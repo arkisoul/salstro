@@ -1,0 +1,183 @@
+// ./src/assets/components/_userfeednewpost.sass
+
+.userfeed__newpost-box
+  margin-bottom: 2em
+  background-color: $bg-white
+  padding: 4px 8px
+  border-radius: 4px
+  border: 1px solid $border-lightblue
+
+.userfeed__newpost-header
+  display: flex
+  justify-content: flex-end
+  flex-wrap: wrap
+  border-bottom: 1px solid $border-lightblue
+  padding: 4px 4px 6px
+
+  @media (min-width: 768px)
+    flex-wrap: nowrap
+
+.userfeed__newpost-tabs
+  display: flex
+  flex-wrap: wrap
+  border-bottom: none
+
+  @media (min-width: 992px)
+    flex-wrap: nowrap
+
+  @media (min-width: 1200px)
+    flex: 1 1 calc(100% - 50px)
+    max-width: calc(100% - 50px)
+
+  .nav-item
+    flex: 1 1 50%
+    max-width: 50%
+
+    &:nth-child(odd)
+      border-right: 1px solid $border-lightblue
+
+    @media (min-width: 992px)
+      height: 100%
+      flex: 1 1 auto
+
+      &:nth-child(odd)
+        border-right: none
+
+      &:not(:last-child)
+        border-right: 1px solid $border-lightblue
+
+  .nav-link
+    display: flex
+    align-items: center
+    color: $text-gray
+    font-size: 13px
+    padding: 8px 12px
+
+    @media (min-width: 1200px)
+      padding: 8px 16px
+
+    &.active, &:hover, &:focus
+      outline: none
+      border: none
+      color: $text-brightpink
+      .userfeed__newpost-icon path
+          fill: $text-brightpink
+
+  .userfeed__newpost-icon
+    margin-right: 4px
+    width: 20px
+    height: 20px
+
+    path
+      fill: $text-gray
+
+// Userfeed New post body
+.userfeed__newpost-body
+  display: flex
+  align-items: top
+  padding: 8px 4px
+  border-bottom: 1px solid $border-lightblue
+
+.userfeed__newpost-avatar
+  flex: 0 0 calc(34px)
+  max-width: calc(34px)
+  margin-right: 16px
+  text-align: center
+
+  img
+    border-radius: 50%
+    width: 34px
+    height: 34px
+    margin: auto
+
+.userfeed__newpost-tabcontent
+  flex: 0 0 calc(100% - 50px)
+  max-width: calc(100% - 50px)
+
+.newpoll__options-wrap
+  display: flex
+  align-items: flex-end
+  margin-left: -50px
+
+.newphotopost__group
+  margin-left: -50px
+  display: flex
+  align-items: center
+
+  .btn__add-big
+    max-width: 100px
+    margin-right: 0
+    margin-bottom: 0
+    margin-left: auto
+
+.newphotopost__container
+  display: flex
+  overflow-x: scroll
+  max-width: calc(100% - 100px)
+  margin-right: 10px
+
+.newphotopost__item
+  position: relative
+  max-width: 70px
+  height: auto
+
+  margin-right: 6px
+
+  &:hover, &:focus
+    .btn__remove-small
+      display: inline-flex
+
+  .btn__remove-small
+    display: none
+    position: absolute
+    top: 4px
+    right: 4px
+
+  img
+    max-width: 100%
+    height: auto
+
+.newvideo__add-link
+  margin-left: -50px
+
+.newpost__options-tag
+  margin-left: -50px
+  margin-top: 1em
+
+  .input-group-prepend
+    border-radius: 4px 0 0 4px
+
+    span
+      background-color: $bg-lightblue
+      color: $text-white
+      font-size: 13px
+
+.newpoll__options
+  flex: 0 0 calc(100% - 60px)
+
+.newpoll__option-add
+  flex: 0 0 40px
+  margin-left: 10px
+
+// Userfeed New post footer
+.userfeed__newpost-footer
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 8px 4px 4px
+
+.userfeed__newpost-privacy
+  display: flex
+  align-items: center
+  color: $text-gray
+  font-size: 13px
+
+  .custom__select-with-img
+    margin-left: 6px
+    border: none
+
+#photopost
+  width: 1px
+  height: 1px
+  position: absolute
+  left: -5000px

@@ -1,0 +1,132 @@
+// ./src/assets/components/_post.sass
+
+.feed__post
+  border-radius: 4px
+  background-color: $bg-white
+  margin-bottom: 1.5em
+  padding: 12px
+
+.feed__post-header
+  display: flex
+  align-items: center
+  margin-bottom: 8px
+
+.feed__post-avatar
+  width: 50px
+  display: inline-block
+  margin-right: 6px
+
+  &.feed__post-avatar-small
+    width: 35px
+
+    img
+      max-width: 35px
+      width: 35px
+      height: 35px
+
+  img
+    max-width: 50px
+    width: 50px
+    height: 50px
+    border-radius: 50%
+
+.feed__post-userinfo
+  flex: 1 1 calc(100% - 75px)
+  margin: 0 6px 0 0
+
+.feed__post-username
+  font-size: 15px
+  color: $text-black
+
+.feed__post-userprof
+  font-size: 15px
+  color: $text-gray
+
+.feed__post-time
+  font-size: 12px
+  color: $text-lightblue
+  display: block
+  width: 100%
+  margin-top: 2px
+
+.feed__post-title, .feed__post-text
+  font-size: 13px
+  text-align: justify
+
+.feed__post-post
+  display: block
+
+.feed__post-img
+  max-width: 100%
+  width: 100%
+  object-fit: cover
+  object-position: center center
+
+.feed__post-meta
+  display: flex
+  text-align: center
+  align-items: center
+  padding: 10px 6px
+  border-bottom: 1px solid $border-offwhite
+
+.feed__post-like-counts
+  display: flex
+  align-items: center
+  flex-direction: column
+  font-size: 13px
+
+  @media (min-width: 480px)
+    flex-direction: row
+
+  img
+    margin-right: 8px
+    width: 16px
+
+.feed__post-comment-counts
+  @extend .feed__post-like-counts
+  margin-left: auto
+  margin-right: 12px
+
+.feed__post-share-counts
+  @extend .feed__post-like-counts
+  margin-right: 0
+  margin-left: 12px
+
+.feed__post-social
+  @extend .feed__post-meta
+  justify-content: space-around
+
+  a
+    display: inline-flex
+    align-items: center
+    font-size: 16px
+    color: $text-black
+
+    &:hover, &:focus
+      color: $text-black
+
+    img
+      margin-right: 6px
+      width: 24px
+
+.feed__post-footer
+  display: flex
+  align-items: center
+  padding-top: 10px
+
+.feed__post-input
+  flex: 1 1 calc(100% - 60px)
+  margin-right: 0px
+  margin-left: 16px
+  border: 1px solid $border-lightblue
+  border-radius: 4px
+  background-color: $bg-offwhite
+
+  .btn__outline
+    padding-left: 4px
+    padding-right: 4px
+    background-color: $bg-offwhite
+
+.form__control-feed
+  border: none
+  background-color: $bg-offwhite

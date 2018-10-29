@@ -17,11 +17,47 @@ body
     @media (min-width: 992px)
         min-height: calc(100vh - 135px)
 
-.form-control::placeholder
-    font-size: 14px
-    font-family: $opensans
-    font-weight: $regular
-    color: $text-blue
+.container
+    @media (min-width: 768px)
+        max-width: 90%
+    @media (min-width: 2000px)
+        max-width: 1800px
 
-.form-control
+    &.container__small
+        @media (min-width: 992px)
+            max-width: 75%
+        @media (min-width: 2000px)
+            max-width: 1800px
+
+a
+    &:hover, &:focus
+        text-decoration: none
+
+.custom__dropdown
+  .dropdown-toggle::after
+    display: none
+
+  .dropdown-menu
+    background-color: $bg-white
+    border: 1px solid $border-lightblue
+    padding: 0
     border-radius: 4px
+    box-shadow: 0 2px 8px rgba($black, 0.25)
+
+    &::before
+      content: ''
+      position: absolute
+      border: 6px solid transparent;
+      transform: rotate(45deg);
+      border-top: 6px solid white;
+      border-left: 6px solid white;
+      top: -6px;
+      left: 20%;
+
+  .dropdown-item
+    color: $text-gray
+    font-size: 14px
+
+    &.active, &:hover, &:focus
+      background-color: $bg-lightblue
+      color: $text-white

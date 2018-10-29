@@ -11,7 +11,10 @@ require('normalize.css');
 import './assets/sass/_app.sass';
 
 $(document).ready(() => {
-  console.log('Ready!');
-
-  require('scripts/demo');
+  // require('scripts/demo');
+  $('.btn__add-polloption').on('click', (e) => {
+    e.preventDefault()
+    const optionHtml = '<div class="form-group"><label for="newpollOption02" class="sr-only">Option</label><input type="text" class="form-control" id="newpollOption02" placeholder="Option"></div>'
+    $('.newpoll__options').prepend(optionHtml);
+  })
 });

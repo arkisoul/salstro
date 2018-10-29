@@ -8,4 +8,15 @@ block content
   include ../components/navbar.pug
   //- main content
   section.main-content
-    h1 Newsfeed wall page
+    .container.container__small
+      .row
+        .col-lg-4.col-md-4
+          //- include sidebar
+          // Sidebar
+          include ../components/sidebar.pug
+          // ./ Sidebar
+        .col-lg-8.col-md-8
+          //- include content
+          // Main Content
+          include ../components/newsfeed.pug
+          // ./ Main Content

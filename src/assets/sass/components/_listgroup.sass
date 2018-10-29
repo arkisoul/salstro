@@ -1,0 +1,77 @@
+// ./src/assets/components/_listgroup.sass
+
+.list__group
+  &.list__group-noborder
+
+    .list-group-item
+      &:last-child
+        border-bottom: 0
+
+  .list-group-item
+    padding: 8px 2px
+    border-radius: 0
+    border-bottom: 1px solid $border-lightblue
+    border-top: none
+    border-right: none
+    border-left: none
+    margin-bottom: 0
+
+    &:first-child
+      border-radius: 0
+
+    &.list__item-badge
+      display: flex
+      align-items: center
+      justify-content: space-between
+
+  .list__item-text
+    margin-right: auto
+    color: $text-gray
+    font-size: 12px
+    display: inline-block
+    max-width: 60%
+    text-overflow: ellipsis
+    overflow: hidden
+    white-space: nowrap
+
+    @media (min-width: 1200px)
+      font-size: 14px
+
+  .list__item-img
+    margin-right: 6px
+
+  .badge
+    color: $text-gray
+    font-size: 10px
+
+    &.badge__primary
+      background-color: $bg-brightpink
+      padding: 4px
+      border-radius: 4px
+      color: $text-white
+
+.link__group
+  display: flex
+  align-items: center
+  padding: 4px 0px
+
+  &:not(:last-child)
+    border-bottom: 1px solid $border-lightblue
+    margin-bottom: 4px
+
+  .link__group-item
+    flex: 1 1 auto
+    display: inline-block
+    text-align: center
+    color: $text-gray
+    font-size: 12px
+    padding: 4px 6px
+    &:not(:last-child)
+      border-right: 1px solid $border-lightblue
+
+    @media (min-width: 1200px)
+      font-size: 14px
+
+    @media (min-width: 1600px)
+      font-size: 14px
+      padding: 4px 16px

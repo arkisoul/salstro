@@ -1,0 +1,31 @@
+// ./src/assets/components/_userfeedheader.sass
+
+.userfeed__header
+  display: flex
+  border: 1px solid $border-lightblue
+  margin-bottom: 2em
+
+  .userfeed__header-link
+    display: inline-flex
+    justify-content: center
+    align-items: center
+    text-align: center
+    color: $text-black
+    font-size: 14px
+    background-color: $bg-white
+    flex: 0 0 33.3333%
+    transition: all ease 350ms
+    padding: 12px 8px
+    text-decoration: none
+
+    &:hover, &:focus
+      background-color: $bg-lightpink
+      border-bottom: 4px solid $border-brightpink
+      text-decoration: none
+
+    &:not(:last-child)
+      border-right: 1px solid $border-lightblue
+
+    &.active
+      background-color: $bg-lightpink
+      border-bottom: 4px solid $border-brightpink

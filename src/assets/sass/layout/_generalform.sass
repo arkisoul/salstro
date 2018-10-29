@@ -1,0 +1,31 @@
+/* src/assets/styles/layout/_generalform.sass  */
+
+.form-group, .input-group
+    margin-bottom: 1em
+    &:last-of-type
+        margin-bottom: 0
+
+.form-control::placeholder
+    font-size: 14px
+    font-family: $opensans
+    font-weight: $regular
+    color: $text-blue
+
+.form__placeholder-dark::placeholder
+    color: $text-black
+
+.form-control
+    border-radius: 4px
+
+    &:focus
+        outline: none
+
+    &.form__control-noborder
+        border: none
+        resize: none
+
+.custom-select
+  background: #fff url('/assets/images/down-arrow.svg')
+  background-repeat: no-repeat
+  background-size: 15%
+  background-position: 90% center

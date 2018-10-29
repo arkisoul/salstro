@@ -1,1 +1,76 @@
 /* src/assets/styles/components/_button.sass  */
+
+.btn__primary
+  background-color: $bg-white
+  color: $text-pink
+  border: 1px solid $border-pink
+  position: relative
+  border-radius: 0
+  transition: all ease-in 350ms
+
+  &:hover, &:focus
+    color: $text-white
+    background-color: $bg-pink
+
+  &::after
+    content: ''
+    height: 6px
+    width: 6px
+    position: absolute
+    display: inline-block
+    background-color: $bg-pink
+    border-radius: 50%
+    border: 1px solid $border-white
+    top: -3px
+    right: -3px
+
+.btn__secondary
+  background-color: $bg-lightpink
+  border: 1px solid $border-brightpink
+  color: $text-brightpink
+  border-radius: 0
+  font-size: 15px
+  font-weight: $regular
+  transition: all ease-in 350ms
+
+  &:hover, &:focus
+    background-color: $bg-brightpink
+    color: $text-lightpink
+
+.btn__profile-wrap
+  padding: 4px 0 16px
+
+.btn__add
+  border: 1px solid $border-lightblue
+  padding: 6px 14px
+
+  &.btn__add-big
+    padding: 10px 18px
+    margin-bottom: 1em
+
+  svg
+    width: 15px
+    height: 15px
+    .a
+      fill: $text-gray
+
+  &:hover, &:focus
+    background: $bg-gray
+
+    svg .a
+      fill: $text-white
+
+.btn__remove-small
+  padding: 0
+  margin: 0
+  border-radius: 50%
+  width: 15px
+  text-align: center
+  line-height: 15px
+  height: 15px
+  background-color: $bg-pink
+  color: $text-white
+  font-size: 12px
+  display: inline-flex
+  justify-content: center
+  align-items: center

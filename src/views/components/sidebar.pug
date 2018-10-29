@@ -1,0 +1,70 @@
+//- ./src/views/components/sidebar.pug
+include ../mixins/box.pug
+
+aside.sidebar
+  +box('Roger', 'assets/images/navbar/avatar.png')
+    .list-group.list__group
+      a.list-group-item.list-group-item-action.list__item-badge(href='#')
+        img.list__item-img(src="assets/images/sidebar/icon-notification.png", alt="Notification")
+        span.list__item-text Notifications
+        span.badge.badge__primary 199
+      a.list-group-item.list-group-item-action.list__item-badge(href='#')
+        img.list__item-img(src="assets/images/sidebar/icon-message.png", alt="Message")
+        span.list__item-text Messages
+        span.badge.badge__primary 50
+      a.list-group-item.list-group-item-action.list__item-badge(href='#')
+        img.list__item-img(src="assets/images/sidebar/icon-connection.png", alt="Connections")
+        span.list__item-text Connections
+        span.badge 210
+      a.list-group-item.list-group-item-action.list__item-badge(href='#')
+        img.list__item-img(src="assets/images/sidebar/icon-following.png", alt="Following")
+        span.list__item-text Following
+        span.badge 515
+      a.list-group-item.list-group-item-action.list__item-badge(href='#')
+        img.list__item-img(src="assets/images/sidebar/icon-followers.png", alt="Followers")
+        span.list__item-text Followers
+        span.badge 10
+      a.list-group-item.list-group-item-action.list__item-badge(href='#')
+        img.list__item-img(src="assets/images/sidebar/icon-profile-views.png", alt="Profile Views")
+        span.list__item-text Profile Views
+        span.badge 24
+    .progress__profile
+      .progress__status Profile :
+        span  60%
+      .progress
+        .progress-bar.progress-bar__primary(role='progressbar' aria-valuenow='60' aria-valuemin='0' aria-valuemax='100')
+    .btn__profile-wrap
+      a.btn.btn-block.btn__secondary(href="#") Upgrade Account
+  +box('My Company Pages')
+    .list-group.list__group.list__group-noborder
+      a.list-group-item.list-group-item-action.list__item-badge(href='#')
+        img.list__item-img(src="assets/images/sidebar/company-01.jpg", alt="")
+        span.list__item-text Dummy Commpany A
+      a.list-group-item.list-group-item-action.list__item-badge(href='#')
+        img.list__item-img(src="assets/images/sidebar/company-02.jpg", alt="")
+        span.list__item-text Ipsum Company
+      a.list-group-item.list-group-item-action.list__item-badge(href='#')
+        img.list__item-img(src="assets/images/sidebar/company-03.jpg", alt="")
+        span.list__item-text Lorem Company
+      a.list-group-item.list-group-item-action.list__item-badge(href='#')
+        img.list__item-img(src="assets/images/sidebar/company-04.jpg", alt="")
+        span.list__item-text Demo Company
+  +box('My Groups')
+    .list-group.list__group.list__group-noborder
+      a.list-group-item.list-group-item-action.list__item-badge(href='#')
+        img.list__item-img(src="assets/images/sidebar/group-01.jpg", alt="")
+        span.list__item-text Loreal Group
+      a.list-group-item.list-group-item-action.list__item-badge(href='#')
+        img.list__item-img(src="assets/images/sidebar/group-02.jpg", alt="")
+        span.list__item-text Hair Trends Group
+      a.list-group-item.list-group-item-action.list__item-badge(href='#')
+        img.list__item-img(src="assets/images/sidebar/group-03.jpg", alt="")
+        span.list__item-text Makeup Trends
+  +box('Other Links')
+    .link__group
+      a.link__group-item(href="#") About
+      a.link__group-item(href="#") Help
+      a.link__group-item(href="#") Privacy &amp; Terms
+    .link__group
+      a.link__group-item(href="#") Advertise with us
+      a.link__group-item(href="#") Contact

@@ -175,4 +175,7 @@ GitHub.sublime-settings
 *.rar
 *.tar.gz
 
+### Dist Folder ###
+dist
+
 # End of https://www.gitignore.io/api/git,node,sass,macos,bower,sublimetext,visualstudiocode

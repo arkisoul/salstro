@@ -1,0 +1,13 @@
+//- ./src/views/mixins/box.pug
+
+mixin box(heading, img='none')
+  .box
+    .box__head
+      if img != 'none'
+        img.box__img(src=img, alt="")
+        h1.box__heading #{heading}
+      else
+        h1.box__heading #{heading}
+    .box__body
+      if block
+        block
