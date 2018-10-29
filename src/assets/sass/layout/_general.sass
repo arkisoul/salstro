@@ -1,0 +1,27 @@
+/* src/assets/styles/layout/_general.sass  */
+
+body
+    background-color: $bg-lightwhite
+    font-family: $opensans
+    font-weight: $regular
+    font-size: 100%
+
+.main-content
+    padding: 2em 0
+    background-color: $bg-lightwhite
+    min-height: calc(100vh - 170px)
+
+    @media (min-width: 576px)
+        min-height: calc(100vh - 120px)
+
+    @media (min-width: 992px)
+        min-height: calc(100vh - 135px)
+
+.form-control::placeholder
+    font-size: 14px
+    font-family: $opensans
+    font-weight: $regular
+    color: $text-blue
+
+.form-control
+    border-radius: 4px

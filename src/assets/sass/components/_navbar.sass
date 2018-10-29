@@ -1,0 +1,103 @@
+#navbar-main
+  background-color: $bg-black!important
+  box-shadow: 0 2px 6px rgba($black, 0.35)!important
+
+  .navbar-logo
+    height: 40px
+
+    @media (min-width: 768px)
+      height: 50px
+
+  .nav-item
+    &.active
+      .navbar__linktext
+        color: $text-pink
+
+    @media (min-width: 992px)
+      &:not(:last-child)
+        margin-right: 1.5em
+
+  .nav-link
+    display: flex
+    align-items: center
+
+    &:hover, &:focus
+      .navbar__linktext
+        color: $text-pink
+
+    @media (min-width: 992px)
+      flex-direction: column
+      text-align: center
+      height: 100%
+
+  .navbar__icon
+    width: 30px
+    margin-right: 10px
+
+    @media (min-width: 992px)
+      margin: 0 auto 4px
+
+  .navbar__linktext
+    font-size: 13px
+    color: $text-white
+
+    @media (min-width: 992px)
+      margin: auto auto 0
+
+  .navbar-toggler
+    @media (min-width: 576px)
+      order: 1
+      margin-left: auto
+      margin-right: 2em
+
+    @media (min-width: 992px)
+      order: initial
+
+  .navbar__user
+    @media (min-width: 576px)
+      order: 1
+
+    @media (min-width: 992px)
+      order: 1
+      margin-left: 2em
+
+  .navbar__form
+    width: 100%
+
+    @media (min-width: 576px)
+      width: auto
+      margin: 0 auto
+
+    @media (min-width: 992px)
+      margin-left: 5em
+      margin-right: 5em
+      min-width: 220px
+
+    @media (min-width: 1200px)
+      min-width: 250px
+
+#navbar-salstro
+  @media (min-width: 576px)
+    order: 2
+
+  @media (min-width: 992px)
+    order: initial
+
+.navbar__search-wrapper
+  position: relative
+  width: 100%
+
+  &::after
+    content: ''
+    background-image: url('../images/navbar/icon-search.png')
+    background-repeat: no-repeat
+    display: inline-block;
+    position: absolute;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+    right: 10px;
+    top: calc(50% - 10px);
+
+  .form-control
+    width: 100%

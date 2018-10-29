@@ -1,0 +1,39 @@
+header.header
+  nav#navbar-main.navbar.navbar-expand-lg.navbar-dark.bg-dark
+    .container
+      a.navbar-brand(href='#')
+        img.navbar-logo(src="assets/images/navbar/logo.svg", alt="Salstro Logo")
+      button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbar-salstro' aria-controls='navbar-salstro' aria-expanded='false' aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      form.form-inline.my-2.my-lg-0.navbar__form
+        .navbar__search-wrapper
+          input.form-control(type='search' placeholder='Search' aria-label='Search')
+      //- .dropdown.navbar__user
+      //-   button#dropdownMenuButton.btn.btn-secondary.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+      //-     img(src="assets/images/navbar/avatar.jpg", alt="User")
+      //-   .dropdown-menu(aria-labelledby='dropdownMenuButton')
+      //-     a.dropdown-item(href='#') Action
+      //-     a.dropdown-item(href='#') Another action
+      //-     a.dropdown-item(href='#') Something else here
+      #navbar-salstro.collapse.navbar-collapse
+        ul.navbar-nav.ml-auto
+          li.nav-item.active
+            a.nav-link(href='#')
+              img.navbar__icon(src="assets/images/navbar/icon-home.png", alt="Home")
+              span.navbar__linktext Home
+          li.nav-item
+            a.nav-link(href='#')
+              img.navbar__icon(src="assets/images/navbar/icon-community.png", alt="Community")
+              span.navbar__linktext Community
+          li.nav-item
+            a.nav-link(href='#')
+              img.navbar__icon(src="assets/images/navbar/icon-education.png", alt="Education")
+              span.navbar__linktext Education
+          li.nav-item
+            a.nav-link(href='#')
+              img.navbar__icon(src="assets/images/navbar/icon-jobs.png", alt="Jobs")
+              span.navbar__linktext Jobs
+          li.nav-item
+            a.nav-link(href='#')
+              img.navbar__icon(src="assets/images/navbar/avatar.png", alt="User")
+              span.navbar__linktext Roger
