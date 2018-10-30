@@ -8,10 +8,10 @@ mixin post()
       p.feed__post-userinfo
         a.feed__post-username(href="#")
           | Roger Fernando
-        span.feed__post-userprof | Senior Hair Stylist
+        span.feed__post-userprof &nbsp;&nbsp;|&nbsp;&nbsp; Senior Hair Stylist
         span.feed__post-time 24 hrs ago
       .dropdown.custom__dropdown
-        button#dropdownMenuButton.btn.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+        button#dropdownMenuButton.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
           img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
         .dropdown-menu(aria-labelledby='dropdownMenuButton')
           a.dropdown-item(href='#') Flag

@@ -2,30 +2,30 @@
 include ../mixins/box.pug
 
 aside.sidebar
-  +box('Roger', '/assets/images/img/avatar.jpg')
+  +box('Roger', '/assets/images/img/avatar.jpg', 'user__avatar')
     .list-group.list__group
       a.list-group-item.list-group-item-action.list__item-badge(href='#')
-        img.list__item-img(src=require("../../assets/images/svg/icon-notification.svg"), alt="Notification")
+        img.list__item-icon(src=require("../../assets/images/svg/icon-notification.svg"), alt="Notification")
         span.list__item-text Notifications
         span.badge.badge__primary 199
       a.list-group-item.list-group-item-action.list__item-badge(href='#')
-        img.list__item-img(src=require("../../assets/images/svg/icon-message.svg"), alt="Message")
+        img.list__item-icon(src=require("../../assets/images/svg/icon-message.svg"), alt="Message")
         span.list__item-text Messages
         span.badge.badge__primary 50
       a.list-group-item.list-group-item-action.list__item-badge(href='#')
-        img.list__item-img(src=require("../../assets/images/svg/icon-connection.svg"), alt="Connections")
+        img.list__item-icon(src=require("../../assets/images/svg/icon-connection.svg"), alt="Connections")
         span.list__item-text Connections
         span.badge 210
       a.list-group-item.list-group-item-action.list__item-badge(href='#')
-        img.list__item-img(src=require("../../assets/images/svg/icon-following.svg"), alt="Following")
+        img.list__item-icon(src=require("../../assets/images/svg/icon-following.svg"), alt="Following")
         span.list__item-text Following
         span.badge 515
       a.list-group-item.list-group-item-action.list__item-badge(href='#')
-        img.list__item-img(src=require("../../assets/images/svg/icon-followers.svg"), alt="Followers")
+        img.list__item-icon(src=require("../../assets/images/svg/icon-followers.svg"), alt="Followers")
         span.list__item-text Followers
         span.badge 10
       a.list-group-item.list-group-item-action.list__item-badge(href='#')
-        img.list__item-img(src=require("../../assets/images/svg/icon-profile-view.svg"), alt="Profile Views")
+        img.list__item-icon(src=require("../../assets/images/svg/icon-profile-view.svg"), alt="Profile Views")
         span.list__item-text Profile Views
         span.badge 24
     .progress__profile

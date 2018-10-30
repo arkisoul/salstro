@@ -6,7 +6,7 @@
     height: 40px
 
     @media (min-width: 768px)
-      height: 50px
+      height: 52px
 
   .nav-item
     &.active
@@ -15,11 +15,15 @@
 
     @media (min-width: 992px)
       &:not(:last-child)
-        margin-right: 1.5em
+        margin-right: 26px
+
+      &:last-child
+        margin-left: 20px
 
   .nav-link
     display: flex
     align-items: center
+    padding: 6px 10px
 
     &:hover, &:focus
       .navbar__linktext
@@ -31,11 +35,18 @@
       height: 100%
 
   .navbar__icon
-    width: 25px
+    width: 31.5px
+    height: 24px
     margin-right: 10px
 
     @media (min-width: 992px)
-      margin: 0 auto 4px
+      margin: 0 auto
+
+  .navbar__user-avatar
+    width: 32px
+    height: 32px
+    border-radius: 50%
+    object-fit: cover
 
   .navbar__linktext
     font-size: 13px
@@ -74,7 +85,7 @@
       min-width: 220px
 
     @media (min-width: 1200px)
-      min-width: 250px
+      min-width: 310px
 
 #navbar-salstro
   @media (min-width: 576px)

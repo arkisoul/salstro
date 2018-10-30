@@ -7,7 +7,7 @@ body
     font-size: 100%
 
 .main-content
-    padding: 2em 0
+    padding: 30px 0
     background-color: $bg-lightwhite
     min-height: calc(100vh - 170px)
 
@@ -15,19 +15,20 @@ body
         min-height: calc(100vh - 120px)
 
     @media (min-width: 992px)
-        min-height: calc(100vh - 135px)
+        min-height: calc(100vh - 110px)
 
 .container
-    width: 1120px
+    width: 1140px
 
     &.container__small
-        width: 850px
+        width: 960px
 
 a
     &:hover, &:focus
         text-decoration: none
 
 .custom__dropdown
+
   .dropdown-toggle::after
     display: none
 
@@ -55,3 +56,10 @@ a
     &.active, &:hover, &:focus
       background-color: $bg-lightblue
       color: $text-white
+
+.vertical__ellipsis-menu
+  padding: 0
+
+  img
+    width: 4px
+    height: 18px

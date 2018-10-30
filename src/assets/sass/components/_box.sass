@@ -3,17 +3,23 @@
 .box
   border-radius: 4px
   border: 1px solid $border-lightblue
-  margin-bottom: 2em
+  margin-bottom: 20px
 
   .box__head
     display: flex
     align-items: center
-    padding: 4px 8px
+    padding: 6px 8px
     background-color: $bg-blue
     border-radius: 4px 4px 0 0
 
   .box__img
     margin-right: 6px
+
+    &.user__avatar
+      width: 36px
+      height: 36px
+      border-radius: 50%
+      object-fit: cover
 
   .box__heading
     font-size: 15px
@@ -24,4 +30,4 @@
   .box__body
     border-radius: 0 0 4px 4px
     background-color: $bg-white
-    padding: 2px 6px 4px
+    padding: 4px 10px 6px
