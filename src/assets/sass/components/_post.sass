@@ -130,3 +130,34 @@
 .form__control-feed
   border: none
   background-color: $bg-offwhite
+
+  &:focus, &:active
+    outline: none!important
+    background-color: $bg-offwhite
+
+  &.focused
+    background-color: $bg-offwhite
+    outline: none!important
+    ~ .input-group-append
+        .btn__outline
+          background-color: $bg-offwhite
+          display: none
+        .btn__send
+          background-color: $bg-offwhite
+          display: inline-block
+
+.feed__nopost
+  background-color: $bg-white
+  border-radius: 4px
+  margin-bottom: 2em
+  display: flex
+  align-items: center
+  justify-content: center
+  padding: 14px
+
+  img
+    margin-right: 10px
+
+  p
+    font-size: 32px
+    color: $text-lightblue

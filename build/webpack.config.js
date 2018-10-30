@@ -21,7 +21,7 @@ module.exports = env => {
     output: {
       path: path.resolve(__dirname, '../dist'),
       publicPath: '/',
-      filename: 'assets/js/[name].[hash:7].bundle.js'
+      filename: 'assets/js/[name].bundle.js'
     },
     devServer: {
       contentBase: path.resolve(__dirname, '../src'),
@@ -89,7 +89,7 @@ module.exports = env => {
           loader: 'url-loader',
           options: {
             limit: 3000,
-            name: 'assets/images/[name].[hash:7].[ext]'
+            name: 'assets/images/[name].[ext]'
           }
         },
         {
@@ -97,7 +97,7 @@ module.exports = env => {
           loader: 'url-loader',
           options: {
             limit: 5000,
-            name: 'assets/fonts/[name].[hash:7].[ext]'
+            name: 'assets/fonts/[name].[ext]'
           }
         },
         {
@@ -105,7 +105,7 @@ module.exports = env => {
           loader: 'url-loader',
           options: {
             limit: 10000,
-            name: 'assets/videos/[name].[hash:7].[ext]'
+            name: 'assets/videos/[name].[ext]'
           }
         }
       ]
@@ -115,7 +115,7 @@ module.exports = env => {
         { from: '../src/assets/images/favicons/manifest.json', to: 'assets/images/favicon/manifest.json' }
       ]),
       new ExtractTextPlugin({
-        filename: 'assets/css/[name].[hash:7].bundle.css',
+        filename: 'assets/css/[name].bundle.css',
         allChunks: true
       }),
       /* new webpack.optimize.CommonsChunkPlugin({

@@ -4,7 +4,7 @@ mixin post()
   article.feed__post
     .feed__post-header
       a.feed__post-avatar(href="#")
-        img(src="assets/images/navbar/avatar.png", alt="Avatar")
+        img(src=require("../../assets/images/img/avatar.jpg"), alt="Avatar")
       p.feed__post-userinfo
         a.feed__post-username(href="#")
           | Roger Fernando
@@ -12,44 +12,43 @@ mixin post()
         span.feed__post-time 24 hrs ago
       .dropdown.custom__dropdown
         button#dropdownMenuButton.btn.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
-          img(src="assets/images/menu-vertical.png", alt="")
+          img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
         .dropdown-menu(aria-labelledby='dropdownMenuButton')
           a.dropdown-item(href='#') Flag
           a.dropdown-item(href='#') Unfollow
     .feed__post-body
-      p.feed__post-title Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum fugiat quasi
-      a.feed__post-post.feed__post-post-single(href="#")
-        img.feed__post-img(src="assets/images/post-01.jpg", alt="")
+      if block
+        block
       .feed__post-meta
         .feed__post-like-counts
-          img(src="assets/images/like-pink.png", alt="")
+          img(src=require("../../assets/images/svg/like-pink.svg"), alt="")
           | 451 likes
         .feed__post-comment-counts
-          img(src="assets/images/icon-comment.png", alt="")
+          img(src=require("../../assets/images/svg/comment.svg"), alt="")
           | 528 comments
         .feed__post-share-counts
           | 25 shares
       .feed__post-social
         a.feed__post-like(href="#")
-          img(src="assets/images/icon-like.png", alt="")
+          img(src=require("../../assets/images/svg/like.svg"), alt="")
           | Like
         a.feed__post-comment(href="#")
-          img(src="assets/images/icon-comment.png", alt="")
+          img(src=require("../../assets/images/svg/comment.svg"), alt="")
           | Comment
         a.feed__post-share(href="#")
-          img(src="assets/images/icon-share.png", alt="")
+          img(src=require("../../assets/images/svg/share.svg"), alt="")
           | Share
     .feed__post-footer
       a.feed__post-avatar.feed__post-avatar-small(href="#")
-        img(src="assets/images/navbar/avatar.png", alt="Avatar")
+        img(src=require("../../assets/images/img/avatar.jpg"), alt="Avatar")
       .input-group.feed__post-input
         input.form-control.form__control-feed(type='text' placeholder="Comment" aria-label="Comment" aria-describedby='button-addon4')
         #button-addon4.input-group-append
           button.btn.btn__outline(type='button')
-            img(src="assets/images/icon-smiley.png", alt="")
+            img(src=require("../../assets/images/svg/smiley.svg"), alt="")
           button.btn.btn__outline(type='button')
-            img(src="assets/images/icon-camera.png", alt="")
+            img(src=require("../../assets/images/svg/icon-camera.svg"), alt="")
           button.btn.btn__outline(type='button')
-            img(src="assets/images/icon-gif.png", alt="")
-          button.btn.btn__outline(type='button')
-            img(src="assets/images/icon-send.png", alt="")
+            img(src=require("../../assets/images/svg/icon-gif.svg"), alt="")
+          button.btn.btn__outline.btn__send(type='button')
+            img(src=require("../../assets/images/svg/icon-send.svg"), alt="")

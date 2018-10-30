@@ -1,0 +1,24 @@
+//- ./src/views/pages/postspecific_page.pug
+
+extends ../layouts/master.pug
+
+block title
+  title Salstro - Post Specific Page
+
+block content
+  //- header cum navbar
+  include ../components/navbar.pug
+  //- main content
+  section.main-content
+    .container
+      .row
+        .col-lg-8.col-md-8
+          //- include content
+          // Main Content
+          include ../components/specificpost.pug
+          // ./ Main Content
+        .col-lg-4.col-md-4
+          //- include sidebar
+          // Sidebar
+          include ../components/specificpost_sidebar.pug
+          // ./ Sidebar

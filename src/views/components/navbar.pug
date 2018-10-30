@@ -3,7 +3,7 @@ header.header
   nav#navbar-main.navbar.navbar-expand-lg.navbar-dark.bg-dark
     .container
       a.navbar-brand(href='#')
-        img.navbar-logo(src="assets/images/navbar/logo.svg", alt="Salstro Logo")
+        img.navbar-logo(src=require("../../assets/images/svg/logo.svg"), alt="Salstro Logo")
       button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbar-salstro' aria-controls='navbar-salstro' aria-expanded='false' aria-label='Toggle navigation')
         span.navbar-toggler-icon
       form.form-inline.my-2.my-lg-0.navbar__form
@@ -13,11 +13,11 @@ header.header
         ul.navbar-nav.ml-auto
           li.nav-item.active
             a.nav-link(href='#')
-              img.navbar__icon(src="assets/images/navbar/icon-home.png", alt="Home")
+              img.navbar__icon(src=require("../../assets/images/svg/icon-home.svg"), alt="Home")
               span.navbar__linktext Home
           li.nav-item.dropdown.navbar__dropdown
             a#navbarDropdown.nav-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
-              img.navbar__icon(src="assets/images/navbar/icon-community.png", alt="Community")
+              img.navbar__icon(src=require("../../assets/images/svg/icon-community.svg"), alt="Community")
               span.navbar__linktext Community
             .dropdown-menu(aria-labelledby='navbarDropdown')
               a.dropdown-item(href='#') Inpiration Gallery
@@ -28,21 +28,21 @@ header.header
               a.dropdown-item(href='#') Community Wall
           li.nav-item.dropdown.navbar__dropdown
             a#navbarDropdown.nav-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
-              img.navbar__icon(src="assets/images/navbar/icon-education.png", alt="Education")
+              img.navbar__icon(src=require("../../assets/images/svg/icon-education.svg"), alt="Education")
               span.navbar__linktext Education
             .dropdown-menu(aria-labelledby='navbarDropdown')
               a.dropdown-item(href='#') Course Search
               a.dropdown-item(href='#') Tutorial
           li.nav-item.dropdown.navbar__dropdown
             a#navbarDropdown.nav-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
-              img.navbar__icon(src="assets/images/navbar/icon-jobs.png", alt="Jobs")
+              img.navbar__icon(src=require("../../assets/images/svg/icon-jobs.svg"), alt="Jobs")
               span.navbar__linktext Jobs
             .dropdown-menu(aria-labelledby='navbarDropdown')
               a.dropdown-item(href='#') Job Search
               a.dropdown-item(href='#') Job Seeker Search
           li.nav-item.dropdown.navbar__dropdown
             a#navbarDropdown.nav-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
-              img.navbar__icon(src="assets/images/navbar/avatar.png", alt="User")
+              img.navbar__icon(src=require("../../assets/images/img/avatar.jpg"), alt="User")
               span.navbar__linktext Roger
             .dropdown-menu(aria-labelledby='navbarDropdown')
               a.dropdown-item(href='#') Profile Edit

@@ -2,30 +2,30 @@
 include ../mixins/box.pug
 
 aside.sidebar
-  +box('Roger', 'assets/images/navbar/avatar.png')
+  +box('Roger', '/assets/images/img/avatar.jpg')
     .list-group.list__group
       a.list-group-item.list-group-item-action.list__item-badge(href='#')
-        img.list__item-img(src="assets/images/sidebar/icon-notification.png", alt="Notification")
+        img.list__item-img(src=require("../../assets/images/svg/icon-notification.svg"), alt="Notification")
         span.list__item-text Notifications
         span.badge.badge__primary 199
       a.list-group-item.list-group-item-action.list__item-badge(href='#')
-        img.list__item-img(src="assets/images/sidebar/icon-message.png", alt="Message")
+        img.list__item-img(src=require("../../assets/images/svg/icon-message.svg"), alt="Message")
         span.list__item-text Messages
         span.badge.badge__primary 50
       a.list-group-item.list-group-item-action.list__item-badge(href='#')
-        img.list__item-img(src="assets/images/sidebar/icon-connection.png", alt="Connections")
+        img.list__item-img(src=require("../../assets/images/svg/icon-connection.svg"), alt="Connections")
         span.list__item-text Connections
         span.badge 210
       a.list-group-item.list-group-item-action.list__item-badge(href='#')
-        img.list__item-img(src="assets/images/sidebar/icon-following.png", alt="Following")
+        img.list__item-img(src=require("../../assets/images/svg/icon-following.svg"), alt="Following")
         span.list__item-text Following
         span.badge 515
       a.list-group-item.list-group-item-action.list__item-badge(href='#')
-        img.list__item-img(src="assets/images/sidebar/icon-followers.png", alt="Followers")
+        img.list__item-img(src=require("../../assets/images/svg/icon-followers.svg"), alt="Followers")
         span.list__item-text Followers
         span.badge 10
       a.list-group-item.list-group-item-action.list__item-badge(href='#')
-        img.list__item-img(src="assets/images/sidebar/icon-profile-views.png", alt="Profile Views")
+        img.list__item-img(src=require("../../assets/images/svg/icon-profile-view.svg"), alt="Profile Views")
         span.list__item-text Profile Views
         span.badge 24
     .progress__profile
@@ -38,27 +38,27 @@ aside.sidebar
   +box('My Company Pages')
     .list-group.list__group.list__group-noborder
       a.list-group-item.list-group-item-action.list__item-badge(href='#')
-        img.list__item-img(src="assets/images/sidebar/company-01.jpg", alt="")
+        img.list__item-img(src=require("../../assets/images/img/company-01.jpg"), alt="")
         span.list__item-text Dummy Commpany A
       a.list-group-item.list-group-item-action.list__item-badge(href='#')
-        img.list__item-img(src="assets/images/sidebar/company-02.jpg", alt="")
+        img.list__item-img(src=require("../../assets/images/img/company-02.jpg"), alt="")
         span.list__item-text Ipsum Company
       a.list-group-item.list-group-item-action.list__item-badge(href='#')
-        img.list__item-img(src="assets/images/sidebar/company-03.jpg", alt="")
+        img.list__item-img(src=require("../../assets/images/img/company-03.jpg"), alt="")
         span.list__item-text Lorem Company
       a.list-group-item.list-group-item-action.list__item-badge(href='#')
-        img.list__item-img(src="assets/images/sidebar/company-04.jpg", alt="")
+        img.list__item-img(src=require("../../assets/images/img/company-04.jpg"), alt="")
         span.list__item-text Demo Company
   +box('My Groups')
     .list-group.list__group.list__group-noborder
       a.list-group-item.list-group-item-action.list__item-badge(href='#')
-        img.list__item-img(src="assets/images/sidebar/group-01.jpg", alt="")
+        img.list__item-img(src=require("../../assets/images/img/group-01.jpg"), alt="")
         span.list__item-text Loreal Group
       a.list-group-item.list-group-item-action.list__item-badge(href='#')
-        img.list__item-img(src="assets/images/sidebar/group-02.jpg", alt="")
+        img.list__item-img(src=require("../../assets/images/img/group-02.jpg"), alt="")
         span.list__item-text Hair Trends Group
       a.list-group-item.list-group-item-action.list__item-badge(href='#')
-        img.list__item-img(src="assets/images/sidebar/group-03.jpg", alt="")
+        img.list__item-img(src=require("../../assets/images/img/group-03.jpg"), alt="")
         span.list__item-text Makeup Trends
   +box('Other Links')
     .link__group
