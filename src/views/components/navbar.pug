@@ -20,9 +20,15 @@ header.header
               img.navbar__icon(src=require("../../assets/images/svg/icon-community.svg"), alt="Community")
               span.navbar__linktext Community
             .dropdown-menu(aria-labelledby='navbarDropdown')
-              a.dropdown-item(href='#') Inpiration Gallery
-              a.dropdown-item(href='#') Hair
-              a.dropdown-item(href='#') Beauty
+              a.dropdown-item.dropdown__sub(href='#')
+                | Inspiration Gallery
+                .dropdown-menu
+                  a.dropdown-item(href='#')
+                    img.dropdown__sub-img(src=require('../../assets/images/svg/angle-right.svg') alt='')
+                    | Hair
+                  a.dropdown-item(href='#')
+                    img.dropdown__sub-img(src=require('../../assets/images/svg/angle-right.svg') alt='')
+                    | Beauty
               a.dropdown-item(href='#') Hall of Fame
               a.dropdown-item(href='#') Blogs
               a.dropdown-item(href='#') Community Wall

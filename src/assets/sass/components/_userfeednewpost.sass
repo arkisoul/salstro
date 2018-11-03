@@ -29,6 +29,21 @@
     flex: 1 1 calc(100% - 50px)
     max-width: calc(100% - 50px)
 
+  .custom__dropdown
+    .dropdown-toggle::after
+      content: ''
+      position: absolute
+      display: inline-block
+      background-image: url('../images/svg/down-arrow.svg')
+      background-repeat: no-repeat
+      background-position: 90% center
+      right: 10px
+      width: 10px
+      height: 10px
+      top: 50%
+      margin-top: -5px
+      border: none
+
   .nav-item
     flex: 1 1 50%
     max-width: 50%
@@ -52,6 +67,8 @@
     color: $text-gray
     font-size: 13px
     padding: 8px 12px
+    outline: none
+    border: none
 
     @media (min-width: 1200px)
       padding: 8px 16px

@@ -1,12 +1,15 @@
 /* src/assets/styles/components/_button.sass  */
 
-.btn__primary
+%btn__base
   background-color: $bg-white
   color: $text-pink
   border: 1px solid $border-pink
   position: relative
   border-radius: 0
   transition: all ease-in 350ms
+  padding: 5px 15px
+  font-size: 15px
+  font-weight: $regular
 
   &:hover, &:focus
     color: $text-white
@@ -23,6 +26,31 @@
     border: 1px solid $border-white
     top: -3px
     right: -3px
+
+.btn__primary
+  @extend %btn__base
+
+.btn__optional
+  @extend %btn__base
+  color: $text-golden
+  border-color: $border-golden
+
+  &:hover, &:focus
+    background-color: $bg-golden
+
+  &::after
+    background-color: $bg-golden
+
+.btn__navigation
+  @extend %btn__base
+  color: $text-gray
+  border-color: $border-gray
+
+  &:hover, &:focus
+    background-color: $bg-gray
+
+  &::after
+    background-color: $bg-gray
 
 .btn__secondary
   background-color: $bg-lightpink
@@ -87,3 +115,58 @@
     img
       width: 16px
       height: 14px
+
+.btn__play
+  border: none
+  background: none
+  box-shadow: none
+  text-shadow: none
+  padding: 0
+  margin: 0
+  width: 60px
+  height: 60px
+  border-radius: 50%
+  cursor: pointer
+
+  img
+    width: 60px
+    height: 60px
+    border-radius: 50%
+
+  &.btn__play-small
+    width: 25px
+    height: 25px
+
+    img
+      width: 25px
+      height: 25px
+
+  &.btn__play40
+    width: 40px
+    height: 40px
+
+    img
+      width: 40px
+      height: 40px
+
+.btn__edit-profile
+  border: 1px solid rgba($border-black, 0)
+  background: rgba($bg-black, 0.6)
+  box-shadow: none
+  text-shadow: none
+  padding: 0
+  margin: 0
+  width: 30px
+  height: 30px
+  border-radius: 50%
+  cursor: pointer
+  display: inline-flex
+  justify-content: center
+  align-items: center
+
+  img
+    width: 14px
+    height: 14px
+
+  &:hover, &:focus
+    background: rgba($bg-black, 0.8)

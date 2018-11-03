@@ -1,11 +1,6 @@
 //- ./src/views/components/newsfeed.pug
 
-include ../mixins/post.pug
-include ../mixins/postcarousel.pug
 include ../mixins/newpost.pug
-include ../mixins/nopost.pug
-include ../mixins/postimage.pug
-include ../mixins/postarticle.pug
 
 section.userfeed__box
   // Userfeed header
@@ -17,16 +12,4 @@ section.userfeed__box
   // User new post section
   +newpostBox
   // ./ User new post section
-
-  // User posts
-  .feed__post-container
-    +post
-      +postImage("/assets/images/img/post-01.jpg")
-    +post
-      +postArticle
-    +post
-      +postcarousel
-    +post
-      +postImage("/assets/images/img/post-03.jpg")
-    +nopostBox
-  // ./ User posts
+  include ./posts.pug

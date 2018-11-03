@@ -1,6 +1,6 @@
-//- ./src/views/mixins/nopost.pug
+//- ./src/views/mixins/postimage.pug
 
 mixin postImage(img)
   p.feed__post-title Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum fugiat quasi
-  a.feed__post-post.feed__post-post-single(href="#")
-    img.feed__post-img(src=img, alt="")
+  a.feed__post-post.feed__post-post-single(href="#", data-toggle='modal' data-target='#postInModal')
+    img.feed__post-img-wide(src=img, alt="")

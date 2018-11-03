@@ -112,7 +112,7 @@ module.exports = env => {
     },
     plugins: [
       new CopyWebpackPlugin([
-        { from: '../src/assets/images/favicons/manifest.json', to: 'assets/images/favicon/manifest.json' }
+        // { from: '../src/assets/images/favicons/manifest.json', to: 'assets/images/favicon/manifest.json' }
       ]),
       new ExtractTextPlugin({
         filename: 'assets/css/[name].bundle.css',

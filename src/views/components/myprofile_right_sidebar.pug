@@ -1,0 +1,24 @@
+//- ./src/views/components/myprofile_right_sidebar.pug
+
+include ../mixins/box.pug
+
+aside.profile__sidebar
+  +box('My Photos')
+    .media__container.media__container-img
+      - for(var x = 1; x < 7; x++)
+        a.media__item.media__item-image
+          img.media__item-img(src=require('../../assets/images/img/photo-0' + x + '.jpg'))
+    .media__container-pagination
+      a.btn.btn__primary(href='') View More
+  +box('My Videos')
+    .media__container.media__container-video
+      - for(var x = 1; x < 7; x++)
+        a.media__item.media__item-vid
+          button.btn__play.btn__play-small
+            img(src=require('../../assets/images/svg/btn-play.svg'))
+          video.media__item-video(poster=require('../../assets/images/img/poster-0' + x + '.jpg'))
+            source(src=require("../../assets/media/post.mp4"), type="video/mp4")
+            Your browser doesn't support video tag
+    .media__container-pagination
+      a.btn.btn__primary(href='') View More
+    

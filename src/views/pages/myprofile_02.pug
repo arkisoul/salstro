@@ -1,0 +1,37 @@
+//- ./src/views/pages/myprofile_01.pug
+
+extends ../layouts/master.pug
+
+block title
+  title Salstro - My Profile
+
+block content
+  //- header cum navbar
+  include ../components/navbar.pug
+  //- main content
+  section.main-content
+    .container
+      .row
+        .col-lg-3.col-md-4
+          //- include sidebar
+          // Sidebar
+          include ../components/sidebar.pug
+          // ./ Sidebar
+        .col-lg-9.col-md-8
+          //- include content
+          .row
+            //- Include Activity Header
+            .col-12
+              include ../components/myprofile_header.pug
+            .col-12
+              include ../components/myprofile_content.pug
+
+block modal
+  include ../components/add_timeline_popup.pug
+  include ../components/aboutme_popup.pug
+  include ../components/addexp_popup.pug
+  include ../components/addvolexp_popup.pug
+  include ../components/addedu_popup.pug
+  include ../components/addaward_popup.pug
+  include ../components/addevents_popup.pug
+  include ../components/addinterests_popup.pug

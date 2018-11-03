@@ -1,0 +1,14 @@
+//- ./src/views/mixins/modal.pug
+
+mixin modalComplete(title, id)
+  - var aria = id + 'Title'
+  // Modal
+  .modal.fade.theme__modal(tabindex='-1' role='dialog' aria-labelledby=aria aria-hidden='true', id=id)
+    .modal-dialog.modal-dialog-centered(role='document')
+      .modal-content
+        .modal-header
+          h5.modal-title(id=aria) #{title}
+          button.close(type='button' data-dismiss='modal' aria-label='Close')
+            img(src=require('../../assets/images/svg/icon-close.svg'), alt="")
+        if block
+            block

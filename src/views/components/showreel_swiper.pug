@@ -1,0 +1,80 @@
+//- ./src/views/components/showreel_swiper.pug
+
+.box
+  .box__head
+    .box__head
+      h1.box__heading Showreel
+      a.box__img-right(href='')
+        img.box__img-right.img__24(src=require('../../assets/images/svg/icon-pencil-circle.svg'), alt="")
+  .box__body
+    .showreel__container
+      // Slider main container
+      #showreel__container.swiper-container.swiper__container
+        // Additional required wrapper
+        .swiper-wrapper
+          // Slides
+          .swiper-slide
+            a.addnewitem__box.addnewitem__box-big.addnewitem__box-black(href='')
+              img.addnewitem__box-img(src=require('../../assets/images/svg/icon-cloud.svg') alt='Upload Image')
+              span.addnewitem__box-text Upload Video
+          .swiper-slide
+            .showreel__item
+              button.btn__play.btn__play40
+                img(src=require('../../assets/images/svg/btn-play.svg'))
+              video.showreel__item-video(poster=require('../../assets/images/img/showreel-01.jpg'))
+                source(src=require("../../assets/media/post.mp4"), type="video/mp4")
+                Your browser doesn't support video tag
+              .showreel__item-option
+                .dropdown.custom__dropdown
+                  button#portItemOpt.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                    img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+                  .dropdown-menu(aria-labelledby='portItemOpt')
+                    a.dropdown-item(href='#') Edit
+                    a.dropdown-item(href='#') Delete
+          .swiper-slide
+            .showreel__item
+              button.btn__play.btn__play40
+                img(src=require('../../assets/images/svg/btn-play.svg'))
+              video.showreel__item-video(poster=require('../../assets/images/img/showreel-02.jpg'))
+                source(src=require("../../assets/media/post.mp4"), type="video/mp4")
+                Your browser doesn't support video tag
+              .showreel__item-option
+                .dropdown.custom__dropdown
+                  button#portItemOpt.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                    img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+                  .dropdown-menu(aria-labelledby='portItemOpt')
+                    a.dropdown-item(href='#') Edit
+                    a.dropdown-item(href='#') Delete
+          .swiper-slide
+            .showreel__item
+              button.btn__play.btn__play40
+                img(src=require('../../assets/images/svg/btn-play.svg'))
+              video.showreel__item-video(poster=require('../../assets/images/img/showreel-01.jpg'))
+                source(src=require("../../assets/media/post.mp4"), type="video/mp4")
+                Your browser doesn't support video tag
+              .showreel__item-option
+                .dropdown.custom__dropdown
+                  button#portItemOpt.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                    img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+                  .dropdown-menu(aria-labelledby='portItemOpt')
+                    a.dropdown-item(href='#') Edit
+                    a.dropdown-item(href='#') Delete
+          .swiper-slide
+            .showreel__item
+              button.btn__play.btn__play40
+                img(src=require('../../assets/images/svg/btn-play.svg'))
+              video.showreel__item-video(poster=require('../../assets/images/img/showreel-02.jpg'))
+                source(src=require("../../assets/media/post.mp4"), type="video/mp4")
+                Your browser doesn't support video tag
+              .showreel__item-option
+                .dropdown.custom__dropdown
+                  button#portItemOpt.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                    img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+                  .dropdown-menu(aria-labelledby='portItemOpt')
+                    a.dropdown-item(href='#') Edit
+                    a.dropdown-item(href='#') Delete
+
+
+        // If we need navigation buttons
+        .swiper-button-prev
+        .swiper-button-next

@@ -1,0 +1,157 @@
+// ./src/assets/sass/components/_profile_header.sass
+
+.profile__header
+  margin-bottom: 30px
+
+.profile__banner
+  position: relative
+
+  .btn__edit-profile
+    position: absolute
+    top: 15px
+    right: 15px
+
+  .profile__stats
+    position: absolute
+    bottom: 15px
+    right: 15px
+    margin: 0
+    padding: 0
+
+    & :not(:last-child)
+      margin-right: 14px
+
+  .profile__following, .profile__followers
+    font-size: 15px
+    color: $text-white
+    text-shadow: 0 0 10px rgba($text-black, 0.5)
+    border: 1px solid rgba($border-black, 0.0)
+
+  .profile__banner-img
+    max-height: 250px
+    object-fit: cover
+    width: 100%
+
+.profile__info-summary
+  display: flex
+  padding: 15px 10px 15px
+  background-color: $bg-white
+  align-items: flex-start
+
+.profile__display-img-wrap
+  height: 140px
+  width: 140px
+  border-radius: 50%
+  background-color: $bg-white
+  border: 1px solid rgba($border-black, 0)
+  box-shadow: 0 0 10px rgba($black, 0.25)
+  display: inline-flex
+  justify-content: center
+  align-items: center
+  margin: -80px 20px 0
+  z-index: 1
+  position: relative
+
+.profile__display-img
+  width: 130px
+  height: 130px
+  border-radius: 50%
+
+.profile__info
+  line-height: 1
+
+  .profile__username
+    font-size: 24px
+    line-height: 30px
+    color: $text-black
+    font-weight: $semi
+    margin: 0
+
+  .profile__user-prof, .profile__user-location
+    font-size: 15px
+    line-height: 20px
+    color: $text-gray
+    font-weight: $regular
+    margin: 0
+
+.profile__accolades
+  display: flex
+  margin-right: 0
+  margin-left: auto
+  align-items: center
+
+  .profile__accolade
+    width: 40px
+    height: 40px
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    border: 1px solid $border-lightblue
+
+    &:not(:last-child)
+      margin-right: 15px
+
+  .profile__accolade-academy
+    width: 30px
+    height: 19px
+
+  .profile__accolade-trophy
+    width: 12px
+    height: 30px
+
+  .profile__accolade-blog
+    width: 28px
+    height: 28px
+
+  .profile__accolade-badge
+    width: 25px
+    height: 30px
+
+.profile__navigation
+  background-color: $bg-white
+
+.profile__navigation-navbar
+  display: flex
+  align-items: center
+  justify-content: space-between
+  list-style: none
+  padding: 0
+  margin: 0
+
+  .pn__navbar-item
+    flex: 1 1 auto
+
+    &:not(:last-child)
+      margin-right: 4px
+
+    &.active
+      .pn__navbar-link
+        border-bottom: 4px solid $border-brightpink
+
+    .pn__navbar-link
+      padding: 12px 15px
+      text-align: center
+      width: 100%
+      color: $text-black
+      font-size: 14px
+      font-weight: $regular
+      display: inline-block
+      position: relative
+
+      &:hover, &:focus
+        border-bottom: 4px solid $border-brightpink
+
+      &.dropdown-toggle
+        &::after
+          content: ''
+          position: absolute
+          display: inline-block
+          background-image: url('../images/svg/down-arrow.svg')
+          background-repeat: no-repeat
+          background-position: 90% center
+          right: 15px
+          width: 10px
+          height: 10px
+          top: 50%
+          transform: translateY(-50%)
+          border: none

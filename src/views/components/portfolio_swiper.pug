@@ -1,0 +1,62 @@
+//- ./src/views/components/portfolio_swiper.pug
+
+.box
+  .box__head
+    h1.box__heading Portfolio
+    a.box__img-right(href='')
+      img.box__img-right.img__24(src=require('../../assets/images/svg/icon-pencil-circle.svg'), alt="")
+  .box__body
+    .portfolio__container
+      // Slider main container
+      #portfolio__container.swiper-container.swiper__container
+        // Additional required wrapper
+        .swiper-wrapper
+          // Slides
+          .swiper-slide
+            a.addnewitem__box.addnewitem__box-big.addnewitem__box-black(href='')
+              img.addnewitem__box-img(src=require('../../assets/images/svg/icon-cloud.svg') alt='Upload Image')
+              span.addnewitem__box-text Upload Image
+          .swiper-slide
+            .portfolio__item
+              img.portfolio__item-img(src=require('../../assets/images/img/portfolio-04.jpg'), alt="Portfolio")
+              .portfolio__item-option
+                .dropdown.custom__dropdown
+                  button#portItemOpt.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                    img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+                  .dropdown-menu(aria-labelledby='portItemOpt')
+                    a.dropdown-item(href='#') Edit
+                    a.dropdown-item(href='#') Delete
+          .swiper-slide
+            .portfolio__item
+              img.portfolio__item-img(src=require('../../assets/images/img/portfolio-05.jpg'), alt="Portfolio")
+              .portfolio__item-option
+                .dropdown.custom__dropdown
+                  button#portItemOpt.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                    img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+                  .dropdown-menu(aria-labelledby='portItemOpt')
+                    a.dropdown-item(href='#') Edit
+                    a.dropdown-item(href='#') Delete
+          .swiper-slide
+            .portfolio__item
+              img.portfolio__item-img(src=require('../../assets/images/img/portfolio-04.jpg'), alt="Portfolio")
+              .portfolio__item-option
+                .dropdown.custom__dropdown
+                  button#portItemOpt.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                    img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+                  .dropdown-menu(aria-labelledby='portItemOpt')
+                    a.dropdown-item(href='#') Edit
+                    a.dropdown-item(href='#') Delete
+          .swiper-slide
+            .portfolio__item
+              img.portfolio__item-img(src=require('../../assets/images/img/portfolio-05.jpg'), alt="Portfolio")
+              .portfolio__item-option
+                .dropdown.custom__dropdown
+                  button#portItemOpt.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                    img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+                  .dropdown-menu(aria-labelledby='portItemOpt')
+                    a.dropdown-item(href='#') Edit
+                    a.dropdown-item(href='#') Delete
+
+        // If we need navigation buttons
+        .swiper-button-prev
+        .swiper-button-next

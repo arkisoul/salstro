@@ -48,14 +48,53 @@ a
       border-left: 6px solid white;
       top: -6px;
       left: 20%;
+      box-shadow: -1px -1px 0 rgba(0,0,0,0.1)
 
   .dropdown-item
     color: $text-gray
-    font-size: 14px
+    font-size: 13px
+    padding: 6px 10px
 
     &.active, &:hover, &:focus
-      background-color: $bg-lightblue
-      color: $text-white
+      background-color: $bg-blueish
+      color: $text-gray
+
+  .dropdown__sub
+    position: relative
+
+    &::after
+      content: ''
+      position: absolute
+      display: inline-block
+      background-image: url('../images/svg/down-arrow.svg')
+      background-repeat: no-repeat
+      background-position: 90% center
+      right: 10px
+      width: 10px
+      height: 10px
+      top: 50%
+      transform: translateY(-50%)
+
+    &~ .dropdown-menu
+      position: static
+      box-shadow: none
+      padding: 0
+      margin: 0
+      border: none
+
+      &::before
+        display: none
+
+      .dropdown-item
+        padding: 6px 14px
+        display: flex
+        align-items: center
+
+  .dropdown__sub-img
+    width: 12px
+    height: 10px
+    margin-left: -7px
+    margin-right: 4px
 
 .vertical__ellipsis-menu
   padding: 0

@@ -1,0 +1,42 @@
+//- ./src/views/pages/myactivity_01.pug
+
+extends ../layouts/master.pug
+
+block title
+  title Salstro - My Activity Wall
+
+block content
+  //- header cum navbar
+  include ../components/navbar.pug
+  //- main content
+  section.main-content
+    .container
+      .row
+        .col-lg-3.col-md-4
+          //- include sidebar
+          // Sidebar
+          include ../components/sidebar.pug
+          // ./ Sidebar
+        .col-lg-9.col-md-8
+          //- include content
+          .row
+            //- Include Activity Header
+            .col-12
+              include ../components/myprofile_header.pug
+            // Main Content
+            .col-lg-8
+              include ../components/posts.pug
+            // ./ Main Content
+            .col-lg-4
+              aside.profile__sidebar
+                +box('My Photos')
+                  a.addnewitem__box(href='')
+                    img.addnewitem__box-img(src=require('../../assets/images/svg/icon-addimage.svg') alt='Add Image')
+                    span.addnewitem__box-text Add New Image
+                +box('My Videos')
+                  a.addnewitem__box(href='')
+                    img.addnewitem__box-img(src=require('../../assets/images/svg/icon-addvideo.svg') alt='Add Image')
+                    span.addnewitem__box-text Add New Video
+
+block modal
+  include ../components/specific_post_modal.pug

@@ -1,0 +1,35 @@
+//- ./src/views/components/add_timeline_popup.pug
+
+include ../mixins/modal.pug
+
+
++modalComplete('Add Profile Timeline', 'addProfileTimeline')
+  .modal-body
+    form(action="", method="post")
+      .addnewitem__box-container
+        a.addnewitem__box(href='')
+          img.addnewitem__box-img(src=require('../../assets/images/svg/icon-addimage.svg') alt='Add Image')
+          span.addnewitem__box-text Add Experience
+        a.addnewitem__box(href='')
+          img.addnewitem__box-img(src=require('../../assets/images/svg/icon-addimage.svg') alt='Add Image')
+          span.addnewitem__box-text Add Education
+        a.addnewitem__box(href='')
+          img.addnewitem__box-img(src=require('../../assets/images/svg/icon-addimage.svg') alt='Add Image')
+          span.addnewitem__box-text 
+            | Add Awards
+            br
+            | &amp; Achievements
+        a.addnewitem__box(href='')
+          img.addnewitem__box-img(src=require('../../assets/images/svg/icon-addimage.svg') alt='Add Image')
+          span.addnewitem__box-text
+            | Add Events
+            br
+            | &amp; Milestones
+        a.addnewitem__box(href='')
+          img.addnewitem__box-img(src=require('../../assets/images/svg/icon-addimage.svg') alt='Add Image')
+          span.addnewitem__box-text
+            | Add Volunteer
+            br
+            | &amp; Experience
+      .btn__submit-wrap
+        button.btn.btn__primary(type="submit") Add

@@ -1,0 +1,39 @@
+//- ./src/views/components/addevents_popup.pug
+
+include ../mixins/modal.pug
+
++modalComplete('Add Events/Milestones', 'addEventsMilestone')
+  .modal-body
+    form(action="", method="post")
+      .form-row.form__fields-wrap
+        .col-md-12.form__fields-item
+          .form-group
+            label.theme__label(for='eventTitle') Event Title
+            input.form-control.theme__form-control.theme__primary-form-control.form-control__error(type='text', placeholder='Sr Hair Stylist' id='eventTitle')
+            small.theme__primary-form-error
+              img.theme__primary-form-error-img(src=require('../../assets/images/svg/icon-error.svg') alt='Error')
+              span.theme__primary-form-error-text Error message lorem ipsum
+        .col-md-6.form__fields-item
+          .input-group.theme__input-group
+            label.theme__label(for='dob') Start Date
+            input.form-control.theme__form-control.theme__primary-form-control.theme__datepicker(type='text' placeholder="mm-yyyy" id='dob' aria-describedby='button-addon4')
+            #button-addon4.input-group-append
+              button.btn.btn__outline(type='button')
+                img(src=require("../../assets/images/svg/icon-calendar.svg"), alt="")
+        .col-md-6.form__fields-item
+          .input-group.theme__input-group
+            label.theme__label(for='dob') End Date
+            input.form-control.theme__form-control.theme__primary-form-control.theme__datepicker(type='text' placeholder="mm-yyyy" id='dob' aria-describedby='button-addon4')
+            #button-addon4.input-group-append
+              button.btn.btn__outline(type='button')
+                img(src=require("../../assets/images/svg/icon-calendar.svg"), alt="")
+        .col-lg-12.form__fields-item
+          .custom-control.custom-checkbox.theme__checkbox
+            input#currentEvent.custom-control-input.theme__checkbox-input(type='checkbox' checked)
+            label.custom-control-label.theme__checkbox-label(for='currentEvent') Current/Present
+        .col-lg-12.form__fields-item
+          .form-group
+            label.theme__label(for='description') Description
+            textarea.form-control.theme__form-control(rows='3' placeholder='Write here' id='description')
+      .btn__submit-wrap
+        button.btn.btn__primary(type="submit") Save

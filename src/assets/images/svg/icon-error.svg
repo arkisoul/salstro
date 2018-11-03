@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 10 10">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ed5f5d;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-path);
+      }
+    </style>
+    <clipPath id="clip-path">
+      <path id="Path_492" data-name="Path 492" class="cls-1" d="M0-24H10v10H0Z" transform="translate(0 24)"/>
+    </clipPath>
+  </defs>
+  <g id="Group_1071" data-name="Group 1071" transform="translate(0 24)">
+    <g id="Group_1070" data-name="Group 1070" class="cls-2" transform="translate(0 -24)">
+      <g id="Group_1069" data-name="Group 1069" transform="translate(0 0.582)">
+        <path id="Path_491" data-name="Path 491" class="cls-1" d="M-7-10.94a.516.516,0,0,1-.516-.516A.516.516,0,0,1-7-11.972a.517.517,0,0,1,.516.516A.516.516,0,0,1-7-10.94m.006-5.17a.5.5,0,0,1,.5.51l-.082,2.858a.415.415,0,0,1-.415.4.416.416,0,0,1-.416-.4l-.08-2.858a.5.5,0,0,1,.5-.51m4.9,5.208-4.344-7.526a.655.655,0,0,0-1.134,0L-11.912-10.9a.656.656,0,0,0,.567.983h8.689a.655.655,0,0,0,.567-.983" transform="translate(12 18.754)"/>
+      </g>
+    </g>
+  </g>
+</svg>

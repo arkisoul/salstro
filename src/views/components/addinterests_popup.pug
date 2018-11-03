@@ -1,0 +1,40 @@
+//- ./src/views/components/addinterests_popup.pug
+
+include ../mixins/modal.pug
+
+
++modalComplete('Add Interest', 'addInterests')
+  .modal-body
+    form(action="", method="post")
+      .form-row.form__fields-wrap
+        .col-lg-12
+          .form-group
+            label.theme__label(for='interests') Interests
+            input.form-control.theme__form-control.theme__primary-form-control(type='text', placeholder='Add interests here' id='interests')
+            .theme__badge-container
+              span.theme__badge
+                | Lorem
+                button.btn__badge-close &times;
+              span.theme__badge
+                | Lorem ipsum
+                button.btn__badge-close &times;
+              span.theme__badge
+                | Lorem dummy
+                button.btn__badge-close &times;
+              span.theme__badge
+                | Lorem
+                button.btn__badge-close &times;
+              span.theme__badge
+                | Lorem
+                button.btn__badge-close &times;
+              span.theme__badge
+                | Lorem ipsum
+                button.btn__badge-close &times;
+              span.theme__badge
+                | Lorem dummy
+                button.btn__badge-close &times;
+              span.theme__badge
+                | Lorem
+                button.btn__badge-close &times;
+      .btn__submit-wrap
+        button.btn.btn__primary(type="submit") Save

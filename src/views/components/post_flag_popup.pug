@@ -1,0 +1,21 @@
+//- ./src/views/components/post_flag_popup.pug
+
+include ../mixins/modal.pug
+
+
++modalComplete('Flag/Report', 'flagPost')
+  .modal-body
+    form(action="", method="post")
+      fieldset.theme__fieldset
+        legend.theme__legend Why are you reporting this?
+        .theme__checkbox-group
+          - var flags = ['Violence', 'Nudity', 'Harassment', 'Offensive', 'Plagiarism', 'Fake Profile', 'Other']
+          - for(var x = 0; x < flags.length; x++)
+            .form-group.form-check.theme__label-checkbox
+              input.form-check-input(type='checkbox',id='flag'+ x)
+              label.form-check-label(for='flag'+ x)= flags[x]
+        .form-group
+          label.theme__label(for='flagComment') Please add comments
+          textarea#flagComment.form-control.theme__form-control(rows='3', placeholder='Write here')
+      .btn__submit-wrap
+        button.btn.btn__primary(type="submit") Submit

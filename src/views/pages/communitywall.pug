@@ -1,0 +1,28 @@
+//- ./src/views/pages/communitywall.pug
+
+extends ../layouts/master.pug
+
+block title
+  title Salstro - Community Wall
+
+block content
+  //- header cum navbar
+  include ../components/navbar.pug
+  //- main content
+  section.main-content
+    .container.container__small
+      .row
+        .col-lg-4.col-md-4
+          //- include sidebar
+          // Sidebar
+          include ../components/sidebar.pug
+          // ./ Sidebar
+        .col-lg-8.col-md-8
+          //- include content
+          // Main Content
+          include ../components/newsfeed.pug
+          // ./ Main Content
+
+block modal
+  include ../components/post_flag_popup.pug
+  include ../components/specific_post_modal.pug

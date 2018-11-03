@@ -1,0 +1,26 @@
+Date 03 Nov 2018
+:: Pages ::
+1. New fee wall
+2. Community wall
+3. Specific post page
+4. My activity 01 (with placeholders)
+5. My activity 02 (with content)
+6. My Profile 01 (with placeholders) and popups
+
+:: Popups ::
+1. Flag/Report post
+2. Specific post
+3. Add Profile timeline
+4. Account Details
+5. Add Experience
+6. Add Volunteering Experience
+7. Add Education
+8. Add Interests
+9. Add Awards & Achievments
+10. Add Events/Milestones
+
+===========================================
+Date
+:: Pages ::
+1. My Profile 02 (with content)
+:: Popups ::

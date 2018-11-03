@@ -1,0 +1,99 @@
+//- ./src/views/components/myprofile_header.pug
+
+section.profile__header
+  .profile__banner
+    img.profile__banner-img(src=require('../../assets/images/img/user-profilebg.jpg') alt='Profile Banner')
+    button.btn__edit-profile
+      img(src=require('../../assets/images/svg/pencil.svg') alt='Edit')
+    p.profile__stats
+      span.profile__following 500+ Following
+      span.profile__followers 210+ Followers
+  .profile__info-summary
+    .profile__display-img-wrap
+      img.profile__display-img(src=require('../../assets/images/img/user-profilepic.png') alt='Profile Picture')
+    .profile__info
+      h1.profile__username Roger Fernando
+      p.profile__user-prof Senior Hair Stylist at Fernando's
+      p.profile__user-location San Francisco, USA
+    .profile__accolades
+      .profile__accolade
+        img.profile__accolade-academy(src=require('../../assets/images/svg/icon-academy.svg') alt='Academy')
+      .profile__accolade
+        img.profile__accolade-trophy(src=require('../../assets/images/svg/icon-trophy.svg') alt='Trophy')
+      .profile__accolade
+        img.profile__accolade-blog(src=require('../../assets/images/svg/icon-blog.svg') alt='Certificates')
+      .profile__accolade
+        img.profile__accolade-badge(src=require('../../assets/images/svg/icon-badge.svg') alt='Awards')
+  .profile__navigation
+    ul.profile__navigation-navbar
+      li.pn__navbar-item.dropdown.custom__dropdown
+        a#profileDropdown.pn__navbar-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false') Profile
+        .dropdown-menu(aria-labelledby='profileDropdown')
+          a.dropdown-item(href='#') Hall of Fame
+          a.dropdown-item(href='#') Blogs
+          a.dropdown-item(href='#') Community Wall
+      li.pn__navbar-item.dropdown.custom__dropdown
+        a#profilePhotoDropdown.pn__navbar-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false') Photos
+        .dropdown-menu(aria-labelledby='profilePhotoDropdown')
+          a.dropdown-item(href='#') Course Search
+          a.dropdown-item(href='#') Tutorial
+      li.pn__navbar-item.active
+        a.pn__navbar-link(href='#') My Activity
+      li.pn__navbar-item.dropdown.custom__dropdown
+        a#profileArticleDropdown.pn__navbar-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false') Articles
+        .dropdown-menu(aria-labelledby='profileArticleDropdown')
+          a.dropdown-item(href='#') Saved Article
+          a.dropdown-item(href='#') My Article
+          a.dropdown-item(href='#') Create a Article
+      li.pn__navbar-item.dropdown.custom__dropdown
+        a#profileWorkshopDropdown.pn__navbar-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false') Workshops
+        .dropdown-menu(aria-labelledby='profileWorkshopDropdown')
+          a.dropdown-item(href='#') Advertise Workshop
+          a.dropdown-item(href='#') Manage Workshop
+      li.pn__navbar-item.dropdown.custom__dropdown
+        a#profileChannelDropdown.pn__navbar-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false') Channel
+        .dropdown-menu(aria-labelledby='profileChannelDropdown')
+          a.dropdown-item.dropdown__sub(href='#') Video
+          .dropdown-menu
+            a.dropdown-item(href='#')
+              img.dropdown__sub-img(src=require('../../assets/images/svg/angle-right.svg') alt='')
+              | My Subscription
+            a.dropdown-item(href='#')
+              img.dropdown__sub-img(src=require('../../assets/images/svg/angle-right.svg') alt='')
+              | Saved Video
+            a.dropdown-item(href='#')
+              img.dropdown__sub-img(src=require('../../assets/images/svg/angle-right.svg') alt='')
+              | Upload Video
+          a.dropdown-item.dropdown__sub(href='#') Channel
+          .dropdown-menu
+            a.dropdown-item(href='#')
+              img.dropdown__sub-img(src=require('../../assets/images/svg/angle-right.svg') alt='')
+              | Channel
+            a.dropdown-item(href='#')
+              img.dropdown__sub-img(src=require('../../assets/images/svg/angle-right.svg') alt='')
+              | Playlist
+            a.dropdown-item(href='#')
+              img.dropdown__sub-img(src=require('../../assets/images/svg/angle-right.svg') alt='')
+              | All Video
+      li.pn__navbar-item.dropdown.custom__dropdown
+        a#profileMoreDropdown.pn__navbar-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false') More
+        .dropdown-menu(aria-labelledby='profileMoreDropdown')
+          a.dropdown-item.dropdown__sub(href='#') Courses
+          .dropdown-menu
+            a.dropdown-item(href='#')
+              img.dropdown__sub-img(src=require('../../assets/images/svg/angle-right.svg') alt='')
+              | Saved Courses
+            a.dropdown-item(href='#')
+              img.dropdown__sub-img(src=require('../../assets/images/svg/angle-right.svg') alt='')
+              | Advertise Course
+            a.dropdown-item(href='#')
+              img.dropdown__sub-img(src=require('../../assets/images/svg/angle-right.svg') alt='')
+              | Manage Courses
+          a.dropdown-item.dropdown__sub(href='#') Jobs
+          .dropdown-menu
+            a.dropdown-item(href='#')
+              img.dropdown__sub-img(src=require('../../assets/images/svg/angle-right.svg') alt='')
+              | Applied Jobs
+            a.dropdown-item(href='#')
+              img.dropdown__sub-img(src=require('../../assets/images/svg/angle-right.svg') alt='')
+              | Saved Jobs

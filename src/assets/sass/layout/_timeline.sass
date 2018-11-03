@@ -1,0 +1,184 @@
+// ./src/assets/sass/layout/_timeline.sass
+
+.profile__timeline-container
+  padding: 15px 8px
+  position: relative
+  background-color: $bg-white
+
+  .timeline__block
+    display: flex
+    flex-direction: column
+    background-color: $bg-white
+    position: relative
+    z-index: 1
+
+    &::after
+      content: '';
+      width: 1px;
+      background: $bg-lightblue;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -1px;
+      z-index: 0;
+
+  .timeline__block-year
+    padding: 8px
+    text-align: center
+    font-size: 18px
+    font-weight: $semi
+    color: $text-gray
+    background-color: $bg-white
+    z-index: 1
+
+  .timeline__block-item
+    display: flex
+    justify-content: space-between
+    align-items: center
+    z-index: 1
+    margin-bottom: 10px
+
+  .timeline__time-item
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex: 0 0 calc(50% - 62px)
+    max-width: calc(50% - 62px)
+    min-height: 90px
+
+    &.timeline__time-right
+      flex-direction: row-reverse
+
+    &.timeline__time-left
+      .timeline__time-block
+        text-align: right
+
+  .timeline__event-item
+    display: flex
+    justify-content: space-between
+    border-radius: 4px
+    background-color: $bg-lightwhite
+    padding: 8px
+    flex: 0 0 calc(50% - 62px)
+    max-width: calc(50% - 62px)
+    min-height: 90px
+
+    &.timeline__event-left
+      flex-direction: row-reverse
+      .timeline__event-block
+        text-align: right
+
+  .timeline__time
+    font-size: 13px
+    color: $text-black
+    margin-bottom: 0px
+    line-height: 20px
+
+  .timeline__time-lapsed
+    font-size: 11px
+    color: $text-blue
+    line-height: 20px
+    margin: 0
+
+  .timeline__edit-btn
+    border: none
+    background: none
+    outline: none
+    box-shadow: none
+    cursor: pointer
+
+    img
+      width: 24px
+      height: 24px
+
+  .timeline__item-point
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    margin: 0 15px
+    max-width: 130px
+
+  .timeline__point
+    width: 30px
+    height: 30px
+    border-radius: 50%
+    background-color: $bg-pink
+    box-shadow: 0 0 10px rgba($black, .25)
+    border: 5px solid $border-brightpink
+    position: relative
+    display: inline-block
+
+    &::before
+      content: ''
+      position: absolute
+      display: inline-block
+      width: 10px
+      height: 10px
+      border-radius: 50%
+      background-color: $bg-lightpink
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+
+  .timeline__point-event
+    display: inline-block
+    font-size: 10px
+    color: $text-black
+    padding: 0
+    margin: 12px 0 0
+    background-color: $bg-white
+    border: 1px solid $border-lightblue
+    border-radius: 25px
+    padding: 4px 8px
+    text-align: center
+
+    &:hover, &:focus
+      color: $text-black
+
+  .timeline__event-block
+    display: flex
+    flex-direction: column
+    flex: 1 1 calc(100% - 80px)
+    max-width: calc(100% - 80px)
+
+  .timeline__event-title
+    font-size: 15px
+    font-weight: $semi
+    color: $text-black
+    line-height: 20px
+    margin: 0
+
+  .timeline__event-subtitle
+    font-size: 13px
+    font-weight: $regular
+    color: $text-black
+    line-height: 18px
+    margin: 0
+
+  .timeline__event-info
+    display: inline-block
+    font-size: 14px
+    color: $text-brightpink
+    text-decoration: underline
+    margin-top: auto
+    margin-bottom: 0
+
+  .timeline__event-img-wrap
+    height: 70px
+    width: 70px
+    max-width: 70px
+    display: inline-flex
+    justify-content: center
+    align-items: center
+    text-align: center
+    background-color: $bg-white
+    border: 1px solid $border-lightblue
+    border-radius: 4px
+
+  .timeline__event-img
+    max-width: 100%
+    height: auto
+    object-fit: cover

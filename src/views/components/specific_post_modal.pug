@@ -1,0 +1,305 @@
+//- ./src/views/components/specific_post_modal.pug
+
+.modal.fade.post__in-modal(tabindex='-1' role='dialog' aria-labelledby=aria aria-hidden='true', id='postInModal')
+  .modal-dialog.modal-dialog-centered.modal-lg(role='document')
+    .modal-content
+      .modal-body
+        .sp__post-modal
+          article.specific__post
+            button.close(type='button' data-dismiss='modal' aria-label='Close')
+              img(src=require('../../assets/images/svg/icon-close.svg'), alt="")
+            .specific__post-header
+              h1.specific__post-heading My Wall Photos
+              p.specific__post-photo-count 1 of 12
+            .specific__post-body
+              +postcarousel('feed__post-carousel-big')
+            .specific__post-footer
+              .specific__post-social
+                a.specific__post-like(href="#")
+                  img(src=require("../../assets/images/svg/like.svg"), alt="")
+                  | Like
+                a.specific__post-comment(href="#")
+                  img(src=require("../../assets/images/svg/comment.svg"), alt="")
+                  | Comment
+                a.specific__post-share(href="#")
+                  img(src=require("../../assets/images/svg/share.svg"), alt="")
+                  | Share
+          aside.specific__post-aside
+            .specific__post-aside-header
+              a.user__avatar-wrap
+                img.user__avatar.user__avatar46(src=require('../../assets/images/img/avatar.jpg'), alt="Avatar")
+              p.m-0.user__info
+                a.user__name Roger Fernando
+                span.user__prof Senior Hair Stylist
+                span.sp__time 24hrs ago
+              .dropdown.custom__dropdown
+                button#dropdownMenuButton.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                  img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+                .dropdown-menu(aria-labelledby='dropdownMenuButton')
+                  a.dropdown-item(href='#', data-toggle='modal' data-target='#flagPost') Flag
+                  a.dropdown-item(href='#') Unfollow
+            .specific__post-aside-body
+              p.specific__post-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde molestias quo culpa et, beatae quos nesciunt ea dolorem, iusto aliquid, accusantium eligendi officia? Doloribus non distinctio veniam reiciendis laborum blanditiis.
+            .specific__post-aside-footer
+              .specific__post-social.specific__post-social-fullwidth
+                a.specific__post-like(href="#")
+                  img(src=require("../../assets/images/svg/like.svg"), alt="")
+                  | 541
+                a.specific__post-comment(href="#")
+                  img(src=require("../../assets/images/svg/comment.svg"), alt="")
+                  | 145
+                a.specific__post-share(href="#")
+                  img(src=require("../../assets/images/svg/share.svg"), alt="")
+                  | 245
+              .specific__post-comments-container
+                .specific__post-comments-info
+                  a.load__comments(href='') Load Previous Comments
+                  span.comments__count 100 of 150
+                .specific__post-comments
+                  .specific__post-comments-item
+                    .specific__post-comments-item-head
+                      a.user__avatar-wrap
+                        img.user__avatar.user__avatar30(src=require('../../assets/images/img/avatar.jpg'), alt="Avatar")
+                      p.specific__post-comment-text Lorem ipsum dolor sit amet consectetur adipisicing
+                    .specific__post-comments-item-foot
+                      p.specific__post-comment-meta
+                        span Like
+                        span Reply
+                        span 2 days ago
+                      .specific__post-comments-item
+                        .specific__post-comments-item-head
+                          a.user__avatar-wrap
+                            img.user__avatar.user__avatar22(src=require('../../assets/images/img/avatar.jpg'), alt="Avatar")
+                          p.specific__post-comment-text Lorem ipsum dolor sit amet
+                        .specific__post-comments-item-foot
+                          p.specific__post-comment-meta
+                            span Like
+                            span Reply
+                            span 2 days ago
+                  .specific__post-comments-item
+                    .specific__post-comments-item-head
+                      a.user__avatar-wrap
+                        img.user__avatar.user__avatar30(src=require('../../assets/images/img/avatar.jpg'), alt="Avatar")
+                      p.specific__post-comment-text Lorem ipsum dolor sit amet consectetur adipisicing
+                    .specific__post-comments-item-foot
+                      p.specific__post-comment-meta
+                        span Like
+                        span Reply
+                        span 2 days ago
+                      .specific__post-comments-item
+                        .specific__post-comments-item-head
+                          a.user__avatar-wrap
+                            img.user__avatar.user__avatar22(src=require('../../assets/images/img/avatar.jpg'), alt="Avatar")
+                          p.specific__post-comment-text Lorem ipsum dolor sit amet
+                        .specific__post-comments-item-foot
+                          p.specific__post-comment-meta
+                            span Like
+                            span Reply
+                            span 2 days ago
+                      .specific__post-comments-item
+                        .specific__post-comments-item-head
+                          a.user__avatar-wrap
+                            img.user__avatar.user__avatar22(src=require('../../assets/images/img/avatar.jpg'), alt="Avatar")
+                          p.specific__post-comment-text Lorem ipsum dolor sit amet consectetur
+                        .specific__post-comments-item-foot
+                          p.specific__post-comment-meta
+                            span Like
+                            span Reply
+                            span 2 days ago
+                      .specific__post-comments-item
+                        .specific__post-comments-item-head
+                          a.user__avatar-wrap
+                            img.user__avatar.user__avatar22(src=require('../../assets/images/img/avatar.jpg'), alt="Avatar")
+                          p.specific__post-comment-text Lorem ipsum dolor sit amet ipsum
+                        .specific__post-comments-item-foot
+                          p.specific__post-comment-meta
+                            span Like
+                            span Reply
+                            span 2 days ago
+                      .specific__post-comments-item
+                        .specific__post-comments-item-head
+                          a.user__avatar-wrap
+                            img.user__avatar.user__avatar22(src=require('../../assets/images/img/avatar.jpg'), alt="Avatar")
+                          p.specific__post-comment-text Lorem ipsum dolor sit amet
+                        .specific__post-comments-item-foot
+                          p.specific__post-comment-meta
+                            span Like
+                            span Reply
+                            span 2 days ago
+                      .specific__post-comments-item
+                        .specific__post-comments-item-head
+                          a.user__avatar-wrap
+                            img.user__avatar.user__avatar22(src=require('../../assets/images/img/avatar.jpg'), alt="Avatar")
+                          p.specific__post-comment-text Lorem ipsum dolor sit amet lorem
+                        .specific__post-comments-item-foot
+                          p.specific__post-comment-meta
+                            span Like
+                            span Reply
+                            span 2 days ago
+                .feed__post-footer
+                  a.feed__post-avatar.feed__post-avatar-small(href="#")
+                    img(src=require("../../assets/images/img/avatar.jpg"), alt="Avatar")
+                  .input-group.feed__post-input
+                    input.form-control.form__control-feed(type='text' placeholder="Comment" aria-label="Comment" aria-describedby='button-addon4')
+                    #button-addon4.input-group-append
+                      button.btn.btn__outline(type='button')
+                        img(src=require("../../assets/images/svg/smiley.svg"), alt="")
+                      button.btn.btn__outline(type='button')
+                        img(src=require("../../assets/images/svg/icon-camera.svg"), alt="")
+                      button.btn.btn__outline(type='button')
+                        img(src=require("../../assets/images/svg/icon-gif.svg"), alt="")
+                      button.btn.btn__outline.btn__send(type='button')
+                        img(src=require("../../assets/images/svg/icon-send.svg"), alt="")
+
+.modal.fade.post__in-modal(tabindex='-1' role='dialog' aria-labelledby=aria aria-hidden='true', id='postLongInModal')
+  .modal-dialog.modal-dialog-centered.modal-lg(role='document')
+    .modal-content
+      .modal-body
+        .sp__post-modal
+          article.specific__post
+            button.close(type='button' data-dismiss='modal' aria-label='Close')
+              img(src=require('../../assets/images/svg/icon-close.svg'), alt="")
+            .specific__post-header
+              h1.specific__post-heading My Wall Photos
+              p.specific__post-photo-count 1 of 12
+            .specific__post-body.specific__post-body-long
+              a.feed__post-post.feed__post-post-single(href="#", data-toggle='modal' data-target='#postInModal')
+                img.feed__post-img-long(src=require('../../assets/images/img/post-long.jpg'), alt="")
+            .specific__post-footer
+              .specific__post-social
+                a.specific__post-like(href="#")
+                  img(src=require("../../assets/images/svg/like.svg"), alt="")
+                  | Like
+                a.specific__post-comment(href="#")
+                  img(src=require("../../assets/images/svg/comment.svg"), alt="")
+                  | Comment
+                a.specific__post-share(href="#")
+                  img(src=require("../../assets/images/svg/share.svg"), alt="")
+                  | Share
+          aside.specific__post-aside
+            .specific__post-aside-header
+              a.user__avatar-wrap
+                img.user__avatar.user__avatar46(src=require('../../assets/images/img/avatar.jpg'), alt="Avatar")
+              p.m-0.user__info
+                a.user__name Roger Fernando
+                span.user__prof Senior Hair Stylist
+                span.sp__time 24hrs ago
+              .dropdown.custom__dropdown
+                button#dropdownMenuButton.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                  img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+                .dropdown-menu(aria-labelledby='dropdownMenuButton')
+                  a.dropdown-item(href='#', data-toggle='modal' data-target='#flagPost') Flag
+                  a.dropdown-item(href='#') Unfollow
+            .specific__post-aside-body
+              p.specific__post-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde molestias quo culpa et, beatae quos nesciunt ea dolorem, iusto aliquid, accusantium eligendi officia? Doloribus non distinctio veniam reiciendis laborum blanditiis.
+            .specific__post-aside-footer
+              .specific__post-social.specific__post-social-fullwidth
+                a.specific__post-like(href="#")
+                  img(src=require("../../assets/images/svg/like.svg"), alt="")
+                  | 541
+                a.specific__post-comment(href="#")
+                  img(src=require("../../assets/images/svg/comment.svg"), alt="")
+                  | 145
+                a.specific__post-share(href="#")
+                  img(src=require("../../assets/images/svg/share.svg"), alt="")
+                  | 245
+              .specific__post-comments-container
+                .specific__post-comments-info
+                  a.load__comments(href='') Load Previous Comments
+                  span.comments__count 100 of 150
+                .specific__post-comments
+                  .specific__post-comments-item
+                    .specific__post-comments-item-head
+                      a.user__avatar-wrap
+                        img.user__avatar.user__avatar30(src=require('../../assets/images/img/avatar.jpg'), alt="Avatar")
+                      p.specific__post-comment-text Lorem ipsum dolor sit amet consectetur adipisicing
+                    .specific__post-comments-item-foot
+                      p.specific__post-comment-meta
+                        span Like
+                        span Reply
+                        span 2 days ago
+                      .specific__post-comments-item
+                        .specific__post-comments-item-head
+                          a.user__avatar-wrap
+                            img.user__avatar.user__avatar22(src=require('../../assets/images/img/avatar.jpg'), alt="Avatar")
+                          p.specific__post-comment-text Lorem ipsum dolor sit amet
+                        .specific__post-comments-item-foot
+                          p.specific__post-comment-meta
+                            span Like
+                            span Reply
+                            span 2 days ago
+                  .specific__post-comments-item
+                    .specific__post-comments-item-head
+                      a.user__avatar-wrap
+                        img.user__avatar.user__avatar30(src=require('../../assets/images/img/avatar.jpg'), alt="Avatar")
+                      p.specific__post-comment-text Lorem ipsum dolor sit amet consectetur adipisicing
+                    .specific__post-comments-item-foot
+                      p.specific__post-comment-meta
+                        span Like
+                        span Reply
+                        span 2 days ago
+                      .specific__post-comments-item
+                        .specific__post-comments-item-head
+                          a.user__avatar-wrap
+                            img.user__avatar.user__avatar22(src=require('../../assets/images/img/avatar.jpg'), alt="Avatar")
+                          p.specific__post-comment-text Lorem ipsum dolor sit amet
+                        .specific__post-comments-item-foot
+                          p.specific__post-comment-meta
+                            span Like
+                            span Reply
+                            span 2 days ago
+                      .specific__post-comments-item
+                        .specific__post-comments-item-head
+                          a.user__avatar-wrap
+                            img.user__avatar.user__avatar22(src=require('../../assets/images/img/avatar.jpg'), alt="Avatar")
+                          p.specific__post-comment-text Lorem ipsum dolor sit amet consectetur
+                        .specific__post-comments-item-foot
+                          p.specific__post-comment-meta
+                            span Like
+                            span Reply
+                            span 2 days ago
+                      .specific__post-comments-item
+                        .specific__post-comments-item-head
+                          a.user__avatar-wrap
+                            img.user__avatar.user__avatar22(src=require('../../assets/images/img/avatar.jpg'), alt="Avatar")
+                          p.specific__post-comment-text Lorem ipsum dolor sit amet ipsum
+                        .specific__post-comments-item-foot
+                          p.specific__post-comment-meta
+                            span Like
+                            span Reply
+                            span 2 days ago
+                      .specific__post-comments-item
+                        .specific__post-comments-item-head
+                          a.user__avatar-wrap
+                            img.user__avatar.user__avatar22(src=require('../../assets/images/img/avatar.jpg'), alt="Avatar")
+                          p.specific__post-comment-text Lorem ipsum dolor sit amet
+                        .specific__post-comments-item-foot
+                          p.specific__post-comment-meta
+                            span Like
+                            span Reply
+                            span 2 days ago
+                      .specific__post-comments-item
+                        .specific__post-comments-item-head
+                          a.user__avatar-wrap
+                            img.user__avatar.user__avatar22(src=require('../../assets/images/img/avatar.jpg'), alt="Avatar")
+                          p.specific__post-comment-text Lorem ipsum dolor sit amet lorem
+                        .specific__post-comments-item-foot
+                          p.specific__post-comment-meta
+                            span Like
+                            span Reply
+                            span 2 days ago
+                .feed__post-footer
+                  a.feed__post-avatar.feed__post-avatar-small(href="#")
+                    img(src=require("../../assets/images/img/avatar.jpg"), alt="Avatar")
+                  .input-group.feed__post-input
+                    input.form-control.form__control-feed(type='text' placeholder="Comment" aria-label="Comment" aria-describedby='button-addon4')
+                    #button-addon4.input-group-append
+                      button.btn.btn__outline(type='button')
+                        img(src=require("../../assets/images/svg/smiley.svg"), alt="")
+                      button.btn.btn__outline(type='button')
+                        img(src=require("../../assets/images/svg/icon-camera.svg"), alt="")
+                      button.btn.btn__outline(type='button')
+                        img(src=require("../../assets/images/svg/icon-gif.svg"), alt="")
+                      button.btn.btn__outline.btn__send(type='button')
+                        img(src=require("../../assets/images/svg/icon-send.svg"), alt="")
+

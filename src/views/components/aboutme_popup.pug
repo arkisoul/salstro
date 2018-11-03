@@ -1,0 +1,127 @@
+//- ./src/views/components/aboutme_popup.pug
+
+include ../mixins/modal.pug
+
+
++modalComplete('Account Details', 'addAboutMe')
+  .modal-body
+    form(action="", method="post")
+      .form-row.form__fields-wrap
+        .col-md-6.form__fields-item
+          .form-group
+            label.theme__label(for='firstName') First Name
+            input.form-control.theme__form-control.theme__primary-form-control.form-control__error(type='text', placeholder='Roger' id='firstName')
+            small.theme__primary-form-error
+              img.theme__primary-form-error-img(src=require('../../assets/images/svg/icon-error.svg') alt='Error')
+              span.theme__primary-form-error-text Error message lorem ipsum
+        .col-md-6.form__fields-item
+          .form-group
+            label.theme__label(for='lastName') Last Name
+            input.form-control.theme__form-control.theme__primary-form-control(type='text', placeholder='Fernando' id='lastName')
+        .col-md-6.form__fields-item
+          .form-group
+            label.theme__label(for='uEmail') E-mail
+            input.form-control.theme__form-control.theme__primary-form-control(type='email', placeholder='roger123.fernando@gmail.com' id='uEmail')
+        .col-md-6.form__fields-item
+          .form-group
+            label.theme__label(for='phoneNo') Phone no.
+            input.form-control.theme__form-control.theme__primary-form-control(type='text', placeholder='Phone No.' id='phoneNo')
+        .col-md-6.form__fields-item
+          .input-group.theme__input-group
+            label.theme__label(for='dob') Date of Birth
+            input.form-control.theme__form-control.theme__primary-form-control.theme__datepicker(type='text' placeholder="Enter your date of birth" id='dob' aria-describedby='button-addon4')
+            #button-addon4.input-group-append
+              button.btn.btn__outline(type='button')
+                img(src=require("../../assets/images/svg/icon-calendar.svg"), alt="")
+        .col-md-6.form__fields-item
+          .form-group
+            label.theme__label(for='countrySelect') Country
+            .theme__select-dropdown
+              button.theme__select-dropdown-toggle(tab-index='-1') Select Country
+              input(type='hidden' name='countrySelect')
+              ul.theme__select-dropdown-menu
+                li.theme__select-dropdown-item
+                  input(type='radio' id='india' name='country' value='india')
+                  label(for='india' data-tar='countrySelect') India
+                li.theme__select-dropdown-item
+                  input(type='radio' id='usa' name='country' value='usa')
+                  label(for='usa' data-tar='countrySelect') USA
+                li.theme__select-dropdown-item
+                  input(type='radio' id='UK' name='country' value='uk')
+                  label(for='UK' data-tar='countrySelect') UK
+                li.theme__select-dropdown-item
+                  input(type='radio' id='france' name='country' value='france')
+                  label(for='france' data-tar='countrySelect') France
+        .col-md-6.form__fields-item
+          .form-group
+            label.theme__label(for='postCode') Post Code
+            input.form-control.theme__form-control.theme__primary-form-control(type='text', placeholder='Enter Postcode here' id='postCode')
+        .col-md-6.form__fields-item
+          .input-group.theme__input-group
+            label.theme__label(for='location') Location
+            input.form-control.theme__form-control.theme__primary-form-control(type='text' placeholder="Enter your location here" id='location' aria-describedby='button-addon4')
+            #button-addon4.input-group-append
+              button.btn.btn__outline(type='button')
+                img(src=require("../../assets/images/svg/icon-map-pin.svg"), alt="")
+        .col-lg-12
+          h1.theme__form-title Profile Details
+        .col-lg-12.form__fields-item
+          .form-group
+            label.theme__label(for='aboutme') About me
+            textarea.form-control.theme__form-control(rows='3' placeholder='Write about yourself here' id='aboutme')
+        .col-md-6.form__fields-item
+          .form-group
+            label.theme__label(for='industrySelect') Industry
+            .theme__select-dropdown
+              button.theme__select-dropdown-toggle(tab-index='-1') Select Industry
+              input(type='hidden' name='industrySelect')
+              ul.theme__select-dropdown-menu
+                li.theme__select-dropdown-item
+                  input(type='radio' id='Salon' name='industry' value='Salon')
+                  label(for='Salon' data-tar='industrySelect') Salon
+                li.theme__select-dropdown-item
+                  input(type='radio' id='Boutique' name='industry' value='Boutique')
+                  label(for='Boutique' data-tar='industrySelect') Boutique
+                li.theme__select-dropdown-item
+                  input(type='radio' id='Fashion' name='industry' value='Fashion')
+                  label(for='Fashion' data-tar='industrySelect') Fashion
+        .col-md-6
+          .form-group
+            label.theme__label(for='experience') Year of Experience
+            input.form-control.theme__form-control.theme__primary-form-control(type='text', placeholder='Year of experience' id='experience')
+        .col-md-6
+          .form-group
+            label.theme__label(for='productsUsed') Products Used
+            input.form-control.theme__form-control.theme__primary-form-control(type='text', placeholder='Add products used' id='productsUsed')
+            .theme__badge-container
+              span.theme__badge
+                | Lorem
+                button.btn__badge-close &times;
+              span.theme__badge
+                | Lorem ipsum
+                button.btn__badge-close &times;
+              span.theme__badge
+                | Lorem dummy
+                button.btn__badge-close &times;
+              span.theme__badge
+                | Lorem
+                button.btn__badge-close &times;
+        .col-md-6
+          .form-group
+            label.theme__label(for='skills') Skills
+            input.form-control.theme__form-control.theme__primary-form-control(type='text', placeholder='Add skills' id='skills')
+            .theme__badge-container
+              span.theme__badge
+                | Lorem
+                button.btn__badge-close &times;
+              span.theme__badge
+                | Lorem ipsum
+                button.btn__badge-close &times;
+              span.theme__badge
+                | Lorem dummy
+                button.btn__badge-close &times;
+              span.theme__badge
+                | Lorem
+                button.btn__badge-close &times;
+      .btn__submit-wrap
+        button.btn.btn__primary(type="submit") Save

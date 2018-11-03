@@ -1,0 +1,85 @@
+//- ./src/views/pages/myprofile_01.pug
+
+extends ../layouts/master.pug
+
+block title
+  title Salstro - My Profile
+
+block content
+  //- header cum navbar
+  include ../components/navbar.pug
+  //- main content
+  section.main-content
+    .container
+      .row
+        .col-lg-3.col-md-4
+          //- include sidebar
+          // Sidebar
+          include ../components/sidebar.pug
+          // ./ Sidebar
+        .col-lg-9.col-md-8
+          //- include content
+          .row
+            //- Include Activity Header
+            .col-12
+              include ../components/myprofile_header.pug
+            .col-12
+              section.myprofile__content
+                .box
+                  .box__head
+                    h1.box__heading About Me
+                    a.box__img-right(href='')
+                      img.box__img-right.img__24(src=require('../../assets/images/svg/icon-pencil-circle.svg'), alt="")
+                  .box__body
+                    .addnew__prompt
+                      a.addnew__prompt-link(href='' data-toggle='modal' data-target='#addAboutMe') Write something about yourself
+                +box('Profile Timeline')
+                  .addnew__prompt
+                    a.addnew__prompt-link(href='' data-toggle='modal' data-target='#addProfileTimeline')
+                      | Add Experience, Education, Awards, Achievements, Events,
+                      br
+                      |  Milestone, Volunteer Experience to your timeline
+                .box
+                  .box__head
+                    h1.box__heading Portfolio
+                    a.box__img-right(href='')
+                      img.box__img-right.img__24(src=require('../../assets/images/svg/icon-pencil-circle.svg'), alt="")
+                  .box__body
+                    a.addnewitem__box.addnewitem__box-big.addnewitem__box-black(href='')
+                      img.addnewitem__box-img(src=require('../../assets/images/svg/icon-cloud.svg') alt='Upload Image')
+                      span.addnewitem__box-text Upload Image  
+                .box
+                  .box__head
+                    h1.box__heading Showreel
+                    a.box__img-right(href='')
+                      img.box__img-right.img__24(src=require('../../assets/images/svg/icon-pencil-circle.svg'), alt="")
+                  .box__body
+                    a.addnewitem__box.addnewitem__box-big.addnewitem__box-black(href='')
+                      img.addnewitem__box-img(src=require('../../assets/images/svg/icon-cloud.svg') alt='Upload Image')
+                      span.addnewitem__box-text Upload Video
+                .box
+                  .box__head
+                    h1.box__heading List of Interests
+                    a.box__img-right(href='')
+                      img.box__img-right.img__24(src=require('../../assets/images/svg/icon-pencil-circle.svg'), alt="")
+                  .box__body
+                    .addnew__prompt
+                      a.addnew__prompt-link(href='' data-toggle='modal' data-target='#addInterests') Add Interests
+                .box
+                  .box__head
+                    h1.box__heading Employer Refereces
+                    a.box__img-right(href='')
+                      img.box__img-right.img__24(src=require('../../assets/images/svg/icon-pencil-circle.svg'), alt="")
+                  .box__body
+                    .addnew__prompt
+                      a.addnew__prompt-link(href='') Add References
+
+block modal
+  include ../components/add_timeline_popup.pug
+  include ../components/aboutme_popup.pug
+  include ../components/addexp_popup.pug
+  include ../components/addvolexp_popup.pug
+  include ../components/addedu_popup.pug
+  include ../components/addaward_popup.pug
+  include ../components/addevents_popup.pug
+  include ../components/addinterests_popup.pug

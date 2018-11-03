@@ -12,6 +12,10 @@
     background-color: $bg-blue
     border-radius: 4px 4px 0 0
 
+  .box__img-right
+    margin-right: 0
+    margin-left: auto
+
   .box__img
     margin-right: 6px
 
@@ -31,3 +35,104 @@
     border-radius: 0 0 4px 4px
     background-color: $bg-white
     padding: 4px 10px 6px
+
+.addnewitem__box-container
+  display: flex
+  flex-wrap: wrap
+
+  .addnewitem__box
+    flex: 1 1 215px
+    max-width: 215px
+    height: 160px
+    justify-content: center
+    &:not(:last-child)
+      margin-right: 18px
+
+.addnewitem__box
+  display: flex
+  flex-direction: column
+  align-items: center
+  text-align: center
+  padding: 12px
+  border-radius: 4px
+  border: 1px solid $border-lightblue
+  margin: 12px 0
+
+  &:hover, &:focus
+    border-color: $border-gray
+    box-shadow: 0 3px 6px rgba($black, 0.16)
+
+  &.addnewitem__box-big
+    .addnewitem__box-img
+      width: 93px
+      height: 93px  
+
+  &.addnewitem__box-black
+    .addnewitem__box-text
+      color: $text-black
+      font-weight: $semi
+
+  .addnewitem__box-img
+    width: 70px
+    height: 61px
+    margin-bottom: 6px
+
+  .addnewitem__box-text
+    color: $text-gray
+    font-size: 13px
+
+.media__container
+  display: flex
+  flex-wrap: wrap
+  margin: 12px 0
+
+  .media__item
+    flex: 1 1 calc(50% - 5px)
+    max-width: calc(50% - 5px)
+    margin-bottom: 10px
+    position: relative
+
+    &:nth-child(odd)
+      margin-right: 10px
+
+    .btn__play
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      z-index: 11
+
+    &.playing
+      .btn__play
+        z-index: 0
+        opacity: 0
+
+  .media__item-img
+    object-fit: cover
+    max-height: 82px
+    max-width: 110px
+    border-radius: 4px
+
+  .media__item-video
+    object-fit: cover
+    max-height: 82px
+    max-width: 110px
+    border-radius: 4px
+    width: 100%
+
+.media__container-pagination
+  text-align: center
+  margin-bottom: 8px
+
+.addnew__prompt
+  margin: 12px 0
+  text-align: center
+
+  .addnew__prompt-link
+    font-size: 13px
+    color: $text-black
+    text-decoration: underline
+
+.img__24
+  width: 24px
+  height: 24px

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 15 15">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: rgba(0,0,0,0);
+        stroke-miterlimit: 10;
+        fill: url(#pattern);
+      }
+    </style>
+    <pattern id="pattern" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 14 14">
+      <image width="14" height="14" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAABHNCSVQICAgIfAhkiAAAARNJREFUKJGNkrErhHEYgJ+PK7e44W64f8CAycCIScpqcbHIZDGYTBbJQCIpoyLZRZdQBpNFGehuYZRFifWxvF9dX3f3eeutX2+/5/e8b+8vUflH9AJHwBMwDNRR87JPrasNdUwtqAc9OaZ+4AwoA7vAKjAIvHYDK8AhcAEsA+PAPXAOjHRqr6zuqHfqVNRG1Qf1Wi0V2pjKwBowBBwDt8AMUAU+gXngJ2uqhOlSXYzaXFhO1VJ6N9vetnrVAi3EI/tqtVWSHorqekBLUasFtJeFUjBRb2JP03mmNAvALPAMNGL4SaAGNIEt4KPtstSVGHpA3VSb6kYnU6txAngD3oEi8B2m325fKlFfgMfIL+CkG5DGH68cXMU0VrjVAAAAAElFTkSuQmCC"/>
+    </pattern>
+  </defs>
+  <rect id="edit_1_" data-name="edit(1)" class="cls-1" width="14" height="14" transform="translate(0.5 0.5)"/>
+</svg>

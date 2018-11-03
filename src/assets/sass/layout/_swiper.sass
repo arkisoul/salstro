@@ -1,0 +1,136 @@
+// ./src/assets/sass/layout/_swiper.sass
+
+.swiper__container
+  .swiper-button-next
+    background-image: url('../images/svg/icon-next.svg')
+    right: 0
+  .swiper-button-prev
+    background-image: url('../images/svg/icon-prev.svg')
+    left: 0
+  .swiper-button-next, .swiper-button-prev
+    width: 30px
+    height: 30px
+    background-size: 100% 100%
+    margin-top: -15px
+
+// Swiper Containers Specifics
+
+.portfolio__container
+  padding: 20px 0
+
+  .addnewitem__box
+    width: 230px
+    height: 170px
+    align-items: center
+    margin: 0 auto
+
+  .portfolio__item
+    max-height: 172px
+    max-width: 230px
+    position: relative
+    margin: 0 auto
+    overflow: hidden
+
+    &:hover, &:focus
+      .portfolio__item-option
+        transform: translateY(0)
+
+  .portfolio__item-img
+    height: 172px
+    object-fit: cover
+    border-radius: 4px
+
+  .portfolio__item-option
+    position: absolute
+    background-color: rgba($bg-black, 0.5)
+    padding: 4px 8px
+    text-align: right
+    border-radius: 0 0 4px 4px
+    transition: all ease-in 300ms
+    left: 0
+    right: 0
+    width: 100%
+    top: 0
+    transform: translateY(-100%)
+
+    .custom__dropdown
+      display: inline-block
+
+      .dropdown-toggle
+        background: none
+
+      .dropdown-menu
+        transform: initial!important
+        top: 125%!important
+        left: -135px!important
+        &::before
+          left: auto
+          right: 15px
+
+.showreel__container
+  padding: 20px 0
+
+  .addnewitem__box
+    width: 230px
+    height: 170px
+    align-items: center
+    margin: 0 auto
+
+  .showreel__item
+    max-height: 172px
+    max-width: 230px
+    position: relative
+    margin: 0 auto
+    overflow: hidden
+
+    &:hover, &:focus
+      .showreel__item-option
+        transform: translateY(0)
+
+    .btn__play
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      z-index: 1
+
+    &.playing
+      .btn__play
+        z-index: 0
+        opacity: 0
+
+  .showreel__item-video
+    width: 100%
+    height: 172px
+    max-width: 230px
+    max-height: 172px
+    object-fit: cover
+    border-radius: 4px
+
+  .showreel__item-option
+    position: absolute
+    background-color: rgba($bg-black, 0.5)
+    padding: 4px 8px
+    text-align: right
+    border-radius: 0 0 4px 4px
+    transition: all ease-in 300ms
+    left: 0
+    right: 0
+    width: 100%
+    top: 0
+    z-index: 1
+    transform: translateY(-100%)
+
+    .custom__dropdown
+      display: inline-block
+
+      .dropdown-toggle
+        background: none
+
+      .dropdown-menu
+        transform: initial!important
+        top: 125%!important
+        left: -135px!important
+        &::before
+          left: auto
+          right: 15px

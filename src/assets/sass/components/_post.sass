@@ -12,6 +12,15 @@
   align-items: flex-start
   margin-bottom: 8px
 
+  .custom__dropdown
+    .dropdown-menu
+      transform: initial!important
+      top: 125%!important
+      left: -135px!important
+      &::before
+        left: auto
+        right: 15px
+
 .feed__post-avatar
   width: 46px
   display: inline-block
@@ -60,12 +69,19 @@
 
 .feed__post-post
   display: block
+  background-color: $bg-black
+  text-align: center
 
-.feed__post-img
-  max-width: 100%
+.feed__post-img-wide
+  display: inline-block
   width: 100%
+  height: 274px
   object-fit: cover
   object-position: center center
+
+.feed__post-img-long
+  display: inline-block
+  max-width: 100%
 
 .feed__post-meta
   display: flex
@@ -104,7 +120,7 @@
   a
     display: inline-flex
     align-items: center
-    font-size: 16px
+    font-size: 15px
     color: $text-black
 
     &:hover, &:focus
@@ -120,7 +136,7 @@
   padding-top: 10px
 
 .feed__post-input
-  flex: 1 1 calc(100% - 60px)
+  flex: 1 1 calc(100% - 56px)
   margin-right: 0px
   margin-left: 16px
   border: 1px solid $border-lightblue
@@ -132,6 +148,14 @@
     padding-right: 4px
     background-color: $bg-offwhite
 
+  .btn__send
+    svg
+      width: 16px
+      height: 16px
+
+      path
+        fill: $text-pink
+
 .form__control-feed
   border: none
   background-color: $bg-offwhite
@@ -139,10 +163,14 @@
   &:focus, &:active
     outline: none!important
     background-color: $bg-offwhite
+    box-shadow: none
+    border: none
 
   &.focused
     background-color: $bg-offwhite
     outline: none!important
+    box-shadow: none
+    border: none
     ~ .input-group-append
         .btn__outline
           background-color: $bg-offwhite
@@ -150,6 +178,9 @@
         .btn__send
           background-color: $bg-offwhite
           display: inline-block
+          
+          svg path
+            fill: $text-brightpink
 
 .feed__nopost
   background-color: $bg-white
@@ -168,3 +199,280 @@
   p
     font-size: 32px
     color: $text-blue
+
+// Specific Post Page
+.specific__post
+  background-color: $bg-white
+  border: 1px solid $border-lightblue
+
+.specific__post-header
+  background-color: $bg-white
+  padding: 15px 12px
+
+.specific__post-heading
+  font-size: 15px
+  color: $text-black
+  line-height: 20px
+  margin: 0
+  font-weight: $semi
+
+.specific__post-photo-count
+  font-size: 12px
+  color: $text-blue
+  line-height: 20px
+  margin: 0
+
+.specific__post-footer
+  background-color: $bg-white
+  padding: 15px 12px
+
+.specific__post-social
+  display: flex
+  align-items: center
+  justify-content: space-between
+  width: 66.66%
+
+  &.specific__post-social-fullwidth
+    width: 100%
+
+.specific__post-like,
+.specific__post-comment,
+.specific__post-share
+  font-size: 13px
+  color: $text-black
+
+  img
+    width: 24px
+    height: 24px
+    margin-right: 10px
+
+  &:hover, &:focus
+    color: $text-black
+
+.feed__post-post-vid
+  min-height: 300px
+
+.feed__post-ytvid
+  width: 100%
+  min-height: 300px
+
+.feed__post-video
+  width: 100%
+  min-height: 300px
+
+// Specific Post Aside
+.specific__post-aside
+  background-color: $bg-white
+  padding: 15px 12px
+
+.specific__post-aside-header
+  display: flex
+  align-items: flex-start
+  margin-bottom: 8px
+
+  .custom__dropdown
+    .dropdown-menu
+      transform: initial!important
+      top: 125%!important
+      left: -135px!important
+      &::before
+        left: auto
+        right: 15px
+
+.user__avatar
+  border-radius: 50%
+  object-fit: cover
+  margin-right: 12px
+
+  &.user__avatar46
+    width: 46px
+    height: 46px
+
+  &.user__avatar30
+    width: 30px
+    height: 30px
+
+  &.user__avatar22
+    width: 22px
+    height: 22px
+
+.user__info
+  line-height: 1
+
+  .user__name
+    display: inline-block
+    width: 100%
+    color: $text-black
+    font-size: 14px
+    font-weight: $semi
+    line-height: 18px
+
+    &:hover, &:focus
+      color: $text-black
+
+  .user__prof
+    font-size: 14px
+    color: $text-gray
+    line-height: 18px
+    display: inline-block
+    width: 100%
+
+  .sp__time
+    font-size: 12px
+    color: $text-blue
+    line-height: 18px
+    display: inline-block
+    width: 100%
+
+.specific__post-aside-body
+  min-height: 120px
+
+.specific__post-text, .specific__post-title
+  font-size: 12px
+  color: $text-black
+  margin-bottom: 10px
+  line-height: 20px
+  text-align: justify
+
+.specific__post-aside-footer
+  .specific__post-social
+    padding: 10px 0
+    border-top: 1px solid $border-offwhite
+    border-bottom: 1px solid $border-offwhite
+
+  .feed__post-input
+    flex: 1 1 calc(100% - 42px)
+    margin-left: 0
+
+.specific__post-comments-info
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding: 15px 0 10px
+
+  .load__comments
+    color: $text-pink
+    font-size: 12px
+
+    &:hover, &:focus
+      color: $text-brightpink
+
+  .comments__count
+    font-size: 12px
+    color: $text-blue
+
+.specific__post-comments-item
+  padding: 6px 0
+
+.specific__post-comments-item-head
+  display: flex
+  align-items: center
+
+.specific__post-comment-text
+  font-size: 12px
+  background-color: $bg-lightwhite
+  border-radius: 4px
+  padding: 9.5px 10px
+  margin-bottom: 4px
+  line-height: 1
+
+.specific__post-comments-item-foot
+  margin-left: 42px
+
+  .specific__post-comments-item-foot
+    margin-left: 34px
+
+.specific__post-comment-meta
+  margin: 0
+  line-height: 1
+
+  span
+    font-size: 10px
+    color: $text-blue
+    padding: 0 10px
+    position: relative
+
+    &:not(:last-child)
+      margin-right: 4px
+      &::after
+        content: ''
+        position: absolute
+        top: 50%
+        right: -4px
+        height: 4px
+        width: 4px
+        margin-top: -2px
+        background-color: $bg-blue
+        border-radius: 50%
+
+// Specific Post in Modal
+.sp__post-modal
+  display: flex
+
+  .specific__post
+    flex: 0 0 850px
+    max-height: 768px
+    overflow-y: scroll
+    position: relative
+    border: none
+    display: flex
+    flex-direction: column
+    background-color: $bg-black
+
+    &:hover, &:focus
+      .specific__post-header
+        background-image: linear-gradient(to bottom, $black 5%, rgba($black, 0.1))
+        background-size: cover
+        background-color: transparent
+      .specific__post-footer
+        background-image: linear-gradient(to top, $black 5%, rgba($black, 0.1))
+        background-size: cover
+        background-color: transparent
+
+    .close
+      position: absolute
+      padding: 0
+      margin: 0
+      width: 30px
+      height: 30px
+      border-radius: 50%
+      z-index: 11
+      top: 15px
+      right: 12px
+      opacity: 1
+      img
+        width: 30px
+        height: 30px
+  .specific__post-aside
+    flex: 0 0 350
+    max-height: 768px
+    overflow-y: scroll
+  .specific__post-header, .specific__post-footer
+    background-color: $bg-black
+    position: absolute
+    z-index: 2
+    left: 0
+    width: 100%
+    transition: all ease-in 300ms
+  .specific__post-header
+    top: 0
+    padding-bottom: 40px
+  .specific__post-footer
+    bottom: 0
+    margin-top: auto
+    margin-bottom: 0
+    padding-top: 40px
+  .specific__post-body
+    position: absolute
+    width: 100%
+    top: 50%
+    transform: translateY(-50%)
+    z-index: 1
+    
+    &.specific__post-body-long
+      top: 0
+      bottom: 0
+      transform: translateY(0)
+
+  .specific__post-heading, .specific__post-photo-count, .specific__post-like, .specific__post-comment, .specific__post-share
+    color: $text-white

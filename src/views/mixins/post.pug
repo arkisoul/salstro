@@ -14,7 +14,7 @@ mixin post()
         button#dropdownMenuButton.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
           img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
         .dropdown-menu(aria-labelledby='dropdownMenuButton')
-          a.dropdown-item(href='#') Flag
+          a.dropdown-item(href='#' data-toggle='modal' data-target='#flagPost') Flag
           a.dropdown-item(href='#') Unfollow
     .feed__post-body
       if block
@@ -38,6 +38,51 @@ mixin post()
         a.feed__post-share(href="#")
           img(src=require("../../assets/images/svg/share.svg"), alt="")
           | Share
+    .specific__post-comments-container
+      .specific__post-comments-info
+        a.load__comments(href='') Load Previous Comments
+        span.comments__count 100 of 150
+      .specific__post-comments
+        .specific__post-comments-item
+          .specific__post-comments-item-head
+            a.user__avatar-wrap
+              img.user__avatar.user__avatar30(src=require('../../assets/images/img/avatar.jpg'), alt="Avatar")
+            p.specific__post-comment-text Lorem ipsum dolor sit amet consectetur adipisicing
+          .specific__post-comments-item-foot
+            p.specific__post-comment-meta
+              span Like
+              span Reply
+              span 2 days ago
+            .specific__post-comments-item
+              .specific__post-comments-item-head
+                a.user__avatar-wrap
+                  img.user__avatar.user__avatar22(src=require('../../assets/images/img/avatar.jpg'), alt="Avatar")
+                p.specific__post-comment-text Lorem ipsum dolor sit amet
+              .specific__post-comments-item-foot
+                p.specific__post-comment-meta
+                  span Like
+                  span Reply
+                  span 2 days ago
+        .specific__post-comments-item
+          .specific__post-comments-item-head
+            a.user__avatar-wrap
+              img.user__avatar.user__avatar30(src=require('../../assets/images/img/avatar.jpg'), alt="Avatar")
+            p.specific__post-comment-text Lorem ipsum dolor sit amet consectetur adipisicing
+          .specific__post-comments-item-foot
+            p.specific__post-comment-meta
+              span Like
+              span Reply
+              span 2 days ago
+            .specific__post-comments-item
+              .specific__post-comments-item-head
+                a.user__avatar-wrap
+                  img.user__avatar.user__avatar22(src=require('../../assets/images/img/avatar.jpg'), alt="Avatar")
+                p.specific__post-comment-text Lorem ipsum dolor sit amet
+              .specific__post-comments-item-foot
+                p.specific__post-comment-meta
+                  span Like
+                  span Reply
+                  span 2 days ago
     .feed__post-footer
       a.feed__post-avatar.feed__post-avatar-small(href="#")
         img(src=require("../../assets/images/img/avatar.jpg"), alt="Avatar")
@@ -51,4 +96,9 @@ mixin post()
           button.btn.btn__outline(type='button')
             img(src=require("../../assets/images/svg/icon-gif.svg"), alt="")
           button.btn.btn__outline.btn__send(type='button')
-            img(src=require("../../assets/images/svg/icon-send.svg"), alt="")
+            //- img(src=require("../../assets/images/svg/icon-send.svg"), alt="")
+            svg(xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewbox='0 0 16 13.769')
+              g(transform='translate(0 88.007)')
+                g.b(transform='translate(0 -88.007)')
+                  g(transform='translate(0 0)')
+                    path.c(d='M0,0,14.262,6.132,16,6.882,0,13.769V8.386a2,2,0,0,0,.249,0q4.295-.57,8.589-1.144c.656-.088,1.309-.193,1.963-.29a31.7,31.7,0,0,0-3.694-.643Q3.554,5.84,0,5.382Z')

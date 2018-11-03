@@ -1,0 +1,32 @@
+//- ./src/views/components/posts.pug
+include ../mixins/post.pug
+include ../mixins/postcarousel.pug
+include ../mixins/nopost.pug
+include ../mixins/postimage.pug
+include ../mixins/postarticle.pug
+include ../mixins/postvideo.pug
+
+// User posts
+.feed__post-container
+  +post
+    +postImage("/assets/images/img/post-01.jpg")
+  +post
+    +postArticle
+  +post
+    +postcarousel
+  +post
+    +postImage("/assets/images/img/post-03.jpg")
+  +post
+    p.feed__post-title Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum fugiat quasi
+    a.feed__post-post.feed__post-post-single(href="#", data-toggle='modal' data-target='#postLongInModal')
+      img.feed__post-img-long(src=require('../../assets/images/img/post-long.jpg'), alt="")
+  +post
+    +postVideo
+      video.feed__post-video(poster=require('../../assets/images/img/post-04.jpg') controls mute preload)
+        source(src=require("../../assets/media/post.mp4"), type="video/mp4")
+        Your browser doesn't support video tag
+  +post
+    +postVideo
+      iframe.feed__post-ytvid(src='https://www.youtube.com/embed/KU4EHIE3ElY?autoplay=0&rel=0&showinfo=0&controls=0&fs=0&iv_load_policy=1&modestbranding=1' frameborder='0' allow='accelerometer; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+  +nopostBox
+// ./ User posts

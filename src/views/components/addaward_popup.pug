@@ -1,0 +1,67 @@
+//- ./src/views/components/addaward_popup.pug
+
+include ../mixins/modal.pug
+
++modalComplete('Add Awards &amp; Achievements', 'addAwardAchievement')
+  .modal-body
+    form(action="", method="post")
+      .form-row.form__fields-wrap
+        .col-md-6.form__fields-item
+          .form-group
+            label.theme__label(for='awardTitle') Title
+            input.form-control.theme__form-control.theme__primary-form-control.form-control__error(type='text', placeholder='Best Hair Stylist Award' id='awardTitle')
+            small.theme__primary-form-error
+              img.theme__primary-form-error-img(src=require('../../assets/images/svg/icon-error.svg') alt='Error')
+              span.theme__primary-form-error-text Error message lorem ipsum
+        .col-md-6.form__fields-item
+          .form-group
+            label.theme__label(for='organization') Organization
+            input.form-control.theme__form-control.theme__primary-form-control(type='text', placeholder='Enter Institute Name' id='organization')
+        .col-md-6.form__fields-item
+          .form-group
+            label.theme__label(for='countrySelect') Country
+            .theme__select-dropdown
+              button.theme__select-dropdown-toggle Select Country
+              input(type='hidden' name='countrySelect')
+              ul.theme__select-dropdown-menu
+                li.theme__select-dropdown-item
+                  input(type='radio' id='india' name='country' value='india')
+                  label(for='india' data-tar='countrySelect') India
+                li.theme__select-dropdown-item
+                  input(type='radio' id='usa' name='country' value='usa')
+                  label(for='usa' data-tar='countrySelect') USA
+                li.theme__select-dropdown-item
+                  input(type='radio' id='UK' name='country' value='uk')
+                  label(for='UK' data-tar='countrySelect') UK
+                li.theme__select-dropdown-item
+                  input(type='radio' id='france' name='country' value='france')
+                  label(for='france' data-tar='countrySelect') France
+        .col-md-6.form__fields-item
+          .form-group
+            label.theme__label(for='postCode') Post Code
+            input.form-control.theme__form-control.theme__primary-form-control(type='text', placeholder='Enter Postcode here' id='postCode')
+        .col-md-6.form__fields-item
+          .input-group.theme__input-group
+            label.theme__label(for='location') Location
+            input.form-control.theme__form-control.theme__primary-form-control(type='text' placeholder="Enter your location here" id='location' aria-describedby='button-addon4')
+            #button-addon4.input-group-append
+              button.btn.btn__outline(type='button')
+                img(src=require("../../assets/images/svg/icon-map-pin.svg"), alt="")
+        .w-100
+        .col-lg-12.form__fields-item
+          .form-group
+            label.theme__label(for='description') Description
+            textarea.form-control.theme__form-control(rows='3' placeholder='Write here' id='description')
+        .col-lg-12.form__fields-item
+          .custom-control.custom-checkbox.theme__checkbox
+            input#awardCheck.custom-control-input.theme__checkbox-input(type='checkbox' checked)
+            label.custom-control-label.theme__checkbox-label(for='awardCheck') This award was issued at state/national level for hair or beauty.
+            span.theme__tooltip-icon(data-toggle="tooltip" data-placement="top" title='“Select checkbox to feature in the Artist directory. Evidence will be required for approval.”') ?
+        .col-md-6
+          .form-group.theme__file-upload
+            input.theme__file-upload-input(type='file' id='awardImage')
+            label.theme__file-upload-label.addnewitem__box(for='awardImage')
+              img.addnewitem__box-img(src=require('../../assets/images/svg/icon-addimage.svg') alt='Add Image')
+              span.addnewitem__box-text Add New Image
+      .btn__submit-wrap
+        button.btn.btn__primary(type="submit") Save
