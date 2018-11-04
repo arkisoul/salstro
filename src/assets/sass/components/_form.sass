@@ -232,7 +232,7 @@
         border: 1px solid $border-offwhite
       &::after
         background-image: url('../images/svg/icon-check.svg')
-        
+
   .theme__checkbox-label
     font-size: 14px
     font-weight: $regular
@@ -291,3 +291,73 @@
     font-size: 10px
     color: $text-gray
     background-color: $bg-lightwhite
+
+// Toggle Switch
+.theme__toggle-switch
+  margin: 0
+  padding: 0
+  display: inline-block
+  position: relative
+
+  .theme__toggle-switch-input
+    position: absolute
+    width: 0.1px
+    height: 0.1px
+    z-index: -1
+    visibility: hidden
+
+    &:checked ~ .theme__toggle-switch-handle
+      .theme__toggle-switch-private
+        z-index: 1
+        border-radius: 20px
+        background-color: $bg-gray
+        color: $text-white
+        width: 55px
+
+      .theme__toggle-switch-public
+        border-radius: 0 20px 20px 0
+        width: 50%
+        background-color: $bg-white
+        color: $text-gray
+
+
+  .theme__toggle-switch-handle
+    position: relative
+    display: inline-block
+    background-color: $bg-white
+    border: 1px solid $border-lightblue
+    color: $text-gray
+    min-width: 100px
+    min-height: 20px
+    border-radius: 20px
+    z-index: 1
+    margin: 0
+
+    .theme__toggle-switch-private,
+    .theme__toggle-switch-public
+      display: inline-block
+      position: absolute
+      top: 0
+      bottom: 0
+      height: 100%
+      width: 50%
+      padding: 4px
+      text-align: center
+      font-size: 12px
+      line-height: 1
+      transition: all ease-in 300ms
+      cursor: pointer
+
+    .theme__toggle-switch-private
+      left: 0
+      z-index: 0
+      border-radius: 20px 0 0 20px
+      background-color: $bg-white
+
+    .theme__toggle-switch-public
+      right: 0
+      z-index: 0
+      border-radius: 20px
+      background-color: $bg-gray
+      color: $text-white
+      width: 50px

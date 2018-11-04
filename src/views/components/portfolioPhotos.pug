@@ -1,0 +1,13 @@
+//- ./src/views/components/portfolioPhotos.pug
+
+include ../mixins/photoItem.pug
+
+.portfolio__photos
+  .portfolio__photo-item
+    a.addnewitem__box.addnewitem__box-big(href='' data-toggle='modal' data-target='#uploadPhoto')
+      img.addnewitem__box-img(src=require('../../assets/images/svg/icon-addimage.svg') alt='Upload Image')
+      span.addnewitem__box-text Upload New Image
+  - for(var x = 1; x <= 8; x++)
+    +photoItem(x)
+  .portfolio__container-pagination
+    button.btn.btn__primary View More

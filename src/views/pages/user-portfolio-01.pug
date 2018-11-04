@@ -1,0 +1,84 @@
+//- ./src/views/pages/user-portfolio-01.pug
+
+extends ../layouts/master.pug
+
+block title
+  title Salstro - Portfolio
+
+block content
+  //- header cum navbar
+  include ../components/navbar.pug
+  //- main content
+  section.main-content
+    .container
+      .row
+        .col-lg-3.col-md-4
+          //- include sidebar
+          // Sidebar
+          include ../components/sidebar.pug
+          // ./ Sidebar
+        .col-lg-9.col-md-8
+          //- include content
+          .row
+            //- Include Activity Header
+            .col-12
+              include ../components/myprofile_header.pug
+            .col-12
+              section.myprofile__content
+                +box('Photos')
+                  .portfolio__photo-container
+                    .portfolio__container-header
+                      // Nav tabs
+                      ul#portfolio__photo-tabs.portfolio__photo-tabs.nav.nav-tabs(role='tablist')
+                        li.nav-item
+                          a#portfolioPhoto-tab.nav-link.active(data-toggle='tab' href='#portfolioPhoto' role='tab' aria-controls='portfolioPhoto' aria-selected='true') Your Photos
+                        li.nav-item
+                          a#portfolioAlbum-tab.nav-link(data-toggle='tab' href='#portfolioAlbum' role='tab' aria-controls='portfolioAlbum' aria-selected='false') Albums
+                      a.btn__primary-link(href="" data-toggle='modal' data-target='#createAlbum') Create New Album
+                    .portfolio__container-content.tab-content
+                      #portfolioPhoto.tab-pane.active(role='tabpanel' aria-labelledby='portfolioPhoto-tab')
+                        .portfolio__photos
+                          .portfolio__photo-item.portfolio__item-full
+                            a.addnewitem__box.addnewitem__box-big(href='' data-toggle='modal' data-target='#uploadPhoto')
+                              img.addnewitem__box-img(src=require('../../assets/images/svg/icon-addimage.svg') alt='Upload Image')
+                              span.addnewitem__box-text Upload New Image
+                      #portfolioAlbum.tab-pane(role='tabpanel' aria-labelledby='portfolioAlbum-tab')
+                        include ../components/portfolioAlbum.pug
+                +box('Videos')
+                  .portfolio__video-container
+                    .portfolio__video-newsfeed
+                      h3.portfolio__heading Profile &amp; Newsfeed Videos
+                      .portfolio__video-item
+                        a.addnewitem__box.addnewitem__box-big(href='')
+                          img.addnewitem__box-img(src=require('../../assets/images/svg/icon-addvideo.svg') alt='Upload Image')
+                          span.addnewitem__box-text Add New Video
+                        .portfolio__video-option
+                          span.portfolio__video-text My Profile Showreel
+                          .dropdown.custom__dropdown
+                            button#portItemOpt.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                              img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+                            .dropdown-menu(aria-labelledby='portItemOpt')
+                              a.dropdown-item(href='#') Edit
+                              a.dropdown-item(href='#') Delete
+                      .portfolio__video-item
+                        a.addnewitem__box.addnewitem__box-big(href='')
+                          img.addnewitem__box-img(src=require('../../assets/images/svg/icon-addvideo.svg') alt='Upload Image')
+                          span.addnewitem__box-text Add New Video
+                        .portfolio__video-option
+                          span.portfolio__video-text Newsfeed Videos
+                          .dropdown.custom__dropdown
+                            button#portItemOpt.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                              img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+                            .dropdown-menu(aria-labelledby='portItemOpt')
+                              a.dropdown-item(href='#') Edit
+                              a.dropdown-item(href='#') Delete
+                    .portfolio__video-other
+                      h3.portfolio__heading Other Videos
+                      .portfolio__video-item.portfolio__item-full
+                        a.addnewitem__box.addnewitem__box-big(href='')
+                          img.addnewitem__box-img(src=require('../../assets/images/svg/icon-addvideo.svg') alt='Upload Image')
+                          span.addnewitem__box-text Add New Video
+
+block modal
+  include ../components/addPhotoPopup.pug
+  include ../components/createAlbumPopup.pug

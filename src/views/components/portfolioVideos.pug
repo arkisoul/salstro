@@ -1,0 +1,59 @@
+//- ./src/views/components/portfolioVideos.pug
+
+include ../mixins/box.pug
+include ../mixins/videoItem.pug
+
++box('Videos')
+  .portfolio__video-container
+    .portfolio__video-newsfeed
+      h3.portfolio__heading Profile &amp; Newsfeed Videos
+      .portfolio__video-item
+        button.btn__play.btn__play40
+          img(src=require('../../assets/images/svg/btn-play.svg'))
+        video.portfolio__item-video(poster=require('../../assets/images/img/port-01.jpg'))
+          source(src=require("../../assets/media/post.mp4"), type="video/mp4")
+          Your browser doesn't support video tag
+        .portfolio__video-option
+          span.portfolio__video-text My Profile Showreel
+          .dropdown.custom__dropdown
+            button#portItemOpt.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+              img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+            .dropdown-menu(aria-labelledby='portItemOpt')
+              a.dropdown-item(href='#') Edit
+              a.dropdown-item(href='#') Delete
+        .portfolio__item-privacy
+          .theme__toggle-switch
+            input(type='checkbox' id='toggle01').theme__toggle-switch-input
+            label(for='toggle01').theme__toggle-switch-handle
+              span.theme__toggle-switch-private Private
+              span.theme__toggle-switch-public Public
+      .portfolio__video-item
+        button.btn__play.btn__play40
+          img(src=require('../../assets/images/svg/btn-play.svg'))
+        video.portfolio__item-video(poster=require('../../assets/images/img/port-08.jpg'))
+          source(src=require("../../assets/media/post.mp4"), type="video/mp4")
+          Your browser doesn't support video tag
+        .portfolio__video-option
+          span.portfolio__video-text Newsfeed Videos
+          .dropdown.custom__dropdown
+            button#portItemOpt.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+              img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+            .dropdown-menu(aria-labelledby='portItemOpt')
+              a.dropdown-item(href='#') Edit
+              a.dropdown-item(href='#') Delete
+        .portfolio__item-privacy
+          .theme__toggle-switch
+            input(type='checkbox' id='toggle01').theme__toggle-switch-input
+            label(for='toggle01').theme__toggle-switch-handle
+              span.theme__toggle-switch-private Private
+              span.theme__toggle-switch-public Public
+    .portfolio__video-other
+      h3.portfolio__heading Other Videos
+      .portfolio__video-item
+        a.addnewitem__box.addnewitem__box-big(href='')
+          img.addnewitem__box-img(src=require('../../assets/images/svg/icon-addvideo.svg') alt='Upload Image')
+          span.addnewitem__box-text Add New Video
+      - for(var x = 1; x <= 8; x++)
+        +videoItem(x)
+      .portfolio__container-pagination
+              button.btn.btn__primary View More

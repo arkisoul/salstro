@@ -31,3 +31,362 @@
 
     &:not(:last-child)
       margin-right: 8px
+
+// Portfolio
+.portfolio__heading
+  display: block
+  width: 100%
+  flex: 0 0 100%
+  grid-column: 1/-1
+  padding-bottom: 8px
+  color: $text-black
+  font-size: 15px
+  font-weight: $semi
+  margin: 0
+  border-bottom: 1px solid $border-lightblue
+
+// Portfolio Photos & Videos
+.portfolio__photo-container
+  padding: 12px 8px
+
+  .portfolio__item-full
+    grid-column: 1/-1
+
+  .portfolio__photo-item
+    position: relative
+
+  .portfolio__item-img
+    object-fit: cover
+    height: 187px
+    border-radius: 4px
+
+  .portfolio__item-option
+    position: absolute
+    background-color: rgba($bg-black, 0.5)
+    box-shadow: 0 -2px 6px rgba($black, 0.16)
+    left: 0
+    right: 0
+    bottom: 0
+    width: 100%
+    border-radius: 0 0 4px 4px
+    padding: 4px 8px
+    text-align: right
+
+    .custom__dropdown
+      display: inline-block
+
+      .dropdown-toggle
+        background: none
+
+      .dropdown-menu
+        transform: initial!important
+        top: 125%!important
+        left: -135px!important
+
+        &::before
+          left: auto
+          right: 15px
+
+.portfolio__container-header
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-bottom: 16px
+
+.portfolio__photo-tabs
+  border-bottom: none
+
+  .nav-item
+    margin-bottom: 0
+
+    &:not(:last-child)
+      margin-right: 12px
+
+  .nav-link
+    padding: 7px 10px
+    font-size: 15px
+    color: $text-brightpink
+    background-color: $bg-white
+    border: 1px solid $border-brightpink
+    border-radius: 4px
+    transition: all ease-in 300ms
+
+    &.active, &:hover, &:focus
+      color: $text-white
+      background-color: $bg-brightpink
+      border: 1px solid $border-brightpink
+
+.portfolio__photos
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  grid-template-rows: auto
+  grid-gap: 20px
+
+  .addnewitem__box
+    margin: 0
+    height: 187px
+    justify-content: center
+
+// Portfolio Albums
+.portfolio__albums
+
+  .portfolio__item-full
+    grid-column: 1/-1
+
+  .portfolio__album-option
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 4px 2px
+
+  .portfolio__album-text
+    font-size: 13px
+    color: $text-blue
+
+  .custom__dropdown
+
+    .dropdown-toggle
+      background: none
+
+    .dropdown-menu
+      transform: initial!important
+      top: 125%!important
+      left: -135px!important
+
+      &::before
+        left: auto
+        right: 15px
+
+  .portfolio__album-item
+    position: relative
+
+    .portfolio__item-privacy
+      position: absolute
+      top: 6px
+      right: 6px
+
+  .portfolio__album-img
+    object-fit: cover
+    height: 187px
+    border-radius: 4px
+
+.portfolio__albums-newsfeed
+  margin-bottom: 20px
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  grid-template-rows: auto
+  grid-gap: 20px
+
+  .addnewitem__box
+    margin: 0
+    height: 187px
+    justify-content: center
+
+.portfolio__album-other
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  grid-template-rows: auto
+  grid-gap: 20px
+
+  .addnewitem__box
+    margin: 0
+    height: 187px
+    justify-content: center
+
+// Portfolio Videos
+.portfolio__video-container
+  padding: 12px 8px
+
+  .portfolio__video-item
+    position: relative
+    margin: 0
+
+    .portfolio__item-privacy
+      position: absolute
+      top: 6px
+      right: 6px
+
+    .btn__play
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      z-index: 1
+      margin-top: -17px
+
+    &.playing
+      .btn__play
+        z-index: 0
+        opacity: 0
+
+  .portfolio__item-video
+    width: 100%
+    height: 187px
+    object-fit: cover
+    border-radius: 4px
+
+  .portfolio__item-full
+    grid-column: 1/-1
+
+  .portfolio__video-option
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 4px 2px
+
+  .portfolio__video-text
+    font-size: 13px
+    color: $text-blue
+
+  .custom__dropdown
+
+    .dropdown-toggle
+      background: none
+
+    .dropdown-menu
+      transform: initial!important
+      top: 125%!important
+      left: -135px!important
+
+      &::before
+        left: auto
+        right: 15px
+
+.portfolio__video-newsfeed
+  margin-bottom: 20px
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  grid-template-rows: auto
+  grid-gap: 20px
+
+  .addnewitem__box
+    margin: 0
+    height: 100%
+    justify-content: center
+
+.portfolio__video-other
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  grid-template-rows: auto
+  grid-gap: 20px
+
+  .addnewitem__box
+    margin: 0
+    height: 187px
+    justify-content: center
+
+.portfolio__container-pagination
+  width: 100%
+  grid-column: 1/-1
+  text-align: center
+  padding: 8px
+
+// Album View
+.album__view-container
+  @extend .portfolio__photo-container
+
+  .album__view-head
+    text-align: right
+    padding: 8px 0
+
+  .album__view-content
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-template-rows: auto
+    grid-gap: 20px
+
+  .addnewitem__box
+    margin: 0
+    height: 187px
+    justify-content: center
+
+// Add photo Popup
+.upload__photo-container
+  padding: 8px
+
+.upload__photo-head
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 8px 0
+
+  .form-group
+    flex: 1 1 calc(100% - 60px)
+
+.upload__photo-body
+  padding: 8px 0 12px
+  border-bottom: 1px solid $border-lightblue
+
+  .newphotopost__group, .newpost__options-tag
+    margin-left: 0
+
+.upload__photo-foot
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 8px 0
+
+// Create Album Popup
+.create__album-container
+  padding: 8px
+
+  .newpost__options-tag
+    margin-left: 0
+
+  .form__fields-wrap
+    padding-bottom: 0
+
+.create__album-photos
+  display: grid
+  grid-template-columns: repeat(4, 1fr)
+  grid-template-rows: auto
+  grid-gap: 20px
+
+  .addnewitem__box
+    margin: 0
+    height: 106px
+    justify-content: center
+
+    img
+      height: 46px
+      width: 53px
+
+  .portfolio__album-option
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 4px 2px
+
+  .portfolio__album-text
+    font-size: 13px
+    color: $text-blue
+
+  .custom__dropdown
+
+    .dropdown-toggle
+      background: none
+
+    .dropdown-menu
+      transform: initial!important
+      top: 125%!important
+      left: -135px!important
+
+      &::before
+        left: auto
+        right: 15px
+
+  .portfolio__album-item
+    position: relative
+
+  .portfolio__album-img
+    object-fit: cover
+    height: 106px
+    border-radius: 4px
+    width: 100%
+
+.create__album-foot
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 8px 0
+  width: 100%

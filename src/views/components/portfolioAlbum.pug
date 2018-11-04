@@ -1,0 +1,48 @@
+//- ./src/views/components/portfolioAlbum.pug
+
+include ../mixins/albumItem.pug
+
+
+.portfolio__albums
+  .portfolio__albums-newsfeed
+    h3.portfolio__heading Profile &amp; Newsfeed Albums
+    .portfolio__album-item
+      img.portfolio__album-img(src=require('../../assets/images/img/port-04.jpg'), alt="Portfolio")
+      .portfolio__album-option
+        span.portfolio__album-text My Profile Portfolio
+        .dropdown.custom__dropdown
+          button#portItemOpt.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+            img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+          .dropdown-menu(aria-labelledby='portItemOpt')
+            a.dropdown-item(href='#') Edit
+            a.dropdown-item(href='#') Delete
+      .portfolio__item-privacy
+        .theme__toggle-switch
+          input(type='checkbox' id='toggle01').theme__toggle-switch-input
+          label(for='toggle01').theme__toggle-switch-handle
+            span.theme__toggle-switch-private Private
+            span.theme__toggle-switch-public Public
+    .portfolio__album-item
+      img.portfolio__album-img(src=require('../../assets/images/img/port-08.jpg'), alt="Portfolio")
+      .portfolio__album-option
+        span.portfolio__album-text Newsfeed Photos
+        .dropdown.custom__dropdown
+          button#portItemOpt.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+            img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+          .dropdown-menu(aria-labelledby='portItemOpt')
+            a.dropdown-item(href='#') Edit
+            a.dropdown-item(href='#') Delete
+      .portfolio__item-privacy
+        .theme__toggle-switch
+          input(type='checkbox' id='toggle01').theme__toggle-switch-input
+          label(for='toggle01').theme__toggle-switch-handle
+            span.theme__toggle-switch-private Private
+            span.theme__toggle-switch-public Public
+  .portfolio__album-other
+    h3.portfolio__heading Other Album
+    .portfolio__album-item
+      a.addnewitem__box.addnewitem__box-big(href='' data-toggle='modal' data-target='#createAlbum')
+        img.addnewitem__box-img(src=require('../../assets/images/svg/icon-addimage.svg') alt='Upload Image')
+        span.addnewitem__box-text Add New Album
+    - for(var x = 1; x <= 8; x++)
+      +albumItem(x)

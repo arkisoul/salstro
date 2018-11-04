@@ -1,0 +1,12 @@
+//- ./src/views/mixins/photoItem.pug
+
+mixin photoItem(num)
+  .portfolio__photo-item
+    img.portfolio__item-img(src=require('../../assets/images/img/port-0' + num + '.jpg'), alt="Portfolio")
+    .portfolio__item-option
+      .dropdown.custom__dropdown
+        button#portItemOpt.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+          img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+        .dropdown-menu(aria-labelledby='portItemOpt')
+          a.dropdown-item(href='#') Edit
+          a.dropdown-item(href='#') Delete

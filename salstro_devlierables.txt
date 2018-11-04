@@ -23,4 +23,11 @@ Date 03 Nov 2018
 Date
 :: Pages ::
 1. My Profile 02 (with content)
+2. My Porftolio 01 (with placeholders)
+3. My Porftolio 02 (with content)
+4. My Porftolio Album
+5. My Porftolio Album View
+
 :: Popups ::
+1. Add Image
+2. Create Album

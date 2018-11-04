@@ -1,0 +1,23 @@
+//- ./src/views/mixins/videoItem.pug
+
+mixin videoItem(num)
+  .portfolio__video-item
+    button.btn__play.btn__play40
+      img(src=require('../../assets/images/svg/btn-play.svg'))
+    video.portfolio__item-video(poster=require('../../assets/images/img/port-0' + num + '.jpg'))
+      source(src=require("../../assets/media/post.mp4"), type="video/mp4")
+      Your browser doesn't support video tag
+    .portfolio__video-option
+      span.portfolio__video-text Newsfeed Videos
+      .dropdown.custom__dropdown
+        button#portItemOpt.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+          img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+        .dropdown-menu(aria-labelledby='portItemOpt')
+          a.dropdown-item(href='#') Edit
+          a.dropdown-item(href='#') Delete
+    .portfolio__item-privacy
+      .theme__toggle-switch
+        input(type='checkbox' id='toggle01').theme__toggle-switch-input
+        label(for='toggle01').theme__toggle-switch-handle
+          span.theme__toggle-switch-private Private
+          span.theme__toggle-switch-public Public

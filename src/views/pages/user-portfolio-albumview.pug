@@ -1,0 +1,50 @@
+//- ./src/views/pages/user-portfolio-album-view.pug
+
+extends ../layouts/master.pug
+include ../mixins/albumViewItem.pug
+
+block title
+  title Salstro - Portfolio Album View
+
+block content
+  //- header cum navbar
+  include ../components/navbar.pug
+  //- main content
+  section.main-content
+    .container
+      .row
+        .col-lg-3.col-md-4
+          //- include sidebar
+          // Sidebar
+          include ../components/sidebar.pug
+          // ./ Sidebar
+        .col-lg-9.col-md-8
+          //- include content
+          .row
+            //- Include Activity Header
+            .col-12
+              include ../components/myprofile_header.pug
+            .col-12
+              section.myprofile__content
+                +box('Photos - My Profile Portfolio')
+                  .album__view-container
+                    .album__view-head
+                      .portfolio__item-privacy
+                        .theme__toggle-switch
+                          input(type='checkbox' id='toggle01').theme__toggle-switch-input
+                          label(for='toggle01').theme__toggle-switch-handle
+                            span.theme__toggle-switch-private Private
+                            span.theme__toggle-switch-public Public
+                    .album__view-content
+                      .portfolio__photo-item
+                        a.addnewitem__box.addnewitem__box-big(href='' data-toggle='modal' data-target='#uploadPhoto')
+                          img.addnewitem__box-img(src=require('../../assets/images/svg/icon-addimage.svg') alt='Upload Image')
+                          span.addnewitem__box-text Add New Image
+                      - for(var x = 1; x <= 8; x++)
+                        +albumViewItem(x)
+                      .portfolio__container-pagination
+                        button.btn.btn__primary View More
+
+block modal
+  include ../components/addPhotoPopup.pug
+  include ../components/createAlbumPopup.pug

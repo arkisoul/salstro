@@ -1,0 +1,19 @@
+//- ./src/views/mixins/albumItem.pug
+
+mixin albumItem(num)
+  .portfolio__album-item
+    img.portfolio__album-img(src=require('../../assets/images/img/port-0' + num + '.jpg'), alt="Portfolio")
+    .portfolio__album-option
+      span.portfolio__album-text Album
+      .dropdown.custom__dropdown
+        button#portItemOpt.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+          img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+        .dropdown-menu(aria-labelledby='portItemOpt')
+          a.dropdown-item(href='#') Edit
+          a.dropdown-item(href='#') Delete
+    .portfolio__item-privacy
+      .theme__toggle-switch
+        input(type='checkbox' id='toggle' + num).theme__toggle-switch-input
+        label(for='toggle01').theme__toggle-switch-handle
+          span.theme__toggle-switch-private Private
+          span.theme__toggle-switch-public Public

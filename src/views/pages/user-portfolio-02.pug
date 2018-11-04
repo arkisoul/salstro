@@ -1,0 +1,47 @@
+//- ./src/views/pages/user-portfolio-02.pug
+
+extends ../layouts/master.pug
+
+block title
+  title Salstro - Portfolio
+
+block content
+  //- header cum navbar
+  include ../components/navbar.pug
+  //- main content
+  section.main-content
+    .container
+      .row
+        .col-lg-3.col-md-4
+          //- include sidebar
+          // Sidebar
+          include ../components/sidebar.pug
+          // ./ Sidebar
+        .col-lg-9.col-md-8
+          //- include content
+          .row
+            //- Include Activity Header
+            .col-12
+              include ../components/myprofile_header.pug
+            .col-12
+              section.myprofile__content
+                +box('Photos')
+                  .portfolio__photo-container
+                    .portfolio__container-header
+                      // Nav tabs
+                      ul#portfolio__photo-tabs.portfolio__photo-tabs.nav.nav-tabs(role='tablist')
+                        li.nav-item
+                          a#portfolioPhoto-tab.nav-link.active(data-toggle='tab' href='#portfolioPhoto' role='tab' aria-controls='portfolioPhoto' aria-selected='true') Your Photos
+                        li.nav-item
+                          a#portfolioAlbum-tab.nav-link(data-toggle='tab' href='#portfolioAlbum' role='tab' aria-controls='portfolioAlbum' aria-selected='false') Albums
+                      a.btn__primary-link(href="" data-toggle='modal' data-target='#createAlbum') Create New Album
+                    .portfolio__container-content.tab-content
+                      #portfolioPhoto.tab-pane.active(role='tabpanel' aria-labelledby='portfolioPhoto-tab')
+                        include ../components/portfolioPhotos.pug
+                      #portfolioAlbum.tab-pane(role='tabpanel' aria-labelledby='portfolioAlbum-tab')
+                        include ../components/portfolioAlbum.pug
+                include ../components/portfolioVideos.pug
+
+block modal
+  include ../components/addPhotoPopup.pug
+  include ../components/createAlbumPopup.pug
