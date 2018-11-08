@@ -1,7 +1,5 @@
 //- ./src/views/components/newsfeed.pug
 
-include ../mixins/newpost.pug
-
 section.userfeed__box
   // Userfeed header
   .userfeed__header
@@ -10,6 +8,6 @@ section.userfeed__box
     a.userfeed__header-link(href="#") My Activity
   // ./ Userfeed header
   // User new post section
-  +newpostBox
+  include ./newpost/newpost.pug
   // ./ User new post section
   include ./posts.pug

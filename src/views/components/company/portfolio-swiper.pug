@@ -1,0 +1,20 @@
+//- ./src/views/components/company/portfolio_swiper.pug
+
+.box
+  .box__head
+    h1.box__heading Portfolio
+  .box__body
+    .portfolio__container
+      // Slider main container
+      #portfolio__container.swiper-container.swiper__container
+        // Additional required wrapper
+        .swiper-wrapper
+          // Slides
+          - for(var x = 1; x <= 3; x++)
+            .swiper-slide
+              .portfolio__item
+                img.portfolio__item-img(src=require('../../../assets/images/img/company-port-0'+ x +'.jpg'), alt="Portfolio")
+                .portfolio__item-name Lorem Ipsum
+        // If we need navigation buttons
+        .swiper-button-prev
+        .swiper-button-next

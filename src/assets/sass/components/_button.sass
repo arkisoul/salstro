@@ -71,6 +71,8 @@
 .btn__add
   border: 1px solid $border-lightblue
   padding: 6px 14px
+  color: $text-gray
+  font-size: 16px
 
   &.btn__add-big
     padding: 10px 18px
@@ -88,8 +90,15 @@
   svg
     width: 15px
     height: 15px
-    .a
+    .rectA
       fill: $text-gray
+
+  &:active
+    box-shadow: none
+    outline: none
+
+.btn__remove
+  @extend .btn__add
 
 .btn__remove-small
   padding: 0
@@ -123,31 +132,31 @@
   text-shadow: none
   padding: 0
   margin: 0
-  width: 60px
-  height: 60px
+  width: 120px
+  height: 120px
   border-radius: 50%
   cursor: pointer
 
   img
-    width: 60px
-    height: 60px
+    width: 120px
+    height: 120px
     border-radius: 50%
 
   &.btn__play-small
-    width: 25px
-    height: 25px
+    width: 50px
+    height: 50px
 
     img
-      width: 25px
-      height: 25px
+      width: 50px
+      height: 50px
 
   &.btn__play40
-    width: 40px
-    height: 40px
+    width: 80px
+    height: 80px
 
     img
-      width: 40px
-      height: 40px
+      width: 80px
+      height: 80px
 
 .btn__edit-profile
   border: 1px solid rgba($border-black, 0)
@@ -183,3 +192,13 @@
 
   &:hover, &:focus
     color: $text-pink
+
+.btn__search
+  background-color: $bg-brightpink
+
+  img
+    width: 20px
+    height: 20px
+
+  &:hover, &:focus
+    background-color: $bg-pink

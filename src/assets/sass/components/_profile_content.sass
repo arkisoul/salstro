@@ -12,6 +12,47 @@
     text-align: justify
     line-height: 1.6
 
+.company__info-table
+  display: grid
+  grid-template-columns: 120px 10px 1fr
+  grid-row-gap: 10px
+  padding: 15px 0
+  border-top: 1px solid $border-offwhite
+  border-bottom: 1px solid $border-offwhite
+  font-size: 13px
+  color: $text-black
+  line-height: 1.6
+
+.company__social-info
+  display: flex
+  justify-content: space-between
+  align-items: center
+  font-size: 13px
+  color: $text-black
+  line-height: 1.6
+
+.company__website
+  font-size: 13px
+  color: $text-black
+  line-height: 1.6
+  margin: 0
+
+.company__social-links
+  padding: 0
+  margin: 0
+  list-style: none
+  display: inline-flex
+  align-items: center
+  padding: 10px 0
+
+  li
+    &:not(:last-child)
+      margin-right: 8px
+
+    img
+      width: 32px
+      height: 32px
+
 .profile__interests
   display: flex
   flex-wrap: wrap
@@ -390,3 +431,116 @@
   align-items: center
   padding: 8px 0
   width: 100%
+
+// Company Profile Working Hours and Map
+.company__profile-row
+  display: flex
+
+  .box
+    flex: 0 0 calc(50% - 8px)
+    max-width: calc(50% - 8px)
+
+    &:first-child
+      margin-right: 8px
+
+    &:last-child
+      margin-left: 8px
+
+.working__hours-table
+  display: grid
+  grid-template-columns: 110px 10px 1fr
+  grid-row-gap: 10px
+  padding: 10px 6px
+  font-size: 14px
+  line-height: 1.6
+  color: $text-blue
+
+.company__map-block
+  margin: -4px -10px 0
+  display: flex
+  flex-direction: column
+
+.company__map-frame
+  min-height: 200px
+
+.company__map-add
+  display: flex
+  justify-content: center
+  align-items: center
+  color: $text-black
+  font-size: 14px
+  padding: 10px 10px
+
+  img
+    width: 16px
+    height: 16px
+    margin-right: 6px
+
+.company__profile-container
+  .showreel__container .showreel__item, .portfolio__container .portfolio__item
+    max-height: 100%
+
+  .showree__item-name, .portfolio__item-name
+    font-size: 14px
+    line-height: 1.6
+    color: $text-black
+    padding: 8px 0
+
+// Company Awards & Achievements
+.company__awards-container
+  padding: 8px 15px 0
+
+  .company__awards-item
+    display: flex
+    align-items: center
+    padding: 12px 0
+
+    &:not(:last-child)
+      border-bottom: 1px solid $border-offwhite
+
+  .company__awards-img-wrap
+    height: 70px
+    width: 70px
+    padding: 4px
+    background-color: $bg-white
+    border-radius: 4px
+    border: 1px solid $border-offwhite
+    display: inline-flex
+    justify-content: center
+    align-items: center
+    margin-right: 30px
+
+  .company__awards-img
+    max-width: 100%
+    height: auto
+    object-fit: cover
+
+  .company__awards-info
+    margin-right: 10px
+
+  .company__award-name
+    font-size: 15px
+    font-weight: $semi
+    color: $text-black
+    margin: 0 0 4px
+
+  .company__award-institute
+    font-size: 13px
+    font-weight: $regular
+    color: $text-black
+    margin: 0 0 4px
+
+  .company__award-date
+    font-size: 13px
+    color: $text-gray
+    margin: 0 0 4px
+
+  .company__award-certificate
+    flex: 0 0 50px
+    max-width: 50px
+    margin-right: 0
+    margin-left: auto
+
+    img
+      width: 45px
+      height: 40px

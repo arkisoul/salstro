@@ -1,0 +1,14 @@
+<svg id="check-sign" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fe5d70;
+      }
+    </style>
+  </defs>
+  <g id="Group_636" data-name="Group 636">
+    <g id="Group_635" data-name="Group 635">
+      <path id="Path_376" data-name="Path 376" class="cls-1" d="M8,0a8,8,0,1,0,8,8A8,8,0,0,0,8,0Zm3.706,5.787L7.874,11.644l0,0-.056.093-.12.087-.031.021-.2.082-.068.016-.168,0-.117-.02L7,11.884l-.1-.038-.053-.053-.026-.016L4.594,9.714a.7.7,0,1,1,.95-1.028L7.159,10.18l3.375-5.159a.7.7,0,0,1,1.172.766Z"/>
+    </g>
+  </g>
+</svg>

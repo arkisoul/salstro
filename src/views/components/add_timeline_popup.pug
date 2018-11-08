@@ -7,25 +7,25 @@ include ../mixins/modal.pug
   .modal-body
     form(action="", method="post")
       .addnewitem__box-container
-        a.addnewitem__box(href='')
+        a.addnewitem__box(href='' data-toggle='modal' data-target='#addExperience')
           img.addnewitem__box-img(src=require('../../assets/images/svg/icon-addimage.svg') alt='Add Image')
           span.addnewitem__box-text Add Experience
-        a.addnewitem__box(href='')
+        a.addnewitem__box(href='' data-toggle='modal' data-target='#addEducation')
           img.addnewitem__box-img(src=require('../../assets/images/svg/icon-addimage.svg') alt='Add Image')
           span.addnewitem__box-text Add Education
-        a.addnewitem__box(href='')
+        a.addnewitem__box(href='' data-toggle='modal' data-target='#addAwardAchievement')
           img.addnewitem__box-img(src=require('../../assets/images/svg/icon-addimage.svg') alt='Add Image')
-          span.addnewitem__box-text 
+          span.addnewitem__box-text
             | Add Awards
             br
             | &amp; Achievements
-        a.addnewitem__box(href='')
+        a.addnewitem__box(href='' data-toggle='modal' data-target='#addEventsMilestone')
           img.addnewitem__box-img(src=require('../../assets/images/svg/icon-addimage.svg') alt='Add Image')
           span.addnewitem__box-text
             | Add Events
             br
             | &amp; Milestones
-        a.addnewitem__box(href='')
+        a.addnewitem__box(href='' data-toggle='modal' data-target='#addVolExperience')
           img.addnewitem__box-img(src=require('../../assets/images/svg/icon-addimage.svg') alt='Add Image')
           span.addnewitem__box-text
             | Add Volunteer

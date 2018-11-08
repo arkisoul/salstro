@@ -28,8 +28,6 @@ block content
                 .box
                   .box__head
                     h1.box__heading About Me
-                    a.box__img-right(href='')
-                      img.box__img-right.img__24(src=require('../../assets/images/svg/icon-pencil-circle.svg'), alt="")
                   .box__body
                     .addnew__prompt
                       a.addnew__prompt-link(href='' data-toggle='modal' data-target='#addAboutMe') Write something about yourself
@@ -42,34 +40,32 @@ block content
                 .box
                   .box__head
                     h1.box__heading Portfolio
-                    a.box__img-right(href='')
-                      img.box__img-right.img__24(src=require('../../assets/images/svg/icon-pencil-circle.svg'), alt="")
                   .box__body
-                    a.addnewitem__box.addnewitem__box-big.addnewitem__box-black(href='')
-                      img.addnewitem__box-img(src=require('../../assets/images/svg/icon-cloud.svg') alt='Upload Image')
-                      span.addnewitem__box-text Upload Image  
+                    form(action="", method="post")
+                      .form-group.theme__file-upload
+                        input#addNewImage.theme__file-upload-input(type="file", name="")
+                        label.addnewitem__box.addnewitem__box-big.addnewitem__box-black(for="addNewImage")
+                          img.addnewitem__box-img(src=require('../../assets/images/svg/icon-cloud.svg') alt='Upload Image')
+                          span.addnewitem__box-text Upload Image
                 .box
                   .box__head
                     h1.box__heading Showreel
-                    a.box__img-right(href='')
-                      img.box__img-right.img__24(src=require('../../assets/images/svg/icon-pencil-circle.svg'), alt="")
                   .box__body
-                    a.addnewitem__box.addnewitem__box-big.addnewitem__box-black(href='')
-                      img.addnewitem__box-img(src=require('../../assets/images/svg/icon-cloud.svg') alt='Upload Image')
-                      span.addnewitem__box-text Upload Video
+                    form(action="", method="post")
+                      .form-group.theme__file-upload
+                        input#addNewVideo.theme__file-upload-input(type="file", name="")
+                        label.addnewitem__box.addnewitem__box-big.addnewitem__box-black(for="addNewVideo")
+                          img.addnewitem__box-img(src=require('../../assets/images/svg/icon-cloud.svg') alt='Upload Image')
+                          span.addnewitem__box-text Upload Video
                 .box
                   .box__head
                     h1.box__heading List of Interests
-                    a.box__img-right(href='')
-                      img.box__img-right.img__24(src=require('../../assets/images/svg/icon-pencil-circle.svg'), alt="")
                   .box__body
                     .addnew__prompt
                       a.addnew__prompt-link(href='' data-toggle='modal' data-target='#addInterests') Add Interests
                 .box
                   .box__head
                     h1.box__heading Employer Refereces
-                    a.box__img-right(href='')
-                      img.box__img-right.img__24(src=require('../../assets/images/svg/icon-pencil-circle.svg'), alt="")
                   .box__body
                     .addnew__prompt
                       a.addnew__prompt-link(href='') Add References

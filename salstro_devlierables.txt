@@ -27,6 +27,7 @@ Date
 3. My Porftolio 02 (with content)
 4. My Porftolio Album
 5. My Porftolio Album View
+6. Company Profile
 
 :: Popups ::
 1. Add Image

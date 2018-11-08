@@ -1,0 +1,14 @@
+//- ./src/views/components/company/awards.pug
+
++box('Awards/Achievements')
+  .company__awards-container
+    - for(var x = 1; x <= 3; x++)
+      .company__awards-item
+        .company__awards-img-wrap
+          img.company__awards-img(src=require('../../assets/images/img/award-0'+ x +'.jpg'), alt="")
+        .company__awards-info
+          h3.company__award-name Lorem Ipsum Award
+          h5.company__award-institute Mauris Institute, New York
+          p.company__award-date 28 September, 2018
+        .company__award-certificate
+          img(src=require('../../assets/images/svg/certificate.svg'), alt="")

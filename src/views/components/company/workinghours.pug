@@ -1,0 +1,9 @@
+//- ./src/views/components/company/workinghours.pug
+
++box('Working Hours')
+  .working__hours-table
+    - var days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+    for day in days
+      .working__hours-day #{day}
+      .working__hours-seperator :
+      .working__hours-time 11 am to 7 pm

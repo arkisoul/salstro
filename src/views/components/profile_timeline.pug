@@ -15,7 +15,7 @@ include ../mixins/box.pug
             p.timeline__time-lapsed 1 yrs 5 months
         .timeline__item-point
           .timeline__point
-          a.timeline__point-event(href='') Add Experience
+          a.timeline__point-event(href='' data-toggle='modal' data-target='#addExperience') Add Experience
         .timeline__event-item.timeline__event-right
           .timeline__event-block
             h3.timeline__event-title Senior Hair Stylist
@@ -33,7 +33,7 @@ include ../mixins/box.pug
             img.timeline__event-img(src=require('../../assets/images/img/tl-icon-01.jpg') alt='Event Image')
         .timeline__item-point
           .timeline__point
-          a.timeline__point-event(href='') Add Education
+          a.timeline__point-event(href='' data-toggle='modal' data-target='#addEducation') Add Education
         .timeline__time-item.timeline__time-right
           a.timeline__edit-btn(href='')
             img(src=require('../../assets/images/svg/icon-pencil-circle-gray.svg'), alt="Edit")
@@ -51,7 +51,7 @@ include ../mixins/box.pug
             p.timeline__time-lapsed 1 yrs 5 months
         .timeline__item-point
           .timeline__point
-          a.timeline__point-event(href='')
+          a.timeline__point-event(href='' data-toggle='modal' data-target='#addAwardAchievement')
             | Add Awards
             br
             | &amp; Achivements
@@ -72,7 +72,7 @@ include ../mixins/box.pug
             img.timeline__event-img(src=require('../../assets/images/img/tl-icon-01.jpg') alt='Event Image')
         .timeline__item-point
           .timeline__point
-          a.timeline__point-event(href='')
+          a.timeline__point-event(href='' data-toggle='modal' data-target='#addEventsMilestone')
             | Add Events
             br
             | &amp; Milestones
@@ -93,7 +93,7 @@ include ../mixins/box.pug
             p.timeline__time-lapsed 1 yrs 5 months
         .timeline__item-point
           .timeline__point
-          a.timeline__point-event(href='')
+          a.timeline__point-event(href='' data-toggle='modal' data-target='#addVolExperience')
             | Add Volunteer
             br
             | Experience
@@ -114,7 +114,7 @@ include ../mixins/box.pug
             img.timeline__event-img(src=require('../../assets/images/img/tl-icon-01.jpg') alt='Event Image')
         .timeline__item-point
           .timeline__point
-          a.timeline__point-event(href='')
+          a.timeline__point-event(href='' data-toggle='modal' data-target='#addVolExperience')
             | Add Volunteer
             br
             | Experience

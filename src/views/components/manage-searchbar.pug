@@ -1,0 +1,28 @@
+//- ./src/views/components/manage-searchbar.pug
+
+section.search__bar
+  form(action="", method="get")
+    .search__bar-row
+      .form-group
+        label.theme__label.sr-only(for='searchName') Name
+        input.form-control.theme__form-control.theme__primary-form-control.theme__secondary-form-control(type='text', placeholder='Enter Name' id='searchName' name='search-name')
+      .form-group
+        label.theme__label.sr-only(for='userTypeSelect') Select Type
+        .theme__select-dropdown.theme__secondary-select-dropdown
+          button.theme__select-dropdown-toggle Select
+          input(type='hidden' name='userTypeSelect')
+          ul.theme__select-dropdown-menu
+            li.theme__select-dropdown-item
+              input(type='radio' id='ALL' name='user-type' value='ALL')
+              label(for='ALL' data-tar='userTypeSelect') ALL
+            li.theme__select-dropdown-item
+              input(type='radio' id='Admin' name='user-type' value='Admin')
+              label(for='Admin' data-tar='userTypeSelect') Admin
+            li.theme__select-dropdown-item
+              input(type='radio' id='Moderator' name='user-type' value='Moderator')
+              label(for='Moderator' data-tar='userTypeSelect') Moderator
+            li.theme__select-dropdown-item
+              input(type='radio' id='Member' name='user-type' value='Member')
+              label(for='Member' data-tar='userTypeSelect') Member
+      button.btn.btn__search(type='submit' role='submit')
+        img(src=require('../../assets/images/svg/icon-search-white.svg'), alt="")

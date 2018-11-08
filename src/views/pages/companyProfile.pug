@@ -1,0 +1,31 @@
+//- ./src/views/pages/companyProfile.pug
+
+extends ../layouts/master.pug
+
+block title
+  title Salstro - Company Profile
+
+block content
+  //- header cum navbar
+  include ../components/navbar.pug
+  //- main content
+  section.main-content
+    .container
+      .row
+        .col-lg-3.col-md-4
+          //- include sidebar
+          // Sidebar
+          include ../components/companySidebar.pug
+          // ./ Sidebar
+        .col-lg-9.col-md-8
+          //- include content
+          .row
+            //- Include Activity Header
+            .col-12
+              include ../components/companyProfileHeader.pug
+            // Main Content
+            .col-12
+              // Profile Content
+              include ../components/company/profile_content.pug
+
+block modal

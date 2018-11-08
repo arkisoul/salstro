@@ -1,0 +1,6 @@
+//- ./src/views/mixins/memberItem.pug
+
+mixin memberItem(img, type)
+.member__item
+  img.member__item-img(src=require('../../assets/images/img/' + img), alt=type)
+  .member__info-block

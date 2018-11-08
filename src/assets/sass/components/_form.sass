@@ -23,6 +23,9 @@
   .form__fields-item
     margin-bottom: 20px
 
+    &.align__flex-end
+      align-self: flex-end
+
 .form-control
   &.theme__form-control
     border: 1px solid $border-offwhite
@@ -48,6 +51,20 @@
 
     & ~ .input-group-append .btn__outline
       border-bottom: 1px solid $border-brightpink
+
+  &.theme__secondary-form-control
+    border: 1px solid $border-offwhite
+    border-radius: 0
+    border-bottom: 1px solid $border-offwhite
+    color: $text-black
+    font-size: 14px
+    font-weight: $regular
+    border-radius: 4px
+
+  &.theme__secondary-form-control::placeholder
+    color: $text-offwhite
+    font-size: 14px
+    font-weight: $regular
 
   &:focus
     outline: none
@@ -105,6 +122,12 @@
 .theme__select-dropdown
   position: relative
 
+  &.theme__secondary-select-dropdown
+    .theme__select-dropdown-toggle
+      border: 1px solid $border-offwhite
+      color: $text-offwhite
+      border-radius: 4px
+
   .theme__select-dropdown-toggle
     position: relative
     display: block
@@ -148,6 +171,8 @@
     z-index: 11
     width: 100%
     display: none
+    max-height: 160px
+    overflow: auto
 
   .theme__select-dropdown-item
 
@@ -361,3 +386,19 @@
       background-color: $bg-gray
       color: $text-white
       width: 50px
+
+.theme__form-group
+  position: relative
+
+  .theme__label
+    position: absolute
+    top: 14px
+    left: 12px
+    transition: all ease-in 300ms
+    width: auto
+
+  .theme__primary-form-control
+    &.touched, &.valid, &.invalid
+      & ~ .theme__label
+        top: -16px
+        left: 0

@@ -93,7 +93,6 @@
   display: flex
   align-items: top
   padding: 8px 4px
-  border-bottom: 1px solid $border-lightblue
 
 .userfeed__newpost-avatar
   flex: 0 0 36px
@@ -108,17 +107,15 @@
     margin: auto
     object-fit: cover
 
-.userfeed__newpost-tabcontent
+.userfedd__newpost-form-group
   flex: 0 0 calc(100% - 50px)
   max-width: calc(100% - 50px)
 
 .newpoll__options-wrap
   display: flex
-  align-items: flex-end
-  margin-left: -50px
+  flex-direction: column
 
 .newphotopost__group
-  margin-left: -50px
   display: flex
   align-items: center
 
@@ -130,7 +127,7 @@
 
 .newphotopost__container
   display: flex
-  overflow-x: scroll
+  overflow-x: auto
   max-width: calc(100% - 100px)
   margin-right: 10px
 
@@ -158,10 +155,8 @@
     height: auto
 
 .newvideo__add-link
-  margin-left: -50px
 
 .newpost__options-tag
-  margin-left: -50px
   margin-top: 1em
 
   .input-group-prepend
@@ -173,7 +168,16 @@
       font-size: 13px
 
 .newpoll__options
-  flex: 0 0 calc(100% - 60px)
+  display: flex
+  align-items: center
+  flex: 0 0 100%
+
+  &:not(:last-of-type)
+    margin-bottom: 16px
+
+  .newpoll__option
+    flex: 0 0 calc(100% - 60px)
+    margin-bottom: 0
 
 .newpoll__option-add
   flex: 0 0 40px
@@ -185,6 +189,8 @@
   justify-content: space-between
   align-items: center
   padding: 8px 4px 4px
+  border-top: 1px solid $border-lightblue
+  margin-top: 8px
 
 .userfeed__newpost-privacy
   display: flex
@@ -196,7 +202,7 @@
     margin-left: 6px
     border: none
 
-#photopost
+.upload__file > input[type='file']
   width: 1px
   height: 1px
   position: absolute
@@ -230,10 +236,11 @@
       position: absolute
       border: 4px solid transparent;
       transform: rotate(45deg);
-      border-top: 4px solid $border-lightblue;
-      border-left: 4px solid $border-lightblue;
+      border-top: 4px solid $border-white
+      border-left: 4px solid $border-white
       top: -4px;
       right: 20px;
+      box-shadow: -1px -1px 0 $border-lightblue
 
   .custom__select-list-item
     display: flex
@@ -272,6 +279,7 @@
     align-items: center
     padding: 8px
     position: relative
+    min-width: 160px
 
     &::after
       content: ''
@@ -293,3 +301,43 @@
     font-size: 12px
     font-weight: $regular
     color: $text-gray
+
+.newpost__tag-container
+  display: flex
+  flex-wrap: wrap
+  margin-top: 6px
+
+  .newpost__tag
+    display: flex
+    padding: 6px 12px
+    justify-content: space-between
+    align-items: center
+    background-color: $bg-gray
+    color: $text-white
+    font-size: 13px
+    font-weight: $regular
+    border-radius: 15px
+    margin-bottom: 8px
+
+    &:not(:last-child)
+      margin-right: 8px
+
+  .btn__remove-tag
+    background: none
+    border: none
+    box-shadow: none
+    border-radius: 50%
+    width: 17px
+    height: 17px
+    text-align: center
+    line-height: 17px
+    background-color: $bg-pink
+    color: $text-white
+    font-size: 13px
+    cursor: pointer
+    padding: 0
+    margin-left: 16px
+
+    &:hover, &:focus, &:active
+      outline: none
+      background-color: $bg-brightpink

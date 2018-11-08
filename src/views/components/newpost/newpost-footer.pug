@@ -1,0 +1,30 @@
+//- ./src/views/components/newpost-footer.pug
+
+.userfeed__newpost-footer
+  .userfeed__newpost-privacy
+    | Privacy
+    .custom__select-with-img
+      select.custom-select(name='privacy')
+        option(value='public' data-img="/assets/images/icon-globe.svg") Public & Community
+        option(value='private' data-img="/assets/images/icon-public.svg") Public
+        option(value='onlyme' data-img="/assets/images/icon-private.svg") Private
+      .custom__select-selected
+        img.custom__select-selected-img(src=require("../../../assets/images/svg/icon-globe.svg"), alt="")
+        span.custom__select-selected-text Public &amp; Community
+      ul.custom__select-list
+        li.custom__select-list-item(value='publiccommunity')
+          img.custom__select-img(src=require("../../../assets/images/svg/icon-globe.svg"), alt="")
+          .custom__select-list-text
+            h3.custom__select-name Public &amp; Community
+            p.m-0.custom__select-text Will be shared with their connections, followers, and posted on the community wall
+        li.custom__select-list-item(value='public')
+          img.custom__select-img(src=require("../../../assets/images/svg/icon-public.svg"), alt="")
+          .custom__select-list-text
+            h3.custom__select-name Public
+            p.m-0.custom__select-text Shared with connections &amp; followers
+        li.custom__select-list-item(value='private')
+          img.custom__select-img(src=require("../../../assets/images/svg/icon-private.svg"), alt="")
+          .custom__select-list-text
+            h3.custom__select-name Private
+            p.m-0.custom__select-text Shared only with connections
+  button.btn.btn__primary(type="submit") Post

@@ -18,15 +18,12 @@
     padding: 12px 8px
     text-decoration: none
     line-height: 20px
+    border-bottom: 4px solid transparent
 
-    &:hover, &:focus
+    &:hover, &:focus, &.active
       background-color: $bg-lightpink
       border-bottom: 4px solid $border-brightpink
       text-decoration: none
 
     &:not(:last-child)
       border-right: 1px solid $border-lightblue
-
-    &.active
-      background-color: $bg-lightpink
-      border-bottom: 4px solid $border-brightpink

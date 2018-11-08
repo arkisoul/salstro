@@ -20,13 +20,13 @@ mixin post()
       if block
         block
       .feed__post-meta
-        .feed__post-like-counts
+        a.feed__post-like-counts(href='')
           img(src=require("../../assets/images/svg/like-pink.svg"), alt="")
           | 451 likes
-        .feed__post-comment-counts
+        a.feed__post-comment-counts(href='')
           img(src=require("../../assets/images/svg/comment.svg"), alt="")
           | 528 comments
-        .feed__post-share-counts
+        a.feed__post-share-counts(href='')
           | 25 shares
       .feed__post-social
         a.feed__post-like(href="#")
@@ -50,9 +50,9 @@ mixin post()
             p.specific__post-comment-text Lorem ipsum dolor sit amet consectetur adipisicing
           .specific__post-comments-item-foot
             p.specific__post-comment-meta
-              span Like
-              span Reply
-              span 2 days ago
+              a(href="") Like
+              a(href="") Reply
+              a(href="") 2 days ago
             .specific__post-comments-item
               .specific__post-comments-item-head
                 a.user__avatar-wrap
@@ -60,9 +60,9 @@ mixin post()
                 p.specific__post-comment-text Lorem ipsum dolor sit amet
               .specific__post-comments-item-foot
                 p.specific__post-comment-meta
-                  span Like
-                  span Reply
-                  span 2 days ago
+                  a(href="") Like
+                  a(href="") Reply
+                  a(href="") 2 days ago
         .specific__post-comments-item
           .specific__post-comments-item-head
             a.user__avatar-wrap
@@ -70,9 +70,9 @@ mixin post()
             p.specific__post-comment-text Lorem ipsum dolor sit amet consectetur adipisicing
           .specific__post-comments-item-foot
             p.specific__post-comment-meta
-              span Like
-              span Reply
-              span 2 days ago
+              a(href="") Like
+              a(href="") Reply
+              a(href="") 2 days ago
             .specific__post-comments-item
               .specific__post-comments-item-head
                 a.user__avatar-wrap
@@ -80,9 +80,9 @@ mixin post()
                 p.specific__post-comment-text Lorem ipsum dolor sit amet
               .specific__post-comments-item-foot
                 p.specific__post-comment-meta
-                  span Like
-                  span Reply
-                  span 2 days ago
+                  a(href="") Like
+                  a(href="") Reply
+                  a(href="") 2 days ago
     .feed__post-footer
       a.feed__post-avatar.feed__post-avatar-small(href="#")
         img(src=require("../../assets/images/img/avatar.jpg"), alt="Avatar")

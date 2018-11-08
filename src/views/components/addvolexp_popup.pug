@@ -7,16 +7,16 @@ include ../mixins/modal.pug
     form(action="", method="post")
       .form-row.form__fields-wrap
         .col-md-6.form__fields-item
-          .form-group
+          .form-group.theme__form-group
+            input.form-control.theme__form-control.theme__primary-form-control.form-control__error(type='text' id='position')
             label.theme__label(for='position') Position
-            input.form-control.theme__form-control.theme__primary-form-control.form-control__error(type='text', placeholder='Sr Hair Stylist' id='position')
             small.theme__primary-form-error
               img.theme__primary-form-error-img(src=require('../../assets/images/svg/icon-error.svg') alt='Error')
               span.theme__primary-form-error-text Error message lorem ipsum
         .col-md-6.form__fields-item
-          .form-group
+          .form-group.theme__form-group
+            input.form-control.theme__form-control.theme__primary-form-control(type='text' id='company')
             label.theme__label(for='company') Company
-            input.form-control.theme__form-control.theme__primary-form-control(type='text', placeholder='Enter Company name here' id='company')
         .col-md-6.form__fields-item
           .form-group
             label.theme__label(for='countrySelect') Country
@@ -36,29 +36,29 @@ include ../mixins/modal.pug
                 li.theme__select-dropdown-item
                   input(type='radio' id='france' name='country' value='france')
                   label(for='france' data-tar='countrySelect') France
-        .col-md-6.form__fields-item
-          .form-group
+        .col-md-6.form__fields-item.align__flex-end
+          .form-group.theme__form-group
+            input.form-control.theme__form-control.theme__primary-form-control(type='text' id='postCode')
             label.theme__label(for='postCode') Post Code
-            input.form-control.theme__form-control.theme__primary-form-control(type='text', placeholder='Enter Postcode here' id='postCode')
         .col-md-6.form__fields-item
-          .input-group.theme__input-group
+          .input-group.theme__input-group.theme__form-group
+            input.form-control.theme__form-control.theme__primary-form-control(type='text' id='location' aria-describedby='button-addon4')
             label.theme__label(for='location') Location
-            input.form-control.theme__form-control.theme__primary-form-control(type='text' placeholder="Enter your location here" id='location' aria-describedby='button-addon4')
             #button-addon4.input-group-append
               button.btn.btn__outline(type='button')
                 img(src=require("../../assets/images/svg/icon-map-pin.svg"), alt="")
         .w-100
         .col-md-6.form__fields-item
-          .input-group.theme__input-group
-            label.theme__label(for='dob') Start Date
-            input.form-control.theme__form-control.theme__primary-form-control.theme__datepicker(type='text' placeholder="mm-yyyy" id='dob' aria-describedby='button-addon4')
+          .input-group.theme__input-group.theme__form-group
+            input.form-control.theme__form-control.theme__primary-form-control.theme__datepicker-my(type='text' id='startDate' aria-describedby='button-addon4')
+            label.theme__label(for='startDate') Start Date
             #button-addon4.input-group-append
               button.btn.btn__outline(type='button')
                 img(src=require("../../assets/images/svg/icon-calendar.svg"), alt="")
         .col-md-6.form__fields-item
-          .input-group.theme__input-group
-            label.theme__label(for='dob') End Date
-            input.form-control.theme__form-control.theme__primary-form-control.theme__datepicker(type='text' placeholder="mm-yyyy" id='dob' aria-describedby='button-addon4')
+          .input-group.theme__input-group.theme__form-group
+            input.form-control.theme__form-control.theme__primary-form-control.theme__datepicker-my(type='text' id='endDate' aria-describedby='button-addon4')
+            label.theme__label(for='endDate') End Date
             #button-addon4.input-group-append
               button.btn.btn__outline(type='button')
                 img(src=require("../../assets/images/svg/icon-calendar.svg"), alt="")

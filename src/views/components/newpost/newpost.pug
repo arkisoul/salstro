@@ -1,0 +1,106 @@
+//- ./src/views/components/newpost.pug
+
+.userfeed__newpost-box
+  .userfeed__newpost-header
+    // Nav tabs
+    include ./newpost-tabs.pug
+  // Tab panes
+  .tab-content.userfeed__newpost-tabcontent
+    #newPost.tab-pane.active(role='tabpanel' aria-labelledby='newPost-tab')
+      form(action="", method="post")
+        .userfeed__newpost-body
+          .userfeed__newpost-avatar
+            img(src=require("../../../assets/images/img/avatar.jpg"), alt="")
+          .userfedd__newpost-form-group
+            .form-group
+              label.sr-only(for='simplenewpost') Create Post
+              textarea#simplenewpost.form-control.form__control-noborder.form__placeholder-dark(rows='3', placeholder='Create a new post or use @ to mention someone')
+        include ./newpost-footer.pug
+    #pollPost.tab-pane(role='tabpanel' aria-labelledby='pollPost-tab')
+      form(action="", method="post")
+        .userfeed__newpost-body
+          .userfeed__newpost-avatar
+            img(src=require("../../../assets/images/img/avatar.jpg"), alt="")
+          .userfedd__newpost-form-group
+            .form-group
+              label.sr-only(for='newpollpost') Create Poll
+              input#newpollpost.form-control.form__control-noborder.form__placeholder-dark(type='text' placeholder='What would you like to ask?')
+        .newpoll__options-wrap
+          .newpoll__options
+            .form-group.newpoll__option
+              label.sr-only(for='newpollOption01') Option
+              input#newpollOption01.form-control.new__option-input(type='text' placeholder='Option 1' onkeypress='stopTagOpt(event)')
+            .newpoll__option-add
+              button.btn.btn__add.btn__add-polloption
+                svg(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 15 15')
+                  rect.rectA(width='1.875' height='15' rx='0.938' transform='translate(6.563)')
+                  rect.rectA(width='1.875' height='15' rx='0.938' transform='translate(15 6.563) rotate(90)')
+        .newpost__options-tag
+          .input-group.newpost__tag-group
+            .input-group-prepend
+              span#options__tag.input-group-text Tags
+            input.form-control.newpost__add-tag(type='text' placeholder='Create tags for your topic' aria-label='Tags' aria-describedby='options__tag')
+            input.newpost__tags(type="hidden")
+          .newpost__tag-container
+        include ./newpost-footer.pug
+    #photoPost.tab-pane(role='tabpanel' aria-labelledby='photoPost-tab')
+      form(action="", method="post")
+        .userfeed__newpost-body
+          .userfeed__newpost-avatar
+            img(src=require("../../../assets/images/img/avatar.jpg"), alt="")
+          .userfedd__newpost-form-group
+            .form-group
+              label.sr-only(for='newphotopost') Create Photo Post
+              input#newphotopost.form-control.form__control-noborder.form__placeholder-dark(type='text' placeholder='Create a new post or use @ to mention someone')
+        .newphotopost__group
+          .newphotopost__container
+            .newphotopost__item
+              img(src=require("../../../assets/images/img/photo.jpg"), alt="")
+              button.btn.btn__remove-small(onclick='removePhotoPost(this)') &times;
+          .form-group
+            label.btn.btn__add.btn__add-big.upload__file(for="photopost")
+              img(src=require("../../../assets/images/svg/plus-gray.svg"), alt="")
+              input#photopost(type="file", name="photopostFile")
+        .newpost__options-tag
+          .input-group.newpost__tag-group
+            .input-group-prepend
+              span#options__tag.input-group-text Tags
+            input.form-control.newpost__add-tag(type='text' placeholder='Create tags for your topic' aria-label='Tags' aria-describedby='options__tag')
+            input.newpost__tags(type="hidden")
+          .newpost__tag-container
+        include ./newpost-footer.pug
+    #videoPost.tab-pane(role='tabpanel' aria-labelledby='videoPost-tab')
+      form(action="", method="post")
+        .userfeed__newpost-body
+          .userfeed__newpost-avatar
+            img(src=require("../../../assets/images/img/avatar.jpg"), alt="")
+          .userfedd__newpost-form-group
+            .form-group
+              label.sr-only(for='newvideopost') Create Video Post
+              input#newvideopost.form-control.form__control-noborder.form__placeholder-dark(type='text' placeholder='Create a new post or use @ to mention someone')
+        .newvideo__add-link
+          .form-group
+            label.btn.btn__add.btn__add-big.upload__file(for="videoPost")
+              img(src=require("../../../assets/images/svg/plus-gray.svg"), alt="")
+              input#videoPost(type="file", name="videoPostFile")
+          .form-group
+            label.sr-only(for='newvideolink') Video link
+            input#newvideolink.form-control(type='text' placeholder='Paste a link for a video')
+        .newpost__options-tag
+          .input-group.newpost__tag-group
+            .input-group-prepend
+              span#options__tag.input-group-text Tags
+            input.form-control.newpost__add-tag(type='text' placeholder='Create tags for your topic' aria-label='Tags' aria-describedby='options__tag')
+            input.newpost__tags(type="hidden")
+          .newpost__tag-container
+        include ./newpost-footer.pug
+    #articlePost.tab-pane(role='tabpanel' aria-labelledby='articlePost-tab')
+      form(action="", method="post")
+        .userfeed__newpost-body
+          .userfeed__newpost-avatar
+            img(src=require("../../../assets/images/img/avatar.jpg"), alt="")
+          .userfedd__newpost-form-group
+            .form-group
+              label.sr-only(for='articlenewpost') Create Article Post
+              textarea#articlenewpost.form-control.form__control-noborder.form__placeholder-dark(rows='3', placeholder='Create a new post or use @ to mention someone')
+        include ./newpost-footer.pug

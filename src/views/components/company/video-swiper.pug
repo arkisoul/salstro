@@ -1,0 +1,26 @@
+//- ./src/views/components/showreel_swiper.pug
+
+.box
+  .box__head
+    .box__head
+      h1.box__heading Videos
+  .box__body
+    .showreel__container
+      // Slider main container
+      #showreel__container.swiper-container.swiper__container
+        // Additional required wrapper
+        .swiper-wrapper
+          // Slides
+          - for(var x = 1; x <= 3; x++)
+            .swiper-slide
+              .showreel__item
+                button.btn__play.btn__play40
+                  img(src=require('../../../assets/images/svg/btn-play.svg'))
+                video.showreel__item-video(poster=require('../../../assets/images/img/company-vid-0'+ x +'.jpg'))
+                  source(src=require("../../../assets/media/post.mp4"), type="video/mp4")
+                  Your browser doesn't support video tag
+                .showreel__item-name Lorem Ipusm
+
+        // If we need navigation buttons
+        .swiper-button-prev
+        .swiper-button-next

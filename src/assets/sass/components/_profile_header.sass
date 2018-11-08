@@ -52,10 +52,19 @@
   z-index: 1
   position: relative
 
+  &.image__square
+    border-radius: 4px
+
 .profile__display-img
   width: 130px
   height: 130px
   border-radius: 50%
+  object-fit: cover
+
+  &.image__square-img
+    width: 120px
+    height: 120px
+    border-radius: 4px
 
 .profile__info
   line-height: 1
@@ -66,6 +75,15 @@
     color: $text-black
     font-weight: $semi
     margin: 0
+
+    .profile__username-edit
+      margin-left: 30px
+      display: inline-block
+
+      .profile__username-edit-mg
+        width: 24px
+        height: 24px
+        display: inline-block
 
   .profile__user-prof, .profile__user-location
     font-size: 15px
@@ -88,6 +106,9 @@
     justify-content: center
     border: 1px solid $border-lightblue
 
+    &:hover, &:focus
+      border-color: $border-blue
+
     &:not(:last-child)
       margin-right: 15px
 
@@ -106,6 +127,14 @@
   .profile__accolade-badge
     width: 25px
     height: 30px
+
+  .profile__accolade-medal
+    width: 25px
+    height: 30px
+
+  .profile__accolade-educator
+    width: 30px
+    height: 27px
 
 .profile__navigation
   background-color: $bg-white
@@ -137,6 +166,7 @@
       font-weight: $regular
       display: inline-block
       position: relative
+      border-bottom: 4px solid transparent
 
       &:hover, &:focus
         border-bottom: 4px solid $border-brightpink

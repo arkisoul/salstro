@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.52 30">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-3 {
+        fill: #ff8c2e;
+      }
+
+      .cls-4 {
+        fill: #1d4883;
+      }
+
+      .cls-5 {
+        fill: #fff;
+      }
+
+      .cls-6 {
+        fill: #ff2d16;
+      }
+    </style>
+    <clipPath id="clip-path">
+      <path id="Path_425" data-name="Path 425" class="cls-1" d="M0-32H24.519V-2H0Z" transform="translate(0 32)"/>
+    </clipPath>
+  </defs>
+  <g id="Group_780" data-name="Group 780" transform="translate(0 32)">
+    <g id="Group_779" data-name="Group 779" class="cls-2" transform="translate(0 -32)">
+      <g id="Group_775" data-name="Group 775" transform="translate(0 0)">
+        <path id="Path_421" data-name="Path 421" class="cls-3" d="M-.818-.043S3.8,3.6,7.354-.694l4.085,2.745s-2.7,2.744-2.7,5.468c0,2.936,2.7,4.531,2.7,9.789,0,4.444-2.854,6.835-6.128,8.557-2.9,1.523-5.393,2.452-6.127,3.441H-.825c-.735-.989-3.227-1.917-6.127-3.441-3.275-1.721-6.128-4.113-6.128-8.557,0-5.258,2.7-6.853,2.7-9.789,0-2.724-2.7-5.468-2.7-5.468L-9-.694c3.554,4.3,8.171.651,8.171.651Z" transform="translate(13.081 0.694)"/>
+      </g>
+      <g id="Group_776" data-name="Group 776" transform="translate(3.958 6.703)">
+        <path id="Path_422" data-name="Path 422" class="cls-4" d="M-.553,0a8.3,8.3,0,0,1,8.3,8.3,8.3,8.3,0,0,1-8.3,8.3,8.3,8.3,0,0,1-8.3-8.3A8.3,8.3,0,0,1-.553,0" transform="translate(8.851)"/>
+      </g>
+      <g id="Group_777" data-name="Group 777" transform="translate(6.064 8.809)">
+        <path id="Path_423" data-name="Path 423" class="cls-5" d="M-.413,0A6.192,6.192,0,0,1,5.778,6.191,6.192,6.192,0,0,1-.413,12.382,6.192,6.192,0,0,1-6.6,6.191,6.192,6.192,0,0,1-.413,0" transform="translate(6.604)"/>
+      </g>
+      <g id="Group_778" data-name="Group 778" transform="translate(8.897 11.272)">
+        <path id="Path_424" data-name="Path 424" class="cls-6" d="M-.294-.14l-1.037-2.1L-2.368-.14-4.7.2l1.681,1.641-.395,2.314,2.08-1.09L.749,4.156.356,1.842,2.036.2Z" transform="translate(4.697 2.241)"/>
+      </g>
+    </g>
+  </g>
+</svg>

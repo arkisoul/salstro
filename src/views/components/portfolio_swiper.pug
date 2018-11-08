@@ -13,9 +13,12 @@
         .swiper-wrapper
           // Slides
           .swiper-slide
-            a.addnewitem__box.addnewitem__box-big.addnewitem__box-black(href='')
-              img.addnewitem__box-img(src=require('../../assets/images/svg/icon-cloud.svg') alt='Upload Image')
-              span.addnewitem__box-text Upload Image
+            form(action="", method="post")
+              .form-group.m-0.theme__file-upload
+                input#uploadNewImage.theme__file-upload-input(type="file", name="")
+                label.addnewitem__box.addnewitem__box-big.addnewitem__box-black(for="uploadNewImage")
+                  img.addnewitem__box-img(src=require('../../assets/images/svg/icon-cloud.svg') alt='Upload Image')
+                  span.addnewitem__box-text Upload Image
           .swiper-slide
             .portfolio__item
               img.portfolio__item-img(src=require('../../assets/images/img/portfolio-04.jpg'), alt="Portfolio")

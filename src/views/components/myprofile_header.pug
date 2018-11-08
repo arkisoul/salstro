@@ -3,7 +3,7 @@
 section.profile__header
   .profile__banner
     img.profile__banner-img(src=require('../../assets/images/img/user-profilebg.jpg') alt='Profile Banner')
-    button.btn__edit-profile
+    button.btn__edit-profile(data-toggle='modal' data-target='#addAboutMe')
       img(src=require('../../assets/images/svg/pencil.svg') alt='Edit')
     p.profile__stats
       span.profile__following 500+ Following
@@ -16,13 +16,13 @@ section.profile__header
       p.profile__user-prof Senior Hair Stylist at Fernando's
       p.profile__user-location San Francisco, USA
     .profile__accolades
-      .profile__accolade
+      a.profile__accolade(href='')
         img.profile__accolade-academy(src=require('../../assets/images/svg/icon-academy.svg') alt='Academy')
-      .profile__accolade
+      a.profile__accolade(href='')
         img.profile__accolade-trophy(src=require('../../assets/images/svg/icon-trophy.svg') alt='Trophy')
-      .profile__accolade
+      a.profile__accolade(href='')
         img.profile__accolade-blog(src=require('../../assets/images/svg/icon-blog.svg') alt='Certificates')
-      .profile__accolade
+      a.profile__accolade(href='')
         img.profile__accolade-badge(src=require('../../assets/images/svg/icon-badge.svg') alt='Awards')
   .profile__navigation
     ul.profile__navigation-navbar

@@ -2,10 +2,9 @@
 
 .box
   .box__head
-    .box__head
-      h1.box__heading Showreel
-      a.box__img-right(href='')
-        img.box__img-right.img__24(src=require('../../assets/images/svg/icon-pencil-circle.svg'), alt="")
+    h1.box__heading Showreel
+    a.box__img-right(href='')
+      img.box__img-right.img__24(src=require('../../assets/images/svg/icon-pencil-circle.svg'), alt="")
   .box__body
     .showreel__container
       // Slider main container
@@ -14,9 +13,12 @@
         .swiper-wrapper
           // Slides
           .swiper-slide
-            a.addnewitem__box.addnewitem__box-big.addnewitem__box-black(href='')
-              img.addnewitem__box-img(src=require('../../assets/images/svg/icon-cloud.svg') alt='Upload Image')
-              span.addnewitem__box-text Upload Video
+            form(action="", method="post")
+              .form-group.m-0.theme__file-upload
+                input#uploadNewVideo.theme__file-upload-input(type="file", name="")
+                label.addnewitem__box.addnewitem__box-big.addnewitem__box-black(for="uploadNewVideo")
+                  img.addnewitem__box-img(src=require('../../assets/images/svg/icon-cloud.svg') alt='Upload Image')
+                  span.addnewitem__box-text Upload Video
           .swiper-slide
             .showreel__item
               button.btn__play.btn__play40

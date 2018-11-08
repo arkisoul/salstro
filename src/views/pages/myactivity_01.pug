@@ -30,13 +30,20 @@ block content
             .col-lg-4
               aside.profile__sidebar
                 +box('My Photos')
-                  a.addnewitem__box(href='')
-                    img.addnewitem__box-img(src=require('../../assets/images/svg/icon-addimage.svg') alt='Add Image')
-                    span.addnewitem__box-text Add New Image
+                  form(action="", method="post")
+                    .form-group.theme__file-upload
+                      input#addNewImage.theme__file-upload-input(type="file")
+                      label.addnewitem__box(for="addNewImage")
+                        img.addnewitem__box-img(src=require('../../assets/images/svg/icon-addimage.svg') alt='Add Image')
+                        span.addnewitem__box-text Add New Image
                 +box('My Videos')
-                  a.addnewitem__box(href='')
-                    img.addnewitem__box-img(src=require('../../assets/images/svg/icon-addvideo.svg') alt='Add Image')
-                    span.addnewitem__box-text Add New Video
+                  form(action="", method="post")
+                    .form-group.theme__file-upload
+                      input#addNewVideo.theme__file-upload-input(type="file")
+                      label.addnewitem__box(for="addNewVideo")
+                        img.addnewitem__box-img(src=require('../../assets/images/svg/icon-addvideo.svg') alt='Add Image')
+                        span.addnewitem__box-text Add New Video
 
 block modal
   include ../components/specific_post_modal.pug
+  include ../components/aboutme_popup.pug
