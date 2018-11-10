@@ -5,7 +5,7 @@ mixin box(heading, img='none', className='none')
     .box__head
       if img != 'none'
         if className != 'none'
-          img.box__img(src=img, alt="", class=className)
+          img.box__img(src=require('../../assets/images/img/' + img), alt="Avatar", class=className)
           h1.box__heading #{heading}
         else
           img.box__img(src=img, alt="")

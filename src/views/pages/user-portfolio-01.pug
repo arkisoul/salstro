@@ -49,9 +49,12 @@ block content
                     .portfolio__video-newsfeed
                       h3.portfolio__heading Profile &amp; Newsfeed Videos
                       .portfolio__video-item
-                        a.addnewitem__box.addnewitem__box-big(href='')
-                          img.addnewitem__box-img(src=require('../../assets/images/svg/icon-addvideo.svg') alt='Upload Image')
-                          span.addnewitem__box-text Add New Video
+                        form(action="", method="post")
+                          .form-group.theme__file-upload
+                            input#addNewVideoNewsfeed.theme__file-upload-input(type="file")
+                            label.addnewitem__box.addnewitem__box-big(for='addNewVideoNewsfeed')
+                              img.addnewitem__box-img(src=require('../../assets/images/svg/icon-addvideo.svg') alt='Upload Image')
+                              span.addnewitem__box-text Add New Video
                         .portfolio__video-option
                           span.portfolio__video-text My Profile Showreel
                           .dropdown.custom__dropdown
@@ -61,9 +64,12 @@ block content
                               a.dropdown-item(href='#') Edit
                               a.dropdown-item(href='#') Delete
                       .portfolio__video-item
-                        a.addnewitem__box.addnewitem__box-big(href='')
-                          img.addnewitem__box-img(src=require('../../assets/images/svg/icon-addvideo.svg') alt='Upload Image')
-                          span.addnewitem__box-text Add New Video
+                        form(action="", method="post")
+                          .form-group.theme__file-upload
+                            input#addNewVideoShowreel.theme__file-upload-input(type="file")
+                            label.addnewitem__box.addnewitem__box-big(for='addNewVideoShowreel')
+                              img.addnewitem__box-img(src=require('../../assets/images/svg/icon-addvideo.svg') alt='Upload Image')
+                              span.addnewitem__box-text Add New Video
                         .portfolio__video-option
                           span.portfolio__video-text Newsfeed Videos
                           .dropdown.custom__dropdown
@@ -75,9 +81,13 @@ block content
                     .portfolio__video-other
                       h3.portfolio__heading Other Videos
                       .portfolio__video-item.portfolio__item-full
-                        a.addnewitem__box.addnewitem__box-big(href='')
-                          img.addnewitem__box-img(src=require('../../assets/images/svg/icon-addvideo.svg') alt='Upload Image')
-                          span.addnewitem__box-text Add New Video
+                        form(action="", method="post")
+                          .form-group.theme__file-upload
+                            input#addNewVideoOther.theme__file-upload-input(type="file")
+                            label.addnewitem__box.addnewitem__box-big(for='addNewVideoOther')
+                              img.addnewitem__box-img(src=require('../../assets/images/svg/icon-addvideo.svg') alt='Upload Image')
+                              span.addnewitem__box-text Add New Video
+
 
 block modal
   include ../components/addPhotoPopup.pug

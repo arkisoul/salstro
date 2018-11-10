@@ -7,9 +7,9 @@ include ../mixins/modal.pug
     form(action="", method="post")
       .form-row.form__fields-wrap
         .col-lg-12.form__fields-item
-          .form-group
+          .form-group.theme__form-group.mt-2
+            input.form-control.theme__form-control.theme__primary-form-control(type='text' id='albumName')
             label.theme__label(for='albumName') Album Name
-            input.form-control.theme__form-control.theme__primary-form-control(type='text', placeholder='Simple Hair Style Album' id='albumName')
         .col-lg-12.form__fields-item
           .form-group
             label.theme__label(for='description') Description
@@ -38,10 +38,12 @@ include ../mixins/modal.pug
                       a.dropdown-item(href='#') Make Album Cover
         .col-lg-12.form__fields-item
           .newpost__options-tag
-            .input-group
+            .input-group.newpost__tag-group
               .input-group-prepend
                 span#options__tag.input-group-text Tags
-              input.form-control(type='text' placeholder='Create tags for your topic' aria-label='Tags' aria-describedby='options__tag')
+              input.form-control.newpost__add-tag(type='text' placeholder='Create tags for your topic' aria-label='Tags' aria-describedby='options__tag')
+              input.newpost__tags(type="hidden")
+            .newpost__tag-container
         .create__album-foot
           .userfeed__newpost-privacy
             | Privacy

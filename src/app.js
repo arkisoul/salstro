@@ -16,20 +16,21 @@ $(document).ready(() => {
   $('[data-toggle="tooltip"]').tooltip();
 
   $('.newpost__add-tag').on('keypress', function (e) {
-    if (e.keyCode !== 13 || e.target.value.length <= 0) {
+    if (e.keyCode !== 13) {
       return
     }
     e.preventDefault()
-    var val = e.target.value
-    var html = '<span class="newpost__tag">' + val + '<button class="btn btn__remove-tag" onclick="removeTag(this)">&times;</button></span>'
-    $(this).parents('.newpost__tag-group').siblings('.newpost__tag-container').append(html)
-    if ($(this).siblings('.newpost__tags').val() === '') {
-      $(this).siblings('.newpost__tags').val(val)
-    } else {
-      $(this).siblings('.newpost__tags').val($(this).siblings('.newpost__tags').val() + ', ' + val)
+    if (e.target.value.length > 0) {
+      var val = e.target.value
+      var html = '<span class="newpost__tag">' + val + '<button class="btn btn__remove-tag" onclick="removeTag(this)">&times;</button></span>'
+      $(this).parents('.newpost__tag-group').siblings('.newpost__tag-container').append(html)
+      if ($(this).siblings('.newpost__tags').val() === '') {
+        $(this).siblings('.newpost__tags').val(val)
+      } else {
+        $(this).siblings('.newpost__tags').val($(this).siblings('.newpost__tags').val() + ', ' + val)
+      }
+      $(this).val('')
     }
-
-    $(this).val('')
   })
 
   $('.btn__add-polloption').on('click', function (e) {
@@ -39,9 +40,9 @@ $(document).ready(() => {
   })
 
   /* $('body').on('click', '.upload__file', function(e) {
-    e.preventDefault()
     var id = $(this).attr('for')
     $('#' + id).click()
+    console.log('clicked')
   }) */
 
   $('.form__control-feed').on('keydown', function (e) {
@@ -64,11 +65,9 @@ $(document).ready(() => {
   })
 
   $('body').on('click', function (e) {
-    // e.stopImmediatePropagation()
-    // e.preventDefault()
     $('.dropdown__sub').removeClass('show').siblings('.dropdown-menu').removeClass('show')
     $('.custom__select-list').slideUp()
-    // $('.theme__select-dropdown-menu').slideUp()
+    $('.theme__select-dropdown-menu').slideUp()
   })
 
   $('.btn__play').on('click', function (e) {
@@ -123,7 +122,6 @@ $(document).ready(() => {
   $('.theme__select-dropdown > .theme__select-dropdown-toggle').on('click', function (e) {
     e.preventDefault()
     e.stopPropagation()
-    console.log('toggling select box')
     $(this).siblings('.theme__select-dropdown-menu').slideToggle()
   })
 
@@ -132,7 +130,7 @@ $(document).ready(() => {
     var selectedValue = $(selectedInput).val()
     var dataRep = $(this).data('tar')
     $(selectedInput).prop('checked', true)
-    $(this).parents('.theme__select-dropdown').find('.theme__select-dropdown-toggle').text(selectedValue).siblings('input[name="' + dataRep + '"]').val(selectedValue).delay(400).siblings('.theme__select-dropdown-menu').slideUp()
+    $(this).parents('.theme__select-dropdown').find('.theme__select-dropdown-toggle').addClass('active').text(selectedValue).siblings('input[name="' + dataRep + '"]').val(selectedValue).delay(400).siblings('.theme__select-dropdown-menu').slideUp()
   })
 
   $('.theme__select-dropdown-multiple .theme__select-dropdown-item > label').on('click', function (e) {
@@ -159,7 +157,7 @@ $(document).ready(() => {
     if (!$(this).parents('.theme__select-dropdown').hasClass('active')) {
       $(this).parents('.theme__select-dropdown').addClass('active')
     }
-    $(this).parents('.theme__select-dropdown').find('.theme__select-dropdown-toggle').text(values).siblings('input[name="' + dataRep + '"]').val(values).delay(400).siblings('.theme__select-dropdown-menu').slideUp()
+    $(this).parents('.theme__select-dropdown').find('.theme__select-dropdown-toggle').addClass('active').text(values).siblings('input[name="' + dataRep + '"]').val(values).delay(400).siblings('.theme__select-dropdown-menu').slideUp()
   })
 
   // Material Design Input Fields
@@ -183,24 +181,26 @@ $(document).ready(() => {
   })
 
   $('.add__badge').on('keypress', function (e) {
-    if (e.keyCode !== 13 || e.target.value.length <= 0) {
+    if (e.keyCode !== 13) {
       return
     }
     e.preventDefault()
     e.stopPropagation()
-    var val = e.target.value;
-    var html = '<span class="theme__badge">' + val + '<button class="btn__badge-close" onclick="removeBadge(event, this)" role="button" type="button">×</button></span>'
-    $(this).siblings('.theme__badge-container').append(html)
-    var id = $(this).attr('id')
-    if ($('input[name="' + id + '"]').val() === '') {
-      $('input[name="' + id + '"]').val(val)
-    } else {
-      $('input[name="' + id + '"]').val($('input[name="' + id + '"]').val() + ', ' + val)
+    if (e.target.value.length > 0) {
+      var val = e.target.value;
+      var html = '<span class="theme__badge">' + val + '<button class="btn__badge-close" onclick="removeBadge(event, this)" role="button" type="button">×</button></span>'
+      $(this).siblings('.theme__badge-container').append(html)
+      var id = $(this).attr('id')
+      if ($('input[name="' + id + '"]').val() === '') {
+        $('input[name="' + id + '"]').val(val)
+      } else {
+        $('input[name="' + id + '"]').val($('input[name="' + id + '"]').val() + ', ' + val)
+      }
+      $(this).val('')
     }
-    $(this).val('')
   })
 
-  $('.theme__primary-form-control').on('keypress', function (e) {
+  $('.theme__primary-form-control, .theme__secondary-form-control').on('keypress', function (e) {
     if (e.keyCode === 13) e.preventDefault()
   })
 });

@@ -50,9 +50,12 @@ include ../mixins/videoItem.pug
     .portfolio__video-other
       h3.portfolio__heading Other Videos
       .portfolio__video-item
-        a.addnewitem__box.addnewitem__box-big(href='')
-          img.addnewitem__box-img(src=require('../../assets/images/svg/icon-addvideo.svg') alt='Upload Image')
-          span.addnewitem__box-text Add New Video
+        form(action="", method="post")
+          .form-group.theme__file-upload
+            input#addNewVideoOther.theme__file-upload-input(type="file")
+            label.addnewitem__box.addnewitem__box-big(for='addNewVideoOther')
+              img.addnewitem__box-img(src=require('../../assets/images/svg/icon-addvideo.svg') alt='Upload Image')
+              span.addnewitem__box-text Add New Video
       - for(var x = 1; x <= 8; x++)
         +videoItem(x)
       .portfolio__container-pagination

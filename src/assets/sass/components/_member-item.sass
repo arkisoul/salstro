@@ -1,0 +1,89 @@
+// ./src/assets/sass/components/_member-item.sass
+
+.member__item
+  display: flex
+  border-radius: 4px
+  border: 1px solid $border-offwhite
+
+  &:not(:last-child)
+    margin-bottom: 20px
+
+  .member__item-media
+    border-radius: 4px 0 0 4px
+
+  .member__item-img
+    border-radius: 4px 0 0 4px
+    width: 140px
+    height: 140px
+    object-fit: cover
+
+  .member__item-body
+    display: flex
+    justify-content: space-between
+    padding: 20px 15px 20px 20px
+    background-color: $bg-white
+    flex: 1 1 100%
+
+  .member__name
+    display: flex
+    align-items: center
+    font-size: 15px
+    font-weight: $semi
+    color: $text-black
+    line-height: 20px
+    margin: 0 0 5px
+
+  .member__accolade
+    width: 24px
+    height: 24px
+    border: 1px solid $border-offwhite
+    display: inline-flex
+    justify-content: center
+    align-items: center
+    margin-left: 8px
+
+    &.member__accolade-noborder
+      border-color: transparent
+
+  .member__accolade-check, .member__accolade-badge
+    width: 16px
+    height: 16px
+
+  .member__profile
+    font-size: 14px
+    font-weight: $regular
+    color: $text-gray
+    line-height: 20px
+    margin: 0 0 5px
+
+  .member__company
+    font-size: 13px
+    font-weight: $regular
+    color: $text-blue
+    line-height: 20px
+    margin: 0 0 6px
+    display: flex
+    align-items: center
+
+    & > img
+      width: 16px
+      height: 16px
+      margin-right: 10px
+
+  .member__location
+    @extend .member__company
+    margin: 0
+
+  .member__options
+    margin-left: auto
+    margin-bottom: auto
+
+    .custom__dropdown
+      .dropdown-menu
+        transform: initial!important
+        top: 30px!important
+        left: -140px!important
+
+        &::before
+          left: auto
+          right: 11px

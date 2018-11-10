@@ -3,4 +3,4 @@
 mixin postImage(img)
   p.feed__post-title Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum fugiat quasi
   a.feed__post-post.feed__post-post-single(href="#", data-toggle='modal' data-target='#postInModal')
-    img.feed__post-img-wide(src=img, alt="")
+    img.feed__post-img-wide(src=require('../../assets/images/img/' + img), alt="")

@@ -20,7 +20,7 @@ Date 03 Nov 2018
 10. Add Events/Milestones
 
 ===========================================
-Date
+Date 10 Nov 2018
 :: Pages ::
 1. My Profile 02 (with content)
 2. My Porftolio 01 (with placeholders)
@@ -28,6 +28,8 @@ Date
 4. My Porftolio Album
 5. My Porftolio Album View
 6. Company Profile
+7. Company Manage
+8. Company Group Manage
 
 :: Popups ::
 1. Add Image

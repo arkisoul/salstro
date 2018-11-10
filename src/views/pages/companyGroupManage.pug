@@ -1,0 +1,29 @@
+//- ./src/views/pages/companyGroupManage.pug
+
+extends ../layouts/master.pug
+
+block title
+  title Salstro - Company Group Manage
+
+block content
+  //- header cum navbar
+  include ../components/navbar.pug
+  //- main content
+  section.main-content
+    .container
+      .row
+        .col-lg-3.col-md-4
+          //- include sidebar
+          // Sidebar
+          include ../components/sidebar.pug
+          // ./ Sidebar
+        .col-lg-9.col-md-8
+          //- include content
+          .row
+            .col-12
+              include ../components/manage-searchbar.pug
+              include ../components/company-manage/admin-block.pug
+              include ../components/company-manage/moderator-block.pug
+              include ../components/company-manage/member-block.pug
+
+block modal

@@ -17,7 +17,7 @@ mixin videoItem(num)
           a.dropdown-item(href='#') Delete
     .portfolio__item-privacy
       .theme__toggle-switch
-        input(type='checkbox' id='toggle01').theme__toggle-switch-input
-        label(for='toggle01').theme__toggle-switch-handle
+        input(type='checkbox' id='toggleVid' + num).theme__toggle-switch-input
+        label(for='toggleVid' + num).theme__toggle-switch-handle
           span.theme__toggle-switch-private Private
           span.theme__toggle-switch-public Public

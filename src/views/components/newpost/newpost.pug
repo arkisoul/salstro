@@ -80,12 +80,12 @@
               input#newvideopost.form-control.form__control-noborder.form__placeholder-dark(type='text' placeholder='Create a new post or use @ to mention someone')
         .newvideo__add-link
           .form-group
-            label.btn.btn__add.btn__add-big.upload__file(for="videoPost")
+            label.btn.btn__add.btn__add-big.upload__file.m-0(for="uploadVideoPost")
               img(src=require("../../../assets/images/svg/plus-gray.svg"), alt="")
-              input#videoPost(type="file", name="videoPostFile")
+              input#uploadVideoPost(type="file", name="videoPost")
           .form-group
             label.sr-only(for='newvideolink') Video link
-            input#newvideolink.form-control(type='text' placeholder='Paste a link for a video')
+            input#newvideolink.form-control.theme__secondary-form-control(type='text' placeholder='Paste a link for a video')
         .newpost__options-tag
           .input-group.newpost__tag-group
             .input-group-prepend

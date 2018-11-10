@@ -17,15 +17,17 @@ include ../mixins/modal.pug
             .newphotopost__item
               img(src=require("../../assets/images/img/photo.jpg"), alt="")
               button.btn.btn__remove-small &times;
-          .form-group
+          .form-group.theme__file-upload
+            input#photopost.theme__file-upload-input(type="file", name="")
             label.btn.btn__add.btn__add-big(for="photopost")
               img(src=require("../../assets/images/svg/plus-gray.svg"), alt="")
-            input#photopost(type="file", name="")
         .newpost__options-tag
-          .input-group
+          .input-group.newpost__tag-group
             .input-group-prepend
               span#options__tag.input-group-text Tags
-            input.form-control(type='text' placeholder='Create tags for your topic' aria-label='Tags' aria-describedby='options__tag')
+            input.form-control.newpost__add-tag(type='text' placeholder='Create tags for your topic' aria-label='Tags' aria-describedby='options__tag')
+            input.newpost__tags(type="hidden")
+          .newpost__tag-container
       .upload__photo-foot
         .userfeed__newpost-privacy
           | Privacy

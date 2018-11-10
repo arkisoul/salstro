@@ -1,6 +1,44 @@
 //- ./src/views/mixins/memberItem.pug
 
 mixin memberItem(img, type)
-.member__item
-  img.member__item-img(src=require('../../assets/images/img/' + img), alt=type)
-  .member__info-block
+  .member__item
+    .member__item-media
+      img.member__item-img(src=require('../../assets/images/img/' + img), alt='Member')
+    .member__item-body
+      .member__info-block
+        h2.member__name
+          | John Carter
+          a.member__accolade.member__accolade-noborder(href='')
+            img.member__accolade-check(src=require('../../assets/images/svg/icon-check-circle.svg'), alt="Check")
+          a.member__accolade(href='')
+            img.member__accolade-badge(src=require('../../assets/images/svg/icon-badge.svg') alt='Awards')
+        h4.member__profile Chief Hair Stylist
+        p.member__company
+          img(src=require('../../assets/images/svg/icon-location.svg'), alt="Location")
+          | Loreal Paris, Paris
+        p.member__location
+          img(src=require('../../assets/images/svg/icon-location-pin.svg'), alt="Location Pin")
+          | Paris, France
+      .member__options
+        .dropdown.custom__dropdown
+          button#dropdownMenuButton.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+            img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+          if type == 'admin'
+            .dropdown-menu(aria-labelledby='dropdownMenuButton')
+              a.dropdown-item(href='#') Change to Moderator
+              a.dropdown-item(href='#') Remove as Admin
+              a.dropdown-item(href='#') Leave Group
+          else if type == 'otheradmin'
+            .dropdown-menu(aria-labelledby='dropdownMenuButton')
+              a.dropdown-item(href='#') Remove as Admin
+              a.dropdown-item(href='#') Remove from Group
+          else if type == 'member'
+            .dropdown-menu(aria-labelledby='dropdownMenuButton')
+              a.dropdown-item(href='#') Make Admin
+              a.dropdown-item(href='#') Make Moderator
+              a.dropdown-item(href='#') Remove from Group
+          else if type == 'moderator'
+            .dropdown-menu(aria-labelledby='dropdownMenuButton')
+              a.dropdown-item(href='#') Make Admin
+              a.dropdown-item(href='#') Remove as Moderator
+              a.dropdown-item(href='#') Remove from Group
