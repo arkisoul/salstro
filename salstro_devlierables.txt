@@ -34,3 +34,16 @@ Date 10 Nov 2018
 :: Popups ::
 1. Add Image
 2. Create Album
+
+===========================================
+Date
+:: Pages ::
+1. Company Profile
+2. Company Manage
+3. Company Group Manage
+4. Member Membership Page
+5. Company Membership Page
+6. Account Upgrade Blogger
+7. Account Upgrade Educator
+
+:: Popups ::

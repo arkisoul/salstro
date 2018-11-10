@@ -1,0 +1,59 @@
+//- ./src/views/pages/memberProfileMembership.pug
+
+extends ../layouts/master.pug
+include ../mixins/box.pug
+
+block title
+  title Salstro - Member Memberships
+
+block content
+  //- header cum navbar
+  include ../components/navbar.pug
+  //- main content
+  section.main-content
+    .container
+      .row
+        .col-lg-3.col-md-4
+          //- include sidebar
+          // Sidebar
+          include ../components/sidebar.pug
+          // ./ Sidebar
+        .col-lg-9.col-md-8
+          //- include content
+          +box('Membership')
+            .membership__container
+              .membership__card
+                .membership__card-head
+                  h2.membership__title Professional
+                  h1.membership__price
+                    | $ 25
+                    span.membership__price-time /mth
+                .membership__card-body
+                  ul.membership__features
+                    li.membership__feature Professional Profile Badge
+                    li.membership__feature Custom Background Header
+                    li.membership__feature See Who Has Viewed Your Profile
+                    li.membership__feature Become a Featured Job Applicant
+                    li.membership__feature Create Job Alerts
+                    li.membership__feature Create Course Alerts
+                .membership__card-foot
+                  a.btn.btn__primary(href='') Get Started Now
+              .membership__card
+                .membership__card-head
+                  h2.membership__title Educator
+                  h1.membership__price
+                    | $ 50
+                    span.membership__price-time /mth
+                  p.membership__note (10% discount when paid annually)
+                  span.membership__offer 50% off
+                .membership__card-body
+                  ul.membership__features
+                    li.membership__feature Educator Profile Badge
+                    li.membership__feature Listed on Educator Directory
+                    li.membership__feature Training Channel
+                    li.membership__feature 12 Course Ads Per Year
+                    li.membership__feature Unlimited Workshop Ads on Profile Page
+                .membership__card-foot
+                  a.btn.btn__primary(href='') Get Started Now
+
+block modal

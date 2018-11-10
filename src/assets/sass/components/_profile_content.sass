@@ -544,3 +544,83 @@
     img
       width: 45px
       height: 40px
+
+// Account Upgrade
+.account__upgrade-header
+  background-image: url('../images/img/account-upgrade-bg.jpg')
+  background-size: cover
+  background-position: center center
+  width: 100%
+  min-height: 250px
+  padding: 50px 30px
+  margin-bottom: 30px
+  display: flex
+  z-index: 1
+  position: relative
+
+  &.account__upgrade-bggray
+    &::before
+      content: ''
+      position: absolute
+      display: block
+      background-color: rgba($bg-gray, 0.9)
+      width: 100%
+      height: 100%
+      left: 0
+      right: 0
+      top: 0
+      bottom: 0
+      z-index: 0
+
+  &.account__upgrade-bgpink
+    &::before
+      content: ''
+      position: absolute
+      display: block
+      background-color: rgba($bg-pink, 0.9)
+      width: 100%
+      height: 100%
+      left: 0
+      right: 0
+      top: 0
+      bottom: 0
+      z-index: 0
+
+
+  .account__upgrade-media
+    margin-right: 20px
+    padding-top: 25px
+    z-index: 1
+
+  .account__upgrade-img
+    width: 140px
+    // height: 140px
+
+  .account__upgrade-content
+    padding: 4px
+    z-index: 1
+
+  .account__upgrade-title
+    font-size: 22px
+    font-weight: $semi
+    color: $text-white
+    margin: 0 0 8px
+    line-height: 29px
+
+  .account__upgrade-detail
+    margin: 0
+    line-height: 1.6
+    font-size: 14px
+    color: $text-white
+    text-align: justify
+
+// Account Blogger Form
+.account__blogger-form
+  padding: 25px 50px 20px
+
+.btn__submit-block
+  text-align: center
+  padding: 10px 10px 0
+
+.account__educator-form
+  @extend .account__blogger-form

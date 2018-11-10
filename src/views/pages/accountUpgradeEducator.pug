@@ -1,10 +1,10 @@
-//- ./src/views/pages/accountUpgradeBlogger.pug
+//- ./src/views/pages/accountUpgradeEducator.pug
 
 extends ../layouts/master.pug
 include ../mixins/box.pug
 
 block title
-  title Salstro - Upgrade Account: Blogger
+  title Salstro - Upgrade Account: Educator
 
 block content
   //- header cum navbar
@@ -21,21 +21,21 @@ block content
         .col-lg-9.col-md-8
           //- include content
           .account__upgrade-block
-            .account__upgrade-header.account__upgrade-bggray
+            .account__upgrade-header.account__upgrade-bgpink
               .account__upgrade-media
-                img.account__upgrade-img(src=require('../../assets/images/svg/icon-blog.svg'), alt="Blogger")
+                img.account__upgrade-img(src=require('../../assets/images/svg/icon-academy.svg'), alt="Educator")
               .account__upgrade-content
-                h1.account__upgrade-title Apply for Blogger Profile
+                h1.account__upgrade-title Apply for Educator Profile
                 p.account__upgrade-detail In eu nunc cursus, mollis risus ut, finibus lorem. Cras vitae velit condimentum, iaculis augue eu, blandit nisl. Suspendisse nisi dui, eleifend ut sapien eu, placerat fringilla lacus. Curabitur com modo, risus sed efficitur varius, sem diam hendrerit ex, non maximus elit orci nec elit. Nulla dum tristique. Nullam mollis nisi tempor convallis maximus. Aliquam maximus, quam et egestas convallis, nunc orci luctus dui, id suscipit mi elit at lectus. Nam in ullamcorper elit.
 
-            +box('Apply for Blogger Profile')
-              .account__blogger-form
+            +box('Apply for Educator Profile')
+              .account__educator-form
                 form(action="", method="post")
                   .form-row.form__fields-wrap
                     .col-lg-12.form__fields-item
                       .form-group.theme__form-group
-                        input.form-control.theme__form-control.theme__primary-form-control.form-control__error(type='text' id='typeOfArticle')
-                        label.theme__label(for='typeOfArticle') Type of Article
+                        input.form-control.theme__form-control.theme__primary-form-control.form-control__error(type='text' id='trainingCompany')
+                        label.theme__label(for='trainingCompany') Training Company
                         small.theme__primary-form-error
                           img.theme__primary-form-error-img(src=require('../../assets/images/svg/icon-error.svg') alt='Error')
                           span.theme__primary-form-error-text Error message lorem ipsum
@@ -73,20 +73,22 @@ block content
                               label(for='Promotional' data-tar='classificationSelect') Promotional
                     .col-lg-12.form__fields-item
                       .form-group.theme__form-group
-                        input.form-control.theme__form-control.theme__primary-form-control.add__badge(type='text' id='bloggerTags')
-                        input(type="hidden", name="bloggerTags")
-                        label.theme__label(for='bloggerTags') Enter Tags
-                        .theme__badge-container
-                    .col-lg-12.form__fields-item
-                      .form-group
-                        label.theme__label(for='articleContent') Article Content
-                        textarea.form-control.theme__form-control(rows='3' placeholder='Write here' id='articleContent')
+                        input.form-control.theme__form-control.theme__primary-form-control(type='text' id='coursesTaught')
+                        label.theme__label(for='bloggerTags') Courses Taught
+                    .col-md-6.form__fields-item
+                      .form-group.theme__form-group
+                        input.form-control.theme__form-control.theme__primary-form-control(type='text' id='fullDayRate')
+                        label.theme__label(for='fullDayRate') Full Day Rate
+                    .col-md-6.form__fields-item
+                      .form-group.theme__form-group
+                        input.form-control.theme__form-control.theme__primary-form-control(type='text' id='halfDayRate')
+                        label.theme__label(for='halfDayRate') Half Day Rate
                     .col-md-6
                       .form-group.theme__file-upload
-                        input.theme__file-upload-input(type='file' id='bloggerCoverImage')
-                        label.theme__file-upload-label.addnewitem__box(for='bloggerCoverImage')
+                        input.theme__file-upload-input(type='file' id='educatorEvidence')
+                        label.theme__file-upload-label.addnewitem__box(for='educatorEvidence')
                           img.addnewitem__box-img(src=require('../../assets/images/svg/icon-addimage.svg') alt='Add Image')
-                          span.addnewitem__box-text Upload Cover Image
+                          span.addnewitem__box-text Upload Evidence
                   .btn__submit-block
                     button.btn.btn__primary(type="submit") Apply
 

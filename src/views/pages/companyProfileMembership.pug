@@ -1,0 +1,75 @@
+//- ./src/views/pages/companyProfileMembership.pug
+
+extends ../layouts/master.pug
+include ../mixins/box.pug
+
+block title
+  title Salstro - Company Memberships
+
+block content
+  //- header cum navbar
+  include ../components/navbar.pug
+  //- main content
+  section.main-content
+    .container
+      .row
+        .col-lg-3.col-md-4
+          //- include sidebar
+          // Sidebar
+          include ../components/companySidebar.pug
+          // ./ Sidebar
+        .col-lg-9.col-md-8
+          //- include content
+          +box('Membership')
+            .membership__container
+              .membership__card
+                .membership__card-head
+                  h2.membership__title Basic
+                  h1.membership__price
+                    | Free
+                .membership__card-body
+                  ul.membership__features
+                    li.membership__feature Create a professional profile
+                    li.membership__feature Promote Company Culture
+                    li.membership__feature Showcase professional Portfolio & Showreel
+                    li.membership__feature Create Job Advertisement
+                .membership__card-foot
+                  a.btn.btn__optional(href='') Get Started Now
+              .membership__card
+                .membership__card-head
+                  h2.membership__title Premium
+                  h1.membership__price
+                    | $ 100
+                    span.membership__price-time /mth
+                  p.membership__note (paid annually)
+                .membership__card-body
+                  ul.membership__features
+                    li.membership__feature Basic account features including
+                    li.membership__feature Premium Profile Badge
+                    li.membership__feature Custom Profile Background
+                    li.membership__feature 1 monthly Job Advertisement
+                    li.membership__feature Create Job Seeker Alert
+                    li.membership__feature Candidate screening
+                    li.membership__feature Download Resumes
+                .membership__card-foot
+                  a.btn.btn__optional(href='') Get Started Now
+              .membership__card
+                .membership__card-head
+                  h2.membership__title Academy
+                  h1.membership__price
+                    | $ 165
+                    span.membership__price-time /mth
+                  p.membership__note (paid annually)
+                  span.membership__offer 50% off
+                .membership__card-body
+                  ul.membership__features
+                    li.membership__feature Basic account features including
+                    li.membership__feature Academy Profile Badge
+                    li.membership__feature Custom Profile Background
+                    li.membership__feature Listed on Academy Directory
+                    li.membership__feature 40 Yearly Course Ads
+                    li.membership__feature Training Channel
+                .membership__card-foot
+                  a.btn.btn__optional(href='') Get Started Now
+
+block modal
