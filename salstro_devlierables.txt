@@ -45,5 +45,7 @@ Date
 5. Company Membership Page
 6. Account Upgrade Blogger
 7. Account Upgrade Educator
+8. Community Hub Blogs
+9. Community Hub Blog View
 
 :: Popups ::

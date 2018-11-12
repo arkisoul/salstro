@@ -1,0 +1,71 @@
+//- ./src/views/pages/hub-blogs.pug
+
+extends ../layouts/master.pug
+include ../mixins/hub-header.pug
+
+block title
+  title Salstro - Community Hub Blogs
+
+block content
+  //- header cum navbar
+  include ../components/navbar.pug
+  //- main content
+  section.main-content
+    .container
+      .row
+        .col-lg-3.col-md-4
+          //- include sidebar
+          // Sidebar
+          include ../components/sidebar.pug
+          // ./ Sidebar
+        .col-lg-9.col-md-8
+          section.hub-blogs-section
+            +hubHeader('Articles')
+            .hub__blog-featured
+              #hub__blogs-swiper.swiper-container.swiper__container
+                // Additional required wrapper
+                .swiper-wrapper
+                  // Slides
+                  - for(var x = 0; x < 3; x++)
+                    .swiper-slide
+                      figure.hub__blog-item
+                        img.hub__blog-img(src=require('../../assets/images/img/hub-post.jpg'), alt="Blog Post")
+                        figcaption.hub__blog-caption Suspendisse rhoncus libero sit amet lorem tristique tincidunt. Integer sed pellentesque sem
+                        a.blog__category-tag.blog__category-tag--big(href='') Lorem Category
+
+                // If we need navigation buttons
+                .swiper-button-prev
+                .swiper-button-next
+
+              .hub__blogs-categories
+                include ../components/blog-categories.pug
+
+            +box('Articles')
+              section.hub-articles
+                - for(var x = 1; x < 9; x++)
+                  .hub-articles__article
+                    .hub-articles__article-media
+                      img.hub-articles__article-img(src=require('../../assets/images/img/port-0' + x + '.jpg') alt='Article Image')
+                      a.blog__category-tag(href='') Lorem Category
+                    .hub-articles__article-body
+                      h2.hub-articles__article-title Curabitur sodales luctus sollicit
+                      p.hub-articles__article-brief Donec eu maximus massa. Cras molli sermentum libero egestas laciniadsm ipsum dolor sit amet.
+                      .hub-articles__article-foot
+                        a.hub-articles__article-read(href='') Read More
+                        span.hub-articles__article-time 2 days ago
+                - for(var x = 8; x >= 1; x--)
+                  .hub-articles__article
+                    .hub-articles__article-media
+                      img.hub-articles__article-img(src=require('../../assets/images/img/port-0' + x + '.jpg') alt='Article Image')
+                      a.blog__category-tag(href='') Lorem Category
+                    .hub-articles__article-body
+                      h2.hub-articles__article-title Curabitur sodales luctus sollicit
+                      p.hub-articles__article-brief Donec eu maximus massa. Cras molli sermentum libero egestas laciniadsm ipsum dolor sit amet.
+                      .hub-articles__article-foot
+                        a.hub-articles__article-read(href='') Read More
+                        span.hub-articles__article-time 2 days ago
+                
+                .hub-articles-pagination
+                  a.btn.btn__primary(href='') View More
+
+block modal

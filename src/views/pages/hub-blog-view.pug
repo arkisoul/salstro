@@ -1,0 +1,110 @@
+//- ./src/views/pages/hub-blogs.pug
+
+extends ../layouts/master.pug
+
+block title
+  title Salstro - Community Hub Blog View
+
+block content
+  //- header cum navbar
+  include ../components/navbar.pug
+  //- main content
+  section.main-content
+    .container
+      .row
+        .col-lg-3.col-md-4
+          //- include sidebar
+          // Sidebar
+          include ../components/sidebar.pug
+          // ./ Sidebar
+        .col-lg-9.col-md-8
+          article.hub-blog
+            .hub-blog__featured
+              img.hub-blog__featured-img(src=require('../../assets/images/img/post-featured.jpg'), alt="Blog Post")
+              a.blog__category-tag.blog__category-tag--big(href='') Lorem Category
+            .hub-blog__content
+              h1.hub-blog__title Lorem ipsum rhoncus libero sit amet lorem tristique tincidun
+              p.hub-blog__para Donec eu maximus massa. Cras mollis fermentum libero egestas lacinia. Lorem ipsum dolor sit amet, consectetur nisl, et vusit amet, consectetur nisl, et vulputate magna molestie ac. Nunc ulces eentum neque lputate magna molestie ac. Nunc ulces eentum neque consequat porta. Sed ac maximus libero. Etiam f magna molestie ac. Nunc ulces eentum neque ugiat imperdiet ligLorem ipsum dolor sit amet, consectetur nisl, et vulputate magna molestie ula, in facilisis arcu sollicitudin a. Vivamus sit amet accumsan mauris.
+              p.hub-blog__para Vonsectetur adipiscing elit. Donec convallis leo eu erat tincidunt lacinia. Etiam eget nunc eget augue interdum elementum vel luctus ligula. Ut quis elementum ex, sollicitudin aliquet neque. Sed facilisis felis turpis, modo fringilla. In eu justo velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent efficitur aliquet nisi, at posuere lectus mattis a. In quam turpis, pharetra at enim vel, pharetra malesuada orci.
+              p.hub-blog__para Integer eu convallis sem. Nunc tortor justo, efficitur vel odio ut, viverra congue massa. Morbi lacinia orci diam, vehicula fringilla felis porta vel. Nulla semper magna sed odio venenatis hendrerit. Morbi blandit libero congue, tincidunt urna non, hendrerit nisl. Vivamus odio urna, malesuada eu augue ut, lacinia placerat lectus. Phasellus ut porta augue. Pellentesque non nisl est. Sed efficitur ipsum sed libero consectetur tincidunt. Cras eget porttitam ut ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec auctor blandit ipsum, non interdum urna vestibulum vitae. Aenean odio lectus, fringilla eget justo in, consequat pharetra lectus. Nullam tempus nisl purus, ac condimentum libero lacinia eget.
+              p.hub-blog__para Sed laoreet velit id orci fringilla, eu molestie erat laoreet. Curabitur dapibus cursus enim a euismod. Aliquam dignissim sodales ipsum, vel dapibus erat dictum a. Nulla suscipit sapien in arcu poconsectetur adipiscing elit. Donec convallis leo eu erat tincidunt lacinia. Etiam eget nunc eget augue interdum elementum vel luctus ligula. Ut quis elementum ex, sollicitudin aliquet neque. Sed facilisis felis turpis, vitae feugiat nibh ullamcorper a. Aliquam sit amet tempor magna, eu dapibus arcu. Mauris facilisis commodo fringilla. In eu justo velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent efficitur aliquet nisi, at posuere lectus mattis a. In quam turpis, pharetra at enim vel, pharetra malesuada orci.
+              .hub-blog__media
+                img.hub-blog__media-img(src=require('../../assets/images/img/post-in.jpg'), alt="")
+              p.hub-blog__para In nec mi id massa scelerisque aliquet eu a ligula. Fusce pulvinar volutpat facilisis. Proin tincidunt euismod risus non ornare. Vivamus bibendum molestie metus, et porttitor mi dapibus aliquet. Curabitur molestie auctor sem, vitae aliquet nisl facilisis eu. In hac habitasse platea dictumst. Donec placerat massabulum felis lorem, suscipit vitae nulla ut, tempor volutpat diam. Sed commodo rutrum posuere. Nulla tempus ante lorem, quis cursus ante efficitur nec. Sed diam orci, semper ut faucibus sed, volutpat ut justo. Donec commodo, orci ut iaculis scelerisque, turpis quam malesuada augue, a iaculis nibh ex sit amet dolor. Phasellus eget pharetra dolor. Curabitur bibendum convallis libero, sed ultrices dolor facilisis placerat. Maecenas ac sagittis nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+              p.hub-blog__para Aliquam eu bibendum diam. Aenean urna augue, aliquam a facilisis sed, laoreet aliquam est. Maecenas vehicula posuere efficitur. Sed ac nisl metus. Duis fermentum pellentesque turpis, vitae consequat elit. Aenean volutpat sapien augue, mollis ullamcorper odio cursus vulputate. Aenean ut nibh et est rhoncus hendrerit vitae sit amet leo. Fusce maximus dui vel magna rutrum viverra. Sed in diam nec metus elementum pellentesque non a urna. Aenean sit amet consequat lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse lectus lacus, gravida quis quam vel, semper auctor ligula.
+              p.hub-blog__para In nec mi id massa scelerisque aliquet eu a ligula. Fusce pulvinar volutpat facilisis. Proin tincidunt euismod risus non ornare. Vivamus bibendum molestie metus, et porttitor mi dapibus aliquet. Curabitur molestie auctor sem, vitae aliquet nisl facilisis eu. In hac habitasse platea dictumst. Donec placerat massa diam, et tempus dolor maximus non. Nunc vel pulvinar neque. Nunc eu lacinia nulla, id aliquam mi. Praesent leo dui, rutrum non ullamcorper et, luctus ut eros. Vestibulum purus libero, accumsan eu varius quis, consequat et ante. Aliquam ut bibendum mi.
+              .hub-blog__meta
+                .hub-blog__tags
+                  a.hub-blog__tag(href='') Lorem ipsum dummy
+                  a.hub-blog__tag(href='') Lorem
+                  a.hub-blog__tag(href='') Lorem ipsum
+                .hub-blog__author
+                  img.hub-blog__author-img(src=require('../../assets/images/img/avatar.jpg'), alt="Author")
+                  p.hub-blog__author-info
+                    | Posted by
+                    a.hub-blog__author-name(href='') Robert
+                .hub-blog__social
+                  a.hub-blog__social-like(href='')
+                    img(src=require('../../assets/images/svg/like.svg'), alt="Like")
+                  a.hub-blog__social-share(href='')
+                    img(src=require('../../assets/images/svg/share.svg'), alt="Share")
+                  a.hub-blog__social-fav(href='')
+                    img(src=require('../../assets/images/svg/star.svg'), alt="Save")
+                    | Save
+          .hub-blog__pagination
+            a.hub-blog__pagination-prev.hub-blog__pagination-btn(href="#") Previous
+            a.hub-blog__pagination-next.hub-blog__pagination-btn.active(href="#") Next
+
+          +box('Comments')
+            .hub-blog__comments
+              .hub-blog__post-comment
+                a.user__avatar-wrap(href="#")
+                  img.user__avatar.user__avatar30(src=require("../../assets/images/img/avatar.jpg"), alt="Avatar")
+                .hub-blog__post-acomment
+                  .form-group
+                    label.sr-only(for='postComment') Comment
+                    textarea.form-control.theme__form-control(rows='3' placeholder='Leave your comment here' id='postComment')
+                  .text-right
+                    button.btn.btn__primary(type="submit" role='submit') Comment
+              .hub-blog__comment-item
+                .hub-blog__comment-item-head
+                  a.user__avatar-wrap
+                    img.user__avatar.user__avatar30(src=require('../../assets/images/img/avatar.jpg'), alt="Avatar")
+                  p.hub-blog__comment-text Lorem ipsum dolor sit amet consectetur adipisicing
+                .hub-blog__comment-item-foot
+                  p.hub-blog__comment-meta
+                    a(href="") Like
+                    a(href="") Reply
+                    a(href="") 2 days ago
+                  .hub-blog__comment-item
+                    .hub-blog__comment-item-head
+                      a.user__avatar-wrap
+                        img.user__avatar.user__avatar22(src=require('../../assets/images/img/avatar.jpg'), alt="Avatar")
+                      p.hub-blog__comment-text Lorem ipsum dolor sit amet
+                    .hub-blog__comment-item-foot
+                      p.hub-blog__comment-meta
+                        a(href="") Like
+                        a(href="") Reply
+                        a(href="") 2 days ago
+              .hub-blog__comment-item
+                .hub-blog__comment-item-head
+                  a.user__avatar-wrap
+                    img.user__avatar.user__avatar30(src=require('../../assets/images/img/avatar.jpg'), alt="Avatar")
+                  p.hub-blog__comment-text Lorem ipsum dolor sit amet consectetur adipisicing
+                .hub-blog__comment-item-foot
+                  p.hub-blog__comment-meta
+                    a(href="") Like
+                    a(href="") Reply
+                    a(href="") 2 days ago
+                  .hub-blog__comment-item
+                    .hub-blog__comment-item-head
+                      a.user__avatar-wrap
+                        img.user__avatar.user__avatar22(src=require('../../assets/images/img/avatar.jpg'), alt="Avatar")
+                      p.hub-blog__comment-text Lorem ipsum dolor sit amet
+                    .hub-blog__comment-item-foot
+                      p.hub-blog__comment-meta
+                        a(href="") Like
+                        a(href="") Reply
+                        a(href="") 2 days ago
+
+block modal

@@ -1,0 +1,15 @@
+//- ./src/views/components/blog-categories.pug
+
+include ../mixins/box.pug
+
++box('Categories')
+  ul#blogCategoriesAccordion.hub__blog-categories-accordion
+    - var list = ['One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten']
+    for item in list
+      li.hub__blog-category-item(id='catHeading' + item)
+        button.hub__blog-category-toggle.collapsed(data-toggle='collapse' data-target='#category' + item type='button' role='button' aria-expanded="false" aria-controls="category" + item) Category #{item}
+        ul.collapse.hub__blog-category-list(aria-labelledby="catHeading" + item data-parent="#blogCategoriesAccordion" id='category' + item)
+          li.hub__blog-category
+            a.hub__blog-category-link(href='') Lorem Ipsum
+          li.hub__blog-category
+            a.hub__blog-category-link(href='') Lorem Ipsum
