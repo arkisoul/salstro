@@ -66,3 +66,57 @@
   &__pagination
     padding: 10px
     text-align: center
+
+// Inspiration Gallery Popup
+.inspired-images__uploads
+  display: flex
+  align-items: center
+
+  .theme__file-upload
+    margin-bottom: 0
+
+  .addnewitem__box
+    margin: 0
+
+.inpired-images__container
+  display: flex
+  flex: 1 1 calc(100% - 190px)
+  overflow-x: auto
+  margin-left: 10px
+
+.inpired-images__item
+  position: relative
+  max-width: 180px
+  height: auto
+  min-width: 180px
+  flex: 1
+  margin-right: 6px
+
+  &:hover, &:focus
+    .btn__remove-small
+      display: inline-flex
+
+  .btn__remove-small
+    display: none
+    position: absolute
+    top: 4px
+    right: 4px
+    width: 20px
+    height: 20px
+
+  img
+    max-width: 100%
+    height: auto
+    object-fit: cover
+    border-radius: 4px
+
+.btn__submit-wrap
+  .btn__back
+    position: absolute
+    left: 20px
+    top: 50%
+    transform: translateY(-50%)
+    background-color: transparent
+
+    img
+      width: 24px

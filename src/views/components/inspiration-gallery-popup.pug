@@ -1,0 +1,45 @@
+//- ./src/views/components/inspiration-gallery-popup.pug
+
+include ../mixins/modal.pug
+
++modalComplete('Upload on Inspiration Gallery Competition', 'inspirationGalleryCompetition')
+  .modal-body
+    form(action="", method="post")
+      .form-row.form__fields-wrap
+        .col-md-6.form__fields-item.align__flex-end
+          .form-group.theme__form-group
+            input.form-control.theme__form-control.theme__primary-form-control(type='text' id='imageTitle')
+            label.theme__label(for='imageTitle') Image Title
+        .col-md-6.form__fields-item
+          .form-group
+            label.theme__label(for='categorySelect') Category
+            .theme__select-dropdown
+              button.theme__select-dropdown-toggle(tab-index='-1') Select Category
+              input(type='hidden' name='categorySelect')
+              ul.theme__select-dropdown-menu
+                li.theme__select-dropdown-item
+                  input(type='radio' id='Hair' name='imageCategory' value='Hair')
+                  label(for='Hair' data-tar='categorySelect') Hair
+                li.theme__select-dropdown-item
+                  input(type='radio' id='Beauty' name='imageCategory' value='Beauty')
+                  label(for='Beauty' data-tar='categorySelect') Beauty
+                li.theme__select-dropdown-item
+                  input(type='radio' id='Design' name='imageCategory' value='Design')
+                  label(for='Design' data-tar='categorySelect') Design
+                li.theme__select-dropdown-item
+                  input(type='radio' id='Boutique' name='imageCategory' value='Boutique')
+                  label(for='Boutique' data-tar='categorySelect') Boutique
+        .col-lg-12.form__fields-item
+          .form-group.theme__form-group
+            input.form-control.theme__form-control.theme__primary-form-control.add__badge(type='text' id='imageTags')
+            input(type="hidden", name="imageTags")
+            label.theme__label(for='imageTags') Enter Tags
+            .theme__badge-container
+        .col-lg-12
+          .form-group.theme__file-upload
+            input.theme__file-upload-input(type='file' id='galleryCoverImage')
+            label.theme__file-upload-label.addnewitem__box.theme__file-upload-label--full(for='galleryCoverImage')
+              img.addnewitem__box-img(src=require('../../assets/images/svg/icon-addimage.svg') alt='Add Image')
+              span.addnewitem__box-text Upload Cover Image
+      .btn__submit-wrap
+        button.btn.btn__primary(type='button' data-toggle='modal' data-target='#inspirationGalleryCompetition02') Next

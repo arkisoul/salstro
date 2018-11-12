@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 18.7">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #7f818c;
+      }
+    </style>
+  </defs>
+  <g id="Group_2023" data-name="Group 2023" transform="translate(0 0.1)">
+    <g id="Group_2020" data-name="Group 2020">
+      <g id="Group_2019" data-name="Group 2019">
+        <path id="Path_884" data-name="Path 884" class="cls-1" d="M23,8.3H1a1,1,0,1,0,0,2H23a1,1,0,0,0,1-1A.945.945,0,0,0,23,8.3Z"/>
+      </g>
+    </g>
+    <g id="Group_2022" data-name="Group 2022">
+      <g id="Group_2021" data-name="Group 2021">
+        <path id="Path_885" data-name="Path 885" class="cls-1" d="M2.3,9.2,9.9,1.6A.967.967,0,0,0,9.9.2.967.967,0,0,0,8.5.2L.3,8.6A.967.967,0,0,0,.3,10l8.3,8.3a.908.908,0,0,0,.7.3,1.08,1.08,0,0,0,.7-.3.967.967,0,0,0,0-1.4Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -258,6 +258,10 @@ window.removePhotoPost = function (_this) {
   $(_this).parent('.newphotopost__item').remove()
 }
 
+window.removeInspiredPhoto = function (_this) {
+  $(_this).parent('.inpired-images__item').remove()
+}
+
 window.removeBadge = function (event, _this) {
   event.preventDefault()
   var badge = $(_this).parent('.theme__badge').text()

@@ -1,0 +1,47 @@
+//- ./src/views/components/inspiration-gallery-popup2.pug
+
+include ../mixins/modal.pug
+
++modalComplete('Upload on Inspiration Gallery Competition', 'inspirationGalleryCompetition02')
+  .modal-body
+    form(action="", method="post")
+      .form-row.form__fields-wrap
+        .col-lg-12.form__fields-item
+          .form-group
+            label.theme__label(for='inspirationText') Your Inspiration
+            textarea.form-control.theme__form-control(rows='3' placeholder='Tell us what inspired your work' id='inspirationText')
+        .col-lg-12
+          h1.theme__form-title Upload Inspired Images
+        .col-lg-12
+          .inspired-images__uploads
+            .form-group.theme__file-upload
+              input.theme__file-upload-input(type='file' id='inpiredImages')
+              label.theme__file-upload-label.addnewitem__box(for='inpiredImages')
+                img.addnewitem__box-img(src=require('../../assets/images/svg/icon-addimage.svg') alt='Add Image')
+                span.addnewitem__box-text Upload Image
+            .inpired-images__container
+              .inpired-images__item
+                img(src=require("../../assets/images/img/port-05.jpg"), alt="")
+                button.btn.btn__remove-small(onclick='removeInspiredPhoto(this)') &times;
+        .col-lg-12
+          h1.theme__form-title Enter Artist Name
+        .col-md-6.form__fields-item.align__flex-end
+          .form-group.theme__form-group
+            input.form-control.theme__form-control.theme__primary-form-control(type='text' id='hairArtist')
+            label.theme__label(for='hairArtist') Hair
+        .col-md-6.form__fields-item.align__flex-end
+          .form-group.theme__form-group
+            input.form-control.theme__form-control.theme__primary-form-control(type='text' id='modelArtist')
+            label.theme__label(for='modelArtist') Model
+        .col-md-6.form__fields-item.align__flex-end
+          .form-group.theme__form-group
+            input.form-control.theme__form-control.theme__primary-form-control(type='text' id='makeupArtist')
+            label.theme__label(for='makeupArtist') Makeup
+        .col-md-6.form__fields-item.align__flex-end
+          .form-group.theme__form-group
+            input.form-control.theme__form-control.theme__primary-form-control(type='text' id='photographerArtist')
+            label.theme__label(for='photographerArtist') Photographer
+      .btn__submit-wrap
+        button.btn.btn__back(type='button' role='button')
+          img(src=require('../../assets/images/svg/arrow-left.svg'), alt="")
+        button.btn.btn__primary(type='button') Submit

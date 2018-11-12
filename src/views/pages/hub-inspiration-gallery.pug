@@ -26,7 +26,7 @@ block content
               .inspiration-gallery
                 p.inspiration-gallery__intro Want to get recognition for your craft and inspire others? Just submit your headshot along with your inspiration story to be in with a chance of featuring on the Hall of Fame and receiving an exclusive achievement badge for your profile. Voting is based on the photo with the most likes and a winner is selected each month.
                 .inspiration-gallery__nav
-                  a.btn.btn__primary(href="#") Enter Now
+                  a.btn.btn__primary(href="#" data-toggle='modal' data-target='#inspirationGalleryCompetition') Enter Now
                   a.btn.btn__navigation(href="#") Beauty Inspiration
                   a.btn.btn__navigation(href="#") Visit Hall of Fame
                 .inspiration-gallery__filter
@@ -88,3 +88,5 @@ block content
                 .inspiration-gallery__pagination
                   a.btn.btn__primary(href="#") View More
 block modal
+  include ../components/inspiration-gallery-popup.pug
+  include ../components/inspiration-gallery-popup2.pug
