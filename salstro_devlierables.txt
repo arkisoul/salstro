@@ -47,5 +47,11 @@ Date
 7. Account Upgrade Educator
 8. Community Hub Blogs
 9. Community Hub Blog View
+10. Hub Inspiration Gallery
+11. Hub Inspiration Gallery View
+12. Hall of fame
+13. Hallf of Fame View
 
 :: Popups ::
+1. Hub Inspiration Gallery Popup Part I
+2. Hub Inspiration Gallery Popup Part II

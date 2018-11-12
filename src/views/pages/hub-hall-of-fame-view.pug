@@ -1,0 +1,104 @@
+//- ./src/views/pages/hub-hall-of-fame-view.pug
+
+extends ../layouts/master.pug
+include ../mixins/hub-header.pug
+
+block title
+  title Salstro - Community Hub Hall of Fame View
+
+block content
+  //- header cum navbar
+  include ../components/navbar.pug
+  //- main content
+  section.main-content
+    .container
+      .row
+        .col-lg-3.col-md-4
+          //- include sidebar
+          // Sidebar
+          include ../components/sidebar.pug
+          // ./ Sidebar
+        .col-lg-9.col-md-8
+          section.inspired-gallery-section
+            +hubHeader('Hall of Fame')
+
+            +box('Hall of Fame')
+              .inspiration-gallery
+                p.inspiration-gallery__intro Every month a winner is selected from entries to the inspiration gallery competitions. Below is a collection of winners for the hair & beauty categories as voted for by our community. Each winner is immortalised in the Hall of Fame and awarded our exclusive competition winner badge for their profile.
+                .inspiration-gallery__nav
+                  a.btn.btn__navigation(href="#") Hair Gallery
+                  a.btn.btn__navigation(href="#") Beauty Gallery
+                .inspiration-gallery__filter
+                  form(action="")
+                    .form-group
+                      label.theme__label.sr-only(for='monthSelect') Select Month
+                      .theme__select-dropdown
+                        button.theme__select-dropdown-toggle(tab-index='-1') Select Month
+                        input(type='hidden' name='monthSelect')
+                        ul.theme__select-dropdown-menu
+                          li.theme__select-dropdown-item
+                            input(type='radio' id='month01' name='galleryMonth' value='July 18')
+                            label(for='month01' data-tar='monthSelect') July 18
+                          li.theme__select-dropdown-item
+                            input(type='radio' id='month02' name='galleryMonth' value='Aug 18')
+                            label(for='month02' data-tar='monthSelect') Aug 18
+                          li.theme__select-dropdown-item
+                            input(type='radio' id='month03' name='galleryMonth' value='Sep 18')
+                            label(for='month03' data-tar='monthSelect') Sep 18
+                          li.theme__select-dropdown-item
+                            input(type='radio' id='month04' name='galleryMonth' value='Oct 18')
+                            label(for='month04' data-tar='monthSelect') Oct 18
+                .ig__view-container
+                  p.ig__view-cat Hair
+                  .ig__view-block
+                    .ig__view-featured
+                      img.ig__view-featured-img(src=require('../../assets/images/img/ig-featured.jpg'), alt="Inspiration Gallery Featured Image")
+                    .ig__view-content
+                      .ig__view-content-header
+                        a.user__avatar-wrap(href='')
+                          img.user__avatar.user__avatar50(src=require('../../assets/images/img/avatar.jpg') alt='User')
+                        p.ig__view-info
+                          a.ig__view-title(href='') Lorem Ipsum Simple Hair Style
+                          a.ig__view-author(href='') Albert Parera
+                        .ig__view-options
+                          .dropdown.custom__dropdown
+                            button#dropdownMenuButton.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                              img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+                            .dropdown-menu(aria-labelledby='dropdownMenuButton')
+                              a.dropdown-item(href='#') Copy Link to Post
+                              a.dropdown-item(href='#') Report this Post
+                      .ig__view-intro
+                        h4.ig__view-intro-title My Inspiration
+                        p.ig__view-intro-content Integer posuere magna eget nulla hendrerit, eget consequat neque varius. Duis et neque sagittis, vestibulum lacus non, consequat tortor. Vivamus consequat, quam varius laoreet ultricies, sem nibh congue nisl, in efficitur purus mi vel metus. Nam et vestibulum mi. Vivamus rhoncus leo a mi elementum, id eleifend lorem molestie.
+                      .ig__view-media
+                        - for(var x = 1; x <= 8; x++)
+                          .ig__view-media-img
+                            img(src=require('../../assets/images/img/ig-0' + x + '.jpg'), alt="Inspired Gallery Images")
+                      .ig__view-artists
+                        .ig__view-artist
+                          .ig__view-artist-title Hair
+                          .ig__view-artist-name : Robert DeSuja
+                        .ig__view-artist
+                          .ig__view-artist-title Model
+                          .ig__view-artist-name : Myscie Cynaie
+                        .ig__view-artist
+                          .ig__view-artist-title Makeup
+                          .ig__view-artist-name : Ryan
+                        .ig__view-artist
+                          .ig__view-artist-title Photographer
+                          .ig__view-artist-name : John
+                      .ig__view-tags
+                        h5.ig__view-tags-title Tags
+                        a.ig__view-tag(href='') Lorem Ipsum Dummy
+                        a.ig__view-tag(href='') Lorem Ipsum
+                        a.ig__view-tag(href='') Lorem
+                        a.ig__view-tag(href='') Lorem Ipsum
+                        a.ig__view-tag(href='') Lorem
+                        a.ig__view-tag(href='') Lorem Ipsum
+                      .ig__view-social
+                        a.ig__view-like(href='')
+                          img(src=require('../../assets/images/svg/like.svg'), alt="Like")
+                        a.ig__view-share(href='')
+                          img(src=require('../../assets/images/svg/share.svg'), alt="Share")
+
+block modal

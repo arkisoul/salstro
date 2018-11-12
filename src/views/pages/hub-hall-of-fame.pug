@@ -1,0 +1,111 @@
+//- ./src/views/pages/hub-hall-of-fame.pug
+
+extends ../layouts/master.pug
+include ../mixins/hub-header.pug
+
+block title
+  title Salstro - Community Hub Hall of Fame
+
+block content
+  //- header cum navbar
+  include ../components/navbar.pug
+  //- main content
+  section.main-content
+    .container
+      .row
+        .col-lg-3.col-md-4
+          //- include sidebar
+          // Sidebar
+          include ../components/sidebar.pug
+          // ./ Sidebar
+        .col-lg-9.col-md-8
+          section.inspired-gallery-section
+            +hubHeader('Hall of Fame')
+
+            +box('Hall of Fame')
+              .inspiration-gallery
+                p.inspiration-gallery__intro Every month a winner is selected from entries to the inspiration gallery competitions. Below is a collection of winners for the hair & beauty categories as voted for by our community. Each winner is immortalised in the Hall of Fame and awarded our exclusive competition winner badge for their profile.
+                .inspiration-gallery__nav
+                  a.btn.btn__navigation(href="#") Hair Inspiration
+                  a.btn.btn__navigation(href="#") Beauty Inspiration
+                .inspiration-gallery__filter
+                  form(action="")
+                    .form-group
+                      label.theme__label.sr-only(for='monthSelect') Select Month
+                      .theme__select-dropdown
+                        button.theme__select-dropdown-toggle(tab-index='-1') Select Month
+                        input(type='hidden' name='monthSelect')
+                        ul.theme__select-dropdown-menu
+                          li.theme__select-dropdown-item
+                            input(type='radio' id='month01' name='galleryMonth' value='July 18')
+                            label(for='month01' data-tar='monthSelect') July 18
+                          li.theme__select-dropdown-item
+                            input(type='radio' id='month02' name='galleryMonth' value='Aug 18')
+                            label(for='month02' data-tar='monthSelect') Aug 18
+                          li.theme__select-dropdown-item
+                            input(type='radio' id='month03' name='galleryMonth' value='Sep 18')
+                            label(for='month03' data-tar='monthSelect') Sep 18
+                          li.theme__select-dropdown-item
+                            input(type='radio' id='month04' name='galleryMonth' value='Oct 18')
+                            label(for='month04' data-tar='monthSelect') Oct 18
+                .halloffame-galleries
+                  .h-gallery__container
+                    .h-gallery__separator
+                      .h-gallery__separator-text July 2018
+                    .h-gallery__block
+                      .h-gallery
+                        p.h-gallery__title Hair
+                        img.h-gallery__img(src=require('../../assets/images/img/ig-featured.jpg'), alt="Hall of Fame Gallery")
+                        .h-gallery__options
+                          a.user__avatar-wrap(href="")
+                            img.user__avatar.user__avatar36(src=require('../../assets/images/img/avatar.jpg'), alt="User")
+                          a.user__name(href="") Robert Fernando
+                          .h-gallery__social
+                            a.h-gallery__like(href="")
+                              img(src=require('../../assets/images/svg/like-white.svg'), alt="Like")
+                            a.h-gallery__share(href="")
+                              img(src=require('../../assets/images/svg/share-white.svg'), alt="Share")
+                      .h-gallery
+                        p.h-gallery__title Beauty
+                        img.h-gallery__img(src=require('../../assets/images/img/ig-featured-02.jpg'), alt="Hall of Fame Gallery")
+                        .h-gallery__options
+                          a.user__avatar-wrap(href="")
+                            img.user__avatar.user__avatar36(src=require('../../assets/images/img/avatar.jpg'), alt="User")
+                          a.user__name(href="") Robert Fernando
+                          .h-gallery__social
+                            a.h-gallery__like(href="")
+                              img(src=require('../../assets/images/svg/like-white.svg'), alt="Like")
+                            a.h-gallery__share(href="")
+                              img(src=require('../../assets/images/svg/share-white.svg'), alt="Share")
+                  .h-gallery__container
+                    .h-gallery__separator
+                      .h-gallery__separator-text June 2018
+                    .h-gallery__block
+                      .h-gallery
+                        p.h-gallery__title Hair
+                        img.h-gallery__img(src=require('../../assets/images/img/ig-featured-03.jpg'), alt="Hall of Fame Gallery")
+                        .h-gallery__options
+                          a.user__avatar-wrap(href="")
+                            img.user__avatar.user__avatar36(src=require('../../assets/images/img/avatar.jpg'), alt="User")
+                          a.user__name(href="") Robert Fernando
+                          .h-gallery__social
+                            a.h-gallery__like(href="")
+                              img(src=require('../../assets/images/svg/like-white.svg'), alt="Like")
+                            a.h-gallery__share(href="")
+                              img(src=require('../../assets/images/svg/share-white.svg'), alt="Share")
+                      .h-gallery
+                        p.h-gallery__title Beauty
+                        img.h-gallery__img(src=require('../../assets/images/img/ig-featured-04.jpg'), alt="Hall of Fame Gallery")
+                        .h-gallery__options
+                          a.user__avatar-wrap(href="")
+                            img.user__avatar.user__avatar36(src=require('../../assets/images/img/avatar.jpg'), alt="User")
+                          a.user__name(href="") Robert Fernando
+                          .h-gallery__social
+                            a.h-gallery__like(href="")
+                              img(src=require('../../assets/images/svg/like-white.svg'), alt="Like")
+                            a.h-gallery__share(href="")
+                              img(src=require('../../assets/images/svg/share-white.svg'), alt="Share")
+                  .h-gallery__pagination
+                    a.btn.btn__primary(href="#") View More
+
+block modal
