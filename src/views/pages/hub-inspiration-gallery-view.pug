@@ -1,0 +1,87 @@
+//- ./src/views/pages/hub-inspiration-gallery-view.pug
+
+extends ../layouts/master.pug
+include ../mixins/hub-header.pug
+
+block title
+  title Salstro - Community Hub Inspiration Gallery View
+
+block content
+  //- header cum navbar
+  include ../components/navbar.pug
+  //- main content
+  section.main-content
+    .container
+      .row
+        .col-lg-3.col-md-4
+          //- include sidebar
+          // Sidebar
+          include ../components/sidebar.pug
+          // ./ Sidebar
+        .col-lg-9.col-md-8
+          section.inspired-gallery-section
+            +hubHeader('Inspired Gallery Competition')
+
+            +box('Hair Inspiration')
+              .inspiration-gallery
+                p.inspiration-gallery__intro Want to get recognition for your craft and inspire others? Just submit your headshot along with your inspiration story to be in with a chance of featuring on the Hall of Fame and receiving an exclusive achievement badge for your profile. Voting is based on the photo with the most likes and a winner is selected each month.
+                .inspiration-gallery__nav
+                  a.btn.btn__primary(href="#" data-toggle='modal' data-target='#inspirationGalleryCompetition') Enter Now
+                  a.btn.btn__navigation(href="#") Beauty Inspiration
+                  a.btn.btn__navigation(href="#") Visit Hall of Fame
+                .ig__view-container
+                  p.ig__view-cat Hair
+                  .ig__view-block
+                    .ig__view-featured
+                      img.ig__view-featured-img(src=require('../../assets/images/img/ig-featured.jpg'), alt="Inspiration Gallery Featured Image")
+                    .ig__view-content
+                      .ig__view-content-header
+                        a.user__avatar-wrap(href='')
+                          img.user__avatar.user__avatar50(src=require('../../assets/images/img/avatar.jpg') alt='User')
+                        p.ig__view-info
+                          a.ig__view-title(href='') Lorem Ipsum Simple Hair Style
+                          a.ig__view-author(href='') Albert Parera
+                        .ig__view-options
+                          .dropdown.custom__dropdown
+                            button#dropdownMenuButton.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                              img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+                            .dropdown-menu(aria-labelledby='dropdownMenuButton')
+                              a.dropdown-item(href='#') Copy Link to Post
+                              a.dropdown-item(href='#') Report this Post
+                      .ig__view-intro
+                        h4.ig__view-intro-title My Inspiration
+                        p.ig__view-intro-content Integer posuere magna eget nulla hendrerit, eget consequat neque varius. Duis et neque sagittis, vestibulum lacus non, consequat tortor. Vivamus consequat, quam varius laoreet ultricies, sem nibh congue nisl, in efficitur purus mi vel metus. Nam et vestibulum mi. Vivamus rhoncus leo a mi elementum, id eleifend lorem molestie.
+                      .ig__view-media
+                        - for(var x = 1; x <= 8; x++)
+                          .ig__view-media-img
+                            img(src=require('../../assets/images/img/ig-0' + x + '.jpg'), alt="Inspired Gallery Images")
+                      .ig__view-artists
+                        .ig__view-artist
+                          .ig__view-artist-title Hair
+                          .ig__view-artist-name : Robert DeSuja
+                        .ig__view-artist
+                          .ig__view-artist-title Model
+                          .ig__view-artist-name : Myscie Cynaie
+                        .ig__view-artist
+                          .ig__view-artist-title Makeup
+                          .ig__view-artist-name : Ryan
+                        .ig__view-artist
+                          .ig__view-artist-title Photographer
+                          .ig__view-artist-name : John
+                      .ig__view-tags
+                        h5.ig__view-tags-title Tags
+                        a.ig__view-tag(href='') Lorem Ipsum Dummy
+                        a.ig__view-tag(href='') Lorem Ipsum
+                        a.ig__view-tag(href='') Lorem
+                        a.ig__view-tag(href='') Lorem Ipsum
+                        a.ig__view-tag(href='') Lorem
+                        a.ig__view-tag(href='') Lorem Ipsum
+                      .ig__view-social
+                        a.ig__view-like(href='')
+                          img(src=require('../../assets/images/svg/like.svg'), alt="Like")
+                        a.ig__view-share(href='')
+                          img(src=require('../../assets/images/svg/share.svg'), alt="Share")
+
+block modal
+  include ../components/inspiration-gallery-popup.pug
+  include ../components/inspiration-gallery-popup2.pug

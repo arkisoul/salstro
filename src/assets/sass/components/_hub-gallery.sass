@@ -120,3 +120,182 @@
 
     img
       width: 24px
+
+// Inspiration Gallery View
+.ig__view-container
+  padding: 15px 0
+
+.ig__view-cat
+  font-size: 13px
+  color: $text-black
+  margin-bottom: 5px
+
+.ig__view-block
+  display: flex
+
+.ig__view-featured
+  position: static
+  top: 0
+  flex: 0 0 calc(50% - 5px)
+  margin-right: 5px
+
+  &-img
+    height: 613px
+    max-height: 620px
+    width: 100%
+    border-radius: 4px
+    object-fit: cover
+
+.ig__view-content
+  flex: 0 0 calc(50% - 5px)
+  margin-left: 5px
+  max-height: 620px
+  overflow-y: auto
+
+.ig__view-content-header
+  display: flex
+  align-items: center
+
+.ig__view-info
+  margin-bottom: 0
+  margin-right: 5px
+  flex: 0 0 calc(100% - 100px)
+
+.ig__view-title
+  display: inline-block
+  width: 100%
+  color: $text-black
+  font-size: 14px
+  font-weight: $semi
+  line-height: 20px
+
+  &:hover, &:focus
+    color: $text-black
+
+.ig__view-author
+  font-size: 14px
+  color: $text-gray
+  line-height: 20px
+
+  &:hover, &:focus
+    color: $text-gray
+
+.ig__view-options
+  margin-right: 20px
+  margin-left: auto
+  align-self: flex-start
+
+  .custom__dropdown
+    .dropdown-menu
+      transform: initial!important
+      left: -140px!important
+      top: 35px!important
+
+      &::before
+        left: auto
+        right: 12px
+
+.ig__view-intro
+  padding: 10px 0
+
+.ig__view-intro-title
+  font-size: 13px
+  margin: 0
+  line-height: 20px
+
+.ig__view-intro-content
+  font-size: 13px
+  color: $text-blue
+  line-height: 1.6
+
+.ig__view-media
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(calc(25% - 5px), 1fr))
+  grid-gap: 5px
+  grid-auto-flow: dense
+  grid-auto-rows: 70px
+
+.ig__view-media-img
+  img
+    width: 100%
+    max-height: 70px
+    height: 70px
+    border-radius: 4px
+    object-fit: cover
+
+.ig__view-artists
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  grid-gap: 5px
+  padding: 15px 5px
+
+.ig__view-artist
+  display: flex
+  align-items: center
+
+  &-title
+    font-size: 13px
+    color: $text-blue
+    flex: 0 0 47%
+
+  &-name
+    font-size: 13px
+    color: $text-black
+
+.ig__view-tags
+  padding: 15px 0
+
+  &-title
+    font-size: 13px
+    color: $text-black
+    position: relative
+    margin: 0 0 10px
+    line-height: 20px
+    z-index: 1
+    text-align: center
+
+    &::before
+      content: ''
+      position: absolute
+      display: block
+      height: 1px
+      width: 100%
+      top: 50%
+      margin-top: -1px
+      left: 0
+      right: 0
+      background-color: $bg-offwhite
+      z-index: -1
+
+    &::after
+      content: ''
+      position: absolute
+      display: inline-block
+      height: 100%
+      width: 50px
+      background-color: $bg-white
+      z-index: -1
+      left: 50%
+      transform: translateX(-50%)
+
+.ig__view-tag
+  display: inline-block
+  color: $text-white
+  background-color: $bg-gray
+  padding: 5px 12px
+  font-size: 12px
+  border-radius: 25px
+  margin: 0 6px 6px 0
+
+  &:hover, &:focus
+    color: $text-white
+
+.ig__view-social
+  text-align: right
+
+.ig__view-like, .ig__view-share
+  display: inline-block
+  margin: 4px
+
+  img
+    width: 16px
