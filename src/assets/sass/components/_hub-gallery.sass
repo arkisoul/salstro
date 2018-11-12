@@ -1,0 +1,68 @@
+// ./src/assets/sass/components/_hub-gallery.sass
+
+// Inspiration Gallery
+.inspiration-gallery
+  padding: 10px 5px 20px
+
+  &__intro
+    font-size: 14px
+    color: $text-black
+    line-height: 1.6
+    margin-bottom: 12px
+
+  &__nav
+    display: flex
+    justify-content: space-around
+    align-items: center
+    padding: 14px 10px
+
+  &__filter
+    padding: 8px 0
+    display: flex
+    align-items: center
+
+    .theme__select-dropdown
+      min-width: 150px
+
+  &__container
+    display: grid
+    grid-gap: 10px
+    grid-template-columns: repeat(auto-fit, minmax(calc(33.33% - 10px), 1fr))
+    grid-auto-rows: 50px
+    grid-auto-flow: dense
+    margin: 10px 0
+
+  &__img
+    display: flex
+    justify-content: center
+    align-items: center
+    position: relative
+    border-radius: 8px
+
+    &--square
+      grid-row: span 4
+
+    &--big
+      grid-row: span 7
+
+    &--bigger
+      grid-row: span 8
+
+    &--winner
+      border: 4px solid $border-golden
+
+  .winner-tag
+    position: absolute
+    right: 0
+    width: 74px
+    bottom: 20px
+
+  &-img
+    width: 100%
+    height: 100%
+    object-fit: cover
+    border-radius: 4px
+
+  &__pagination
+    padding: 10px
+    text-align: center
