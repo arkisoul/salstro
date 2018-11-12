@@ -1,6 +1,8 @@
 /* src/app.js */
 // Swiper
 import Swiper from 'swiper'
+// CKEditor
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic'
 // Popper
 require('popper.js')
 // Bootstrap
@@ -231,6 +233,17 @@ $(document).ready(() => {
       prevEl: '.swiper-button-prev',
     }
   })
+})
+
+$(document).ready(() => {
+  ClassicEditor
+    .create(document.querySelector('#addArticleContent'))
+    .then(editor => {
+      // console.log(editor);
+    })
+    .catch(error => {
+      // console.error(error);
+    });
 })
 
 window.removePollOption = function (_this) {

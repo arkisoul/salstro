@@ -83,6 +83,15 @@ block content
                       .form-group.theme__form-group
                         input.form-control.theme__form-control.theme__primary-form-control(type='text' id='halfDayRate')
                         label.theme__label(for='halfDayRate') Half Day Rate
+                    .col-lg-12.form__fields-item
+                      fieldset.theme__fieldset.pb-0
+                        legend.theme__legend Available for Nationwide Travel
+                        .custom-control.custom-radio.custom-control-inline.theme__radio
+                          input#travelYes.custom-control-input.theme__radio-input(type='radio' name='nationalTravel' value='Yes')
+                          label.custom-control-label.theme__radio-label(for='travelYes') Yes
+                        .custom-control.custom-radio.custom-control-inline.theme__radio
+                          input#travelNo.custom-control-input.theme__radio-input(type='radio' name='nationalTravel' value='No')
+                          label.custom-control-label.theme__radio-label(for='travelNo') No
                     .col-md-6
                       .form-group.theme__file-upload
                         input.theme__file-upload-input(type='file' id='educatorEvidence')

@@ -1,0 +1,94 @@
+//- ./src/views/pages/user-create-article.pug
+
+extends ../layouts/master.pug
+
+block title
+  title Salstro - Create Article
+
+block content
+  //- header cum navbar
+  include ../components/navbar.pug
+  //- main content
+  section.main-content
+    .container
+      .row
+        .col-lg-3.col-md-4
+          //- include sidebar
+          // Sidebar
+          include ../components/sidebar.pug
+          // ./ Sidebar
+        .col-lg-9.col-md-8
+          //- include content
+          .row
+            //- Include Activity Header
+            .col-12
+              include ../components/myprofile_header.pug
+            .col-12
+              +box('Create a Article')
+                .create__article-form
+                  form(action="", method="post")
+                    .form-row.form__fields-wrap
+                      .col-lg-12.form__fields-item
+                        .form-group.theme__form-group
+                          input.form-control.theme__form-control.theme__primary-form-control.form-control__error(type='text' id='typeArticle')
+                          label.theme__label(for='typeArticle') Type of Article
+                          small.theme__primary-form-error
+                            img.theme__primary-form-error-img(src=require('../../assets/images/svg/icon-error.svg') alt='Error')
+                            span.theme__primary-form-error-text Error message lorem ipsum
+                      .col-md-6.form__fields-item
+                        .form-group
+                          label.theme__label(for='industrySelect') Industry
+                          .theme__select-dropdown.theme__select-dropdown-multiple
+                            button.theme__select-dropdown-toggle(tab-index='-1') Select Industry
+                            input(type='hidden' name='industrySelect')
+                            ul.theme__select-dropdown-menu
+                              li.theme__select-dropdown-item
+                                input(type='checkbox' id='Salon' name='industry' value='Salon')
+                                label(for='Salon' data-tar='industrySelect') Salon
+                              li.theme__select-dropdown-item
+                                input(type='checkbox' id='Boutique' name='industry' value='Boutique')
+                                label(for='Boutique' data-tar='industrySelect') Boutique
+                              li.theme__select-dropdown-item
+                                input(type='checkbox' id='Fashion' name='industry' value='Fashion')
+                                label(for='Fashion' data-tar='industrySelect') Fashion
+                      .col-md-6.form__fields-item
+                        .form-group
+                          label.theme__label(for='classificationSelect') Classification
+                          .theme__select-dropdown
+                            button.theme__select-dropdown-toggle(tab-index='-1') Select Classification
+                            input(type='hidden' name='classificationSelect')
+                            ul.theme__select-dropdown-menu
+                              li.theme__select-dropdown-item
+                                input(type='radio' id='Educational' name='classification' value='Educational')
+                                label(for='Educational' data-tar='classificationSelect') Educational
+                              li.theme__select-dropdown-item
+                                input(type='radio' id='Academic' name='classification' value='Academic')
+                                label(for='Academic' data-tar='classificationSelect') Academic
+                              li.theme__select-dropdown-item
+                                input(type='radio' id='Promotional' name='classification' value='Promotional')
+                                label(for='Promotional' data-tar='classificationSelect') Promotional
+                      .col-lg-12.form__fields-item
+                        .form-group.theme__form-group
+                          input.form-control.theme__form-control.theme__primary-form-control.add__badge(type='text' id='articleTags')
+                          input(type="hidden", name="articleTags")
+                          label.theme__label(for='articleTags') Enter Tags
+                          .theme__badge-container
+                      .col-lg-12.form__fields-item
+                        .form-group
+                          label.theme__label(for='addArticleContent') Article Content
+                          textarea.form-control.theme__form-control(rows='3' placeholder='Write here' id='addArticleContent')
+                      .col-md-6
+                        .form-group.theme__file-upload
+                          input.theme__file-upload-input(type='file' id='educatorEvidence')
+                          label.theme__file-upload-label.addnewitem__box(for='educatorEvidence')
+                            img.addnewitem__box-img(src=require('../../assets/images/svg/icon-addimage.svg') alt='Add Image')
+                            span.addnewitem__box-text Upload Cover Image
+                      .col-lg-12
+                        .custom-control.custom-checkbox.theme__checkbox
+                          input#articleSubmit.custom-control-input.theme__checkbox-input(type='checkbox' checked)
+                          label.custom-control-label.theme__checkbox-label(for='articleSubmit') Please select checkbox to submit your article to the community hub
+                    .btn__submit-block
+                      button.btn.btn__navigation.mr-5(type='button' role='button') Preview
+                      button.btn.btn__primary(type="submit") Submit
+
+block modal
