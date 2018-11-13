@@ -52,7 +52,9 @@ Date
 12. Hall of fame
 13. Hallf of Fame View
 14. User Profile Create an Article
-15. User Add Workshop
+15. User Add a Workshop
+16. User Add a Course
+17. User Workshops
 
 :: Popups ::
 1. Hub Inspiration Gallery Popup Part I

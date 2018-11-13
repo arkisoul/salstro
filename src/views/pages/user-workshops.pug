@@ -1,0 +1,55 @@
+//- ./src/views/pages/user-workshops.pug
+
+extends ../layouts/master.pug
+
+block title
+  title Salstro - User Workshops
+
+block content
+  //- header cum navbar
+  include ../components/navbar.pug
+  //- main content
+  section.main-content
+    .container
+      .row
+        .col-lg-3.col-md-4
+          //- include sidebar
+          // Sidebar
+          include ../components/sidebar.pug
+          // ./ Sidebar
+        .col-lg-9.col-md-8
+          //- include content
+          .row
+            //- Include Activity Header
+            .col-12
+              include ../components/myprofile_header.pug
+            .col-12
+              section.myprofile__content
+                +box('Educators Bio')
+                  p.educators__bio Suspendisse porta elit lectus, sit amet cursus massa dictum sit amet. Donec non mauris nec nisl dapibus ullamcorper auctor sed leo. Quisque dignissim, arcu non suscipit ultrices, risus magna venenatis velit, ut convallis arcu augue vitae risus. Aenean aliquam eros at finibus tempus.Phasellus lectus velit, dictum a congue eu, ultrices lobortis nibh. Aenean porta nisl vitae ultricies mollis. Cras risus tellus, bibendum qis enim in, molestie tempus metus. Vivamus et lectus gravida, posuere ligula eu, tristique nisi. Sed finibus est magna, elementum vol tpat enim convallis eget. Duis in mi orci. Vestibulum molestie tempor lacus in commodo.Etiam laoreet condimentum mauris, et imperdiet urna ullamcorper in. Sed eget lacus nec neque sollicitudin varius sit amet in nisl. Ut vestibulum nibh quis nisi lobortis consectetur. Aenean vestibulum, est sit amet lacinia blandit, dui justo consectetur nulla, in fringilla nisi dui sit amet nulla. Quiue egestas nibh nisi, at suscipit urna rhoncus sed.
+                section.private__workshops
+                  include ../components/private-training.pug
+                +box('Workshops')
+                  section.workshops
+                    .workshops__nav
+                      a.btn__primary-link(href="") Create New Course
+                    - for(var x = 1; x < 9; x++)
+                      .workshop-card
+                        .workshop-card__media
+                          img.workshop-card__media-img(src=require('../../assets/images/img/port-0'+ x +'.jpg'), alt="Workshop Image")
+                        .workshop-card__body
+                          .workshop-card__content
+                            h2.workshop-card__title Color Training Course
+                            p.workshop-card__duration
+                              img(src=require('../../assets/images/svg/icon-clock.svg'), alt="Duration")
+                              | 15 Days or 12.00 hours
+                            p.workshop-card__description Donec eu maximus massa. Cas mollis Nulla metus quam, eu maximus massa Praesent hendrerit facilisis orciaximus tortor.......
+                          .workshop-card__meta
+                            p.workshop-card__price-tag
+                              img(src=require('../../assets/images/svg/icon-dollar.svg'), alt="Price")
+                              | 1500.00
+                            a.btn.btn__primary(href="#") Edit
+                    .workshops__pagination
+                      a.btn.btn__primary(href='#') View More
+
+block modal

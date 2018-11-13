@@ -28,7 +28,8 @@ block content
                 +box('Educators Bio')
                   .addnew__prompt
                     a.addnew__prompt-link(href='') Add Educator's Bio Here
-                include ../components/private-training.pug
+                section.private__workshops
+                  include ../components/private-training.pug
                 +box('Add a Workshop')
                   .addworkshop__form
                     form(action="", method="post")
