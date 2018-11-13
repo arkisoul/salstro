@@ -1,0 +1,122 @@
+//- ./src/views/pages/user-add-video.pug
+
+extends ../layouts/master.pug
+
+block title
+  title Salstro - User Add Video
+
+block content
+  //- header cum navbar
+  include ../components/navbar.pug
+  //- main content
+  section.main-content
+    .container
+      .row
+        .col-lg-3.col-md-4
+          //- include sidebar
+          // Sidebar
+          include ../components/sidebar.pug
+          // ./ Sidebar
+        .col-lg-9.col-md-8
+          //- include content
+          .row
+            //- Include Activity Header
+            .col-12
+              include ../components/myprofile_header.pug
+            .col-12
+              section.myprofile__content
+                +box('Upload Training Video')
+                  .addvideo__form
+                    form(action="", method="post")
+                      .form-row.form__fields-wrap
+                        .col-lg-12.form__fields-item
+                          .form-group.theme__form-group
+                            input.form-control.theme__form-control.theme__primary-form-control.form-control__error(type='text' id='videoTitle')
+                            label.theme__label(for='videoTitle') Video Title
+                            small.theme__primary-form-error
+                              img.theme__primary-form-error-img(src=require('../../assets/images/svg/icon-error.svg') alt='Error')
+                              span.theme__primary-form-error-text Error message lorem ipsum
+                        .col-md-6.form__fields-item
+                          .form-group
+                            label.theme__label(for='industrySelect') Industry
+                            .theme__select-dropdown.theme__select-dropdown-multiple
+                              button.theme__select-dropdown-toggle(tab-index='-1') Select Industry
+                              input(type='hidden' name='industrySelect')
+                              ul.theme__select-dropdown-menu
+                                li.theme__select-dropdown-item
+                                  input(type='checkbox' id='Salon' name='industry' value='Salon')
+                                  label(for='Salon' data-tar='industrySelect') Salon
+                                li.theme__select-dropdown-item
+                                  input(type='checkbox' id='Boutique' name='industry' value='Boutique')
+                                  label(for='Boutique' data-tar='industrySelect') Boutique
+                                li.theme__select-dropdown-item
+                                  input(type='checkbox' id='Fashion' name='industry' value='Fashion')
+                                  label(for='Fashion' data-tar='industrySelect') Fashion
+                        .col-md-6.form__fields-item
+                          .form-group
+                            label.theme__label(for='classificationSelect') Classification
+                            .theme__select-dropdown
+                              button.theme__select-dropdown-toggle(tab-index='-1') Select Classification
+                              input(type='hidden' name='classificationSelect')
+                              ul.theme__select-dropdown-menu
+                                li.theme__select-dropdown-item
+                                  input(type='radio' id='Educational' name='classification' value='Educational')
+                                  label(for='Educational' data-tar='classificationSelect') Educational
+                                li.theme__select-dropdown-item
+                                  input(type='radio' id='Academic' name='classification' value='Academic')
+                                  label(for='Academic' data-tar='classificationSelect') Academic
+                                li.theme__select-dropdown-item
+                                  input(type='radio' id='Promotional' name='classification' value='Promotional')
+                                  label(for='Promotional' data-tar='classificationSelect') Promotional
+                        .col-md-4.form__fields-item.align__flex-end
+                          .form-group.theme__form-group
+                            input.form-control.theme__form-control.theme__primary-form-control(type='text' id='classPrice')
+                            label.theme__label(for='classPrice') Price
+                        .col-md-4.form__fields-item.align__flex-end
+                          .form-group.theme__form-group
+                            input.form-control.theme__form-control.theme__primary-form-control(type='text' id='classDiscount')
+                            label.theme__label(for='classDiscount') Discount
+                        .col-md-4.form__fields-item
+                          .form-group
+                            label.theme__label(for='subPeriod') Subscribe Video
+                            .theme__select-dropdown.theme__select-dropdown-multiple
+                              button.theme__select-dropdown-toggle(tab-index='1') Select Subscription
+                              input(type='hidden' name='subPeriod')
+                              ul.theme__select-dropdown-menu
+                                li.theme__select-dropdown-item
+                                  input(type='checkbox' id='sub01' name='subscriptionDuration' value='7 Days')
+                                  label(for='sub01' data-tar='subPeriod') 7 Days
+                                li.theme__select-dropdown-item
+                                  input(type='checkbox' id='sub02' name='subscriptionDuration' value='15 Days')
+                                  label(for='sub02' data-tar='subPeriod') 15 Days
+                                li.theme__select-dropdown-item
+                                  input(type='checkbox' id='sub03' name='subscriptionDuration' value='1 month')
+                                  label(for='sub03' data-tar='subPeriod') 1 month
+                        .col-md-12.form__fields-item.align__flex-end
+                          .form-group.theme__form-group
+                            input.form-control.theme__form-control.theme__primary-form-control(type='text' id='videoLink')
+                            label.theme__label(for='videoLink') Add Video Link
+                        .col-lg-12.form__fields-item
+                          .form-group.theme__form-group
+                            input.form-control.theme__form-control.theme__primary-form-control.add__badge(type='text' id='workshopTags')
+                            input(type="hidden", name="workshopTags")
+                            label.theme__label(for='workshopTags') Enter Tags
+                            .theme__badge-container
+                        .col-lg-12.form__fields-item
+                          .form-group
+                            label.theme__label(for='videoDesc') Video Description
+                            textarea.form-control.theme__form-control(rows='3' placeholder='Write here' id='videoDesc')
+                        .col-md-6.form__fields-item
+                          .form-group.theme__file-upload
+                            input.theme__file-upload-input(type='file' id='workshopImage')
+                            label.theme__file-upload-label.addnewitem__box(for='workshopImage')
+                              img.addnewitem__box-img(src=require('../../assets/images/svg/icon-addvideo.svg') alt='Add Image')
+                              span.addnewitem__box-text Upload Video
+                        .col-lg-12
+                          .custom-control.custom-checkbox.theme__checkbox
+                            input#articleSubmit.custom-control-input.theme__checkbox-input(type='checkbox' checked)
+                            label.custom-control-label.theme__checkbox-label(for='articleSubmit') Please select checkbox to submit your Course to the Training Portal
+                      .btn__submit-block
+                        button.btn.btn__primary(type="submit") Submit
+
+block modal

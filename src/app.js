@@ -262,6 +262,15 @@ $(document).ready(() => {
     .catch(error => {
       // console.error(error);
     });
+
+  ClassicEditor
+    .create(document.querySelector('#videoDesc'))
+    .then(editor => {
+      // console.log(editor);
+    })
+    .catch(error => {
+      // console.error(error);
+    });
 })
 
 window.removePollOption = function (_this) {
