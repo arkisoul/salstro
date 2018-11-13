@@ -225,6 +225,14 @@ $(document).ready(() => {
       prevEl: '.swiper-button-prev',
     }
   });
+  const playlistSwiper = new Swiper('.swiper__playlist', {
+    slidesPerView: 3,
+    spaceBetween: 20,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    }
+  });
   const blogSwiper = new Swiper('#hub__blogs-swiper', {
     slidesPerView: 1,
     spaceBetween: 0,

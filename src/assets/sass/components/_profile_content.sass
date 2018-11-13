@@ -735,3 +735,256 @@
     img
       width: 16px
       margin-right: 10px
+
+// Video Channel
+.videochannel
+  padding: 8px 4px
+
+.vc__nav
+  display: flex
+  align-items: center
+  justify-content: flex-end
+  padding: 8px 0
+  margin-bottom: 10px
+
+.vc__feat
+  display: flex
+  justify-content: space-between
+  margin-bottom: 40px
+
+  &-video
+    flex: 0 0 45%
+    max-width: 45%
+    max-height: 230px
+    height: 230px
+    width: 100%
+    object-fit: cover
+    position: relative
+
+    .btn__play
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+
+  &-vid
+    max-height: 230px
+    height: 230px
+    width: 100%
+    object-fit: cover
+    border-radius: 4px
+
+  &-desc
+    flex: 0 0 55%
+    max-width: 55%
+    padding: 10px 5px 5px 15px
+
+  &-head
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+  &-title
+    font-size: 22px
+    font-weight: $semi
+    max-width: 80%
+    text-overflow: ellipsis
+    overflow: hidden
+    white-space: nowrap
+    margin: 0 0 10px
+    color: $text-black
+
+  .btn__vid-edit
+    margin: 0
+    background: transparent
+    padding: 0
+
+    img
+      width: 24px
+
+  &-meta
+    display: flex
+    align-items: center
+    margin-bottom: 8px
+
+  &-views
+    font-size: 12px
+    color: $text-blue
+    display: inline-block
+    margin-right: 20px
+
+  &-days
+    font-size: 12px
+    color: $text-blue
+    display: inline-block
+    position: relative
+    margin-left: 10px
+
+    &::before
+      content: ''
+      position: absolute
+      width: 6px
+      height: 6px
+      border-radius: 50%
+      background-color: $bg-gray
+      top: 50%
+      left: -15px
+      transform: translateY(-50%)
+
+  &-intro
+    font-size: 13px
+    color: $text-blue
+    line-height: 1.6
+    margin-bottom: 8px
+
+.vc__read-more
+  display: inline-block
+  font-size: 14px
+  color: $text-brightpink
+
+  &:hover, &:focus
+    color: $text-brightpink
+
+// Playlists
+.swiper__playlist
+  .swiper-button-prev, .swiper-button-next
+    top: 35%
+
+.vc__playlists
+  &-pagination
+    padding: 10px 0
+    text-align: center
+
+.vc__playlist
+  padding-bottom: 25px
+  margin-bottom: 20px
+
+  &:not(:last-of-type)
+    border-bottom: 1px solid $border-offwhite
+
+  &-title
+    font-size: 22px
+    font-weight: $semi
+    color: $text-black
+    margin: 0 0 20px
+
+// Video Item
+.video-item
+
+  &__media
+    position: relative
+    max-height: 140px
+    height: 140px
+
+    .btn__play
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+
+    .btn__edit-vid
+      padding: 0
+      margin: 0
+      position: absolute
+      top: 10px
+      left: 10px
+      border-radius: 50%
+      background: none
+      box-shadow: none
+      border: none
+
+      img
+        width: 24px
+
+  &__vid
+    max-height: 140px
+    height: 140px
+    width: 100%
+    object-fit: cover
+    border-radius: 4px 4px 0 0
+
+  &__time
+    display: inline-block
+    font-size: 10px
+    padding: 3px
+    border-radius: 8px
+    background-color: rgba($bg-black, 0.8)
+    color: $text-white
+    position: absolute
+    bottom: 10px
+    right: 10px
+
+  &__content
+    background-color: $bg-white
+    padding: 5px
+
+    &-head
+      display: flex
+      align-items: center
+      justify-content: space-between
+
+  &__title
+    font-size: 15px
+    font-weight: $semi
+    color: $text-black
+    margin: 0 0 8px
+    max-width: 75%
+    text-overflow: ellipsis
+    overflow: hidden
+    white-space: nowrap
+
+  &__ratings
+    display: inline-flex
+    align-items: center
+    padding: 3px 5px
+    font-size: 11px
+    color: $text-white
+    border-radius: 25px
+    background-color: $bg-gray
+
+    img
+      width: 10px
+      margin-right: 4px
+
+  &__author
+    font-size: 14px
+    color: $text-blue
+    margin: 0 0 4px
+
+  &__price
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    &-name
+      font-size: 12px
+      color: $text-black
+      line-height: 16px
+
+    &-tag
+      font-size: 15px
+      color: $text-brightpink
+      font-weight: $semi
+
+      &.video-item__price-tagst
+        font-size: 14px
+        color: $text-blue
+        text-decoration: line-through
+        font-weight: $regular
+
+.discount__tag
+  display: inline-block
+  font-size: 10px
+  padding: 3px
+  min-width: 100px
+  max-width: 110px
+  text-align: center
+  color: $text-white
+  background-image: linear-gradient(45deg, $bg-brightpink, $bg-pink)
+  position: absolute
+  right: 0px
+  top: 12px
+  border-radius: 25px 0 0 25px
+
+  &:hover, &:focus
+    color: $text-white
