@@ -27,9 +27,6 @@ Date 10 Nov 2018
 3. My Porftolio 02 (with content)
 4. My Porftolio Album
 5. My Porftolio Album View
-6. Company Profile
-7. Company Manage
-8. Company Group Manage
 
 :: Popups ::
 1. Add Image
@@ -58,6 +55,7 @@ Date
 18. User Video Channels
 19. User Video Course View
 20. User Video Course Testimonials
+21. User Video List
 
 :: Popups ::
 1. Hub Inspiration Gallery Popup Part I
