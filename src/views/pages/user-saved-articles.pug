@@ -24,41 +24,42 @@ block content
             .col-12
               include ../components/myprofile_header.pug
             .col-12
-              +box('Saved Articles')
-                section.hub-articles
-                  - for(var x = 1; x < 9; x++)
-                    .hub-articles__article
-                      .hub-articles__article-media
-                        img.hub-articles__article-img(src=require('../../assets/images/img/port-0' + x + '.jpg') alt='Article Image')
-                        a.blog__category-tag(href='') Lorem Category
-                        .hub-articles__article-options
-                          .dropdown.custom__dropdown
-                            button#articleOpt.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
-                              img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
-                            .dropdown-menu(aria-labelledby='articleOpt')
-                              a.dropdown-item(href='#') Remove
-                      .hub-articles__article-body
-                        h2.hub-articles__article-title Curabitur sodales luctus sollicit
-                        p.hub-articles__article-brief Donec eu maximus massa. Cras molli sermentum libero egestas laciniadsm ipsum dolor sit amet.
-                        .hub-articles__article-foot
-                          a.hub-articles__article-read(href='') Read More
-                          span.hub-articles__article-time 2 days ago
-                  - for(var x = 8; x >= 1; x--)
-                    .hub-articles__article
-                      .hub-articles__article-media
-                        img.hub-articles__article-img(src=require('../../assets/images/img/port-0' + x + '.jpg') alt='Article Image')
-                        a.blog__category-tag(href='') Lorem Category
-                        .hub-articles__article-options
-                          .dropdown.custom__dropdown
-                            button#articleOpt.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
-                              img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
-                            .dropdown-menu(aria-labelledby='articleOpt')
-                              a.dropdown-item(href='#') Remove
-                      .hub-articles__article-body
-                        h2.hub-articles__article-title Curabitur sodales luctus sollicit
-                        p.hub-articles__article-brief Donec eu maximus massa. Cras molli sermentum libero egestas laciniadsm ipsum dolor sit amet.
-                        .hub-articles__article-foot
-                          a.hub-articles__article-read(href='') Read More
-                          span.hub-articles__article-time 2 days ago
+              section.myprofile__content
+                +box('Saved Articles')
+                  section.hub-articles
+                    - for(var x = 1; x < 9; x++)
+                      .hub-articles__article
+                        .hub-articles__article-media
+                          img.hub-articles__article-img(src=require('../../assets/images/img/port-0' + x + '.jpg') alt='Article Image')
+                          a.blog__category-tag(href='') Lorem Category
+                          .hub-articles__article-options
+                            .dropdown.custom__dropdown
+                              button#articleOpt.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                                img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+                              .dropdown-menu(aria-labelledby='articleOpt')
+                                a.dropdown-item(href='#') Remove
+                        .hub-articles__article-body
+                          h2.hub-articles__article-title Curabitur sodales luctus sollicit
+                          p.hub-articles__article-brief Donec eu maximus massa. Cras molli sermentum libero egestas laciniadsm ipsum dolor sit amet.
+                          .hub-articles__article-foot
+                            a.hub-articles__article-read(href='') Read More
+                            span.hub-articles__article-time 2 days ago
+                    - for(var x = 8; x >= 1; x--)
+                      .hub-articles__article
+                        .hub-articles__article-media
+                          img.hub-articles__article-img(src=require('../../assets/images/img/port-0' + x + '.jpg') alt='Article Image')
+                          a.blog__category-tag(href='') Lorem Category
+                          .hub-articles__article-options
+                            .dropdown.custom__dropdown
+                              button#articleOpt.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                                img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+                              .dropdown-menu(aria-labelledby='articleOpt')
+                                a.dropdown-item(href='#') Remove
+                        .hub-articles__article-body
+                          h2.hub-articles__article-title Curabitur sodales luctus sollicit
+                          p.hub-articles__article-brief Donec eu maximus massa. Cras molli sermentum libero egestas laciniadsm ipsum dolor sit amet.
+                          .hub-articles__article-foot
+                            a.hub-articles__article-read(href='') Read More
+                            span.hub-articles__article-time 2 days ago
 
 block modal

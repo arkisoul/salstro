@@ -1,0 +1,20 @@
+//- ./src/views/components/private-training.pug
+
+.training-card
+  .training-card__media
+    img.training-card__media-img(src=require('../../assets/images/img/port-05.jpg'), alt="Training Image")
+  .training-card__body
+    h2.training-card__title Private in-salon Training
+    .training-card__meta
+      .training-card__rates
+        .training-card__rate
+          p.training-card__rate-name Full Day
+          p.training-card__rate-tag
+            img(src=require('../../assets/images/svg/icon-dollar.svg'), alt="Price")
+            | 1500.00
+        .training-card__rate
+          p.training-card__rate-name Half Day
+          p.training-card__rate-tag
+            img(src=require('../../assets/images/svg/icon-dollar.svg'), alt="Price")
+            | 1000.00
+      a.btn.btn__primary(href="#") Edit

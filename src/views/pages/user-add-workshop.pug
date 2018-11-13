@@ -1,0 +1,114 @@
+//- ./src/views/pages/user-add-workshop.pug
+
+extends ../layouts/master.pug
+
+block title
+  title Salstro - User Add Workshop
+
+block content
+  //- header cum navbar
+  include ../components/navbar.pug
+  //- main content
+  section.main-content
+    .container
+      .row
+        .col-lg-3.col-md-4
+          //- include sidebar
+          // Sidebar
+          include ../components/sidebar.pug
+          // ./ Sidebar
+        .col-lg-9.col-md-8
+          //- include content
+          .row
+            //- Include Activity Header
+            .col-12
+              include ../components/myprofile_header.pug
+            .col-12
+              section.myprofile__content
+                +box('Educators Bio')
+                  .addnew__prompt
+                    a.addnew__prompt-link(href='') Add Educator's Bio Here
+                include ../components/private-training.pug
+                +box('Add a Workshop')
+                  .addworkshop__form
+                    form(action="", method="post")
+                      .form-row.form__fields-wrap
+                        .col-lg-12.form__fields-item
+                          .form-group.theme__form-group
+                            input.form-control.theme__form-control.theme__primary-form-control.form-control__error(type='text' id='workshopTitle')
+                            label.theme__label(for='workshopTitle') Workshop Title
+                            small.theme__primary-form-error
+                              img.theme__primary-form-error-img(src=require('../../assets/images/svg/icon-error.svg') alt='Error')
+                              span.theme__primary-form-error-text Error message lorem ipsum
+                        .col-md-6.form__fields-item
+                          .form-group.theme__form-group
+                            input.form-control.theme__form-control.theme__primary-form-control(type='text' id='classSize')
+                            label.theme__label(for='classSize') Class Size
+                        .col-md-6.form__fields-item
+                          .form-group.theme__form-group
+                            input.form-control.theme__form-control.theme__primary-form-control(type='text' id='workshopRate')
+                            label.theme__label(for='workshopRate') Workshop Rate
+                        .col-md-6.form__fields-item
+                          .form-group
+                            label.theme__label(for='categorySelect') Category
+                            .theme__select-dropdown.theme__select-dropdown-multiple
+                              button.theme__select-dropdown-toggle(tab-index='-1') Select Category
+                              input(type='hidden' name='categorySelect')
+                              ul.theme__select-dropdown-menu
+                                li.theme__select-dropdown-item
+                                  input(type='checkbox' id='Salon' name='industry' value='Salon')
+                                  label(for='Salon' data-tar='categorySelect') Salon
+                                li.theme__select-dropdown-item
+                                  input(type='checkbox' id='Boutique' name='industry' value='Boutique')
+                                  label(for='Boutique' data-tar='categorySelect') Boutique
+                                li.theme__select-dropdown-item
+                                  input(type='checkbox' id='Fashion' name='industry' value='Fashion')
+                                  label(for='Fashion' data-tar='categorySelect') Fashion
+                        .col-md-6.form__fields-item.align__flex-end
+                          .form-group.theme__form-group
+                            input.form-control.theme__form-control.theme__primary-form-control(type='text' id='workshopDuration')
+                            label.theme__label(for='workshopDuration') Workshop Duration
+                        .col-lg-12
+                          h1.theme__form-title Workshop Schedule
+                        .col-md-6.form__fields-item
+                          .input-group.theme__input-group.theme__form-group
+                            input.form-control.theme__form-control.theme__primary-form-control.theme__datepicker-my(type='text' id='startDate' aria-describedby='button-addon4')
+                            label.theme__label(for='startDate') Start Date
+                            #button-addon4.input-group-append
+                              button.btn.btn__outline(type='button')
+                                img(src=require("../../assets/images/svg/icon-calendar.svg"), alt="")
+                        .col-md-6.form__fields-item
+                          .input-group.theme__input-group.theme__form-group
+                            input.form-control.theme__form-control.theme__primary-form-control.theme__datepicker-my(type='text' id='endDate' aria-describedby='button-addon4')
+                            label.theme__label(for='endDate') End Date
+                            #button-addon4.input-group-append
+                              button.btn.btn__outline(type='button')
+                                img(src=require("../../assets/images/svg/icon-calendar.svg"), alt="")
+                        .col-lg-12.form__fields-item
+                          .form-group.theme__form-group
+                            input.form-control.theme__form-control.theme__primary-form-control.add__badge(type='text' id='workshopTags')
+                            input(type="hidden", name="workshopTags")
+                            label.theme__label(for='workshopTags') Enter Tags
+                            .theme__badge-container
+                        .col-lg-12.form__fields-item
+                          .form-group
+                            label.theme__label(for='workshopTnC') Terms &amp; Conditions
+                            textarea.form-control.theme__form-control(rows='3' placeholder='Write here' id='workshopTnC')
+                        .col-lg-12.form__fields-item
+                          .form-group
+                            label.theme__label(for='workshopDesc') Description
+                            textarea.form-control.theme__form-control(rows='3' placeholder='Write here' id='workshopDesc')
+                        .col-md-6.form__fields-item
+                          .form-group.theme__file-upload
+                            input.theme__file-upload-input(type='file' id='workshopImage')
+                            label.theme__file-upload-label.addnewitem__box(for='workshopImage')
+                              img.addnewitem__box-img(src=require('../../assets/images/svg/icon-addimage.svg') alt='Add Image')
+                              span.addnewitem__box-text Upload Cover Image
+                        .col-lg-12
+                          .custom-control.custom-checkbox.theme__checkbox
+                            input#articleSubmit.custom-control-input.theme__checkbox-input(type='checkbox' checked)
+                            label.custom-control-label.theme__checkbox-label(for='articleSubmit') Please select checkbox to submit your Course to the Training Portal
+                      .btn__submit-block
+                        button.btn.btn__primary(type="submit") Submit
+
+block modal

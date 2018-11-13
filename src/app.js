@@ -244,6 +244,24 @@ $(document).ready(() => {
     .catch(error => {
       // console.error(error);
     });
+
+  ClassicEditor
+    .create(document.querySelector('#workshopTnC'))
+    .then(editor => {
+      // console.log(editor);
+    })
+    .catch(error => {
+      // console.error(error);
+    });
+
+  ClassicEditor
+    .create(document.querySelector('#workshopDesc'))
+    .then(editor => {
+      // console.log(editor);
+    })
+    .catch(error => {
+      // console.error(error);
+    });
 })
 
 window.removePollOption = function (_this) {
