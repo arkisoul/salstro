@@ -1,0 +1,252 @@
+//- ./src/views/pages/user-video-course-view.pug
+
+extends ../layouts/master.pug
+
+block title
+  title Salstro - User Video Course View
+
+block content
+  //- header cum navbar
+  include ../components/navbar.pug
+  //- main content
+  section.main-content
+    .container
+      .row
+        .col-lg-3.col-md-4
+          //- include sidebar
+          // Sidebar
+          include ../components/sidebar.pug
+          // ./ Sidebar
+        .col-lg-9.col-md-8
+          //- include content
+          .row
+            //- Include Activity Header
+            .col-12
+              include ../components/myprofile_header.pug
+            .col-12
+              section.myprofile__content
+                +box('Hair Style Course Video')
+                  section.videochannel
+                    .vc__tabs
+                      ul#portfolio__photo-tabs.portfolio__photo-tabs.nav.nav-tabs(role='tablist')
+                        li.nav-item
+                          a#vcCourse-tab.nav-link(data-toggle='tab' href='#vcCourse' role='tab' aria-controls='vcCourse' aria-selected='false') Course
+                        li.nav-item
+                          a#vcTestimonials-tab.nav-link.active(data-toggle='tab' href='#vcTestimonials' role='tab' aria-controls='vcTestimonials' aria-selected='true') Testimonials
+                    .vc__tab-content.tab-content
+                      #vcCourse.tab-pane(role='tabpanel' aria-labelledby='vcCourse-tab')
+                        .vc__feat
+                          .vc__feat-video
+                            button.btn__play.btn__play40
+                              img(src=require('../../assets/images/svg/btn-play.svg'))
+                            video.vc__feat-vid(poster=require('../../assets/images/img/company-vid-01.jpg'))
+                              source(src=require("../../assets/media/post.mp4"), type="video/mp4")
+                              Your browser doesn't support video tag
+                          .vc__feat-desc
+                            .vc__feat-head
+                              h1.vc__feat-title Lorem Hair style video from dummy
+                              button.btn.btn__vid-edit
+                                img(src=require('../../assets/images/svg/icon-edit.svg'), alt="Edit")
+                            p.vc__feat-meta
+                              span.video-item__ratings.mr-2
+                                img(src=require('../../assets/images/svg/rating.svg'), alt="Rating")
+                                | 4.5
+                              span.vc__feat-views 12.1K views
+                              span.vc__feat-days 5 days ago
+                            .video-item__price.mt-4
+                              .video-item__price-item
+                                .video-item__price-tag $ 45.00
+                              .video-item__price-item
+                                .video-item__price-tag.video-item__price-tagst $ 50.00
+                            button.btn.btn__primary.mt-3 Enroll Now
+                        .vcourse-content
+                          .vcourse-content__block
+                            h3.vcourse-content__block-heading Course Description
+                            p.vcourse-content__block-para Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a nisl et leo tempor ullamcorper. Suspendisse iaculis, elit nec dictum enim. Pellentesque vehicula, est ac vehicula tincidunt, augue lacus placerat diam, id egestas tortor mauris porttitor tortor. Integer sagittis id nibh eu scelerisque. Morbi ut tempor sem, sed dictum erat. Morbi at risus tellus. In hac habitasse platea dictumst.
+                            p.vcourse-content__block-para Vivamus placerat erat a interdum malesuada. In lectus arcu, mollis et condimentum nec, scelerisque vel libero. Duis eget mi sit amet lobortis purus sed laoreet volutpat. Nunc vitae neque varius, tempus ligula ut, cursus eros.
+                          .vcourse-content__block
+                            h3.vcourse-content__block-heading About Educator
+                            p.vcourse-content__block-para Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a nisl et leo tempor ullamcorper. Suspendisse iaculis, elit nec dictum enim. Pellentesque vehicula, est ac vehicula tincidunt, augue lacus placerat diam, id egestas tortor mauris porttitor tortor. Integer sagittis id nibh eu scelerisque. Morbi ut tempor sem, sed dictum erat. Morbi at risus tellus. In hac habitasse platea dictumst.
+                            p.vcourse-content__block-para
+                              | Subscribe my channel :
+                              a(href="")  https://salon.com/lorems.ipsum123adf
+                          .vcourse-content__block
+                            h3.vcourse-content__block-heading Search Tags
+                            .vcourse-content__block-tags
+                              span.vcourse-content__block-tag lorem
+                              span.vcourse-content__block-tag lorem ipsum
+                              span.vcourse-content__block-tag lorem ipsum dummy
+                              span.vcourse-content__block-tag lorem dummy
+                              span.vcourse-content__block-tag dummy
+                              span.vcourse-content__block-tag lorem
+                              span.vcourse-content__block-tag lorem ipsum
+                              span.vcourse-content__block-tag lorem ipsum dummy
+                              span.vcourse-content__block-tag lorem dummy
+                              span.vcourse-content__block-tag dummy
+                        section.vc__playlists
+                          .vc__playlist
+                            .vc__playlist-title More Courses/Videos from this Category - Hair Color Video
+                            #vc-playlist01.swiper-container.swiper__container.swiper__playlist
+                              // Additional required wrapper
+                              .swiper-wrapper
+                                // Slides
+                                .swiper-slide
+                                  .video-item
+                                    .video-item__media
+                                      button.btn__play.btn__play-small
+                                        img(src=require('../../assets/images/svg/btn-play.svg'))
+                                      button.btn.btn__edit-vid
+                                        img(src=require('../../assets/images/svg/icon-edit.svg'), alt="Edit")
+                                      span.discount__tag Discount 10%
+                                      span.video-item__time 2:50
+                                      video.video-item__vid(poster=require('../../assets/images/img/port-02.jpg'))
+                                        source(src=require("../../assets/media/post.mp4"), type="video/mp4")
+                                        Your browser doesn't support video tag
+                                    .video-item__content
+                                      .video-item__content-head
+                                        h3.video-item__title Bridal Up style Part 1
+                                        span.video-item__ratings
+                                          img(src=require('../../assets/images/svg/rating.svg'), alt="Rating")
+                                          | 4.5
+                                      h3.video-item__author Roger Fernando
+                                      .video-item__price
+                                        .video-item__price-item
+                                          .video-item__price-name Discounted Price
+                                          .video-item__price-tag $ 45.00
+                                        .video-item__price-item
+                                          .video-item__price-name Old Price
+                                          .video-item__price-tag.video-item__price-tagst $ 50.00
+                                .swiper-slide
+                                  .video-item
+                                    .video-item__media
+                                      button.btn__play.btn__play-small
+                                        img(src=require('../../assets/images/svg/btn-play.svg'))
+                                      button.btn.btn__edit-vid
+                                        img(src=require('../../assets/images/svg/icon-edit.svg'), alt="Edit")
+                                      span.discount__tag Discount 10%
+                                      span.video-item__time 2:50
+                                      video.video-item__vid(poster=require('../../assets/images/img/port-04.jpg'))
+                                        source(src=require("../../assets/media/post.mp4"), type="video/mp4")
+                                        Your browser doesn't support video tag
+                                    .video-item__content
+                                      .video-item__content-head
+                                        h3.video-item__title Bridal Up style Part 1
+                                        span.video-item__ratings
+                                          img(src=require('../../assets/images/svg/rating.svg'), alt="Rating")
+                                          | 4.5
+                                      h3.video-item__author Roger Fernando
+                                      .video-item__price
+                                        .video-item__price-item
+                                          .video-item__price-name Price
+                                          .video-item__price-tag $ 45.00
+                                .swiper-slide
+                                  .video-item
+                                    .video-item__media
+                                      button.btn__play.btn__play-small
+                                        img(src=require('../../assets/images/svg/btn-play.svg'))
+                                      button.btn.btn__edit-vid
+                                        img(src=require('../../assets/images/svg/icon-edit.svg'), alt="Edit")
+                                      span.discount__tag Discount 10%
+                                      span.video-item__time 2:50
+                                      video.video-item__vid(poster=require('../../assets/images/img/port-06.jpg'))
+                                        source(src=require("../../assets/media/post.mp4"), type="video/mp4")
+                                        Your browser doesn't support video tag
+                                    .video-item__content
+                                      .video-item__content-head
+                                        h3.video-item__title Bridal Up style Part 1
+                                        span.video-item__ratings
+                                          img(src=require('../../assets/images/svg/rating.svg'), alt="Rating")
+                                          | 4.5
+                                      h3.video-item__author Roger Fernando
+                                      .video-item__price
+                                        .video-item__price-item
+                                          .video-item__price-name Discounted Price
+                                          .video-item__price-tag $ 1800.00
+                                        .video-item__price-item
+                                          .video-item__price-name Old Price
+                                          .video-item__price-tag.video-item__price-tagst $ 2000.00
+                                .swiper-slide
+                                  .video-item
+                                    .video-item__media
+                                      button.btn__play.btn__play-small
+                                        img(src=require('../../assets/images/svg/btn-play.svg'))
+                                      button.btn.btn__edit-vid
+                                        img(src=require('../../assets/images/svg/icon-edit.svg'), alt="Edit")
+                                      span.discount__tag Discount 10%
+                                      span.video-item__time 2:50
+                                      video.video-item__vid(poster=require('../../assets/images/img/port-08.jpg'))
+                                        source(src=require("../../assets/media/post.mp4"), type="video/mp4")
+                                        Your browser doesn't support video tag
+                                    .video-item__content
+                                      .video-item__content-head
+                                        h3.video-item__title Bridal Up style Part 1
+                                        span.video-item__ratings
+                                          img(src=require('../../assets/images/svg/rating.svg'), alt="Rating")
+                                          | 4.5
+                                      h3.video-item__author Roger Fernando
+                                      .video-item__price
+                                        .video-item__price-item
+                                          .video-item__price-name Discounted Price
+                                          .video-item__price-tag $ 45.00
+                                        .video-item__price-item
+                                          .video-item__price-name Old Price
+                                          .video-item__price-tag.video-item__price-tagst $ 50.00
+
+                              // If we need navigation buttons
+                              .swiper-button-prev
+                              .swiper-button-next
+                      #vcTestimonials.tab-pane.active(role='tabpanel' aria-labelledby='vcTestimonials-tab')
+                        .hub-blog__comments
+                          .hub-blog__post-comment
+                            a.user__avatar-wrap(href="#")
+                              img.user__avatar.user__avatar30(src=require("../../assets/images/img/avatar.jpg"), alt="Avatar")
+                            .hub-blog__post-acomment
+                              .form-group
+                                label.sr-only(for='postComment') Comment
+                                textarea.form-control.theme__form-control(rows='3' placeholder='Leave your comment here' id='postComment')
+                              .text-right
+                                button.btn.btn-link.text-dark.mr-2 Cancel
+                                button.btn.btn__primary(type="submit" role='submit') Comment
+                          .hub-blog__comment-item
+                            .hub-blog__comment-item-head
+                              a.user__avatar-wrap
+                                img.user__avatar.user__avatar30(src=require('../../assets/images/img/avatar.jpg'), alt="Avatar")
+                              p.hub-blog__comment-text Lorem ipsum dolor sit amet consectetur adipisicing
+                            .hub-blog__comment-item-foot
+                              p.hub-blog__comment-meta
+                                a(href="") Like
+                                a(href="") Reply
+                                a(href="") 2 days ago
+                              .hub-blog__comment-item
+                                .hub-blog__comment-item-head
+                                  a.user__avatar-wrap
+                                    img.user__avatar.user__avatar22(src=require('../../assets/images/img/avatar.jpg'), alt="Avatar")
+                                  p.hub-blog__comment-text Lorem ipsum dolor sit amet
+                                .hub-blog__comment-item-foot
+                                  p.hub-blog__comment-meta
+                                    a(href="") Like
+                                    a(href="") Reply
+                                    a(href="") 2 days ago
+                          .hub-blog__comment-item
+                            .hub-blog__comment-item-head
+                              a.user__avatar-wrap
+                                img.user__avatar.user__avatar30(src=require('../../assets/images/img/avatar.jpg'), alt="Avatar")
+                              p.hub-blog__comment-text Lorem ipsum dolor sit amet consectetur adipisicing
+                            .hub-blog__comment-item-foot
+                              p.hub-blog__comment-meta
+                                a(href="") Like
+                                a(href="") Reply
+                                a(href="") 2 days ago
+                              .hub-blog__comment-item
+                                .hub-blog__comment-item-head
+                                  a.user__avatar-wrap
+                                    img.user__avatar.user__avatar22(src=require('../../assets/images/img/avatar.jpg'), alt="Avatar")
+                                  p.hub-blog__comment-text Lorem ipsum dolor sit amet
+                                .hub-blog__comment-item-foot
+                                  p.hub-blog__comment-meta
+                                    a(href="") Like
+                                    a(href="") Reply
+                                    a(href="") 2 days ago
+                          button.btn.btn-link.text-pink.text-small View More Comments
+
+block modal
