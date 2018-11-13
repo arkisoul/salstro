@@ -156,6 +156,12 @@
   grid-template-columns: repeat(3, 1fr)
   grid-gap: 30px
 
+  &__nav
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    grid-column: 1/-1
+
   &__article
     display: flex
     flex-direction: column
@@ -166,6 +172,33 @@
       border-radius: 4px 4px 0 0
       max-height: 187px
       position: relative
+
+    &-options
+      display: flex
+      align-items: center
+      justify-content: flex-end
+      padding: 8px
+      position: absolute
+      background-color: rgba($bg-black, 0.5)
+      transition: all ease-in 300ms
+      left: 1px
+      right: 1px
+      width: calc(100% - 2px)
+      bottom: 0
+
+      .custom__dropdown
+
+        .dropdown-toggle
+          background: none
+
+        .dropdown-menu
+          transform: initial!important
+          top: 125%!important
+          left: -76px!important
+          min-width: 100px
+          &::before
+            left: auto
+            right: 15px
 
     &-img
       max-height: 187px
