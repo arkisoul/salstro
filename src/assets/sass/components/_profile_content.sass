@@ -906,8 +906,8 @@
   &__time
     display: inline-block
     font-size: 10px
-    padding: 3px
-    border-radius: 8px
+    padding: 3px 5px
+    border-radius: 4px
     background-color: rgba($bg-black, 0.8)
     color: $text-white
     position: absolute
@@ -967,7 +967,7 @@
       font-weight: $semi
 
       &.video-item__price-tagst
-        font-size: 14px
+        font-size: 13px
         color: $text-blue
         text-decoration: line-through
         font-weight: $regular
@@ -1042,9 +1042,10 @@
   display: flex
   align-items: center
   justify-content: flex-end
+  margin: 6px 0 15px
 
 .video-list__filter
-  margin: 10px 0 20px
+  margin: 10px 0 15px
 
 .video-list__filter-row
   display: flex
@@ -1070,3 +1071,92 @@
 
     label
       margin-right: 8px
+
+// Dahsboard Notifications
+.notifications-container
+  padding: 10px 8px
+
+.notifications
+  padding: 10px 0
+
+.notification
+  display: flex
+  align-items: flex-start
+  padding: 15px 0
+
+  &:not(:last-child)
+    border-bottom: 1px solid $border-offwhite
+
+  &__pagination
+    text-align: center
+    padding: 10px 0
+
+  &__media
+    flex: 0 0 60px
+    max-width: 60px
+
+  &__body
+    flex: 1 1 auto
+    max-width: calc(100% - 60px)
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+
+  &__content
+    flex: 1 1 auto
+    max-width: calc(100% - 200px)
+
+  &__text
+    font-size: 14px
+    color: $text-gray
+    margin-bottom: 10px
+
+  &__user
+    font-weight: $semi
+    font-size: 14px
+    color: $text-black
+
+  &__time
+    margin: 0
+    font-size: 12px
+    color: $text-blue
+
+  &__action
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    flex: 0 0 190px
+    margin-left: 10px
+
+    .btn__link
+      margin-right: 8px
+
+    .btn__primary
+      margin-right: 8px
+
+    .custom__dropdown
+      margin-left: auto
+
+      .dropdown-menu
+        top: 35px!important
+        transform: initial!important
+        left: -135px!important
+
+        &::before
+          right: 16px
+          left: auto
+
+.btn__link
+  font-size: 15px
+  text-decoration: underline
+  display: inline-block
+  font-weight: 400;
+  background-color: transparent;
+
+  &-black
+    @extend .btn__link
+    color: $text-black
+
+  &-gray
+    @extend .btn__link
+    color: $text-gray

@@ -1,0 +1,299 @@
+//- ./src/views/pages/user-dash-notifications.pug
+
+extends ../layouts/master.pug
+
+block title
+  title Salstro - User Dashboard Notifications
+
+block content
+  //- header cum navbar
+  include ../components/navbar.pug
+  //- main content
+  section.main-content
+    .container
+      .row
+        .col-lg-3.col-md-4
+          //- include sidebar
+          // Sidebar
+          include ../components/sidebar.pug
+          // ./ Sidebar
+        .col-lg-9.col-md-8
+          //- include content
+          .row
+            //- Include Activity Header
+            .col-12
+              include ../components/myprofile_header.pug
+            .col-12
+              section.myprofile__content
+                +box('Your Notifications')
+                  .notifications-container
+                    .vc__tabs
+                      ul#portfolio__photo-tabs.portfolio__photo-tabs.nav.nav-tabs(role='tablist')
+                        li.nav-item
+                          a#notRecent-tab.nav-link(data-toggle='tab' href='#notRecent' role='tab' aria-controls='notRecent' aria-selected='false') Recent
+                        li.nav-item
+                          a#notOlder-tab.nav-link.active(data-toggle='tab' href='#notOlder' role='tab' aria-controls='notOlder' aria-selected='true') Older
+                    .vc__tab-content.tab-content
+                      #notRecent.tab-pane(role='tabpanel' aria-labelledby='notRecent-tab')
+                        .notifications
+                          .notification
+                            .notification__media
+                              img.user__avatar.user__avatar30(src=require('../../assets/images/img/avatar.jpg'), alt="User")
+                            .notification__body
+                              .notification__content
+                                p.notification__text
+                                  | You have a new friend request :
+                                  span.notification__user Roocye
+                                p.notification__time 2 days ago
+                              .notification__action
+                                button.btn.btn__link.btn__link-gray Cancel
+                                button.btn.btn__primary Accept
+                                .dropdown.custom__dropdown
+                                  button#notiOpt.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                                    img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+                                  .dropdown-menu(aria-labelledby='notiOpt')
+                                    a.dropdown-item(href='#') Hide this notification
+                          .notification
+                            .notification__media
+                              img.user__avatar.user__avatar30(src=require('../../assets/images/img/avatar.jpg'), alt="User")
+                            .notification__body
+                              .notification__content
+                                p.notification__text
+                                  | You have a new friend request :
+                                  span.notification__user Roocye
+                                p.notification__time 2 days ago
+                              .notification__action
+                                button.btn.btn__link.btn__link-gray Cancel
+                                button.btn.btn__primary Accept
+                                .dropdown.custom__dropdown
+                                  button#notiOpt.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                                    img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+                                  .dropdown-menu(aria-labelledby='notiOpt')
+                                    a.dropdown-item(href='#') Hide this notification
+                          .notification
+                            .notification__media
+                              img.user__avatar.user__avatar30(src=require('../../assets/images/img/avatar.jpg'), alt="User")
+                            .notification__body
+                              .notification__content
+                                p.notification__text
+                                  | You have a new friend request :
+                                  span.notification__user Roocye
+                                p.notification__time 2 days ago
+                              .notification__action
+                                button.btn.btn__link.btn__link-gray Cancel
+                                button.btn.btn__primary Accept
+                                .dropdown.custom__dropdown
+                                  button#notiOpt.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                                    img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+                                  .dropdown-menu(aria-labelledby='notiOpt')
+                                    a.dropdown-item(href='#') Hide this notification
+                          .notification
+                            .notification__media
+                              img.user__avatar.user__avatar30(src=require('../../assets/images/img/avatar.jpg'), alt="User")
+                            .notification__body
+                              .notification__content
+                                p.notification__text
+                                  | You have a new friend request :
+                                  span.notification__user Roocye
+                                p.notification__time 2 days ago
+                              .notification__action
+                                button.btn.btn__link.btn__link-gray Cancel
+                                button.btn.btn__primary Accept
+                                .dropdown.custom__dropdown
+                                  button#notiOpt.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                                    img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+                                  .dropdown-menu(aria-labelledby='notiOpt')
+                                    a.dropdown-item(href='#') Hide this notification
+                          .notification
+                            .notification__media
+                              img.user__avatar.user__avatar30(src=require('../../assets/images/img/avatar.jpg'), alt="User")
+                            .notification__body
+                              .notification__content
+                                p.notification__text Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum iure laboriosam odit! Laborum facilis odio dolorem inventore
+                                p.notification__time 2 days ago
+                              .notification__action
+                                .dropdown.custom__dropdown
+                                  button#notiOpt.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                                    img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+                                  .dropdown-menu(aria-labelledby='notiOpt')
+                                    a.dropdown-item(href='#') Hide this notification
+                        .notification__pagination
+                          button.btn.btn__primary View More
+                      #notOlder.tab-pane.active(role='tabpanel' aria-labelledby='notOlder-tab')
+                        .notifications
+                          .notification
+                            .notification__media
+                              img.user__avatar.user__avatar30(src=require('../../assets/images/img/avatar.jpg'), alt="User")
+                            .notification__body
+                              .notification__content
+                                p.notification__text
+                                  | You have a new friend request :
+                                  span.notification__user Roocye
+                                p.notification__time 2 days ago
+                              .notification__action
+                                button.btn.btn__link.btn__link-gray Cancel
+                                button.btn.btn__primary Accept
+                                .dropdown.custom__dropdown
+                                  button#notiOpt.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                                    img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+                                  .dropdown-menu(aria-labelledby='notiOpt')
+                                    a.dropdown-item(href='#') Hide this notification
+                          .notification
+                            .notification__media
+                              img.user__avatar.user__avatar30(src=require('../../assets/images/img/avatar.jpg'), alt="User")
+                            .notification__body
+                              .notification__content
+                                p.notification__text
+                                  | You have a new friend request :
+                                  span.notification__user Roocye
+                                p.notification__time 2 days ago
+                              .notification__action
+                                button.btn.btn__link.btn__link-gray Cancel
+                                button.btn.btn__primary Accept
+                                .dropdown.custom__dropdown
+                                  button#notiOpt.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                                    img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+                                  .dropdown-menu(aria-labelledby='notiOpt')
+                                    a.dropdown-item(href='#') Hide this notification
+                          .notification
+                            .notification__media
+                              img.user__avatar.user__avatar30(src=require('../../assets/images/img/avatar.jpg'), alt="User")
+                            .notification__body
+                              .notification__content
+                                p.notification__text
+                                  | You have a new friend request :
+                                  span.notification__user Roocye
+                                p.notification__time 2 days ago
+                              .notification__action
+                                button.btn.btn__link.btn__link-gray Cancel
+                                button.btn.btn__primary Accept
+                                .dropdown.custom__dropdown
+                                  button#notiOpt.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                                    img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+                                  .dropdown-menu(aria-labelledby='notiOpt')
+                                    a.dropdown-item(href='#') Hide this notification
+                          .notification
+                            .notification__media
+                              img.user__avatar.user__avatar30(src=require('../../assets/images/img/avatar.jpg'), alt="User")
+                            .notification__body
+                              .notification__content
+                                p.notification__text
+                                  | You have a new friend request :
+                                  span.notification__user Roocye
+                                p.notification__time 2 days ago
+                              .notification__action
+                                button.btn.btn__link.btn__link-gray Cancel
+                                button.btn.btn__primary Accept
+                                .dropdown.custom__dropdown
+                                  button#notiOpt.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                                    img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+                                  .dropdown-menu(aria-labelledby='notiOpt')
+                                    a.dropdown-item(href='#') Hide this notification
+                          .notification
+                            .notification__media
+                              img.user__avatar.user__avatar30(src=require('../../assets/images/img/avatar.jpg'), alt="User")
+                            .notification__body
+                              .notification__content
+                                p.notification__text Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum iure laboriosam odit! Laborum facilis odio dolorem inventore
+                                p.notification__time 2 days ago
+                              .notification__action
+                                .dropdown.custom__dropdown
+                                  button#notiOpt.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                                    img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+                                  .dropdown-menu(aria-labelledby='notiOpt')
+                                    a.dropdown-item(href='#') Hide this notification
+                          .notification
+                            .notification__media
+                              img.user__avatar.user__avatar30(src=require('../../assets/images/img/avatar.jpg'), alt="User")
+                            .notification__body
+                              .notification__content
+                                p.notification__text Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum iure laboriosam odit! Laborum facilis odio dolorem inventore
+                                p.notification__time 2 days ago
+                              .notification__action
+                                .dropdown.custom__dropdown
+                                  button#notiOpt.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                                    img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+                                  .dropdown-menu(aria-labelledby='notiOpt')
+                                    a.dropdown-item(href='#') Hide this notification
+                          .notification
+                            .notification__media
+                              img.user__avatar.user__avatar30(src=require('../../assets/images/img/avatar.jpg'), alt="User")
+                            .notification__body
+                              .notification__content
+                                p.notification__text Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum iure laboriosam odit! Laborum facilis odio dolorem inventore
+                                p.notification__time 2 days ago
+                              .notification__action
+                                .dropdown.custom__dropdown
+                                  button#notiOpt.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                                    img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+                                  .dropdown-menu(aria-labelledby='notiOpt')
+                                    a.dropdown-item(href='#') Hide this notification
+                          .notification
+                            .notification__media
+                              img.user__avatar.user__avatar30(src=require('../../assets/images/img/avatar.jpg'), alt="User")
+                            .notification__body
+                              .notification__content
+                                p.notification__text Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum iure laboriosam odit! Laborum facilis odio dolorem inventore
+                                p.notification__time 2 days ago
+                              .notification__action
+                                .dropdown.custom__dropdown
+                                  button#notiOpt.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                                    img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+                                  .dropdown-menu(aria-labelledby='notiOpt')
+                                    a.dropdown-item(href='#') Hide this notification
+                          .notification
+                            .notification__media
+                              img.user__avatar.user__avatar30(src=require('../../assets/images/img/avatar.jpg'), alt="User")
+                            .notification__body
+                              .notification__content
+                                p.notification__text Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum iure laboriosam odit! Laborum facilis odio dolorem inventore
+                                p.notification__time 2 days ago
+                              .notification__action
+                                .dropdown.custom__dropdown
+                                  button#notiOpt.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                                    img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+                                  .dropdown-menu(aria-labelledby='notiOpt')
+                                    a.dropdown-item(href='#') Hide this notification
+                          .notification
+                            .notification__media
+                              img.user__avatar.user__avatar30(src=require('../../assets/images/img/avatar.jpg'), alt="User")
+                            .notification__body
+                              .notification__content
+                                p.notification__text Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum iure laboriosam odit! Laborum facilis odio dolorem inventore
+                                p.notification__time 2 days ago
+                              .notification__action
+                                .dropdown.custom__dropdown
+                                  button#notiOpt.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                                    img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+                                  .dropdown-menu(aria-labelledby='notiOpt')
+                                    a.dropdown-item(href='#') Hide this notification
+                          .notification
+                            .notification__media
+                              img.user__avatar.user__avatar30(src=require('../../assets/images/img/avatar.jpg'), alt="User")
+                            .notification__body
+                              .notification__content
+                                p.notification__text Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum iure laboriosam odit! Laborum facilis odio dolorem inventore
+                                p.notification__time 2 days ago
+                              .notification__action
+                                .dropdown.custom__dropdown
+                                  button#notiOpt.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                                    img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+                                  .dropdown-menu(aria-labelledby='notiOpt')
+                                    a.dropdown-item(href='#') Hide this notification
+                          .notification
+                            .notification__media
+                              img.user__avatar.user__avatar30(src=require('../../assets/images/img/avatar.jpg'), alt="User")
+                            .notification__body
+                              .notification__content
+                                p.notification__text Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum iure laboriosam odit! Laborum facilis odio dolorem inventore
+                                p.notification__time 2 days ago
+                              .notification__action
+                                .dropdown.custom__dropdown
+                                  button#notiOpt.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                                    img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+                                  .dropdown-menu(aria-labelledby='notiOpt')
+                                    a.dropdown-item(href='#') Hide this notification
+                        .notification__pagination
+                          button.btn.btn__primary View More
+
+block modal
