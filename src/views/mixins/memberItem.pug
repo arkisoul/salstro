@@ -19,26 +19,41 @@ mixin memberItem(img, type)
         p.member__location
           img(src=require('../../assets/images/svg/icon-location-pin.svg'), alt="Location Pin")
           | Paris, France
-      .member__options
-        .dropdown.custom__dropdown
-          button#dropdownMenuButton.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
-            img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
-          if type == 'admin'
-            .dropdown-menu(aria-labelledby='dropdownMenuButton')
-              a.dropdown-item(href='#') Change to Moderator
-              a.dropdown-item(href='#') Remove as Admin
-              a.dropdown-item(href='#') Leave Group
-          else if type == 'otheradmin'
-            .dropdown-menu(aria-labelledby='dropdownMenuButton')
-              a.dropdown-item(href='#') Remove as Admin
-              a.dropdown-item(href='#') Remove from Group
-          else if type == 'member'
-            .dropdown-menu(aria-labelledby='dropdownMenuButton')
-              a.dropdown-item(href='#') Make Admin
-              a.dropdown-item(href='#') Make Moderator
-              a.dropdown-item(href='#') Remove from Group
-          else if type == 'moderator'
-            .dropdown-menu(aria-labelledby='dropdownMenuButton')
-              a.dropdown-item(href='#') Make Admin
-              a.dropdown-item(href='#') Remove as Moderator
-              a.dropdown-item(href='#') Remove from Group
+      if type == 'connection'
+        .member__action
+          a.btn.btn__primary(href="#") Send Message
+      if type == 'pviewa'
+        .member__action
+          a.btn.btn__primary(href="#") Send Message
+          .member__time Viewed 2 days ago
+      else if type == 'pviewb'
+        .member__action
+          a.btn.btn__primary(href="#") Connect
+          .member__time Viewed 2 days ago
+      else
+        .member__options
+          .dropdown.custom__dropdown
+            button#dropdownMenuButton.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+              img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+            if type == 'admin'
+              .dropdown-menu(aria-labelledby='dropdownMenuButton')
+                a.dropdown-item(href='#') Change to Moderator
+                a.dropdown-item(href='#') Remove as Admin
+                a.dropdown-item(href='#') Leave Group
+            else if type == 'otheradmin'
+              .dropdown-menu(aria-labelledby='dropdownMenuButton')
+                a.dropdown-item(href='#') Remove as Admin
+                a.dropdown-item(href='#') Remove from Group
+            else if type == 'member'
+              .dropdown-menu(aria-labelledby='dropdownMenuButton')
+                a.dropdown-item(href='#') Make Admin
+                a.dropdown-item(href='#') Make Moderator
+                a.dropdown-item(href='#') Remove from Group
+            else if type == 'moderator'
+              .dropdown-menu(aria-labelledby='dropdownMenuButton')
+                a.dropdown-item(href='#') Make Admin
+                a.dropdown-item(href='#') Remove as Moderator
+                a.dropdown-item(href='#') Remove from Group
+            else if type == 'connection'
+              .dropdown-menu(aria-labelledby='dropdownMenuButton')
+                a.dropdown-item(href='#') Remove Connection

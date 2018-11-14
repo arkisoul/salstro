@@ -1,0 +1,46 @@
+//- ./src/views/pages/user-dash-profileviews.pug
+
+extends ../layouts/master.pug
+include ../mixins/dash-header.pug
+include ../mixins/memberItem.pug
+
+block title
+  title Salstro - User Dashboard Profile Views
+
+block content
+  //- header cum navbar
+  include ../components/navbar.pug
+  //- main content
+  section.main-content
+    .container
+      .row
+        .col-lg-3.col-md-4
+          //- include sidebar
+          // Sidebar
+          include ../components/sidebar.pug
+          // ./ Sidebar
+        .col-lg-9.col-md-8
+          //- include content
+          .row
+            //- Include Activity Header
+            .col-12
+              +dashHeader('Profile Views')
+              section.myprofile__content
+                +box('Profile Views - for last 30 days')
+                  section.profileview-container
+                    .profileviews
+                      +memberItem('admin-01.jpg', 'pviewa')
+                      +memberItem('admin-02.jpg', 'pviewa')
+                      +memberItem('admin-03.jpg', 'pviewa')
+                      +memberItem('moderator-01.jpg', 'pviewb')
+                      +memberItem('moderator-02.jpg', 'pviewb')
+                      +memberItem('member-01.jpg', 'pviewb')
+                      +memberItem('moderator-02.jpg', 'pviewa')
+                      +memberItem('member-02.jpg', 'pviewb')
+                      +memberItem('member-03.jpg', 'pviewa')
+                      +memberItem('member-04.jpg', 'pviewb')
+                      +memberItem('member-05.jpg', 'pviewa')
+                      .member__pagination
+                        a.btn.btn__primary(href='#') View More
+
+block modal

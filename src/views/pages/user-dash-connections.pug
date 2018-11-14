@@ -1,0 +1,71 @@
+//- ./src/views/pages/user-dash-connections.pug
+
+extends ../layouts/master.pug
+include ../mixins/dash-header.pug
+include ../mixins/memberItem.pug
+
+block title
+  title Salstro - User Dashboard Connections
+
+block content
+  //- header cum navbar
+  include ../components/navbar.pug
+  //- main content
+  section.main-content
+    .container
+      .row
+        .col-lg-3.col-md-4
+          //- include sidebar
+          // Sidebar
+          include ../components/sidebar.pug
+          // ./ Sidebar
+        .col-lg-9.col-md-8
+          //- include content
+          .row
+            //- Include Activity Header
+            .col-12
+              +dashHeader('My Connections')
+              section.myprofile__content
+                +box('My Connections')
+                  section.connections-container
+                    a.w-100.d-inline-block.btn.btn__link.btn__link-gray.text-right(href='#') Import contact from your email account
+                    .connections__filter
+                      form(action="")
+                        .connections__filter-og
+                          .form-group
+                            label.theme__label.sr-only(for='searchName') Name
+                            input.form-control.theme__form-control.theme__primary-form-control.theme__secondary-form-control(type='text', placeholder='Enter Name' id='searchName' name='search-name')
+                          .form-group
+                            label.theme__label.sr-only(for='searchLocation') Location
+                            input.form-control.theme__form-control.theme__primary-form-control.theme__secondary-form-control(type='text', placeholder='Location' id='searchLocation' name='search-location')
+                          button.btn.btn__search(type='submit' role='submit')
+                            img(src=require('../../assets/images/svg/icon-search-white.svg'), alt="")
+                          button.btn.btn__link.btn__link-black.btn__ad-search Advanced Search
+                        .connections__filter-adwrap
+                          .connections__filter-ad
+                            .form-group
+                              label.theme__label(for='searchComp') Company
+                              input.form-control.theme__form-control.theme__primary-form-control.theme__secondary-form-control(type='text', placeholder='Company' id='searchComp' name='search-comp')
+                            .form-group
+                              label.theme__label(for='searchEdu') Education
+                              input.form-control.theme__form-control.theme__primary-form-control.theme__secondary-form-control(type='text', placeholder='Education' id='searchEdu' name='search-edu')
+                            .form-group.custom__range-group
+                              label.theme__label(for='locationRadius') Location Radius (km)
+                              input#locationRadius.custom-range(type='range' min='0' max='100' step='1' value='50')
+                              span.locationRadiusValue
+                    .connections
+                      +memberItem('admin-01.jpg', 'connection')
+                      +memberItem('admin-02.jpg', 'connection')
+                      +memberItem('admin-03.jpg', 'connection')
+                      +memberItem('moderator-01.jpg', 'connection')
+                      +memberItem('moderator-02.jpg', 'connection')
+                      +memberItem('member-01.jpg', 'connection')
+                      +memberItem('moderator-02.jpg', 'connection')
+                      +memberItem('member-02.jpg', 'connection')
+                      +memberItem('member-03.jpg', 'connection')
+                      +memberItem('member-04.jpg', 'connection')
+                      +memberItem('member-05.jpg', 'connection')
+                      .member__pagination
+                        a.btn.btn__primary(href='#') View More
+
+block modal

@@ -24,6 +24,9 @@
     background-color: $bg-white
     flex: 1 1 100%
 
+  .member__info-block
+    flex: 1 1 auto
+
   .member__name
     display: flex
     align-items: center
@@ -74,8 +77,23 @@
     @extend .member__company
     margin: 0
 
+  .member__action
+    margin-right: 30px
+    align-self: center
+    min-width: 140px
+
+    .btn__primary
+      width: 100%
+      text-align: center
+
+  .member__time
+    font-size: 14px
+    margin-top: 10px
+    color: $text-gray
+    text-align: center
+
   .member__options
-    margin-left: auto
+    align-self: flex-end
     margin-bottom: auto
 
     .custom__dropdown
@@ -87,3 +105,7 @@
         &::before
           left: auto
           right: 11px
+
+.member__pagination
+  padding: 15px 0 0
+  text-align: center

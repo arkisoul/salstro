@@ -205,6 +205,20 @@ $(document).ready(() => {
   $('.theme__primary-form-control, .theme__secondary-form-control').on('keypress', function (e) {
     if (e.keyCode === 13) e.preventDefault()
   })
+
+  $('.btn__ad-search').on('click', function(e) {
+    e.preventDefault()
+    $('.connections__filter-adwrap').slideToggle();
+  })
+
+  var locationRange = $('#locationRadius')
+  var locationRangeValue = locationRange.val()
+  var locationSpan = $('.locationRadiusValue')
+  locationSpan.text(locationRangeValue)
+
+  locationRange.on('change', function(e) {
+    locationSpan.text(e.target.value)
+  })
 });
 
 $(document).ready(() => {
