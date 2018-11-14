@@ -1,0 +1,222 @@
+//- ./src/views/pages/user-dash-messages.pug
+
+extends ../layouts/master.pug
+
+block title
+  title Salstro - User Dashboard Messages
+
+block content
+  //- header cum navbar
+  include ../components/navbar.pug
+  //- main content
+  section.main-content
+    .container
+      .row
+        .col-lg-3.col-md-4
+          //- include sidebar
+          // Sidebar
+          include ../components/sidebar.pug
+          // ./ Sidebar
+        .col-lg-9.col-md-8
+          //- include content
+          .row
+            //- Include Activity Header
+            .col-12
+              section.myprofile__content
+                +box('Messages')
+                  section.message-container
+                    .m__user-search
+                      form.form-inline.my-2.my-lg-0.navbar__form
+                        .navbar__search-wrapper
+                          input.form-control(type='search' placeholder='Search' aria-label='Search')
+                    .m__users
+                      - for(var x = 1; x <= 10; x++)
+                        a.user__box(href="#")
+                          .user__avatar-wrap.user__online
+                            img.user__avatar.user__avatar30(src=require('../../assets/images/img/avatar.jpg'), alt="User")
+                          .user__info-block
+                            h2.user__name Roger Fernando
+                            p.user__last-msg Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam laudantium
+                      - for(var x = 1; x <= 10; x++)
+                        a.user__box(href="#")
+                          .user__avatar-wrap.user__offline
+                            img.user__avatar.user__avatar30(src=require('../../assets/images/img/avatar.jpg'), alt="User")
+                          .user__info-block
+                            h2.user__name Roger Fernando
+                            p.user__last-msg Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam laudantium
+                    .m__header
+                      a.user__avatar-wrap.user__online(href="#")
+                        img.user__avatar.user__avatar40(src=require('../../assets/images/img/avatar.jpg'), alt="User")
+                      .user__info-block
+                        h2.user__name Roger Fernando
+                        h5.user__prof Senior Hair Stylist
+                    .m__body
+                      .m__messages
+                        .m__separator
+                          .m__separator-text 10 Sept 2018
+                        .m__message.m__message-left
+                          .m__message-box
+                            a.user__avatar-wrap.user__offline(href="#")
+                              img.user__avatar.user__avatar30(src=require('../../assets/images/img/avatar.jpg'), alt="User")
+                            .m__message-text Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            .dropdown.custom__dropdown
+                              button#mesOpt.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                                img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+                              .dropdown-menu(aria-labelledby='mesOpt')
+                                a.dropdown-item(href='#') Delete
+                          .m__message-time 2 min ago
+                        .m__message.m__message-right
+                          .m__message-box
+                            a.user__avatar-wrap.user__offline(href="#")
+                              img.user__avatar.user__avatar30(src=require('../../assets/images/img/avatar.jpg'), alt="User")
+                            .m__message-text Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            .dropdown.custom__dropdown
+                              button#mesOpt.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                                img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+                              .dropdown-menu(aria-labelledby='mesOpt')
+                                a.dropdown-item(href='#') Delete
+                          .m__message-time 2 min ago
+                        .m__message.m__message-right
+                          .m__message-box
+                            a.user__avatar-wrap.user__offline(href="#")
+                              img.user__avatar.user__avatar30(src=require('../../assets/images/img/avatar.jpg'), alt="User")
+                            .m__message-text Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            .dropdown.custom__dropdown
+                              button#mesOpt.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                                img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+                              .dropdown-menu(aria-labelledby='mesOpt')
+                                a.dropdown-item(href='#') Delete
+                          .m__message-time 2 min ago
+                        .m__message.m__message-left
+                          .m__message-box
+                            a.user__avatar-wrap.user__online(href="#")
+                              img.user__avatar.user__avatar30(src=require('../../assets/images/img/avatar.jpg'), alt="User")
+                            .m__message-text Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            .dropdown.custom__dropdown
+                              button#mesOpt.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                                img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+                              .dropdown-menu(aria-labelledby='mesOpt')
+                                a.dropdown-item(href='#') Delete
+                          .m__message-time 2 min ago
+                        .m__message.m__message-right
+                          .m__message-box
+                            a.user__avatar-wrap.user__offline(href="#")
+                              img.user__avatar.user__avatar30(src=require('../../assets/images/img/avatar.jpg'), alt="User")
+                            .m__message-text Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            .dropdown.custom__dropdown
+                              button#mesOpt.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                                img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+                              .dropdown-menu(aria-labelledby='mesOpt')
+                                a.dropdown-item(href='#') Delete
+                          .m__message-time 2 min ago
+                        .m__message.m__message-right
+                          .m__message-box
+                            a.user__avatar-wrap.user__offline(href="#")
+                              img.user__avatar.user__avatar30(src=require('../../assets/images/img/avatar.jpg'), alt="User")
+                            .m__message-text Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            .dropdown.custom__dropdown
+                              button#mesOpt.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                                img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+                              .dropdown-menu(aria-labelledby='mesOpt')
+                                a.dropdown-item(href='#') Delete
+                          .m__message-time 2 min ago
+                        .m__message.m__message-left
+                          .m__message-box
+                            a.user__avatar-wrap.user__online(href="#")
+                              img.user__avatar.user__avatar30(src=require('../../assets/images/img/avatar.jpg'), alt="User")
+                            .m__message-text Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            .dropdown.custom__dropdown
+                              button#mesOpt.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                                img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+                              .dropdown-menu(aria-labelledby='mesOpt')
+                                a.dropdown-item(href='#') Delete
+                          .m__message-time 2 min ago
+                        .m__separator
+                          .m__separator-text 10 Sept 2018
+                        .m__message.m__message-left
+                          .m__message-box
+                            a.user__avatar-wrap.user__offline(href="#")
+                              img.user__avatar.user__avatar30(src=require('../../assets/images/img/avatar.jpg'), alt="User")
+                            .m__message-text Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            .dropdown.custom__dropdown
+                              button#mesOpt.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                                img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+                              .dropdown-menu(aria-labelledby='mesOpt')
+                                a.dropdown-item(href='#') Delete
+                          .m__message-time 2 min ago
+                        .m__message.m__message-right
+                          .m__message-box
+                            a.user__avatar-wrap.user__offline(href="#")
+                              img.user__avatar.user__avatar30(src=require('../../assets/images/img/avatar.jpg'), alt="User")
+                            .m__message-text Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            .dropdown.custom__dropdown
+                              button#mesOpt.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                                img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+                              .dropdown-menu(aria-labelledby='mesOpt')
+                                a.dropdown-item(href='#') Delete
+                          .m__message-time 2 min ago
+                        .m__message.m__message-right
+                          .m__message-box
+                            a.user__avatar-wrap.user__offline(href="#")
+                              img.user__avatar.user__avatar30(src=require('../../assets/images/img/avatar.jpg'), alt="User")
+                            .m__message-text Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            .dropdown.custom__dropdown
+                              button#mesOpt.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                                img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+                              .dropdown-menu(aria-labelledby='mesOpt')
+                                a.dropdown-item(href='#') Delete
+                          .m__message-time 2 min ago
+                        .m__message.m__message-left
+                          .m__message-box
+                            a.user__avatar-wrap.user__online(href="#")
+                              img.user__avatar.user__avatar30(src=require('../../assets/images/img/avatar.jpg'), alt="User")
+                            .m__message-text Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            .dropdown.custom__dropdown
+                              button#mesOpt.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                                img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+                              .dropdown-menu(aria-labelledby='mesOpt')
+                                a.dropdown-item(href='#') Delete
+                          .m__message-time 2 min ago
+                        .m__message.m__message-right
+                          .m__message-box
+                            a.user__avatar-wrap.user__offline(href="#")
+                              img.user__avatar.user__avatar30(src=require('../../assets/images/img/avatar.jpg'), alt="User")
+                            .m__message-text Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            .dropdown.custom__dropdown
+                              button#mesOpt.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                                img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+                              .dropdown-menu(aria-labelledby='mesOpt')
+                                a.dropdown-item(href='#') Delete
+                          .m__message-time 2 min ago
+                        .m__message.m__message-right
+                          .m__message-box
+                            a.user__avatar-wrap.user__offline(href="#")
+                              img.user__avatar.user__avatar30(src=require('../../assets/images/img/avatar.jpg'), alt="User")
+                            .m__message-text Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            .dropdown.custom__dropdown
+                              button#mesOpt.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                                img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+                              .dropdown-menu(aria-labelledby='mesOpt')
+                                a.dropdown-item(href='#') Delete
+                          .m__message-time 2 min ago
+                        .m__message.m__message-left
+                          .m__message-box
+                            a.user__avatar-wrap.user__online(href="#")
+                              img.user__avatar.user__avatar30(src=require('../../assets/images/img/avatar.jpg'), alt="User")
+                            .m__message-text Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            .dropdown.custom__dropdown
+                              button#mesOpt.btn.dropdown-toggle.vertical__ellipsis-menu(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                                img(src=require("../../assets/images/svg/vertical-ellipsis.svg"), alt="")
+                              .dropdown-menu(aria-labelledby='mesOpt')
+                                a.dropdown-item(href='#') Delete
+                          .m__message-time 2 min ago
+                      .m__send-msg
+                        form(action="")
+                          .m__send-group
+                            button.btn.btn__attachment
+                              img(src=require('../../assets/images/svg/icon-upin.svg'), alt="Attach")
+                            input.m__msg(type="text", name="msg" placeholder='Write Message Here')
+                            button.btn.btn__submit(type="submit")
+                              img(src=require('../../assets/images/svg/send.svg'), alt="Submit")
+
+block modal
