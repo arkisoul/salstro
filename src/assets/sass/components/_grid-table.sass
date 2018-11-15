@@ -1,0 +1,90 @@
+// ./src/assets/sass/components/_grid-table.sass
+
+.grid-table
+  margin-bottom: 20px
+
+  &__head
+    padding: 0
+
+  &__row
+    display: grid
+    grid-template-columns: 30% 20% 20% 30%
+
+    &-head
+      background-color: $bg-lightwhite
+
+      .grid-table__col
+        text-align: center
+        font-size: 14px
+        padding: 8px 4px
+        color: $text-black
+
+    &-body
+      background-color: $bg-white
+      border-bottom: 1px solid $border-lightblue
+
+      .grid-table__col
+        padding: 14px 20px
+
+  &__col
+    display: flex
+    align-items: center
+    justify-content: center
+
+  .align__left
+    justify-content: flex-start
+
+  .align__right
+    justify-content: flex-end
+
+.text__title
+  font-size: 15px
+  color: $text-black
+
+.text__date
+  font-size: 12px
+  color: $text-gray
+
+.text__link
+  display: inline-block
+  font-size: 14px
+  text-decoration: underline
+
+  &-lblue
+    color: $text-lightblue
+
+    &:hover, &:focus
+      color: $text-blue
+
+  &-pink
+    color: $text-pink
+
+    &:hover, &:focus
+      color: $text-brightpink
+
+  &-gray
+    color: $text-gray
+
+    &:hover, &:focus
+      color: $text-gray
+
+  &-black
+    color: $text-black
+
+.icon__link
+  display: inline-block
+
+  .icon__edit
+    width: 16px
+
+  .icon__view
+    width: 16px
+
+  .icon__trash
+    width: 13px
+
+.action__wrapper
+  display: flex
+  width: 100%
+  justify-content: space-between
+  align-items: center

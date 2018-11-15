@@ -1,0 +1,16 @@
+//- ./src/views/mixins/activityHeader.pug
+
+mixin activityHeader(t1, t2, t3)
+  .activity-header
+    .activity-item
+      .activity-img.activity-img--blue
+        img(src=require('../../assets/images/svg/icon-posted.svg'), alt="")
+      .acitivty-text #{t1}
+    .activity-item
+      .activity-img.activity-img--pink
+        img(src=require('../../assets/images/svg/icon-active.svg'), alt="")
+      .acitivty-text #{t2}
+    .activity-item
+      .activity-img.activity-img--gray
+        img(src=require('../../assets/images/svg/icon-app.svg'), alt="")
+      .acitivty-text #{t3}

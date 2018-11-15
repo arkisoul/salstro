@@ -68,6 +68,8 @@ Date
 20. Job Seeker Form
 21. Job Search
 22. Job View
+23. Job Manager
+24. Course Manager
 
 :: Popups ::
 1. Hub Inspiration Gallery Popup Part I

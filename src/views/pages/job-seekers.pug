@@ -1,0 +1,94 @@
+//- ./src/views/pages/job-seekers.pug
+
+extends ../layouts/master.pug
+include ../mixins/mapHeader.pug
+include ../mixins/jobCard.pug
+include ../mixins/memberItem.pug
+
+block title
+  title Salstro - Job Search
+
+block content
+  //- header cum navbar
+  include ../components/navbar.pug
+  //- main content
+  section.main-content
+    .container
+      .row
+        .col-lg-3.col-md-4
+          //- include sidebar
+          // Sidebar
+          include ../components/sidebar.pug
+          // ./ Sidebar
+        .col-lg-9.col-md-8
+          //- include content
+          .row
+            //- Include Activity Header
+            .col-12
+              +mapHeader()
+                .map-atop
+                  +memberItemSmall('admin-01.jpg')
+            .col-12
+              section.myprofile__content
+                +box('Jobseeker Search')
+                  section.box__container
+                    .job-filter
+                      form(action="")
+                        .connections__filter-og
+                          .form-group
+                            label.theme__label.sr-only(for='jobTitle') Job Title
+                            input.form-control.theme__form-control.theme__primary-form-control.theme__secondary-form-control(type='text', placeholder='Job Title' id='jobTitle' name='search-name')
+                          .form-group
+                            label.theme__label.sr-only(for='searchLocation') Location
+                            input.form-control.theme__form-control.theme__primary-form-control.theme__secondary-form-control(type='text', placeholder='Location' id='searchLocation' name='search-location')
+                          button.btn.btn__search(type='submit' role='submit')
+                            img(src=require('../../assets/images/svg/icon-search-white.svg'), alt="")
+                          button.btn.btn__link.btn__link-black.btn__ad-search Advanced Search
+                        .connections__filter-adwrap
+                          .connections__filter-og
+                            .form-group
+                              label.theme__label(for='searchKeywords') Keywords
+                              input.form-control.theme__form-control.theme__primary-form-control.theme__secondary-form-control(type='text', placeholder='Keyword' id='searchKeywords' name='search-keyword')
+                            .form-group.custom__range-group
+                              label.theme__label(for='locationRadius') Location Radius (km)
+                              input#locationRadius.custom-range(type='range' min='0' max='100' step='1' value='50')
+                              span.locationRadiusValue
+                          .connections__filter-ad
+                            .form-group
+                              label.theme__label(for='searchIndustry') Industry
+                              input.form-control.theme__form-control.theme__primary-form-control.theme__secondary-form-control(type='text', placeholder='Industry' id='searchIndustry' name='search-industry')
+                            .form-group
+                              label.theme__label(for='careerLevelSelect') Career Level
+                              .theme__select-dropdown.theme__secondary-select-dropdown
+                                button.theme__select-dropdown-toggle Select
+                                input(type='hidden' name='careerLevelSelect')
+                                ul.theme__select-dropdown-menu
+                                  li.theme__select-dropdown-item
+                                    input(type='radio' id='Fresher' name='careerLevel' value='Fresher')
+                                    label(for='Fresher' data-tar='careerLevelSelect') Fresher
+                                  li.theme__select-dropdown-item
+                                    input(type='radio' id='Intermediate' name='careerLevel' value='Intermediate')
+                                    label(for='Intermediate' data-tar='careerLevelSelect') Intermediate
+                            .form-group
+                              label.theme__label(for='dateListedSelect') Date Listed
+                              .theme__select-dropdown.theme__secondary-select-dropdown
+                                button.theme__select-dropdown-toggle Select
+                                input(type='hidden' name='dateListedSelect')
+                                ul.theme__select-dropdown-menu
+                                  li.theme__select-dropdown-item
+                                    input(type='radio' id='date01' name='dateListed' value='Recent')
+                                    label(for='date01' data-tar='dateListedSelect') Recent
+                                  li.theme__select-dropdown-item
+                                    input(type='radio' id='date02' name='dateListed' value='15 days ago')
+                                    label(for='date02' data-tar='dateListedSelect') 15 days ago
+                          .connections__filter-og
+                            .form-group.custom-control.custom-checkbox.theme__checkbox
+                              input#jobAlert.custom-control-input.theme__checkbox-input(type='checkbox' checked)
+                              label.custom-control-label.theme__checkbox-label(for='jobAlert') Create job alert with this search
+                    .jobseekers
+                      - for(var x =1; x <= 5; x++)
+                        +memberItem('member-0' + x + '.jpg', 'jobseeker')
+                    .theme__pagination
+                      a.btn.btn__primary(href='') View More
+
+block modal

@@ -11,7 +11,10 @@ mixin memberItem(img, type)
           a.member__accolade.member__accolade-noborder(href='')
             img.member__accolade-check(src=require('../../assets/images/svg/icon-check-circle.svg'), alt="Check")
           a.member__accolade(href='')
-            img.member__accolade-badge(src=require('../../assets/images/svg/icon-badge.svg') alt='Awards')
+            if type == 'jobseeker'
+              img.member__accolade-badge(src=require('../../assets/images/svg/icon-blog.svg') alt='Blog')
+            else
+              img.member__accolade-badge(src=require('../../assets/images/svg/icon-badge.svg') alt='Awards')
         h4.member__profile Chief Hair Stylist
         p.member__company
           img(src=require('../../assets/images/svg/icon-location.svg'), alt="Location")
@@ -30,6 +33,9 @@ mixin memberItem(img, type)
         .member__action
           a.btn.btn__primary(href="#") Connect
           .member__time Viewed 2 days ago
+      else if type == 'jobseeker'
+        .member__action
+          a.btn.btn__primary(href="#") Enquire
       else
         .member__options
           .dropdown.custom__dropdown
@@ -57,3 +63,23 @@ mixin memberItem(img, type)
             else if type == 'connection'
               .dropdown-menu(aria-labelledby='dropdownMenuButton')
                 a.dropdown-item(href='#') Remove Connection
+
+mixin memberItemSmall(img, type)
+  .member__item.member__item--small
+    .member__item-media
+      img.member__item-img(src=require('../../assets/images/img/' + img), alt='Member')
+    .member__item-body
+      .member__info-block
+        h2.member__name
+          | John Carter
+          a.member__accolade.member__accolade-noborder(href='')
+            img.member__accolade-check(src=require('../../assets/images/svg/icon-check-circle.svg'), alt="Check")
+          a.member__accolade(href='')
+            img.member__accolade-badge(src=require('../../assets/images/svg/icon-blog.svg') alt='Awards')
+        h4.member__profile Chief Hair Stylist
+        p.member__company
+          img(src=require('../../assets/images/svg/icon-location.svg'), alt="Location")
+          | Loreal Paris, Paris
+        p.member__location
+          img(src=require('../../assets/images/svg/icon-location-pin.svg'), alt="Location Pin")
+          | Paris, France

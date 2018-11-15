@@ -1,0 +1,60 @@
+//- ./src/views/pages/jobs-manager.pug
+
+extends ../layouts/master.pug
+include ../mixins/activity-header.pug
+
+block title
+  title Salstro - Job Manager
+
+block content
+  //- header cum navbar
+  include ../components/navbar.pug
+  //- main content
+  section.main-content
+    .container
+      .row
+        .col-lg-3.col-md-4
+          //- include sidebar
+          // Sidebar
+          include ../components/companySidebar.pug
+          // ./ Sidebar
+        .col-lg-9.col-md-8
+          //- include content
+          .row
+            //- Include Activity Header
+            .col-12
+              include ../components/companyProfileHeader.pug
+              section.myprofile__content
+                +box('Job Manager')
+                  .box__container
+                    +activityHeader('4 Jobs Posted', '2 Active Jobs', '36 Applicants')
+                    .grid-table
+                      .grid-table__head
+                        .grid-table__row.grid-table__row-head
+                          .grid-table__col Position
+                          .grid-table__col Applications
+                          .grid-table__col Status
+                          .grid-table__col Upgrade
+                      .grid-table__body
+                        - for(var x = 0; x < 5; x++)
+                          .grid-table__row.grid-table__row-body
+                            .grid-table__col.align__left
+                              .content__wrapper
+                                .text__title Senior Hairdresser
+                                .text__date Upload date (19/05/2018)
+                                .text__date Expiry date (18/06/2018)
+                            .grid-table__col
+                              a.text__link.text__link-gray(href="#") 5 Application
+                            .grid-table__col
+                              a.text__link.text__link-pink(href="#") Active
+                            .grid-table__col
+                              .action__wrapper
+                                a.text__link.text__link-gray(href="#") Upgrade ad
+                                a.icon__link(href='')
+                                  img.icon__view(src=require('../../assets/images/svg/icon-eye.svg'), alt="View")
+                                a.icon__link(href='')
+                                  img.icon__edit(src=require('../../assets/images/svg/icon-mod.svg'), alt="View")
+                                a.icon__link(href='')
+                                  img.icon__trash(src=require('../../assets/images/svg/icon-trash.svg'), alt="View")
+
+block modal
