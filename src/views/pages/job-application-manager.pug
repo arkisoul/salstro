@@ -1,0 +1,87 @@
+//- ./src/views/pages/job-application-manager.pug
+
+extends ../layouts/master.pug
+
+block title
+  title Salstro - Job Application Manager
+
+block content
+  //- header cum navbar
+  include ../components/navbar.pug
+  //- main content
+  section.main-content
+    .container
+      .row
+        .col-lg-3.col-md-4
+          //- include sidebar
+          // Sidebar
+          include ../components/companySidebar.pug
+          // ./ Sidebar
+        .col-lg-9.col-md-8
+          //- include content
+          .row
+            //- Include Activity Header
+            .col-12
+              include ../components/companyProfileHeader.pug
+              section.myprofile__content
+                +box('Application Manager')
+                  .box__container
+                    .appm-header
+                      .appm-header__intro
+                        .appm-header__title Job: Senior Hairdresser
+                        .appm-header__subtitle 5 applicants
+                      .appm-header__actions
+                        a.btn.btn__primary--fill.active(href='') Shortlist
+                        a.btn.btn__primary--fill(href='') Reject
+                        a.btn.btn__primary--fill(href='') Schedule Interview
+                    .grid-table.grid-table__app
+                      .grid-table__head
+                        .grid-table__row.grid-table__row-head
+                          .grid-table__col Applicants
+                          .grid-table__col Video Resume
+                          .grid-table__col Applied Date
+                          .grid-table__col Status
+                          .grid-table__col Action
+                      .grid-table__body
+                        - for(var x = 0; x < 5; x++)
+                          .grid-table__row.grid-table__row-body
+                            .grid-table__col.align__left
+                              .content__wrapper-flex
+                                .content__wrapper-media
+                                  img(src=require('../../assets/images/img/member-01.jpg'), alt="Applicant")
+                                .content__wrapper
+                                  .applicant__name Rosemarie Hawkins
+                                  .applicant__profile Master of Web Developing
+                                  .applicant__location
+                                    img(src=require('../../assets/images/svg/icon-location-pin.svg'), alt="")
+                                    | Expiry date (18/06/2018)
+                            .grid-table__col
+                              a.icon__link(href='')
+                                img.icon__video(src=require('../../assets/images/svg/icon-video.svg'), alt="Video")
+                            .grid-table__col 21-08-2018
+                            .grid-table__col
+                              .status-dropdown
+                                label.theme__label.sr-only(for='statusSelect') Select Type
+                                .theme__select-dropdown.theme__secondary-select-dropdown
+                                  button.theme__select-dropdown-toggle Select
+                                  input(type='hidden' name='statusSelect')
+                                  ul.theme__select-dropdown-menu
+                                    li.theme__select-dropdown-item
+                                      input(type='radio' id='scheInter' name='applicant-status' value='Schedule Interview')
+                                      label(for='scheInter' data-tar='statusSelect') Schedule Interview
+                                    li.theme__select-dropdown-item
+                                      input(type='radio' id='Shortlist' name='applicant-status' value='Shortlist')
+                                      label(for='Shortlist' data-tar='statusSelect') Shortlist
+                                    li.theme__select-dropdown-item
+                                      input(type='radio' id='Reject' name='applicant-status' value='Reject')
+                                      label(for='Reject' data-tar='statusSelect') Reject
+                            .grid-table__col
+                              .action__wrapper
+                                a.icon__link(href='')
+                                  img.icon_2020(src=require('../../assets/images/svg/icon-mail.svg'), alt="Mail")
+                                a.icon__link(href='')
+                                  img.icon_2020(src=require('../../assets/images/svg/icon-eye.svg'), alt="View")
+                                a.icon__link(href='')
+                                  img.icon_2020(src=require('../../assets/images/svg/icon-download.svg'), alt="Download")
+
+block modal

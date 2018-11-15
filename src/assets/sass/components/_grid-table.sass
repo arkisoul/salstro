@@ -3,6 +3,21 @@
 .grid-table
   margin-bottom: 20px
 
+  &.grid-table__app
+    .grid-table__head
+      padding: 0 0 15px
+
+    .grid-table__row
+      grid-template-columns: 43% 6% 15% 23% 13%
+
+    .grid-table__row-body
+      border: 1px solid $border-lightblue
+      border-radius: 4px
+      margin-bottom: 10px
+
+      .grid-table__col
+        padding: 8px 10px
+
   &__head
     padding: 0
 
@@ -14,10 +29,8 @@
       background-color: $bg-lightwhite
 
       .grid-table__col
-        text-align: center
-        font-size: 14px
         padding: 8px 4px
-        color: $text-black
+        text-align: center
 
     &-body
       background-color: $bg-white
@@ -30,6 +43,8 @@
     display: flex
     align-items: center
     justify-content: center
+    font-size: 14px
+    color: $text-black
 
   .align__left
     justify-content: flex-start
@@ -44,6 +59,39 @@
 .text__date
   font-size: 12px
   color: $text-gray
+
+.content__wrapper-flex
+  display: flex
+  align-items: center
+
+.content__wrapper-media
+  width: 59px
+  height: 59px
+  border-radius: 4px
+  margin-right: 6px
+
+  img
+    border-radius: 4px
+    max-width: 100%
+    border-radius: 4px
+    object-fit: cover
+
+.applicant__name
+  font-size: 15px
+  font-weight: $semi
+  color: $text-black
+
+.applicant__profile
+  font-size: 13px
+  color: $text-gray
+
+.applicant__location
+  font-size: 11px
+  color: $text-blue
+
+  img
+    width: 13px
+    margin-right: 6px
 
 .text__link
   display: inline-block
@@ -83,8 +131,49 @@
   .icon__trash
     width: 13px
 
+  .icon__video
+    width: 32px
+
+  .icon_2020
+    width: 20px
+
 .action__wrapper
   display: flex
   width: 100%
   justify-content: space-between
   align-items: center
+
+// Application Manager Header
+.appm-header
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-bottom: 10px
+
+  &__title
+    font-size: 15px
+    font-weight: $semi
+    color: $text-black
+
+  &__subtitle
+    font-size: 12px
+    color: $text-gray
+
+.btn__primary--fill
+  display: inline-block
+  font-size: 14px
+  border: 1px solid $border-brightpink
+  border-radius: 4px
+  padding: 5px 20px
+  background-color: $bg-white
+  color: $text-brightpink
+
+  &:not(:last-child)
+    margin-right: 10px
+
+  &:hover, &:focus, &.active
+    background-color: $bg-brightpink
+    color: $text-white
+
+.status-dropdown
+  width: 100%
