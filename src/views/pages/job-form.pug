@@ -1,0 +1,113 @@
+//- ./src/views/pages/job-form.pug
+
+extends ../layouts/master.pug
+
+block title
+  title Salstro - Job Form
+
+block content
+  //- header cum navbar
+  include ../components/navbar.pug
+  //- main content
+  section.main-content
+    .container
+      .row
+        .col-lg-3.col-md-4
+          //- include sidebar
+          // Sidebar
+          include ../components/companySidebar.pug
+          // ./ Sidebar
+        .col-lg-9.col-md-8
+          //- include content
+          .row
+            //- Include Activity Header
+            .col-12
+              include ../components/companyProfileHeader.pug
+            .col-12
+              section.myprofile__content
+                +box('Add a Job')
+                  .addjob__form
+                    form(action="", method="post")
+                      .form-row.form__fields-wrap
+                        .col-lg-12.form__fields-item
+                          .form-group.theme__form-group
+                            input.form-control.theme__form-control.theme__primary-form-control.form-control__error(type='text' id='jobTitle')
+                            label.theme__label(for='jobTitle') Job Title
+                            small.theme__primary-form-error
+                              img.theme__primary-form-error-img(src=require('../../assets/images/svg/icon-error.svg') alt='Error')
+                              span.theme__primary-form-error-text Error message lorem ipsum
+                        .col-md-6.form__fields-item
+                          .form-group
+                            label.theme__label(for='categorySelect') Category
+                            .theme__select-dropdown
+                              button.theme__select-dropdown-toggle(tab-index='-1') Select Category
+                              input(type='hidden' name='categorySelect')
+                              ul.theme__select-dropdown-menu
+                                li.theme__select-dropdown-item
+                                  input(type='radio' id='Educational' name='jobCategory' value='Educational')
+                                  label(for='Educational' data-tar='categorySelect') Educational
+                                li.theme__select-dropdown-item
+                                  input(type='radio' id='Academic' name='jobCategory' value='Academic')
+                                  label(for='Academic' data-tar='categorySelect') Academic
+                                li.theme__select-dropdown-item
+                                  input(type='radio' id='Promotional' name='jobCategory' value='Promotional')
+                                  label(for='Promotional' data-tar='categorySelect') Promotional
+                        .col-md-6.form__fields-item.align__flex-end
+                          .form-group.theme__form-group
+                            input.form-control.theme__form-control.theme__primary-form-control(type='text' id='jobPosition')
+                            label.theme__label(for='jobPosition') Position
+                        .col-md-6.form__fields-item.align__flex-end
+                          .form-group
+                            label.theme__label(for='employType') Type of Employment
+                            .theme__select-dropdown
+                              button.theme__select-dropdown-toggle(tab-index='-1') Select
+                              input(type='hidden' name='employType')
+                              ul.theme__select-dropdown-menu
+                                li.theme__select-dropdown-item
+                                  input(type='radio' id='Educational' name='typeEmployment' value='Educational')
+                                  label(for='Educational' data-tar='employType') Educational
+                                li.theme__select-dropdown-item
+                                  input(type='radio' id='Academic' name='typeEmployment' value='Academic')
+                                  label(for='Academic' data-tar='employType') Academic
+                                li.theme__select-dropdown-item
+                                  input(type='radio' id='Promotional' name='typeEmployment' value='Promotional')
+                                  label(for='Promotional' data-tar='employType') Promotional
+                        .col-md-6.form__fields-item.align__flex-end
+                          h3.theme__form-subtitle Job Opening Date
+                          .form-row
+                            .col-md-6
+                              .input-group.theme__input-group.theme__form-group
+                                input.form-control.theme__form-control.theme__primary-form-control.theme__datepicker(type='text' id='startDate' aria-describedby='button-addon4')
+                                label.theme__label(for='startDate') Start Date
+                                #button-addon4.input-group-append
+                                  button.btn.btn__outline(type='button')
+                                    img(src=require("../../assets/images/svg/icon-calendar.svg"), alt="")
+                            .col-md-6
+                              .input-group.theme__input-group.theme__form-group
+                                input.form-control.theme__form-control.theme__primary-form-control.theme__datepicker(type='text' id='endDate' aria-describedby='button-addon4')
+                                label.theme__label(for='endDate') End Date
+                                #button-addon4.input-group-append
+                                  button.btn.btn__outline(type='button')
+                                    img(src=require("../../assets/images/svg/icon-calendar.svg"), alt="")
+                        .col-md-6.form__fields-item.align__flex-end
+                          .form-group.theme__form-group
+                            input.form-control.theme__form-control.theme__primary-form-control(type='text' id='jobAddress')
+                            label.theme__label(for='jobAddress') Address
+                        .col-md-6.form__fields-item.align__flex-end
+                          .form-group.theme__form-group
+                            input.form-control.theme__form-control.theme__primary-form-control(type='text' id='jobSalary')
+                            label.theme__label(for='jobSalary') Salary
+                        .col-lg-12.form__fields-item
+                          .form-group.theme__form-group
+                            input.form-control.theme__form-control.theme__primary-form-control.add__badge(type='text' id='jobSkills')
+                            input(type="hidden", name="jobSkills")
+                            label.theme__label(for='jobSkills') Skills
+                            .theme__badge-container
+                        .col-lg-12.form__fields-item
+                          .form-group
+                            label.theme__label(for='jobDescription') Job Description
+                            textarea.form-control.theme__form-control(rows='3' placeholder='Write here' id='jobDescription')
+                      .btn__submit-block
+                        button.btn.btn__primary(type="submit") Submit
+
+block modal

@@ -637,6 +637,12 @@
 .addvideo__form
   @extend .account__blogger-form
 
+.addjob__form
+  @extend .account__blogger-form
+
+.addjobseeker__form
+  @extend .account__blogger-form
+
 // Workshops
 .educators__bio
   margin-bottom: 0
@@ -1476,9 +1482,12 @@
     align-items: center
     margin-bottom: 15px
 
+    .theme__label
+      color: $text-black
+
     .form-group
       flex: 1 1 300px
-      max-width: 300px
+      max-width: 289px
       margin-right: 10px
       margin-bottom: 0
 
@@ -1488,6 +1497,10 @@
   &-ad
     display: flex
     align-items: center
+    margin-bottom: 10px
+
+    .theme__label
+      color: $text-black
 
     .form-group
       flex: 1 1 200px
@@ -1495,27 +1508,94 @@
       margin-right: 10px
       margin-bottom: 0
 
-    .custom__range-group
+    .theme__checkbox
+      margin-top: 15px
+
+      .theme__checkbox-label
+        &::before, &::after
+          top: 10px
+
+.custom__range-group
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  margin-right: 0
+
+  .theme__label
+    width: 100%
+
+  .custom-range
+    height: 38px
+    width: calc(100% - 50px)
+    margin-right: 10px
+
+  .locationRadiusValue
+    height: 40px
+    width: 40px
+    display: inline-block
+    border: 1px solid #e8e8e8
+    border-radius: 4px
+    padding: 10px
+    font-size: 12px
+    color: black
+    text-align: center
+
+.theme__pagination
+  text-align: center
+  padding: 15px 0
+
+.job-search-container
+  padding: 20px 6px
+
+.job-filter
+  margin-bottom: 40px
+
+.box__container
+  padding: 20px 6px
+
+// Job View
+.jd
+
+  &-container
+    padding: 20px 6px
+
+  &-block
+    width: 100%
+    margin-bottom: 20px
+
+    &__row
       display: flex
-      align-items: center
-      flex-wrap: wrap
-      margin-right: 0
+      justify-content: space-between
 
-      .theme__label
-        width: 100%
+    &__col
+      flex: 0 0 50%
+      max-width: calc(50% - 10px)
 
-    .custom-range
-      height: 38px
-      width: calc(100% - 50px)
-      margin-right: 10px
+      &:first-child
+        margin-right: 20px
 
-    .locationRadiusValue
-      height: 40px
-      width: 40px
-      display: inline-block
-      border: 1px solid #e8e8e8
-      border-radius: 4px
-      padding: 10px
-      font-size: 12px
-      color: black
-      text-align: center
+  &__title
+    font-size: 14px
+    font-weight: $semi
+    color: $text-black
+
+  &__detail
+    font-size: 14px
+    font-weight: $regular
+    color: $text-black
+    margin-bottom: 10px
+
+  &__list
+    list-style-type: none
+    padding: 0
+    margin: 0
+
+    &-item
+      font-size: 14px
+      font-weight: $regular
+      color: $text-black
+      line-height: 1.6
+
+  &__back
+    text-align: center
+    padding: 15px 0

@@ -206,7 +206,7 @@ $(document).ready(() => {
     if (e.keyCode === 13) e.preventDefault()
   })
 
-  $('.btn__ad-search').on('click', function(e) {
+  $('.btn__ad-search').on('click', function (e) {
     e.preventDefault()
     $('.connections__filter-adwrap').slideToggle();
   })
@@ -216,7 +216,7 @@ $(document).ready(() => {
   var locationSpan = $('.locationRadiusValue')
   locationSpan.text(locationRangeValue)
 
-  locationRange.on('change', function(e) {
+  locationRange.on('change', function (e) {
     locationSpan.text(e.target.value)
   })
 });
@@ -287,6 +287,15 @@ $(document).ready(() => {
 
   ClassicEditor
     .create(document.querySelector('#videoDesc'))
+    .then(editor => {
+      // console.log(editor);
+    })
+    .catch(error => {
+      // console.error(error);
+    });
+
+  ClassicEditor
+    .create(document.querySelector('#jobDescription'))
     .then(editor => {
       // console.log(editor);
     })

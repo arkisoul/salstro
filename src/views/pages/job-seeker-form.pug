@@ -1,0 +1,60 @@
+//- ./src/views/pages/job-seeker-form.pug
+
+extends ../layouts/master.pug
+
+block title
+  title Salstro - Job Seeker Form
+
+block content
+  //- header cum navbar
+  include ../components/navbar.pug
+  //- main content
+  section.main-content
+    .container
+      .row
+        .col-lg-3.col-md-4
+          //- include sidebar
+          // Sidebar
+          include ../components/sidebar.pug
+          // ./ Sidebar
+        .col-lg-9.col-md-8
+          //- include content
+          .row
+            //- Include Activity Header
+            .col-12
+              include ../components/myprofile_header.pug
+            .col-12
+              section.myprofile__content
+                +box('Create a Jobseeker ad')
+                  .addjobseeker__form
+                    form(action="", method="post")
+                      .form-row.form__fields-wrap
+                        .col-lg-12.form__fields-item
+                          .form-group.theme__form-group
+                            input.form-control.theme__form-control.theme__primary-form-control.form-control__error(type='text' id='jobTitle')
+                            label.theme__label(for='jobTitle') Job Title
+                            small.theme__primary-form-error
+                              img.theme__primary-form-error-img(src=require('../../assets/images/svg/icon-error.svg') alt='Error')
+                              span.theme__primary-form-error-text Error message lorem ipsum
+                        .col-md-6.form__fields-item.align__flex-end
+                          .form-group.theme__form-group
+                            input.form-control.theme__form-control.theme__primary-form-control(type='text' id='jobAddress')
+                            label.theme__label(for='jobAddress') Address
+                        .col-md-6.form__fields-item.align__flex-end
+                          .form-group.theme__form-group
+                            input.form-control.theme__form-control.theme__primary-form-control(type='text' id='dateAvailable')
+                            label.theme__label(for='dateAvailable') Date Available
+                        .col-lg-12.form__fields-item
+                          .form-group.theme__form-group
+                            input.form-control.theme__form-control.theme__primary-form-control.add__badge(type='text' id='jobSkills')
+                            input(type="hidden", name="jobSkills")
+                            label.theme__label(for='jobSkills') Skills
+                            .theme__badge-container
+                        .col-lg-12.form__fields-item
+                          .form-group
+                            label.theme__label(for='jobDescription') Description
+                            textarea.form-control.theme__form-control(rows='3' placeholder='Write here' id='jobDescription')
+                      .btn__submit-block
+                        button.btn.btn__primary(type="submit") Submit
+
+block modal

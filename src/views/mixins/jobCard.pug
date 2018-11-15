@@ -1,0 +1,62 @@
+//- ./src/views/mixins/jobCard.pug
+
+mixin jobCard(img)
+  .job-card
+    .job-card__media
+      img.job-card__media-img(src=require('../../assets/images/img/' + img), alt="Job Company")
+    .job-card__body
+      .job-card__content
+        h3.job-card__title Hair Stylist Salon Job
+        p.job-card__comp Beauty Salon Company
+        p.job-card__other
+          span.job-card__location
+            img(src=require('../../assets/images/svg/location-pin.svg'), alt="")
+            | Barcelona, Spain
+          span.job-card__time
+            img(src=require('../../assets/images/svg/clock.svg'), alt="")
+            | 2 Days ago
+        p.job-card__brief Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur doloribus obcaecati non fuga itaque qui, repellendus
+      .job-card__action
+        a.job-card__bookmark(href='')
+          img(src=require('../../assets/images/svg/star.svg'), alt="Save")
+          | Save
+        a.btn.btn__primary(href="#") View Details
+
+mixin jobCardSmall(img)
+  .job-card.job-card--small
+    .job-card__media
+      img.job-card__media-img(src=require('../../assets/images/img/' + img), alt="Job Company")
+    .job-card__body
+      .job-card__content
+        h3.job-card__title Hair Stylist Salon Job
+        p.job-card__comp Beauty Salon Company
+        p.job-card__other
+          span.job-card__location
+            img(src=require('../../assets/images/svg/location-pin.svg'), alt="")
+            | Barcelona, Spain
+          span.job-card__time
+            img(src=require('../../assets/images/svg/clock.svg'), alt="")
+            | 2 Days ago
+
+mixin jobCardView(img)
+  .job-card
+    .job-card__media
+      img.job-card__media-img(src=require('../../assets/images/img/' + img), alt="Job Company")
+    .job-card__body
+      .job-card__content
+        h3.job-card__title Hair Stylist Salon Job
+        p.job-card__comp Beauty Salon Company
+        span.job-card__location
+            img(src=require('../../assets/images/svg/location-pin.svg'), alt="")
+            | Barcelona, Spain
+        span.job-card__time
+          img(src=require('../../assets/images/svg/clock.svg'), alt="")
+          | 2 Days ago
+      .job-card__action
+        p.job-card__social
+          a.job-card__bookmark(href='')
+            img(src=require('../../assets/images/svg/star.svg'), alt="Save")
+            | Save
+          a.job-card__share(href='')
+            img(src=require('../../assets/images/svg/share.svg'), alt="Save")
+        a.btn.btn__primary(href="#") Apply

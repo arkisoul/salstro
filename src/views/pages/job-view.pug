@@ -1,0 +1,86 @@
+//- ./src/views/pages/job-view.pug
+
+extends ../layouts/master.pug
+include ../mixins/mapHeader.pug
+include ../mixins/jobCard.pug
+
+block title
+  title Salstro - Job View
+
+block content
+  //- header cum navbar
+  include ../components/navbar.pug
+  //- main content
+  section.main-content
+    .container
+      .row
+        .col-lg-3.col-md-4
+          //- include sidebar
+          // Sidebar
+          include ../components/sidebar.pug
+          // ./ Sidebar
+        .col-lg-9.col-md-8
+          //- include content
+          .row
+            //- Include Activity Header
+            .col-12
+              +mapHeaderView()
+                .job-card--holder
+                  +jobCardView('job-01.jpg')
+            .col-12
+              section.myprofile__content
+                +box('Job Description')
+                  section.jd-container
+                    .jd-block
+                      h3.jd__title Internship Detail
+                      p.jd__detail About Internship: Suit Up India is India's 1st Marketplace for custom made sellers all across India. We are seeking sellers across India to come online and sell with us through a 3d tech. These sellers are usually manufacturers such as Tailors, Boutique, Printer, Cobbler etc. mainly in fashion.About all across India. We are seeking sellers across India come online and sell with us through a 3d tech. These sellers are usually manufacturers such as Tailors, Boutique, Printer, Cobbler etc. mainly in fashion.
+                      p.jd__detail About Internship: Suit Up India is India's 1st Marketplace for custom made sellers all across India. We are seeking sellers across India to come online and sell with us through a 3d tech. These sellers are usually manufacturers such as Tailors, Boutique, Printer, Cobbler etc. mainly in fashion.
+                      p.jd__detail About Internship: Suit Up India is India's 1st Marketplace for custom made sellers all across India. We are seeking sellers across India to come online and sell with us through a 3d tech. These sellers are usually manufacturers such as Tailors, Boutique, Printer, Cobbler etc. mainly in fashion.
+                    .jd-block__row
+                      .jd-block__col
+                        .jd-block
+                          h3.jd__title Roles and Responsibilities:
+                          ul.jd__list
+                            li.jd__list-item Cold Calling
+                            li.jd__list-item B2B, B2C Sales, Corporate Sales
+                            li.jd__list-item Client Servicing
+                            li.jd__list-item Vendor on boarding, servicing, management
+                        .jd-block
+                          h3.jd__title Perks
+                          ul.jd__list
+                            li.jd__list-item Flexible working hours
+                            li.jd__list-item Internship Certificate
+                            li.jd__list-item Free Snacks
+                            li.jd__list-item Pre Placement offer
+                        .jd-block
+                          h3.jd__title No. of Positions
+                          p.jd__detail 3
+                      .jd-block__col
+                        .jd-block
+                          h3.jd__title Work Type
+                          p.jd__detail Full Time
+                        .jd-block
+                          h3.jd__title Skill Set
+                          ul.jd__list
+                            li.jd__list-item Analytical Skills
+                            li.jd__list-item Sales Situation Handling - Basic
+                            li.jd__list-item Salesforce
+                            li.jd__list-item Business Intelligence
+                        .jd-block
+                          h3.jd__title Salary Information
+                          p.jd__detail Rs. 15k to 20k
+                        .jd-block
+                          h3.jd__title Date Listed
+                          p.jd__detail 15-04-2018
+                        .jd-block
+                          h3.jd__title Closing Date
+                          p.jd__detail 30-04-2018
+                    .jd__back
+                      a.btn.btn__primary(href="#") Back
+                +box('Similar Jobs')
+                  section.box__container
+                    .jobs
+                      - for(var x = 1; x <= 2; x++)
+                        +jobCard('job-0' + x + '.jpg')
+
+block modal

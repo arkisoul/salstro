@@ -1,0 +1,121 @@
+// ./src/assets/sass/components/_job-card.sass
+
+.job-card--holder
+  padding: 20px
+
+.job-card
+  display: flex
+  margin-bottom: 20px
+  border: 1px solid $border-offwhite
+  background-color: $bg-white
+  z-index: 1
+  border-radius: 4px
+  padding: 10px
+
+  &--small
+    .job-card__media
+      flex: 0 0 70px
+      width: 70px
+      height: 70px
+
+  &:hover, &:focus
+    box-shadow: 0 0 8px rgba($black, 0.2)
+    background-color: $bg-lightwhite
+    border-color: $border-pink
+    z-index: 1
+
+  &__media
+    flex: 0 0 120px
+    width: 120px
+    height: 120px
+    display: flex
+    justify-content: center
+    align-items: center
+    border: 1px solid $border-offwhite
+    border-radius: 4px
+    margin-right: 15px
+
+    &-img
+      max-width: 100%
+      height: auto
+      object-fit: cover
+      border-radius: 4px
+
+  &__body
+    display: flex
+    flex: 1 1 auto
+
+  &__content
+    flex: 1 1 auto
+
+  &__title
+    font-size: 18px
+    font-weight: $semi
+    color: $text-black
+    margin: 0
+
+  &__comp
+    font-size: 14px
+    margin: 0 0 4px
+    color: $text-gray
+
+  &__other
+    display: flex
+    align-items: center
+    margin: 0 0 4px
+
+  &__location, &__time
+    display: flex
+    align-items: center
+    color: $text-black
+    font-size: 14px
+    font-weight: $semi
+    margin-bottom: 4px
+
+    img
+      width: 16px
+      margin-right: 6px
+
+  &__location
+    margin-right: 20px
+
+  &__brief
+    font-size: 14px
+    margin: 0
+    color: $text-blue
+
+  &__action
+    flex: 0 0 120px
+    margin-right: 0
+    margin-left: 15px
+    display: flex
+    flex-direction: column
+
+    .btn__primary
+      margin-bottom: 0
+      margin-top: auto
+
+  &__social
+    margin: 0
+    display: flex
+    align-items: center
+    justify-content: flex-end
+
+  &__bookmark
+    font-size: 14px
+    color: $text-black
+    display: inline-flex
+    align-items: center
+    margin-left: auto
+
+    &:hover, &:focus
+      color: $text-black
+
+    img
+      width: 16px
+      margin-right: 6px
+
+  &__share
+    img
+      width: 16px
+      margin-left: 10px

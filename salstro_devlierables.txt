@@ -64,6 +64,10 @@ Date
 16. User Dashboard Messages
 17. User Dashboard Profile Views
 18. User Dashboard Connections
+19. Job Form
+20. Job Seeker Form
+21. Job Search
+22. Job View
 
 :: Popups ::
 1. Hub Inspiration Gallery Popup Part I
