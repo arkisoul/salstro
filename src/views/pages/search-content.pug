@@ -1,0 +1,130 @@
+//- ./src/views/pages/search-content.pug
+
+extends ../layouts/master.pug
+include ../mixins/mapHeader.pug
+include ../mixins/companyCard.pug
+include ../mixins/memberItem.pug
+include ../mixins/jobCard.pug
+include ../mixins/workshop-card.pug
+
+block title
+  title Salstro - Search Content
+
+block content
+  //- header cum navbar
+  include ../components/navbar.pug
+  //- main content
+  section.main-content
+    .container
+      .row
+        .col-lg-3.col-md-4
+          //- include sidebar
+          // Sidebar
+          include ../components/sidebar.pug
+          // ./ Sidebar
+        .col-lg-9.col-md-8
+          //- include content
+          .row
+            //- Include Activity Header
+            .col-12
+              section.myprofile__content
+                +box('Network Search')
+                  section.box__container
+                    .job-filter
+                      form(action="")
+                        .connections__filter-og
+                          .form-group
+                            label.theme__label.sr-only(for='searchTerm') Search Here
+                            input.form-control.theme__form-control.theme__primary-form-control.theme__secondary-form-control(type='text', placeholder='Search Here' id='searchTerm' name='search-content')
+                          .form-group.inline-checkbox-group
+                            .custom-control.custom-checkbox.custom-control-inline.theme__checkbox
+                              input#conPeople.custom-control-input.theme__checkbox-input(type='checkbox' name='con-type' value='con-people')
+                              label.custom-control-label.theme__checkbox-label(for='conPeople') People
+                            .custom-control.custom-checkbox.custom-control-inline.theme__checkbox
+                              input#conCourses.custom-control-input.theme__checkbox-input(type='checkbox' name='con-type' value='con-courses')
+                              label.custom-control-label.theme__checkbox-label(for='conCourses') Courses
+                            .custom-control.custom-checkbox.custom-control-inline.theme__checkbox
+                              input#conJobs.custom-control-input.theme__checkbox-input(type='checkbox' name='con-type' value='con-jobs')
+                              label.custom-control-label.theme__checkbox-label(for='conJobs') Jobs
+                          button.btn.btn__search(type='submit' role='submit')
+                            img(src=require('../../assets/images/svg/icon-search-white.svg'), alt="")
+                          button.btn.btn__link.btn__link-black.btn__ad-search Advanced Search
+                        .connections__filter-adwrap
+                          .form-group.inline-checkbox-group
+                            .custom-control.custom-checkbox.custom-control-inline.theme__checkbox
+                              input#conCompany.custom-control-input.theme__checkbox-input(type='checkbox' name='con-type' value='con-company')
+                              label.custom-control-label.theme__checkbox-label(for='conCompany') Company
+                            .custom-control.custom-checkbox.custom-control-inline.theme__checkbox
+                              input#conGroup.custom-control-input.theme__checkbox-input(type='checkbox' name='con-type' value='con-group')
+                              label.custom-control-label.theme__checkbox-label(for='conGroup') Group
+                            .custom-control.custom-checkbox.custom-control-inline.theme__checkbox
+                              input#conArticle.custom-control-input.theme__checkbox-input(type='checkbox' name='con-type' value='con-article')
+                              label.custom-control-label.theme__checkbox-label(for='conArticle') Article
+                            .custom-control.custom-checkbox.custom-control-inline.theme__checkbox
+                              input#conContent.custom-control-input.theme__checkbox-input(type='checkbox' name='con-type' value='con-content')
+                              label.custom-control-label.theme__checkbox-label(for='conContent') Content
+                          .connections__filter-og
+                            .form-group
+                              label.theme__label(for='pepIndustry') Industry
+                              input.form-control.theme__form-control.theme__primary-form-control.theme__secondary-form-control(type='text', placeholder='Industry' id='pepIndustry' name='search-industry')
+                            .form-group.custom__range-group
+                              label.theme__label(for='locationRadius') Location Radius (km)
+                              input#locationRadius.custom-range(type='range' min='0' max='100' step='1' value='50')
+                              span.locationRadiusValue
+                    .search-results
+                      .search-result-brief
+                        | Showing 1022 Results
+                      .search-block
+                        h2.search-block__heading People Result
+                        - for(var x = 1; x <= 5; x++)
+                          +memberItem('member-0' + x + '.jpg', 'pviewc')
+                          +memberItem('member-0' + (6 - x) + '.jpg', 'pviewd')
+                        .theme__pagination
+                          a.btn.btn__primary(href='') View More
+                      .search-block
+                        h2.search-block__heading Job Result
+                        - for(var x = 1; x <= 6; x++)
+                          +jobCard('job-0'+ x +'.jpg')
+                          +jobCard('job-0'+ (7 - x) +'.jpg')
+                        .theme__pagination
+                          a.btn.btn__primary(href='') View More
+                      .search-block
+                        h2.search-block__heading Courses Result
+                        - for(var x = 1; x <= 8; x++)
+                          +workshopCard('port-0'+ x +'.jpg')
+                          +workshopCard('port-0'+ (9 - x) +'.jpg')
+                        .theme__pagination
+                          a.btn.btn__primary(href='') View More
+                      .search-block
+                        h2.search-block__heading Traning Video Result
+                        .video-list
+                          - for(var x = 1; x < 7; x++)
+                            .video-item
+                              .video-item__media
+                                button.btn__play.btn__play-small
+                                  img(src=require('../../assets/images/svg/btn-play.svg'))
+                                button.btn.btn__edit-vid
+                                  img(src=require('../../assets/images/svg/icon-edit.svg'), alt="Edit")
+                                span.discount__tag Discount 10%
+                                span.video-item__time 2:50
+                                video.video-item__vid(poster=require('../../assets/images/img/port-0'+ x +'.jpg'))
+                                  source(src=require("../../assets/media/post.mp4"), type="video/mp4")
+                                  Your browser doesn't support video tag
+                              .video-item__content
+                                .video-item__content-head
+                                  h3.video-item__title Bridal Up style Part 1
+                                  span.video-item__ratings
+                                    img(src=require('../../assets/images/svg/rating.svg'), alt="Rating")
+                                    | 4.5
+                                h3.video-item__author Roger Fernando
+                                .video-item__price
+                                  .video-item__price-item
+                                    .video-item__price-name Discounted Price
+                                    .video-item__price-tag $ 45.00
+                                  .video-item__price-item
+                                    .video-item__price-name Old Price
+                                    .video-item__price-tag.video-item__price-tagst $ 50.00
+                        .theme__pagination
+                          a.btn.btn__primary(href='') View More
+
+block modal

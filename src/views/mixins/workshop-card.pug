@@ -1,0 +1,22 @@
+//- ./src/views/mixins/workshop-card.pug
+
+mixin workshopCard(img)
+  .workshop-card
+    .workshop-card__media
+      img.workshop-card__media-img(src=require('../../assets/images/img/' + img), alt="Workshop Image")
+    .workshop-card__body
+      .workshop-card__content
+        h2.workshop-card__title
+          | Color Training Course
+          a.workshop-card__save(href='')
+            img(src=require('../../assets/images/svg/star.svg'), alt="Save")
+            | Save
+        p.workshop-card__duration
+          img(src=require('../../assets/images/svg/icon-clock.svg'), alt="Duration")
+          | 15 Days or 12.00 hours
+        p.workshop-card__description Donec eu maximus massa. Cas mollis Nulla metus quam, eu maximus massa Praesent hendrerit facilisis orciaximus tortor.......
+      .workshop-card__meta
+        p.workshop-card__price-tag
+          img(src=require('../../assets/images/svg/icon-dollar.svg'), alt="Price")
+          | 1500.00
+        a.btn.btn__primary(href="#") Edit

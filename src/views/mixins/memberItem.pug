@@ -33,6 +33,12 @@ mixin memberItem(img, type)
         .member__action
           a.btn.btn__primary(href="#") Connect
           .member__time Viewed 2 days ago
+      else if type == 'pviewc'
+        .member__action
+          a.btn.btn__primary(href="#") Connect
+      else if type == 'pviewd'
+        .member__action
+          a.btn.btn__primary(href="#") Send Message
       else if type == 'jobseeker'
         .member__action
           a.btn.btn__primary(href="#") Enquire

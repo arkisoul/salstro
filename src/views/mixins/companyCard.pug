@@ -1,0 +1,23 @@
+//- ./src/views/mixins/companyCard.pug
+
+mixin companyCard(img)
+  .company-card
+    .company-card__media
+      img.company-card__media-img(src=require('../../assets/images/img/' + img), alt="Company")
+    .company-card__body
+      .company-card__content
+        h3.company-card__name
+          | Beauty Salon Company
+          span.company-card__accolade
+            img.company-card__accolade-verified(src=require('../../assets/images/svg/icon-check-circle.svg'), alt="Check")
+          span.company-card__accolade.company-card__accolade--border
+            img.company-card__accolade-blogger(src=require('../../assets/images/svg/icon-blog.svg'), alt="Blogger")
+        p.company-card__compcat Lorem Company Category
+        p.company-card__other
+          img(src=require('../../assets/images/svg/icon-location.svg'), alt="")
+          | Lorem Ipsum Company
+        p.company-card__location
+          img(src=require('../../assets/images/svg/icon-briefcase.svg'), alt="")
+          | Barcelona, Spain
+      .company-card__action
+        a.btn.btn__primary(href="#") Follow

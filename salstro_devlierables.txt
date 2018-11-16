@@ -79,6 +79,9 @@ Date
 31. Educator Video Playlist
 32. Educator Courses
 33. Educator Course View
+34. Search People
+35. Search Companies
+36. Search Content
 
 :: Popups ::
 1. Hub Inspiration Gallery Popup Part I

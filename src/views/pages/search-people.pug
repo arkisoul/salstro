@@ -1,0 +1,92 @@
+//- ./src/views/pages/search-people.pug
+
+extends ../layouts/master.pug
+include ../mixins/mapHeader.pug
+include ../mixins/jobCard.pug
+include ../mixins/memberItem.pug
+
+block title
+  title Salstro - Search People
+
+block content
+  //- header cum navbar
+  include ../components/navbar.pug
+  //- main content
+  section.main-content
+    .container
+      .row
+        .col-lg-3.col-md-4
+          //- include sidebar
+          // Sidebar
+          include ../components/sidebar.pug
+          // ./ Sidebar
+        .col-lg-9.col-md-8
+          //- include content
+          .row
+            //- Include Activity Header
+            .col-12
+              +mapHeader()
+                .map-atop
+                  +memberItemSmall('admin-01.jpg')
+            .col-12
+              section.myprofile__content
+                +box('Search People')
+                  section.box__container
+                    .job-filter
+                      form(action="")
+                        .connections__filter-og
+                          .form-group
+                            label.theme__label.sr-only(for='pepName') Name
+                            input.form-control.theme__form-control.theme__primary-form-control.theme__secondary-form-control(type='text', placeholder='Enter Name' id='pepName' name='search-name')
+                          .form-group
+                            label.theme__label.sr-only(for='searchLocation') Location
+                            input.form-control.theme__form-control.theme__primary-form-control.theme__secondary-form-control(type='text', placeholder='Location' id='searchLocation' name='search-location')
+                          button.btn.btn__search(type='submit' role='submit')
+                            img(src=require('../../assets/images/svg/icon-search-white.svg'), alt="")
+                          button.btn.btn__link.btn__link-black.btn__ad-search Advanced Search
+                        .connections__filter-adwrap
+                          .connections__filter-ad
+                            .form-group
+                              label.theme__label(for='pepCompany') Company
+                              input.form-control.theme__form-control.theme__primary-form-control.theme__secondary-form-control(type='text', placeholder='Company' id='pepCompany' name='search-company')
+                            .form-group
+                              label.theme__label(for='pepEducation') Education
+                              input.form-control.theme__form-control.theme__primary-form-control.theme__secondary-form-control(type='text', placeholder='Education' id='pepEducation' name='search-education')
+                            .form-group.custom__range-group
+                              label.theme__label(for='locationRadius') Location Radius (km)
+                              input#locationRadius.custom-range(type='range' min='0' max='100' step='1' value='50')
+                              span.locationRadiusValue
+                          .connections__filter-btn
+                            button.btn.btn__primary--fill.btn__search-filter Artist
+                            button.btn.btn__primary--fill.btn__search-filter Bloggers
+                            button.btn.btn__primary--fill.btn__search-filter(data-toggle='sfilter' data-target='#sfilterEducator') Educators
+                            button.btn.btn__primary--fill.btn__search-filter Style Icons
+                          #sfilterEducator.sfilter__content
+                            .connections__filter-ad
+                              .form-group
+                                label.theme__label(for='pepSkills') Skills
+                                input.form-control.theme__form-control.theme__primary-form-control.theme__secondary-form-control(type='text', placeholder='Skills' id='pepSkills' name='search-skill')
+                              .form-group
+                                label.theme__label(for='pepMaxDayRate') Sort Day Rate
+                                .theme__select-dropdown.theme__secondary-select-dropdown
+                                  button.theme__select-dropdown-toggle Select
+                                  input(type='hidden' name='pepMaxDayRate')
+                                  ul.theme__select-dropdown-menu
+                                    li.theme__select-dropdown-item
+                                      input(type='radio' id='lohi' name='pepDayRate' value='Low to High')
+                                      label(for='lohi' data-tar='pepMaxDayRate') Low to High
+                                    li.theme__select-dropdown-item
+                                      input(type='radio' id='hilo' name='pepDayRate' value='High to Low')
+                                      label(for='hilo' data-tar='pepMaxDayRate') High to Low
+                              .form-group.custom__range-group
+                                label.theme__label(for='peopleDayRate') Max Day Rate
+                                input#peopleDayRate.custom-range(type='range' min='0' max='100' step='1' value='50')
+                                span.peopleDayRateValue
+                    .search-results
+                      - for(var x =1; x <= 5; x++)
+                        +memberItem('member-0' + x + '.jpg', 'pviewc')
+                        +memberItem('member-0' + (6 - x) + '.jpg', 'pviewd')
+                    .theme__pagination
+                      a.btn.btn__primary(href='') View More
+
+block modal

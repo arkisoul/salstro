@@ -211,6 +211,7 @@ $(document).ready(() => {
     $('.connections__filter-adwrap').slideToggle();
   })
 
+  // Location Range
   var locationRange = $('#locationRadius')
   var locationRangeValue = locationRange.val()
   var locationSpan = $('.locationRadiusValue')
@@ -218,6 +219,29 @@ $(document).ready(() => {
 
   locationRange.on('change', function (e) {
     locationSpan.text(e.target.value)
+  })
+
+  // Max Day Rate
+  var dayRateRange = $('#peopleDayRate')
+  var dayRateRangeValue = dayRateRange.val()
+  var dayRateSpan = $('.peopleDayRateValue')
+  dayRateSpan.text(dayRateRangeValue)
+
+  dayRateRange.on('change', function (e) {
+    dayRateSpan.text(e.target.value)
+  })
+
+  // Search Filter Button
+  var $searchFilterBtn = $('.btn__search-filter')
+  $searchFilterBtn.on('click', function(e) {
+    e.preventDefault()
+    $(this).addClass('active').siblings().removeClass('active')
+    $('.sfilter__content').slideUp()
+    var eTarget = $(this).data('target')
+    if(typeof eTarget == 'undefined') {
+      return
+    }
+    $(eTarget).slideToggle()
   })
 });
 

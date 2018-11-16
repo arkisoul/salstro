@@ -540,3 +540,15 @@ input.custom-range[type=range]
 /***** CSS Magic to Highlight Stars on Hover ****
 
 /* hover previous stars in list
+
+// Inline Checkbox Group
+.inline-checkbox-group
+  display: flex
+  align-items: center
+  margin-top: 15px
+
+  .theme__checkbox
+    &-label
+      &::before, &::after
+        top: 50%
+        transform: translateY(-50%)

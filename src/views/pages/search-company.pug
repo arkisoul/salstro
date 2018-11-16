@@ -1,0 +1,74 @@
+//- ./src/views/pages/search-company.pug
+
+extends ../layouts/master.pug
+include ../mixins/mapHeader.pug
+include ../mixins/companyCard.pug
+include ../mixins/memberItem.pug
+
+block title
+  title Salstro - Search Company
+
+block content
+  //- header cum navbar
+  include ../components/navbar.pug
+  //- main content
+  section.main-content
+    .container
+      .row
+        .col-lg-3.col-md-4
+          //- include sidebar
+          // Sidebar
+          include ../components/sidebar.pug
+          // ./ Sidebar
+        .col-lg-9.col-md-8
+          //- include content
+          .row
+            //- Include Activity Header
+            .col-12
+              +mapHeader()
+                .map-atop
+                  +memberItemSmall('admin-01.jpg')
+            .col-12
+              section.myprofile__content
+                +box('Search Companies')
+                  section.box__container
+                    .job-filter
+                      form(action="")
+                        .connections__filter-og
+                          .form-group
+                            label.theme__label.sr-only(for='pepCompany') Company Name
+                            input.form-control.theme__form-control.theme__primary-form-control.theme__secondary-form-control(type='text', placeholder='Company Name' id='pepCompany' name='search-company')
+                          .form-group
+                            label.theme__label.sr-only(for='searchLocation') Location
+                            input.form-control.theme__form-control.theme__primary-form-control.theme__secondary-form-control(type='text', placeholder='Location' id='searchLocation' name='search-location')
+                          button.btn.btn__search(type='submit' role='submit')
+                            img(src=require('../../assets/images/svg/icon-search-white.svg'), alt="")
+                          button.btn.btn__link.btn__link-black.btn__ad-search Advanced Search
+                        .connections__filter-adwrap
+                          .connections__filter-og
+                            .form-group
+                              label.theme__label(for='pepIndustry') Industry
+                              input.form-control.theme__form-control.theme__primary-form-control.theme__secondary-form-control(type='text', placeholder='Industry' id='pepIndustry' name='search-industry')
+                            .form-group.custom__range-group
+                              label.theme__label(for='locationRadius') Location Radius (km)
+                              input#locationRadius.custom-range(type='range' min='0' max='100' step='1' value='50')
+                              span.locationRadiusValue
+                          .connections__filter-og
+                            .form-group
+                              label.theme__label(for='pepKeywords') Keywords
+                              input.form-control.theme__form-control.theme__primary-form-control.theme__secondary-form-control(type='text', placeholder='Keywords' id='pepKeywords' name='search-keywords')
+                            .form-group.inline-checkbox-group
+                              .custom-control.custom-checkbox.custom-control-inline.theme__checkbox
+                                input#compAcademics.custom-control-input.theme__checkbox-input(type='checkbox' name='academics' value='academics')
+                                label.custom-control-label.theme__checkbox-label(for='compAcademics') Academics
+                              .custom-control.custom-checkbox.custom-control-inline.theme__checkbox
+                                input#compActiveJobs.custom-control-input.theme__checkbox-input(type='checkbox' name='activejobs' value='activejobs')
+                                label.custom-control-label.theme__checkbox-label(for='compActiveJobs') Company with Active Jobs
+                    .search-results
+                      - for(var x = 1; x <= 6; x++)
+                        +companyCard('job-0'+ x +'.jpg')
+                        +companyCard('job-0'+ (7 - x) +'.jpg')
+                    .theme__pagination
+                      a.btn.btn__primary(href='') View More
+
+block modal

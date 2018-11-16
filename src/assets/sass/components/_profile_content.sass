@@ -711,6 +711,9 @@
     justify-content: space-between
     flex: 1 1 auto
 
+    &.workshop-card__body--small
+      padding: 8px 18px
+
   &__content
     flex: 1 1 auto
     margin-right: 10px
@@ -722,6 +725,18 @@
     margin: 0 0 10px
     display: flex
     align-items: center
+
+  &__company
+    font-size: 14px
+    font-weight: $regular
+    color: $text-gray
+    margin: 0 0 10px
+    display: flex
+    align-items: center
+
+    img
+      width: 24px
+      margin-right: 10px
 
   &__save
     display: flex
@@ -1630,7 +1645,7 @@
     max-width: calc(100% - 50px)
     margin-right: 10px
 
-  .locationRadiusValue
+  .locationRadiusValue, .peopleDayRateValue
     height: 40px
     width: 40px
     display: inline-block
@@ -1660,6 +1675,12 @@
     font-size: 12px
     color: black
     text-align: center
+
+.connections__filter-btn
+  margin: 10px 0 15px
+
+#sfilterEducator
+  display: none
 
 .theme__pagination
   text-align: center
@@ -1754,3 +1775,20 @@
 
 .tv__tabs-sort
   flex: 1 1 auto
+
+// Search Results
+.search-result-brief
+  font-size: 14px
+  text-align: right
+  color: $text-gray
+  margin: 10px 0 20px
+
+.search-block
+  margin-bottom: 20px
+
+  &__heading
+    font-size: 20px
+    font-weight: $semi
+    margin-bottom: 15px
+    padding-bottom: 10px
+    border-bottom: 1px solid $border-lightblue
