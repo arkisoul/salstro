@@ -1,0 +1,391 @@
+//- ./src/views/pages/edu-video-channel.pug
+
+extends ../layouts/master.pug
+include ../mixins/edu-header.pug
+include ../mixins/memberItem.pug
+
+block title
+  title Salstro - Video Channel Home
+
+block content
+  //- header cum navbar
+  include ../components/navbar.pug
+  //- main content
+  section.main-content
+    .container
+      .row
+        .col-lg-3.col-md-4
+          //- include sidebar
+          // Sidebar
+          include ../components/sidebar.pug
+          // ./ Sidebar
+        .col-lg-9.col-md-8
+          //- include content
+          .row
+            //- Include Activity Header
+            .col-12
+              include ../components/myprofile_header.pug
+              section.myprofile__content
+                +box('Video List')
+                  section.videochannel
+                    .vc__nav.vc__nav-between
+                      h3.text__link.text__link-gray Subscribe this channel for one month
+                      a.btn.btn__primary(href="") Subscribe Channel
+                    .vc__feat
+                      .vc__feat-video
+                        button.btn__play.btn__play40
+                          img(src=require('../../assets/images/svg/btn-play.svg'))
+                        video.vc__feat-vid(poster=require('../../assets/images/img/company-vid-01.jpg'))
+                          source(src=require("../../assets/media/post.mp4"), type="video/mp4")
+                          Your browser doesn't support video tag
+                      .vc__feat-desc
+                        .vc__feat-head
+                          h1.vc__feat-title Lorem Hair style video from dummy
+                        p.vc__feat-meta
+                          span.vc__feat-views 12.1K views
+                          span.vc__feat-days 5 days ago
+                        p.vc__feat-intro
+                          | Aenean ultricies mi vitae luctus finibus. Vestibulum ante ipsum primis in faucibus orci luctus et.
+                        p.vc__feat-intro
+                          | Curae Aenean pharetra posuere lorem a elementum. Integer mollis libero et mattis. Nam leo non viverra. Donec, nisl et varius vehicula, massa neque ornare libero, in posuere....
+                        a.vc__read-more(href="#") Read More
+                    section.vc__playlists
+                      .vc__playlist
+                        .vc__playlist-title Category - Hair Style Video
+                        #vc-playlist01.swiper-container.swiper__container.swiper__playlist
+                          // Additional required wrapper
+                          .swiper-wrapper
+                            // Slides
+                            .swiper-slide
+                              .video-item
+                                .video-item__media
+                                  button.btn__play.btn__play-small
+                                    img(src=require('../../assets/images/svg/btn-play.svg'))
+                                  button.btn.btn__edit-vid
+                                    img(src=require('../../assets/images/svg/icon-edit.svg'), alt="Edit")
+                                  span.discount__tag Discount 10%
+                                  span.video-item__time 2:50
+                                  video.video-item__vid(poster=require('../../assets/images/img/port-02.jpg'))
+                                    source(src=require("../../assets/media/post.mp4"), type="video/mp4")
+                                    Your browser doesn't support video tag
+                                .video-item__content
+                                  .video-item__content-head
+                                    h3.video-item__title Bridal Up style Part 1
+                                    span.video-item__ratings
+                                      img(src=require('../../assets/images/svg/rating.svg'), alt="Rating")
+                                      | 4.5
+                                  h3.video-item__author Roger Fernando
+                                  .video-item__price
+                                    .video-item__price-item
+                                      .video-item__price-name Discounted Price
+                                      .video-item__price-tag $ 45.00
+                                    .video-item__price-item
+                                      .video-item__price-name Old Price
+                                      .video-item__price-tag.video-item__price-tagst $ 50.00
+                            .swiper-slide
+                              .video-item
+                                .video-item__media
+                                  button.btn__play.btn__play-small
+                                    img(src=require('../../assets/images/svg/btn-play.svg'))
+                                  button.btn.btn__edit-vid
+                                    img(src=require('../../assets/images/svg/icon-edit.svg'), alt="Edit")
+                                  span.discount__tag Discount 10%
+                                  span.video-item__time 2:50
+                                  video.video-item__vid(poster=require('../../assets/images/img/port-04.jpg'))
+                                    source(src=require("../../assets/media/post.mp4"), type="video/mp4")
+                                    Your browser doesn't support video tag
+                                .video-item__content
+                                  .video-item__content-head
+                                    h3.video-item__title Bridal Up style Part 1
+                                    span.video-item__ratings
+                                      img(src=require('../../assets/images/svg/rating.svg'), alt="Rating")
+                                      | 4.5
+                                  h3.video-item__author Roger Fernando
+                                  .video-item__price
+                                    .video-item__price-item
+                                      .video-item__price-name Price
+                                      .video-item__price-tag $ 45.00
+                            .swiper-slide
+                              .video-item
+                                .video-item__media
+                                  button.btn__play.btn__play-small
+                                    img(src=require('../../assets/images/svg/btn-play.svg'))
+                                  button.btn.btn__edit-vid
+                                    img(src=require('../../assets/images/svg/icon-edit.svg'), alt="Edit")
+                                  span.discount__tag Discount 10%
+                                  span.video-item__time 2:50
+                                  video.video-item__vid(poster=require('../../assets/images/img/port-06.jpg'))
+                                    source(src=require("../../assets/media/post.mp4"), type="video/mp4")
+                                    Your browser doesn't support video tag
+                                .video-item__content
+                                  .video-item__content-head
+                                    h3.video-item__title Bridal Up style Part 1
+                                    span.video-item__ratings
+                                      img(src=require('../../assets/images/svg/rating.svg'), alt="Rating")
+                                      | 4.5
+                                  h3.video-item__author Roger Fernando
+                                  .video-item__price
+                                    .video-item__price-item
+                                      .video-item__price-name Discounted Price
+                                      .video-item__price-tag $ 1800.00
+                                    .video-item__price-item
+                                      .video-item__price-name Old Price
+                                      .video-item__price-tag.video-item__price-tagst $ 2000.00
+                            .swiper-slide
+                              .video-item
+                                .video-item__media
+                                  button.btn__play.btn__play-small
+                                    img(src=require('../../assets/images/svg/btn-play.svg'))
+                                  button.btn.btn__edit-vid
+                                    img(src=require('../../assets/images/svg/icon-edit.svg'), alt="Edit")
+                                  span.discount__tag Discount 10%
+                                  span.video-item__time 2:50
+                                  video.video-item__vid(poster=require('../../assets/images/img/port-08.jpg'))
+                                    source(src=require("../../assets/media/post.mp4"), type="video/mp4")
+                                    Your browser doesn't support video tag
+                                .video-item__content
+                                  .video-item__content-head
+                                    h3.video-item__title Bridal Up style Part 1
+                                    span.video-item__ratings
+                                      img(src=require('../../assets/images/svg/rating.svg'), alt="Rating")
+                                      | 4.5
+                                  h3.video-item__author Roger Fernando
+                                  .video-item__price
+                                    .video-item__price-item
+                                      .video-item__price-name Discounted Price
+                                      .video-item__price-tag $ 45.00
+                                    .video-item__price-item
+                                      .video-item__price-name Old Price
+                                      .video-item__price-tag.video-item__price-tagst $ 50.00
+
+                          // If we need navigation buttons
+                          .swiper-button-prev
+                          .swiper-button-next
+
+                      .vc__playlist
+                        .vc__playlist-title Category - Hair Cuttin Video
+                        #vc-playlist02.swiper-container.swiper__container.swiper__playlist
+                          // Additional required wrapper
+                          .swiper-wrapper
+                            // Slides
+                            .swiper-slide
+                              .video-item
+                                .video-item__media
+                                  button.btn__play.btn__play-small
+                                    img(src=require('../../assets/images/svg/btn-play.svg'))
+                                  button.btn.btn__edit-vid
+                                    img(src=require('../../assets/images/svg/icon-edit.svg'), alt="Edit")
+                                  span.discount__tag Discount 10%
+                                  span.video-item__time 2:50
+                                  video.video-item__vid(poster=require('../../assets/images/img/port-02.jpg'))
+                                    source(src=require("../../assets/media/post.mp4"), type="video/mp4")
+                                    Your browser doesn't support video tag
+                                .video-item__content
+                                  .video-item__content-head
+                                    h3.video-item__title Bridal Up style Part 1
+                                    span.video-item__ratings
+                                      img(src=require('../../assets/images/svg/rating.svg'), alt="Rating")
+                                      | 4.5
+                                  h3.video-item__author Roger Fernando
+                                  .video-item__price
+                                    .video-item__price-item
+                                      .video-item__price-name Discounted Price
+                                      .video-item__price-tag $ 45.00
+                                    .video-item__price-item
+                                      .video-item__price-name Old Price
+                                      .video-item__price-tag.video-item__price-tagst $ 50.00
+                            .swiper-slide
+                              .video-item
+                                .video-item__media
+                                  button.btn__play.btn__play-small
+                                    img(src=require('../../assets/images/svg/btn-play.svg'))
+                                  button.btn.btn__edit-vid
+                                    img(src=require('../../assets/images/svg/icon-edit.svg'), alt="Edit")
+                                  span.discount__tag Discount 10%
+                                  span.video-item__time 2:50
+                                  video.video-item__vid(poster=require('../../assets/images/img/port-04.jpg'))
+                                    source(src=require("../../assets/media/post.mp4"), type="video/mp4")
+                                    Your browser doesn't support video tag
+                                .video-item__content
+                                  .video-item__content-head
+                                    h3.video-item__title Bridal Up style Part 1
+                                    span.video-item__ratings
+                                      img(src=require('../../assets/images/svg/rating.svg'), alt="Rating")
+                                      | 4.5
+                                  h3.video-item__author Roger Fernando
+                                  .video-item__price
+                                    .video-item__price-item
+                                      .video-item__price-name Price
+                                      .video-item__price-tag $ 45.00
+                            .swiper-slide
+                              .video-item
+                                .video-item__media
+                                  button.btn__play.btn__play-small
+                                    img(src=require('../../assets/images/svg/btn-play.svg'))
+                                  button.btn.btn__edit-vid
+                                    img(src=require('../../assets/images/svg/icon-edit.svg'), alt="Edit")
+                                  span.discount__tag Discount 10%
+                                  span.video-item__time 2:50
+                                  video.video-item__vid(poster=require('../../assets/images/img/port-06.jpg'))
+                                    source(src=require("../../assets/media/post.mp4"), type="video/mp4")
+                                    Your browser doesn't support video tag
+                                .video-item__content
+                                  .video-item__content-head
+                                    h3.video-item__title Bridal Up style Part 1
+                                    span.video-item__ratings
+                                      img(src=require('../../assets/images/svg/rating.svg'), alt="Rating")
+                                      | 4.5
+                                  h3.video-item__author Roger Fernando
+                                  .video-item__price
+                                    .video-item__price-item
+                                      .video-item__price-name Discounted Price
+                                      .video-item__price-tag $ 1800.00
+                                    .video-item__price-item
+                                      .video-item__price-name Old Price
+                                      .video-item__price-tag.video-item__price-tagst $ 2000.00
+                            .swiper-slide
+                              .video-item
+                                .video-item__media
+                                  button.btn__play.btn__play-small
+                                    img(src=require('../../assets/images/svg/btn-play.svg'))
+                                  button.btn.btn__edit-vid
+                                    img(src=require('../../assets/images/svg/icon-edit.svg'), alt="Edit")
+                                  span.discount__tag Discount 10%
+                                  span.video-item__time 2:50
+                                  video.video-item__vid(poster=require('../../assets/images/img/port-08.jpg'))
+                                    source(src=require("../../assets/media/post.mp4"), type="video/mp4")
+                                    Your browser doesn't support video tag
+                                .video-item__content
+                                  .video-item__content-head
+                                    h3.video-item__title Bridal Up style Part 1
+                                    span.video-item__ratings
+                                      img(src=require('../../assets/images/svg/rating.svg'), alt="Rating")
+                                      | 4.5
+                                  h3.video-item__author Roger Fernando
+                                  .video-item__price
+                                    .video-item__price-item
+                                      .video-item__price-name Discounted Price
+                                      .video-item__price-tag $ 45.00
+                                    .video-item__price-item
+                                      .video-item__price-name Old Price
+                                      .video-item__price-tag.video-item__price-tagst $ 50.00
+
+                          // If we need navigation buttons
+                          .swiper-button-prev
+                          .swiper-button-next
+
+                      .vc__playlist
+                        .vc__playlist-title Category - Hair Color Video
+                        #vc-playlist03.swiper-container.swiper__container.swiper__playlist
+                          // Additional required wrapper
+                          .swiper-wrapper
+                            // Slides
+                            .swiper-slide
+                              .video-item
+                                .video-item__media
+                                  button.btn__play.btn__play-small
+                                    img(src=require('../../assets/images/svg/btn-play.svg'))
+                                  button.btn.btn__edit-vid
+                                    img(src=require('../../assets/images/svg/icon-edit.svg'), alt="Edit")
+                                  span.discount__tag Discount 10%
+                                  span.video-item__time 2:50
+                                  video.video-item__vid(poster=require('../../assets/images/img/port-02.jpg'))
+                                    source(src=require("../../assets/media/post.mp4"), type="video/mp4")
+                                    Your browser doesn't support video tag
+                                .video-item__content
+                                  .video-item__content-head
+                                    h3.video-item__title Bridal Up style Part 1
+                                    span.video-item__ratings
+                                      img(src=require('../../assets/images/svg/rating.svg'), alt="Rating")
+                                      | 4.5
+                                  h3.video-item__author Roger Fernando
+                                  .video-item__price
+                                    .video-item__price-item
+                                      .video-item__price-name Discounted Price
+                                      .video-item__price-tag $ 45.00
+                                    .video-item__price-item
+                                      .video-item__price-name Old Price
+                                      .video-item__price-tag.video-item__price-tagst $ 50.00
+                            .swiper-slide
+                              .video-item
+                                .video-item__media
+                                  button.btn__play.btn__play-small
+                                    img(src=require('../../assets/images/svg/btn-play.svg'))
+                                  button.btn.btn__edit-vid
+                                    img(src=require('../../assets/images/svg/icon-edit.svg'), alt="Edit")
+                                  span.discount__tag Discount 10%
+                                  span.video-item__time 2:50
+                                  video.video-item__vid(poster=require('../../assets/images/img/port-04.jpg'))
+                                    source(src=require("../../assets/media/post.mp4"), type="video/mp4")
+                                    Your browser doesn't support video tag
+                                .video-item__content
+                                  .video-item__content-head
+                                    h3.video-item__title Bridal Up style Part 1
+                                    span.video-item__ratings
+                                      img(src=require('../../assets/images/svg/rating.svg'), alt="Rating")
+                                      | 4.5
+                                  h3.video-item__author Roger Fernando
+                                  .video-item__price
+                                    .video-item__price-item
+                                      .video-item__price-name Price
+                                      .video-item__price-tag $ 45.00
+                            .swiper-slide
+                              .video-item
+                                .video-item__media
+                                  button.btn__play.btn__play-small
+                                    img(src=require('../../assets/images/svg/btn-play.svg'))
+                                  button.btn.btn__edit-vid
+                                    img(src=require('../../assets/images/svg/icon-edit.svg'), alt="Edit")
+                                  span.discount__tag Discount 10%
+                                  span.video-item__time 2:50
+                                  video.video-item__vid(poster=require('../../assets/images/img/port-06.jpg'))
+                                    source(src=require("../../assets/media/post.mp4"), type="video/mp4")
+                                    Your browser doesn't support video tag
+                                .video-item__content
+                                  .video-item__content-head
+                                    h3.video-item__title Bridal Up style Part 1
+                                    span.video-item__ratings
+                                      img(src=require('../../assets/images/svg/rating.svg'), alt="Rating")
+                                      | 4.5
+                                  h3.video-item__author Roger Fernando
+                                  .video-item__price
+                                    .video-item__price-item
+                                      .video-item__price-name Discounted Price
+                                      .video-item__price-tag $ 1800.00
+                                    .video-item__price-item
+                                      .video-item__price-name Old Price
+                                      .video-item__price-tag.video-item__price-tagst $ 2000.00
+                            .swiper-slide
+                              .video-item
+                                .video-item__media
+                                  button.btn__play.btn__play-small
+                                    img(src=require('../../assets/images/svg/btn-play.svg'))
+                                  button.btn.btn__edit-vid
+                                    img(src=require('../../assets/images/svg/icon-edit.svg'), alt="Edit")
+                                  span.discount__tag Discount 10%
+                                  span.video-item__time 2:50
+                                  video.video-item__vid(poster=require('../../assets/images/img/port-08.jpg'))
+                                    source(src=require("../../assets/media/post.mp4"), type="video/mp4")
+                                    Your browser doesn't support video tag
+                                .video-item__content
+                                  .video-item__content-head
+                                    h3.video-item__title Bridal Up style Part 1
+                                    span.video-item__ratings
+                                      img(src=require('../../assets/images/svg/rating.svg'), alt="Rating")
+                                      | 4.5
+                                  h3.video-item__author Roger Fernando
+                                  .video-item__price
+                                    .video-item__price-item
+                                      .video-item__price-name Discounted Price
+                                      .video-item__price-tag $ 45.00
+                                    .video-item__price-item
+                                      .video-item__price-name Old Price
+                                      .video-item__price-tag.video-item__price-tagst $ 50.00
+
+                          // If we need navigation buttons
+                          .swiper-button-prev
+                          .swiper-button-next
+                      .vc__playlists-pagination
+                        button.btn.btn__primary View More
+
+block modal

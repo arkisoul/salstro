@@ -1,0 +1,135 @@
+//- ./src/views/pages/edu-course-view.pug
+
+extends ../layouts/master.pug
+include ../mixins/edu-header.pug
+include ../mixins/memberItem.pug
+
+block title
+  title Salstro - Educator Course View
+
+block content
+  //- header cum navbar
+  include ../components/navbar.pug
+  //- main content
+  section.main-content
+    .container
+      .row
+        .col-lg-3.col-md-4
+          //- include sidebar
+          // Sidebar
+          include ../components/sidebar.pug
+          // ./ Sidebar
+        .col-lg-9.col-md-8
+          //- include content
+          .row
+            //- Include Activity Header
+            .col-12
+              +eduHeaderView('Course View')
+                .edu-bottom
+                  .workshop-card
+                    .workshop-card__media
+                      img.workshop-card__media-img(src=require('../../assets/images/img/port-01.jpg'), alt="Workshop Image")
+                    .workshop-card__body
+                      .workshop-card__content
+                        h2.workshop-card__title
+                          | Color Training Course
+                        p.workshop-card__duration
+                          img(src=require('../../assets/images/svg/icon-clock.svg'), alt="Duration")
+                          | 15 Days or 12.00 hours
+                        p.workshop-card__price-tag.text-left.mt-2
+                          img(src=require('../../assets/images/svg/icon-dollar.svg'), alt="Price")
+                          | 1500.00
+                      .workshop-card__meta.workshop-card__meta--col
+                        .workshop-card__social
+                          a.workshop-card__save(href='')
+                            img(src=require('../../assets/images/svg/star.svg'), alt="")
+                            | Save
+                          a.workshop-card__share(href='')
+                            img(src=require('../../assets/images/svg/share.svg'), alt="")
+                        a.btn.btn__primary(href="#") Book Now
+              section.myprofile__content
+                .row
+                  .col-lg-8
+                    +box('Course Detail')
+                      section.jd-container
+                        .jd-block
+                          h3.jd__title Course Description
+                          p.jd__detail
+                            | This course delivers cutting techniques with relevance to the trends we see through our collections, social media and session work.Looking into the current “trend of the moment” an how to translate it into the salon.
+                            br
+                            | Work on the current techniques for cutting and personalising hair
+                        .jd-block
+                          h3.jd__title COURSE FOCUS
+                          ul.jd__list
+                            li.jd__list-item Techniques of cutting shapes
+                            li.jd__list-item Looking into hair trends and inspirations
+                            li.jd__list-item How to personalise hair for maximum benefits
+                        .jd-block
+                          h3.jd__title Class Schedule
+                          p.jd__detail Duration: 1 day Morning - 2 x demo cut Afternoon – Workshop on live models
+                        .jd-block
+                          h3.jd__title What you will learn
+                          ul.jd__list
+                            li.jd__list-item Techniques of cutting shapes
+                            li.jd__list-item Looking into hair trends and inspirations
+                            li.jd__list-item How to personalise hair for maximum benefits
+                        .jd-block
+                          h3.jd__title What you will get
+                          p.jd__detail An internationally recognised TONI&GUY Diploma will be awarded to all students on successful completion of the course.
+                        .jd-block
+                          h3.jd__title What to bring
+                          p.jd__detail Scissors Combs, clips,brushes & Hairdryer
+                        .jd-block
+                          h3.jd__title What to wear
+                          p.jd__detail Casual, Closed shoes
+                        .jd-block
+                          h3.jd__title Appropriate for
+                          p.jd__detail Qualified stylist
+                        .jd-block
+                          h3.jd__title Cancelation & Refund Policy
+                          p.jd__detail Refunds - We require 7 days notice of cancellation to receive a full refund. Please call 02 9078 1006 if you need to cancel/change your booking.
+                        .jd-block
+                          h3.jd__title Terms & Conditions
+                          p.jd__detail Refunds - We require 7 days notice of cancellation to receive a full refund. Please call 02 9078 1006 if you need to cancel/change your booking.
+                        .jd-block--separator
+                        .jd-block
+                          h3.jd__title Entry Requirements
+                          p.jd__detail Qualified Stylists
+                        .jd-block
+                          h3.jd__title Bring
+                          p.jd__detail Scissors, Combs, brushes, Hairdryer, Clippers & clipper accessories etc.
+                        .jd-block
+                          p.jd__tags
+                            | Tags
+                            span.jd__tag lorem
+                            span.jd__tag lorem ipsum
+                            span.jd__tag lorem ipsum dummy
+                            span.jd__tag dummy
+                  .col-lg-4
+                    +box('Interested?')
+                      .box__container
+                        form(action="", method="post")
+                          .form-row.form__fields-wrap.pb-0
+                            .col-12.form__fields-item
+                              .form-group.theme__form-group
+                                input.form-control.theme__form-control.theme__primary-form-control(type='text' id='firstName')
+                                label.theme__label(for='firstName') First Name
+                            .col-12.form__fields-item
+                              .form-group.theme__form-group
+                                input.form-control.theme__form-control.theme__primary-form-control(type='text' id='lastName')
+                                label.theme__label(for='lastName') Last Name
+                            .col-12.form__fields-item
+                              .form-group.theme__form-group
+                                input.form-control.theme__form-control.theme__primary-form-control(type='email' id='uEmail')
+                                label.theme__label(for='uEmail') E-mail
+                            .col-12.form__fields-item
+                              .form-group.theme__form-group
+                                input.form-control.theme__form-control.theme__primary-form-control(type='text' id='phoneNo')
+                                label.theme__label(for='phoneNo') Phone no.
+                            .col-12.form__fields-item
+                              .form-group
+                                label.theme__label(for='course-question') Questions
+                                textarea.form-control.theme__form-control(rows='3' placeholder='Write about yourself here' id='course-question')
+                            button.btn.btn__primary.btn-block(type="submit") Enquire Now
+
+block modal

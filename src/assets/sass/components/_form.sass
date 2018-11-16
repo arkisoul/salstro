@@ -499,3 +499,44 @@ input.custom-range[type=range]
     cursor: pointer
     box-shadow: 0 2px 5px rgba($black, 0.36)
     cursor: pointer
+
+// Rating Widget
+@import url('//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css')
+
+/****** Style Star Rating Widget ****
+
+.theme__rating
+  border: none
+  float: left
+  padding: 0
+  >
+    input
+      display: none
+    label:before
+      margin: 5px
+      font-size: 1.25em
+      font-family: FontAwesome
+      display: inline-block
+      content: "\f005"
+    .half:before
+      content: "\f089"
+      position: absolute
+    label
+      color: $text-gray
+      float: right
+    input:checked ~ label
+      color: $star
+  &:not(:checked) > label:hover
+    color: $star
+    ~ label
+      color: $star
+  >
+    input:checked
+      + label:hover, ~ label:hover
+        color: $star
+    label:hover ~ input:checked ~ label, input:checked ~ label:hover ~ label
+      color: $star
+
+/***** CSS Magic to Highlight Stars on Hover ****
+
+/* hover previous stars in list

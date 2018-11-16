@@ -1,0 +1,12 @@
+//- ./src/views/mixins/edu-header.pug
+
+mixin eduHeader(title)
+  .edu-header
+    h1.edu-header__heading #{title}
+
+
+mixin eduHeaderView(title)
+  .edu-header.edu-header--view
+    h1.edu-header__heading #{title}
+    if block
+      block

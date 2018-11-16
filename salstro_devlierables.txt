@@ -70,6 +70,15 @@ Date
 22. Job View
 23. Job Manager
 24. Course Manager
+25. Job Application Manager
+26. Job Seekers
+27. Educator Training Video List
+28. Educator Training Video - Educators
+29. Educator Video Channels
+30. Educator Video Channel View
+31. Educator Video Playlist
+32. Educator Courses
+33. Educator Course View
 
 :: Popups ::
 1. Hub Inspiration Gallery Popup Part I

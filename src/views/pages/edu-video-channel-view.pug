@@ -1,0 +1,118 @@
+//- ./src/views/pages/edu-video-channel-view.pug
+
+extends ../layouts/master.pug
+
+block title
+  title Salstro - Video on Channel
+
+block content
+  //- header cum navbar
+  include ../components/navbar.pug
+  //- main content
+  section.main-content
+    .container
+      .row
+        .col-lg-3.col-md-4
+          //- include sidebar
+          // Sidebar
+          include ../components/sidebar.pug
+          // ./ Sidebar
+        .col-lg-9.col-md-8
+          //- include content
+          .row
+            //- Include Activity Header
+            .col-12
+              include ../components/myprofile_header.pug
+            .col-12
+              section.myprofile__content
+                +box('Video List')
+                  .box__container
+                    .video-list__filter
+                      form(action="")
+                        .video-list__filter-row
+                          .form-group
+                            label.theme__label.sr-only(for='videoCategorySelect') Select Type
+                            .theme__select-dropdown.theme__secondary-select-dropdown
+                              button.theme__select-dropdown-toggle Select
+                              input(type='hidden' name='videoCategorySelect')
+                              ul.theme__select-dropdown-menu
+                                li.theme__select-dropdown-item
+                                  input(type='radio' id='hairColor' name='video-cat' value='Hair Color')
+                                  label(for='hairColor' data-tar='videoCategorySelect') Hair Color
+                                li.theme__select-dropdown-item
+                                  input(type='radio' id='hairCutting' name='video-cat' value='Hair Cutting')
+                                  label(for='hairCutting' data-tar='videoCategorySelect') Hair Cutting
+                                li.theme__select-dropdown-item
+                                  input(type='radio' id='hairStyling' name='video-cat' value='Hair Styling')
+                                  label(for='hairStyling' data-tar='videoCategorySelect') Hair Styling
+                          .input-group
+                            label.theme__label.sr-only(for='keywordSearch') Keyword
+                            input.rounded-left.form-control.theme__form-control.theme__primary-form-control.theme__secondary-form-control(type='text', placeholder='Keyword' id='keywordSearch' name='keyword-search' aria-label="Recipient's username" aria-describedby='keyworkAddon')
+                            .input-group-append
+                              button#keyworkAddon.btn.btn__search(type='submit' role='submit')
+                                img(src=require('../../assets/images/svg/icon-search-white.svg'), alt="")
+                          .form__group
+                            label.theme__label(for='vidSort') Sort By
+                            .form-group
+                              .theme__select-dropdown.theme__secondary-select-dropdown
+                                button.theme__select-dropdown-toggle Select
+                                input(type='hidden' name='vidSort')
+                                ul.theme__select-dropdown-menu
+                                  li.theme__select-dropdown-item
+                                    input(type='radio' id='pHiLo' name='video-cat' value='Price High to Low')
+                                    label(for='pHiLo' data-tar='vidSort') Price High to Low
+                                  li.theme__select-dropdown-item
+                                    input(type='radio' id='pLoHi' name='video-cat' value='Price Low to High')
+                                    label(for='pLoHi' data-tar='vidSort') Price Low to High
+                                  li.theme__select-dropdown-item
+                                    input(type='radio' id='popularity' name='video-cat' value='Popularity')
+                                    label(for='popularity' data-tar='vidSort') Popularity
+                    .video-list
+                      - for(var x = 1; x < 9; x++)
+                        .video-item
+                          .video-item__media
+                            button.btn__play.btn__play-small
+                              img(src=require('../../assets/images/svg/btn-play.svg'))
+                            span.discount__tag Discount 10%
+                            span.video-item__time 2:50
+                            video.video-item__vid(poster=require('../../assets/images/img/port-0'+ x +'.jpg'))
+                              source(src=require("../../assets/media/post.mp4"), type="video/mp4")
+                              Your browser doesn't support video tag
+                          .video-item__content
+                            .video-item__content-head
+                              h3.video-item__title Bridal Up style Part 1
+                              span.video-item__ratings
+                                img(src=require('../../assets/images/svg/rating.svg'), alt="Rating")
+                                | 4.5
+                            h3.video-item__author Roger Fernando
+                            .video-item__price
+                              .video-item__price-item
+                                .video-item__price-tag $ 45.00
+                              .video-item__price-item
+                                .video-item__price-tag.video-item__price-tagst $ 50.00
+                      - for(var x = 8; x > 0; x--)
+                        .video-item
+                          .video-item__media
+                            button.btn__play.btn__play-small
+                              img(src=require('../../assets/images/svg/btn-play.svg'))
+                            span.discount__tag Discount 10%
+                            span.video-item__time 2:50
+                            video.video-item__vid(poster=require('../../assets/images/img/port-0'+ x +'.jpg'))
+                              source(src=require("../../assets/media/post.mp4"), type="video/mp4")
+                              Your browser doesn't support video tag
+                          .video-item__content
+                            .video-item__content-head
+                              h3.video-item__title Bridal Up style Part 1
+                              span.video-item__ratings
+                                img(src=require('../../assets/images/svg/rating.svg'), alt="Rating")
+                                | 4.5
+                            h3.video-item__author Roger Fernando
+                            .video-item__price
+                              .video-item__price-item
+                                .video-item__price-tag $ 45.00
+                              .video-item__price-item
+                                .video-item__price-tag.video-item__price-tagst $ 50.00
+                      .video-list__pagination
+                        button.btn.btn__primary View More
+
+block modal

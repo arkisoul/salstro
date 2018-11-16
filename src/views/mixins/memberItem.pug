@@ -36,6 +36,9 @@ mixin memberItem(img, type)
       else if type == 'jobseeker'
         .member__action
           a.btn.btn__primary(href="#") Enquire
+      else if type == 'educator'
+        .member__action
+          a.btn.btn__primary(href="#") View Channel
       else
         .member__options
           .dropdown.custom__dropdown

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="playlist" transform="translate(0 -10.667)">
+    <g id="Group_891" data-name="Group 891" transform="translate(0 18.129)">
+      <g id="Group_890" data-name="Group 890">
+        <rect id="Rectangle_63" data-name="Rectangle 63" class="cls-1" width="19.2" height="3.227"/>
+      </g>
+    </g>
+    <g id="Group_893" data-name="Group 893" transform="translate(0 10.667)">
+      <g id="Group_892" data-name="Group 892" transform="translate(0 0)">
+        <rect id="Rectangle_64" data-name="Rectangle 64" class="cls-1" width="19.2" height="3.227"/>
+      </g>
+    </g>
+    <g id="Group_895" data-name="Group 895" transform="translate(0 25.591)">
+      <g id="Group_894" data-name="Group 894">
+        <rect id="Rectangle_65" data-name="Rectangle 65" class="cls-1" width="12.8" height="3.227"/>
+      </g>
+    </g>
+    <g id="Group_897" data-name="Group 897" transform="translate(16 25.591)">
+      <g id="Group_896" data-name="Group 896">
+        <path id="Path_458" data-name="Path 458" class="cls-1" d="M213.333,181.333v9.076l8-4.538Z" transform="translate(-213.333 -181.333)"/>
+      </g>
+    </g>
+  </g>
+</svg>

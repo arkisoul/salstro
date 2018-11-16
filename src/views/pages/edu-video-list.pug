@@ -1,0 +1,181 @@
+//- ./src/views/pages/edu-video-list.pug
+
+extends ../layouts/master.pug
+include ../mixins/edu-header.pug
+include ../mixins/memberItem.pug
+
+block title
+  title Salstro - Training Video List
+
+block content
+  //- header cum navbar
+  include ../components/navbar.pug
+  //- main content
+  section.main-content
+    .container
+      .row
+        .col-lg-3.col-md-4
+          //- include sidebar
+          // Sidebar
+          include ../components/sidebar.pug
+          // ./ Sidebar
+        .col-lg-9.col-md-8
+          //- include content
+          .row
+            //- Include Activity Header
+            .col-12
+              +eduHeader('Education - Training Video List')
+              section.myprofile__content
+                +box('Training Video List')
+                  .box__container
+                    .job-filter
+                      form(action="")
+                        .connections__filter-og
+                          .form-group
+                            label.theme__label.sr-only(for='courseIndustry') Industry
+                            input.form-control.theme__form-control.theme__primary-form-control.theme__secondary-form-control(type='text', placeholder='Industry' id='courseIndustry' name='search-industry')
+                          .form-group
+                            label.theme__label.sr-only(for='searchCategory') Category
+                            input.form-control.theme__form-control.theme__primary-form-control.theme__secondary-form-control(type='text', placeholder='Category' id='searchCategory' name='search-category')
+                          button.btn.btn__search(type='submit' role='submit')
+                            img(src=require('../../assets/images/svg/icon-search-white.svg'), alt="")
+                          button.btn.btn__link.btn__link-black.btn__ad-search Advanced Search
+                        .connections__filter-adwrap
+                          .connections__filter-og
+                            .form-group
+                              label.theme__label(for='searchEducator') Educator
+                              input.form-control.theme__form-control.theme__primary-form-control.theme__secondary-form-control(type='text', placeholder='educator' id='searchEducator' name='search-educator')
+                            .form-group
+                              label.theme__label(for='searchKeywords') Keywords
+                              input.form-control.theme__form-control.theme__primary-form-control.theme__secondary-form-control(type='text', placeholder='Keyword' id='searchKeywords' name='search-keyword')
+                          .connections__filter-ad.connections__filter-adsmall
+                            .form-group.custom__range-group.custom__range-minmax
+                              label.theme__label(for='priceRange') Price Range
+                              span.priceRangeMin $100
+                              input#priceRange.custom-range(type='range' min='100' max='1000' step='100' value='50')
+                              span.priceRangeMax $1000
+                            .form-group
+                              label.theme__label Rating
+                              fieldset.theme__rating
+                                input#star5(type='radio' name='rating' value='5')
+                                label.full(for='star5' title='Awesome - 5 stars')
+                                input#star4half(type='radio' name='rating' value='4 and a half')
+                                label.half(for='star4half' title='Pretty good - 4.5 stars')
+                                input#star4(type='radio' name='rating' value='4')
+                                label.full(for='star4' title='Pretty good - 4 stars')
+                                input#star3half(type='radio' name='rating' value='3 and a half')
+                                label.half(for='star3half' title='Meh - 3.5 stars')
+                                input#star3(type='radio' name='rating' value='3')
+                                label.full(for='star3' title='Meh - 3 stars')
+                                input#star2half(type='radio' name='rating' value='2 and a half')
+                                label.half(for='star2half' title='Kinda bad - 2.5 stars')
+                                input#star2(type='radio' name='rating' value='2')
+                                label.full(for='star2' title='Kinda bad - 2 stars')
+                                input#star1half(type='radio' name='rating' value='1 and a half')
+                                label.half(for='star1half' title='Meh - 1.5 stars')
+                                input#star1(type='radio' name='rating' value='1')
+                                label.full(for='star1' title='Sucks big time - 1 star')
+                                input#starhalf(type='radio' name='rating' value='half')
+                                label.half(for='starhalf' title='Sucks big time - 0.5 stars')
+                            .form-group
+                              label.theme__label(for='rentalPeriod') Rental Period Type
+                              .theme__select-dropdown.theme__secondary-select-dropdown
+                                button.theme__select-dropdown-toggle Select
+                                input(type='hidden' name='rentalPeriod')
+                                ul.theme__select-dropdown-menu
+                                  li.theme__select-dropdown-item
+                                    input(type='radio' id='Full' name='rental-period' value='Full')
+                                    label(for='Full' data-tar='rentalPeriod') Full
+                                  li.theme__select-dropdown-item
+                                    input(type='radio' id='Partial' name='rental-period' value='Partial')
+                                    label(for='Partial' data-tar='rentalPeriod') Partial
+                    .training-videos
+                      .tv__tabs
+                        ul#portfolio__photo-tabs.portfolio__photo-tabs.nav.nav-tabs(role='tablist')
+                          li.nav-item
+                            a#tvVideos-tab.nav-link.active(data-toggle='tab' href='#tvVideos' role='tab' aria-controls='tvVideos' aria-selected='true') Videos
+                          li.nav-item
+                            a#tvEducators-tab.nav-link(data-toggle='tab' href='#tvEducators' role='tab' aria-controls='tvEducators' aria-selected='false') Educators
+                        form.tv__tabs-sort(action="")
+                          .video-list__filter-row
+                            .form__group
+                              label.theme__label(for='vidSort') Sort By
+                              .form-group
+                                .theme__select-dropdown.theme__secondary-select-dropdown
+                                  button.theme__select-dropdown-toggle Select
+                                  input(type='hidden' name='vidSort')
+                                  ul.theme__select-dropdown-menu
+                                    li.theme__select-dropdown-item
+                                      input(type='radio' id='pHiLo' name='video-cat' value='Price High to Low')
+                                      label(for='pHiLo' data-tar='vidSort') Price High to Low
+                                    li.theme__select-dropdown-item
+                                      input(type='radio' id='pLoHi' name='video-cat' value='Price Low to High')
+                                      label(for='pLoHi' data-tar='vidSort') Price Low to High
+                                    li.theme__select-dropdown-item
+                                      input(type='radio' id='popularity' name='video-cat' value='Popularity')
+                                      label(for='popularity' data-tar='vidSort') Popularity
+                      .tv__tab-content.tab-content
+                        #tvVideos.tab-pane.active(role='tabpanel' aria-labelledby='tvVideos-tab')
+                          .video-list
+                            - for(var x = 1; x < 9; x++)
+                              .video-item
+                                .video-item__media
+                                  button.btn__play.btn__play-small
+                                    img(src=require('../../assets/images/svg/btn-play.svg'))
+                                  button.btn.btn__edit-vid
+                                    img(src=require('../../assets/images/svg/icon-edit.svg'), alt="Edit")
+                                  span.discount__tag Discount 10%
+                                  span.video-item__time 2:50
+                                  video.video-item__vid(poster=require('../../assets/images/img/port-0'+ x +'.jpg'))
+                                    source(src=require("../../assets/media/post.mp4"), type="video/mp4")
+                                    Your browser doesn't support video tag
+                                .video-item__content
+                                  .video-item__content-head
+                                    h3.video-item__title Bridal Up style Part 1
+                                    span.video-item__ratings
+                                      img(src=require('../../assets/images/svg/rating.svg'), alt="Rating")
+                                      | 4.5
+                                  h3.video-item__author Roger Fernando
+                                  .video-item__price
+                                    .video-item__price-item
+                                      .video-item__price-name Discounted Price
+                                      .video-item__price-tag $ 45.00
+                                    .video-item__price-item
+                                      .video-item__price-name Old Price
+                                      .video-item__price-tag.video-item__price-tagst $ 50.00
+                            - for(var x = 8; x > 0; x--)
+                              .video-item
+                                .video-item__media
+                                  button.btn__play.btn__play-small
+                                    img(src=require('../../assets/images/svg/btn-play.svg'))
+                                  button.btn.btn__edit-vid
+                                    img(src=require('../../assets/images/svg/icon-edit.svg'), alt="Edit")
+                                  span.discount__tag Discount 10%
+                                  span.video-item__time 2:50
+                                  video.video-item__vid(poster=require('../../assets/images/img/port-0'+ x +'.jpg'))
+                                    source(src=require("../../assets/media/post.mp4"), type="video/mp4")
+                                    Your browser doesn't support video tag
+                                .video-item__content
+                                  .video-item__content-head
+                                    h3.video-item__title Bridal Up style Part 1
+                                    span.video-item__ratings
+                                      img(src=require('../../assets/images/svg/rating.svg'), alt="Rating")
+                                      | 4.5
+                                  h3.video-item__author Roger Fernando
+                                  .video-item__price
+                                    .video-item__price-item
+                                      .video-item__price-name Discounted Price
+                                      .video-item__price-tag $ 45.00
+                                    .video-item__price-item
+                                      .video-item__price-name Old Price
+                                      .video-item__price-tag.video-item__price-tagst $ 50.00
+                            .video-list__pagination
+                              button.btn.btn__primary View More
+                        #tvEducators.tab-pane(role='tabpanel' aria-labelledby='tvEducators-tab')
+                          .educators
+                            - for(var x =1; x <= 5; x++)
+                              +memberItem('member-0' + x + '.jpg', 'educator')
+                          .theme__pagination
+                            a.btn.btn__primary(href='') View More
+
+block modal

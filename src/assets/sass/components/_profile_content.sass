@@ -136,6 +136,7 @@
 
 .portfolio__photo-tabs
   border-bottom: none
+  margin-bottom: 20px
 
   .nav-item
     margin-bottom: 0
@@ -151,11 +152,23 @@
     border: 1px solid $border-brightpink
     border-radius: 4px
     transition: all ease-in 300ms
+    display: flex
+    align-items: center
 
     &.active, &:hover, &:focus
       color: $text-white
       background-color: $bg-brightpink
       border: 1px solid $border-brightpink
+
+      svg
+        path, circle
+          fill: $text-white
+
+    svg
+      margin-right: 10px
+      width: 24px
+      path, circle
+        fill: $text-brightpink
 
 .portfolio__photos
   display: grid
@@ -707,6 +720,37 @@
     font-weight: $semi
     color: $text-black
     margin: 0 0 10px
+    display: flex
+    align-items: center
+
+  &__save
+    display: flex
+    align-items: center
+    color: $text-gray
+    font-size: 14px
+    margin-left: 20px
+    font-weight: $regular
+
+    &:hover, &:focus
+      color: $text-gray
+
+    img
+      width: 16px
+      margin-right: 6px
+
+  &__share
+    display: flex
+    align-items: center
+    color: $text-gray
+    font-size: 14px
+    margin-left: 10px
+    font-weight: $regular
+
+    &:hover, &:focus
+      color: $text-gray
+
+    img
+      width: 16px
 
   &__duration
     font-size: 13px
@@ -727,8 +771,18 @@
     max-width: 100px
     align-self: flex-end
 
+    &.workshop-card__meta--col
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      height: 100%
+
     .btn__primary
       width: 100%
+
+  &__social
+    display: flex
+    align-items: center
 
   &__price-tag
     font-size: 14px
@@ -752,6 +806,9 @@
   justify-content: flex-end
   padding: 8px 0
   margin-bottom: 10px
+
+  &.vc__nav-between
+    justify-content: space-between
 
 .vc__feat
   display: flex
@@ -991,6 +1048,39 @@
   right: 0px
   top: 12px
   border-radius: 25px 0 0 25px
+
+  &.discount__tag--left
+    left: auto
+    right: 0
+
+  &:hover, &:focus
+    color: $text-white
+
+.video-playlist__option
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 90px
+  position: absolute
+  top: 0
+  bottom: 0
+  right: 0
+  height: 100%
+  background-color: rgba($bg-black, 0.8)
+  border-radius: 0 4px 0 0
+  z-index: 1
+
+.video-playlist__play
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  text-align: center
+  color: $text-white
+
+  img
+    width: 24px
+    margin-top: 4px
 
   &:hover, &:focus
     color: $text-white
@@ -1499,6 +1589,16 @@
     align-items: center
     margin-bottom: 10px
 
+    &.connections__filter-adsmall
+      .form-group
+        flex: 1 1 160px
+        max-width: 145px
+
+      .custom__range-minmax
+        flex: 1 1 300px
+        max-width: 289px
+        justify-content: space-between
+
     .theme__label
       color: $text-black
 
@@ -1526,12 +1626,33 @@
 
   .custom-range
     height: 38px
-    width: calc(100% - 50px)
+    flex: 1 1 auto
+    max-width: calc(100% - 50px)
     margin-right: 10px
 
   .locationRadiusValue
     height: 40px
     width: 40px
+    display: inline-block
+    border: 1px solid #e8e8e8
+    border-radius: 4px
+    padding: 10px
+    font-size: 12px
+    color: black
+    text-align: center
+
+.custom__range-minmax
+
+  .custom-range
+    height: 38px
+    width: calc(100% - 150px)
+    margin-right: 10px
+    margin-left: 10px
+
+  .priceRangeMin, .priceRangeMax
+    height: 40px
+    min-width: 40px
+    width: auto
     display: inline-block
     border: 1px solid #e8e8e8
     border-radius: 4px
@@ -1574,6 +1695,13 @@
       &:first-child
         margin-right: 20px
 
+    &--separator
+      display: block
+      width: 100%
+      height: 1px
+      background-color: $bg-offwhite
+      margin: 20px 0
+
   &__title
     font-size: 14px
     font-weight: $semi
@@ -1599,3 +1727,30 @@
   &__back
     text-align: center
     padding: 15px 0
+
+  &__tags
+    font-size: 14px
+    font-weight: $regular
+    color: $text-black
+    margin-bottom: 10px
+    display: flex
+    align-items: center
+
+  &__tag
+    font-size: 12px
+    font-weight: $regular
+    padding: 4px 8px
+    background-color: $bg-gray
+    color: $text-white
+    margin-left: 15px
+    border-radius: 25px
+
+// Training Videos Tabs
+.tv__tabs
+  display: flex
+  align-items: center
+  justify-content: space-between
+  margin-bottom: 30px
+
+.tv__tabs-sort
+  flex: 1 1 auto
