@@ -68,16 +68,42 @@ block content
                                 li.theme__select-dropdown-item
                                   input(type='checkbox' id='Fashion' name='courseCategory' value='Fashion')
                                   label(for='Fashion' data-tar='categorySelect') Fashion
-                        .col-lg-12
-                          h1.theme__form-title Course Schedule
                         .col-md-6.form__fields-item
+                          .form-group
+                            label.theme__label(for='countrySelect') Country
+                            .theme__select-dropdown
+                              button.theme__select-dropdown-toggle(tab-index='-1') Select Country
+                              input(type='hidden' name='countrySelect')
+                              ul.theme__select-dropdown-menu
+                                li.theme__select-dropdown-item
+                                  input(type='radio' id='India' name='country' value='India')
+                                  label(for='India' data-tar='countrySelect') India
+                                li.theme__select-dropdown-item
+                                  input(type='radio' id='USA' name='country' value='USA')
+                                  label(for='USA' data-tar='countrySelect') USA
+                                li.theme__select-dropdown-item
+                                  input(type='radio' id='UK' name='country' value='UK')
+                                  label(for='UK' data-tar='countrySelect') UK
+                                li.theme__select-dropdown-item
+                                  input(type='radio' id='France' name='country' value='France')
+                                  label(for='France' data-tar='countrySelect') France
+                        .col-md-6.form__fields-item.align__flex-end
+                          .input-group.theme__input-group.theme__form-group
+                            input.form-control.theme__form-control.theme__primary-form-control(type='text' id='location' aria-describedby='button-addon4')
+                            label.theme__label(for='location') Location
+                            #button-addon4.input-group-append
+                              button.btn.btn__outline(type='button')
+                                img(src=require("../../assets/images/svg/icon-map-pin.svg"), alt="")
+                        .col-lg-12
+                          h1.theme__form-subtitle Course Schedule
+                        .col-md-3.form__fields-item
                           .input-group.theme__input-group.theme__form-group
                             input.form-control.theme__form-control.theme__primary-form-control.theme__datepicker-my(type='text' id='startDate' aria-describedby='button-addon4')
                             label.theme__label(for='startDate') Start Date
                             #button-addon4.input-group-append
                               button.btn.btn__outline(type='button')
                                 img(src=require("../../assets/images/svg/icon-calendar.svg"), alt="")
-                        .col-md-6.form__fields-item
+                        .col-md-3.form__fields-item
                           .input-group.theme__input-group.theme__form-group
                             input.form-control.theme__form-control.theme__primary-form-control.theme__datepicker-my(type='text' id='endDate' aria-describedby='button-addon4')
                             label.theme__label(for='endDate') End Date
@@ -88,18 +114,111 @@ block content
                           .form-group.theme__form-group
                             input.form-control.theme__form-control.theme__primary-form-control(type='text' id='courseDuration')
                             label.theme__label(for='courseDuration') Course Duration
-                        .col-md-6.form__fields-item
+                        .col-md-3.form__fields-item
+                          .form-group
+                            label.theme__label(for='courseFeeSelect') Course Fees
+                            .theme__select-dropdown
+                              button.theme__select-dropdown-toggle(tab-index='-1') Select Course Fees
+                              input(type='hidden' name='courseFeeSelect')
+                              ul.theme__select-dropdown-menu
+                                li.theme__select-dropdown-item
+                                  input(type='radio' id='Absorb Fees' name='courseFee' value='Absorb Fees')
+                                  label(for='Absorb Fees' data-tar='courseFeeSelect') Absorb Fees
+                                li.theme__select-dropdown-item
+                                  input(type='radio' id='Easy Fees' name='courseFee' value='Easy Fees')
+                                  label(for='Easy Fees' data-tar='courseFeeSelect') Easy Fees
+                        .col-md-3.form__fields-item
+                          .form-group
+                            label.theme__label(for='instPlanSelect') Installment Plan
+                            .theme__select-dropdown
+                              button.theme__select-dropdown-toggle(tab-index='-1') Select
+                              input(type='hidden' name='instPlanSelect')
+                              ul.theme__select-dropdown-menu
+                                li.theme__select-dropdown-item
+                                  input(type='radio' id='intEnable' name='instPlan' value='Enable')
+                                  label(for='intEnable' data-tar='instPlanSelect') Enable
+                                li.theme__select-dropdown-item
+                                  input(type='radio' id='intDisable' name='instPlan' value='Disable')
+                                  label(for='intDisable' data-tar='instPlanSelect') Disable
+                        .col-md-3.form__fields-item
+                          .form-group
+                            label.theme__label(for='instDurationSelect') Max Installment
+                            .theme__select-dropdown
+                              button.theme__select-dropdown-toggle(tab-index='-1') Select Course Fees
+                              input(type='hidden' name='instDurationSelect')
+                              ul.theme__select-dropdown-menu
+                                li.theme__select-dropdown-item
+                                  input(type='radio' id='instDur1' name='instDuration' value='1')
+                                  label(for='instDur1' data-tar='instDurationSelect') 1
+                                li.theme__select-dropdown-item
+                                  input(type='radio' id='instDur2' name='instDuration' value='2')
+                                  label(for='instDur2' data-tar='instDurationSelect') 2
+                                li.theme__select-dropdown-item
+                                  input(type='radio' id='instDur3' name='instDuration' value='3')
+                                  label(for='instDur3' data-tar='instDurationSelect') 3
+                                li.theme__select-dropdown-item
+                                  input(type='radio' id='instDur4' name='instDuration' value='4')
+                                  label(for='instDur4' data-tar='instDurationSelect') 4
+                        .col-md-3.form__fields-item
+                          .form-group
+                            label.theme__label(for='promoCodeSelect') Promo Code
+                            .theme__select-dropdown
+                              button.theme__select-dropdown-toggle(tab-index='-1') Select
+                              input(type='hidden' name='promoCodeSelect')
+                              ul.theme__select-dropdown-menu
+                                li.theme__select-dropdown-item
+                                  input(type='radio' id='promo01' name='promoCode' value='Promo 01')
+                                  label(for='promo01' data-tar='promoCodeSelect') Promo 01
+                                li.theme__select-dropdown-item
+                                  input(type='radio' id='promo02' name='promoCode' value='Promo 02')
+                                  label(for='promo02' data-tar='promoCodeSelect') Promo 02
+                        .col-md-3.form__fields-item
+                          .form-group
+                            label.theme__label(for='currencyTypeSelect') Type
+                            .theme__select-dropdown
+                              button.theme__select-dropdown-toggle(tab-index='-1') Select
+                              input(type='hidden' name='currencyTypeSelect')
+                              ul.theme__select-dropdown-menu
+                                li.theme__select-dropdown-item
+                                  input(type='radio' id='currency01' name='currencyType' value='$')
+                                  label(for='currency01' data-tar='currencyTypeSelect') $
+                                li.theme__select-dropdown-item
+                                  input(type='radio' id='currency02' name='currencyType' value='€')
+                                  label(for='currency02' data-tar='currencyTypeSelect') €
+                        .col-md-3.form__fields-item.align__flex-end
                           .form-group.theme__form-group
-                            input.form-control.theme__form-control.theme__primary-form-control(type='text' id='courseFee')
-                            label.theme__label(for='courseFee') Course Fee
+                            input.form-control.theme__form-control.theme__primary-form-control(type='number' id='feeValue')
+                            label.theme__label(for='feeValue') Value
+                        .col-lg-12
+                          h1.theme__form-subtitle Ticket
+                        .col-lg-12.course__tickets
+                          .course__ticket
+                            .form__fields-item.span--full
+                              .form-group.theme__form-group
+                                input.form-control.theme__form-control.theme__primary-form-control(type='text' id='ticketName')
+                                label.theme__label(for='ticketName') Ticket Name
+                            .form__fields-item.span--half
+                              .form-group.theme__form-group
+                                input.form-control.theme__form-control.theme__primary-form-control(type='text' id='qty')
+                                label.theme__label(for='qty') Qty
+                            .form__fields-item.span--half
+                              .form-group.theme__form-group
+                                input.form-control.theme__form-control.theme__primary-form-control(type='text' id='price')
+                                label.theme__label(for='price') Price
+                            .form__fields-item.span--half
+                              .form-group.theme__form-group
+                                input.form-control.theme__form-control.theme__primary-form-control(type='text' id='onlineFee')
+                                label.theme__label(for='onlineFee') Online Fee
+                            .form__fields-item.span--half
+                              .form-group.theme__form-group
+                                input.form-control.theme__form-control.theme__primary-form-control(type='text' id='buyerPrice')
+                                label.theme__label(for='buyerPrice') Buyer Price
+                            .form__fields-item.span--small
+                              button.btn.btn__add-ticket(data-target=".course__tickets" onclick="addTicket(event, this)") &#43;
                         .col-lg-12.form__fields-item
                           .form-group
                             label.theme__label(for='entryReq') Entry Requirements
                             textarea.form-control.theme__form-control(rows='3' placeholder='Write here (Qualified Stylist, etc)' id='entryReq')
-                        .col-lg-12.form__fields-item
-                          .form-group
-                            label.theme__label(for='courseBring') Bring
-                            textarea.form-control.theme__form-control(rows='3' placeholder='Write here (Scissors, Combs, Brushes etc)' id='courseBring')
                         .col-lg-12.form__fields-item
                           .form-group.theme__form-group
                             input.form-control.theme__form-control.theme__primary-form-control.add__badge(type='text' id='workshopTags')
@@ -116,10 +235,6 @@ block content
                             label.theme__file-upload-label.addnewitem__box(for='workshopImage')
                               img.addnewitem__box-img(src=require('../../assets/images/svg/icon-addimage.svg') alt='Add Image')
                               span.addnewitem__box-text Upload Cover Image
-                        .col-lg-12
-                          .custom-control.custom-checkbox.theme__checkbox
-                            input#articleSubmit.custom-control-input.theme__checkbox-input(type='checkbox' checked)
-                            label.custom-control-label.theme__checkbox-label(for='articleSubmit') Please select checkbox to submit your Course to the Training Portal
                       .btn__submit-block
                         button.btn.btn__primary(type="submit") Submit
 

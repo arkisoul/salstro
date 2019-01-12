@@ -79,19 +79,22 @@ block content
                         .col-md-4.form__fields-item
                           .form-group
                             label.theme__label(for='subPeriod') Subscribe Video
-                            .theme__select-dropdown.theme__select-dropdown-multiple
+                            .theme__select-dropdown
                               button.theme__select-dropdown-toggle(tab-index='1') Select Subscription
                               input(type='hidden' name='subPeriod')
                               ul.theme__select-dropdown-menu
                                 li.theme__select-dropdown-item
-                                  input(type='checkbox' id='sub01' name='subscriptionDuration' value='7 Days')
+                                  input(type='radio' id='sub01' name='subscriptionDuration' value='7 Days')
                                   label(for='sub01' data-tar='subPeriod') 7 Days
                                 li.theme__select-dropdown-item
-                                  input(type='checkbox' id='sub02' name='subscriptionDuration' value='15 Days')
-                                  label(for='sub02' data-tar='subPeriod') 15 Days
+                                  input(type='radio' id='sub02' name='subscriptionDuration' value='15 Days')
+                                  label(for='sub02' data-tar='subPeriod') 14 Days
                                 li.theme__select-dropdown-item
-                                  input(type='checkbox' id='sub03' name='subscriptionDuration' value='1 month')
+                                  input(type='radio' id='sub03' name='subscriptionDuration' value='1 month')
                                   label(for='sub03' data-tar='subPeriod') 1 month
+                                li.theme__select-dropdown-item
+                                  input(type='radio' id='sub04' name='subscriptionDuration' value='Life time Access')
+                                  label(for='sub04' data-tar='subPeriod') Life time Access
                         .col-md-12.form__fields-item.align__flex-end
                           .form-group.theme__form-group
                             input.form-control.theme__form-control.theme__primary-form-control(type='text' id='videoLink')
@@ -112,10 +115,10 @@ block content
                             label.theme__file-upload-label.addnewitem__box(for='courseVideo')
                               img.addnewitem__box-img(src=require('../../assets/images/svg/icon-addvideo.svg') alt='Add Image')
                               span.addnewitem__box-text Upload Video
-                        .col-lg-12
-                          .custom-control.custom-checkbox.theme__checkbox
-                            input#articleSubmit.custom-control-input.theme__checkbox-input(type='checkbox' checked)
-                            label.custom-control-label.theme__checkbox-label(for='articleSubmit') Please select checkbox to submit your Course to the Training Portal
+                        //- .col-lg-12
+                        //-   .custom-control.custom-checkbox.theme__checkbox
+                        //-     input#articleSubmit.custom-control-input.theme__checkbox-input(type='checkbox' checked)
+                        //-     label.custom-control-label.theme__checkbox-label(for='articleSubmit') Please select checkbox to submit your Course to the Training Portal
                       .btn__submit-block
                         button.btn.btn__primary(type="submit") Submit
 

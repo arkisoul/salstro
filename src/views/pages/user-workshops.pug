@@ -1,6 +1,7 @@
 //- ./src/views/pages/user-workshops.pug
 
 extends ../layouts/master.pug
+include ../mixins/workshop-card.pug
 
 block title
   title Salstro - User Workshops
@@ -34,21 +35,7 @@ block content
                     .workshops__nav
                       a.btn__primary-link(href="") Create New Course
                     - for(var x = 1; x < 9; x++)
-                      .workshop-card
-                        .workshop-card__media
-                          img.workshop-card__media-img(src=require('../../assets/images/img/port-0'+ x +'.jpg'), alt="Workshop Image")
-                        .workshop-card__body
-                          .workshop-card__content
-                            h2.workshop-card__title Color Training Course
-                            p.workshop-card__duration
-                              img(src=require('../../assets/images/svg/icon-clock.svg'), alt="Duration")
-                              | 15 Days or 12.00 hours
-                            p.workshop-card__description Donec eu maximus massa. Cas mollis Nulla metus quam, eu maximus massa Praesent hendrerit facilisis orciaximus tortor.......
-                          .workshop-card__meta
-                            p.workshop-card__price-tag
-                              img(src=require('../../assets/images/svg/icon-dollar.svg'), alt="Price")
-                              | 1500.00
-                            a.btn.btn__primary(href="#") Edit
+                      +workshopCard('port-0'+ x +'.jpg')
                     .workshops__pagination
                       a.btn.btn__primary(href='#') View More
 

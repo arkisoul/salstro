@@ -39,9 +39,13 @@ block content
                         p.workshop-card__duration
                           img(src=require('../../assets/images/svg/icon-clock.svg'), alt="Duration")
                           | 15 Days or 12.00 hours
-                        p.workshop-card__price-tag.text-left.mt-2
-                          img(src=require('../../assets/images/svg/icon-dollar.svg'), alt="Price")
-                          | 1500.00
+                        .workshop-card__footer.mt-2
+                          p.workshop-card__date
+                            img(src=require('../../assets/images/svg/icon-cal.svg'))
+                            | 25 June 2018
+                          p.workshop-card__price-tag.text-left.mb-0
+                            img(src=require('../../assets/images/svg/icon-dollar.svg'), alt="Price")
+                            | 1500.00
                       .workshop-card__meta.workshop-card__meta--col
                         .workshop-card__social
                           a.workshop-card__save(href='')
@@ -109,7 +113,7 @@ block content
                             span.jd__tag lorem ipsum dummy
                             span.jd__tag dummy
                   .col-lg-4
-                    +box('Interested?')
+                    +box('Enroll on Course')
                       .box__container
                         form(action="", method="post")
                           .form-row.form__fields-wrap.pb-0
@@ -130,9 +134,99 @@ block content
                                 input.form-control.theme__form-control.theme__primary-form-control(type='text' id='phoneNo')
                                 label.theme__label(for='phoneNo') Phone no.
                             .col-12.form__fields-item
-                              .form-group
-                                label.theme__label(for='course-question') Questions
-                                textarea.form-control.theme__form-control(rows='3' placeholder='Write about yourself here' id='course-question')
-                            button.btn.btn__primary.btn-block(type="submit") Enquire Now
+                              h3.theme__form-title--black Tickets
+                              .course-tickets
+                                .course-tickets__ticket
+                                  .course-tickets__info
+                                    .course-tickets__name Early Bird
+                                    .course-tickets__rate $ 500.00
+                                  .course-tickets__qty
+                                    | Qty
+                                    .theme__form-group
+                                      label.theme__label.sr-only(for='qty01') Qty
+                                      .theme__select-dropdown.theme__secondary-select-dropdown
+                                        button.theme__select-dropdown-toggle Qty
+                                        input(type='hidden' name='qty01')
+                                        ul.theme__select-dropdown-menu
+                                          - for(var x = 1; x <= 5; x++)
+                                            li.theme__select-dropdown-item
+                                              input(type='radio' id=x name='qty-01' value=x)
+                                              label(for=x data-tar='qty01')= x
+                                  .course-tickets__soldout
+                                    .course-tickets__sold Tickets Sold Out
+                                .course-tickets__ticket.course-tickets__ticket--sold
+                                  .course-tickets__info
+                                    .course-tickets__name Half Day Workshop
+                                    .course-tickets__rate $ 500.00
+                                  .course-tickets__qty
+                                    | Qty
+                                    .theme__form-group
+                                      label.theme__label.sr-only(for='qty02') Qty
+                                      .theme__select-dropdown.theme__secondary-select-dropdown
+                                        button.theme__select-dropdown-toggle Qty
+                                        input(type='hidden' name='qty02')
+                                        ul.theme__select-dropdown-menu
+                                          - for(var x = 1; x <= 5; x++)
+                                            li.theme__select-dropdown-item
+                                              input(type='radio' id=x name='qty-02' value=x)
+                                              label(for=x data-tar='qty02')= x
+                                  .course-tickets__soldout
+                                    .course-tickets__sold Tickets Sold Out
+                                .course-tickets__ticket
+                                  .course-tickets__info
+                                    .course-tickets__name Full Day Workshop
+                                    .course-tickets__rate $ 500.00
+                                  .course-tickets__qty
+                                    | Qty
+                                    .theme__form-group
+                                      label.theme__label.sr-only(for='qty03') Qty
+                                      .theme__select-dropdown.theme__secondary-select-dropdown
+                                        button.theme__select-dropdown-toggle Qty
+                                        input(type='hidden' name='qty03')
+                                        ul.theme__select-dropdown-menu
+                                          - for(var x = 1; x <= 5; x++)
+                                            li.theme__select-dropdown-item
+                                              input(type='radio' id=x name='qty-03' value=x)
+                                              label(for=x data-tar='qty03')= x
+                                  .course-tickets__soldout
+                                    .course-tickets__sold Tickets Sold Out
+                              .course-promo
+                                .input-group.theme__form-group
+                                  .input-group-prepend
+                                    span#promo-addon.input-group-text Promocode
+                                  input.form-control.theme__form-control.theme__secondary-form-control(type='text' placeholder='Enter Here' aria-label='promocode' aria-describedby='promo-addon')
+                                button.btn.btn__search(type="button") Apply
+                              .course-rates
+                                table.table.table-borderless.table-sm.theme__table
+                                  tbody
+                                    tr
+                                      td.text-left(scope='row') Discount
+                                      td.text-right -$20.00
+                                    tr
+                                      td.text-left(scope='row') GST
+                                      td.text-right $120.00
+                                    tr
+                                      td.text-left(scope='row') Total inc GST
+                                      td.text-right $1560.00
+                            button.btn.btn__primary.btn-block(type="submit") Enroll Now
+                            .col-lg-12
+                              .course-installments
+                                p.text-center Or pay with monthly installments
+                                h6.course-installments__title Setup installments
+                                .course-installment
+                                  .theme__form-group
+                                    label.theme__label.sr-only(for='installmentSelect') Installments
+                                    .theme__select-dropdown.theme__secondary-select-dropdown
+                                      button.theme__select-dropdown-toggle Select
+                                      input(type='hidden' name='installmentSelect')
+                                      ul.theme__select-dropdown-menu
+                                        - for(var x = 1; x <= 4; x++)
+                                          li.theme__select-dropdown-item
+                                            input(type='radio' id=x name='installment' value=x)
+                                            label(for=x data-tar='installmentSelect')= x
+                                  .course-intallment-step $560.00
+                              small.course-support
+                                | Need more info?
+                                a.btn__contact(href='') Contact Us
 
 block modal

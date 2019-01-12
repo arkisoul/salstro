@@ -211,6 +211,33 @@ $(document).ready(() => {
     $('.connections__filter-adwrap').slideToggle();
   })
 
+  $('.bm__checkbox-input').on('change', function (e) {
+    var $target = $(this);
+    var isChecked = $target.is(":checked");
+    if(isChecked) {
+      $target.parents('.grid-table__row-body').addClass('active')
+    } else {
+      $target.parents('.grid-table__row-body').removeClass('active')
+    }
+  })
+
+  $('#bmGroup').on('change', function (e) {
+    var $target = $(this);
+    var $group = $target.data('target');
+    var bmchecks = Array.from(document.querySelectorAll('[data-group="'+ $group +'"]'));
+    if($target.is(":checked")) {
+      bmchecks.map(function (ele) {
+        $(ele).prop('checked', true).parents('.grid-table__row-body').addClass('active')
+      })
+    } else {
+      bmchecks.map(function (ele) {
+        $(ele).prop('checked', false).parents('.grid-table__row-body').removeClass('active')
+      })
+    }
+  })
+
+  bmCheckStatus();
+
   // Location Range
   var locationRange = $('#locationRadius')
   var locationRangeValue = locationRange.val()
@@ -368,4 +395,37 @@ window.removeBadge = function (event, _this) {
   badges = badges.filter((ele) => ele !== badge)
   $(_this).parents('.theme__badge-container').siblings('input[type="hidden"]').val(badges.join(', '))
   $(_this).parent('.theme__badge').remove()
+}
+
+window.addTicket = function(event, _this) {
+  event.preventDefault()
+  var ticketHtml = '<div class="course__ticket"><div class="form__fields-item span--full"><div class="form-group theme__form-group"><input class="form-control theme__form-control theme__primary-form-control" type="text" id="ticketName"><label class="theme__label" for="ticketName">Ticket Name</label></div></div><div class="form__fields-item span--half"><div class="form-group theme__form-group"><input class="form-control theme__form-control theme__primary-form-control" type="text" id="qty"><label class="theme__label" for="qty">Qty</label></div></div><div class="form__fields-item span--half"><div class="form-group theme__form-group"><input class="form-control theme__form-control theme__primary-form-control" type="text" id="price"><label class="theme__label" for="price">Price</label></div></div><div class="form__fields-item span--half"><div class="form-group theme__form-group"><input class="form-control theme__form-control theme__primary-form-control" type="text" id="onlineFee"><label class="theme__label" for="onlineFee">Online Fee</label></div></div><div class="form__fields-item span--half"><div class="form-group theme__form-group"><input class="form-control theme__form-control theme__primary-form-control" type="text" id="buyerPrice"><label class="theme__label" for="buyerPrice">Buyer Price</label></div></div><div class="form__fields-item span--small"><button class="btn btn__add-ticket" onclick="removeTicket(event, this)">&minus;</button></div></div>'
+  var target = $(_this).data('target')
+  $(target).prepend(ticketHtml)
+}
+
+window.removeTicket = (event, _this) => {
+  event.preventDefault()
+  $(_this).parents('.course__ticket').remove()
+}
+
+window.bmCheckStatus = () => {
+  var $bmCheckboxes = Array.from(document.querySelectorAll('.bm__checkbox-input'));
+  var $bmCheckboxesLen = $bmCheckboxes.length;
+  var $bmGroupMain;
+  var bmCount = 0;
+
+  $bmCheckboxes.map(function (element) {
+    $bmGroupMain = $(element).data('group');
+    if($(element).is(':checked')) {
+      bmCount++;
+      $(element).parents('.grid-table__row-body').addClass('active')
+    }
+  })
+
+  if(bmCount === $bmCheckboxesLen) {
+    $('[data-target="'+ $bmGroupMain +'"]').prop('checked', true);
+  } else {
+    $('[data-target="'+ $bmGroupMain +'"]').removeAttr('checked');
+  }
 }

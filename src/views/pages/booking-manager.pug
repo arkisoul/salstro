@@ -1,0 +1,92 @@
+//- ./src/views/pages/booking-manager.pug
+
+extends ../layouts/master.pug
+
+block title
+  title Salstro - Booking Manager
+
+block content
+  //- header cum navbar
+  include ../components/navbar.pug
+  //- main content
+  section.main-content
+    .container
+      .row
+        .col-lg-3.col-md-4
+          //- include sidebar
+          // Sidebar
+          include ../components/companySidebar.pug
+          // ./ Sidebar
+        .col-lg-9.col-md-8
+          //- include content
+          .row
+            //- Include Activity Header
+            .col-12
+              include ../components/companyProfileHeader.pug
+              section.myprofile__content
+                +box('Booking Manager')
+                  .box__container
+                    .bm__header
+                      h3.bm__course-title Course : Advanced Cutting
+                      .bm__course-status
+                        .bm__course-item 5 Orders
+                        .bm__course-item 7/15 Tickets
+                        .bm__course-item Sales: $ 300.00
+                        .bm__course-item Refunds: $ 45.00
+                        .bm__course-item Balance: $ 265.00
+                        .bm__course-item
+                          .dropdown.custom__dropdown
+                            button#dropdownMenuButton.btn.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false') Action
+                              .dropdown-menu(aria-labelledby='dropdownMenuButton')
+                                a.dropdown-item(href='#') Email Attendees
+                                a.dropdown-item(href='#') Cancel Event
+                                a.dropdown-item(href='#') Refund Order
+                    .grid-table.grid-table__bm
+                      .grid-table__head
+                        .grid-table__row.grid-table__row-head
+                          .grid-table__col
+                            .custom-control.custom-checkbox.theme__checkbox
+                              input#bmGroup.custom-control-input.theme__checkbox-input(type='checkbox' data-target='bm-group')
+                              label.custom-control-label.theme__checkbox-label(for='bmGroup')
+                          .grid-table__col Orders
+                          .grid-table__col Order#
+                          .grid-table__col
+                            | Ticket
+                            br
+                            | Qty
+                          .grid-table__col
+                            | Purchase
+                            br
+                            | Date
+                          .grid-table__col Status
+                          .grid-table__col Action
+                      .grid-table__body
+                        - for(var x = 0; x < 5; x++)
+                          .grid-table__row.grid-table__row-body
+                            .grid-table__col
+                              .custom-control.custom-checkbox.theme__checkbox
+                                input.custom-control-input.theme__checkbox-input.bm__checkbox-input(type='checkbox' id='bmGroup0' + x data-group='bm-group')
+                                label.custom-control-label.theme__checkbox-label(for='bmGroup0' + x)
+                            .grid-table__col.align__left
+                              .content__wrapper-flex
+                                .content__wrapper-media
+                                  img(src=require('../../assets/images/img/member-01.jpg'), alt="Applicant")
+                                .content__wrapper
+                                  .applicant__name Rosemarie Hawkins
+                                  .applicant__profile Master of Web Developing
+                                  .applicant__location
+                                    img(src=require('../../assets/images/svg/icon-location-pin.svg'), alt="")
+                                    | Expiry date (18/06/2018)
+                            .grid-table__col 12456
+                            .grid-table__col 2
+                            .grid-table__col 21/08/2018
+                            .grid-table__col.text-center Refunded
+                            .grid-table__col
+                              .action__wrapper
+                                a.icon__link(href='')
+                                  img.icon_2020(src=require('../../assets/images/svg/icon-mail.svg'), alt="Mail")
+                                a.icon__link(href='')
+                                  img.icon_2020(src=require('../../assets/images/svg/icon-eye.svg'), alt="View")
+
+block modal
+  include ../components/refund-popups.pug

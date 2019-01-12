@@ -55,7 +55,6 @@
   &.theme__secondary-form-control
     border: 1px solid $border-offwhite
     border-radius: 0
-    border-bottom: 1px solid $border-offwhite
     color: $text-black
     font-size: 14px
     font-weight: $regular
@@ -63,6 +62,8 @@
 
     & ~ .input-group-append button
       height: 38px
+      border: 1px solid $border-offwhite
+      border-left-color: transparent
 
   &.theme__secondary-form-control::placeholder
     color: $text-offwhite
@@ -259,6 +260,13 @@
   font-weight: $regular
   color: $text-black
   padding-bottom: 8px
+  border: none
+
+.theme__form-title--black
+  margin: 15px 0
+  font-size: 15px
+  font-weight: $semi
+  color: $text-black
   border: none
 
 .theme__checkbox

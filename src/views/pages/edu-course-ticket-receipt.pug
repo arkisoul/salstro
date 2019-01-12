@@ -1,0 +1,106 @@
+//- ./src/views/pages/edu-course-ticket-receipt.pug
+
+//- ./src/views/pages/edu-courses-search.pug
+
+extends ../layouts/master.pug
+include ../mixins/edu-header.pug
+include ../mixins/memberItem.pug
+include ../mixins/workshop-card.pug
+
+block title
+  title Salstro - Education Course Ticket Receipt
+
+block content
+  //- main content
+  .container.container__small
+    .course-receipt
+      .course-receipt__header
+        img.navbar-logo(src=require("../../assets/images/svg/logo.svg"), alt="Salstro Logo")
+      +eduHeaderViewSmall('Ticket Receipt')
+        .edu-bottom
+          .workshop-card
+            .workshop-card__media
+              img.workshop-card__media-img(src=require('../../assets/images/img/port-01.jpg'), alt="Workshop Image")
+            .workshop-card__body.workshop-card__body--small
+              .workshop-card__content
+                h2.workshop-card__title
+                  | Color Training Course
+                h4.workshop-card__company
+                  img(src=require('../../assets/images/img/job-01.jpg'), alt="")
+                  | Beauty Salon Company
+                p.workshop-card__duration
+                  img(src=require('../../assets/images/svg/icon-clock.svg'), alt="Duration")
+                  | 15 Days or 12.00 hours
+                .workshop-card__footer.mt-2
+                  p.workshop-card__date
+                    img(src=require('../../assets/images/svg/icon-cal.svg'))
+                    | 25 June 2018
+                  p.workshop-card__price-tag.text-left.mb-0
+                    img(src=require('../../assets/images/svg/icon-dollar.svg'), alt="Price")
+                    | 1500.00
+              .workshop-card__meta.workshop-card__meta--col.worshop-card__meta--full
+                .workshop-card__order
+                  | Order #4350450
+      .course-receipt__content
+        .jd-block
+          h3.jd__title Location
+          p.jd__detail 1 York St, level 3, California
+        .jd-block
+          h3.jd__title Date & Time
+          p.jd__detail Friday 16th November 2018 9am to 5pm
+        .jd-block
+          h3.jd__title What to bring
+          p.jd__detail Scissors Combs, clips,brushes & Hairdryer
+        .jd-block
+          h3.jd__title What to wear
+          p.jd__detail Casual clothing & closed shoes
+        .jd-block
+          h3.jd__title Cancelation & Refund Policy
+          p.jd__detail Refunds - We require 7 days notice of cancellation to receive a full refund. Please call 02 9078 1006 if you need to cancel/change your booking. 
+        .jd-block
+          h3.jd__title Order Information
+          ul.jd__list
+            li.jd__list-item Order # 123478
+            li.jd__list-item Ordered by. Rosmarie Hawkins on 21/08/2018 10:26pm
+      .course-receipt__summary
+        table.table.theme__table.theme__table--border
+          thead
+            tr
+              td Ticket
+              td Qty.
+              td Fee
+              td Amount
+          tbody
+            tr
+              td Early Bird
+              td 2
+              td $ 500.00
+              td.text-right $ 1000.00
+            tr
+              td Half Day
+              td 0
+              td $ 300.00
+              td.text-right $ 0.00
+            tr
+              td Full Day
+              td 1
+              td $ 200.00
+              td.text-right $ 200.00
+          tfoot
+            tr
+              td &nbsp;
+              td &nbsp;
+              td.text-center(scope='row') Discount(10%)
+              td.text-right -$20.00
+            tr
+              td &nbsp;
+              td &nbsp;
+              td.text-center(scope='row') GST
+              td.text-right $120.00
+            tr
+              td &nbsp;
+              td &nbsp;
+              td.text-center(scope='row') Total inc GST
+              td.text-right $1300.00
+      footer.footer
+        p.copyright Copyright @ salstro.com 2018

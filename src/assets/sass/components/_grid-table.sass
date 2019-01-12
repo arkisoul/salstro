@@ -18,6 +18,29 @@
       .grid-table__col
         padding: 8px 10px
 
+  &__bm
+    .grid-table__head
+      padding: 0 0 15px
+
+    .grid-table__row
+      grid-template-columns: 45px 1fr 100px 60px 110px 140px 70px
+
+    .grid-table__row-body
+      border: 1px solid $border-lightblue
+      border-radius: 4px
+      margin-bottom: 10px
+
+      &.active
+        background-color: $bg-lightwhite
+
+      .grid-table__col
+        padding: 8px 10px
+
+    .theme__checkbox .theme__checkbox-label::after,
+    .theme__checkbox .theme__checkbox-label::before
+      top: -15px
+      left: -32px
+
   &__head
     padding: 0
 
@@ -128,6 +151,9 @@
   .icon__view
     width: 16px
 
+  .icon__copy
+    height: 16px
+
   .icon__trash
     width: 13px
 
@@ -177,3 +203,48 @@
 
 .status-dropdown
   width: 100%
+
+.bm__header
+  margin-bottom: 20px
+
+.bm__course-title
+  font-size: 15px
+  font-weight: $semi
+
+.bm__course-status
+  display: flex
+  align-items: center
+  justify-content: space-between
+  font-size: 14px
+  color: $text-gray
+
+  .custom__dropdown
+    .dropdown-toggle
+      font-size: 14px
+      color: $text-gray
+      border: 1px solid $border-lightblue
+      border-radius: 4px
+      min-width: 85px
+
+      &::after
+        content: ''
+        position: absolute
+        display: inline-block
+        background-image: url('../images/svg/down-arrow.svg')
+        background-repeat: no-repeat
+        background-position: 90% center
+        right: 8px
+        width: 10px
+        height: 10px
+        top: 50%
+        transform: translateY(-50%)
+        border: none
+
+      .dropdown-menu
+        transform: initial!important
+        top: 110%!important
+        left: -80%!important
+
+        &::before
+          left: auto
+          right: 20%

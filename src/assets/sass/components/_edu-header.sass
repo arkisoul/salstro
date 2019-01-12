@@ -19,6 +19,13 @@
   &.edu-header--view
     margin-bottom: 100px
 
+  &.edu-header--small
+    max-height: 173px
+    min-height: 173px
+
+    .edu-header__heading
+      transform: translateY(-100%)
+
   &::before
     content: ''
     position: absolute
@@ -50,6 +57,6 @@
 .edu-bottom
   position: absolute
   width: 100%
-  padding: 0 20px
+  padding: 0 30px
   bottom: 0
   transform: translateY(50%)

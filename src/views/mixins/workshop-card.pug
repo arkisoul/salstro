@@ -1,6 +1,6 @@
 //- ./src/views/mixins/workshop-card.pug
 
-mixin workshopCard(img)
+mixin workshopCard(img, type = 'none')
   .workshop-card
     .workshop-card__media
       img.workshop-card__media-img(src=require('../../assets/images/img/' + img), alt="Workshop Image")
@@ -14,9 +14,26 @@ mixin workshopCard(img)
         p.workshop-card__duration
           img(src=require('../../assets/images/svg/icon-clock.svg'), alt="Duration")
           | 15 Days or 12.00 hours
+        p.workshop-card__dateplace
+          span.workshop-card__date
+            img(src=require('../../assets/images/svg/icon-cal.svg'), alt="")
+            | 05 Jan 2019
+          span.workshop-card__place
+            img(src=require('../../assets/images/svg/icon-location-pin.svg'), alt="")
+            | Barcelona
         p.workshop-card__description Donec eu maximus massa. Cas mollis Nulla metus quam, eu maximus massa Praesent hendrerit facilisis orciaximus tortor.......
-      .workshop-card__meta
-        p.workshop-card__price-tag
-          img(src=require('../../assets/images/svg/icon-dollar.svg'), alt="Price")
-          | 1500.00
-        a.btn.btn__primary(href="#") Edit
+      if type == 'past'
+        .workshop-card__actions
+          button.btn.btn-block.btn__navigation Ticket Details
+          button.btn.btn-block.btn__navigation Contact Organiser
+      else if type == 'upcoming'
+        .workshop-card__actions
+          button.btn.btn-block.btn__primary Ticket Details
+          button.btn.btn-block.btn__primary Contact Organiser
+          button.btn.btn-block.btn__primary Request Refund
+      else
+        .workshop-card__meta
+          p.workshop-card__price-tag
+            img(src=require('../../assets/images/svg/icon-dollar.svg'), alt="Price")
+            | 1500.00
+          a.btn.btn__primary(href="#") View

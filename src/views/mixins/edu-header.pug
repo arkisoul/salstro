@@ -10,3 +10,9 @@ mixin eduHeaderView(title)
     h1.edu-header__heading #{title}
     if block
       block
+
+mixin eduHeaderViewSmall(title)
+  .edu-header.edu-header--view.edu-header--small
+    h1.edu-header__heading #{title}
+    if block
+      block

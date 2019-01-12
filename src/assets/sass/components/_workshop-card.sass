@@ -1,0 +1,199 @@
+// ./src/assets/sass/components/_workshop-card.sass
+
+.workshop-card
+  position: relative
+  display: flex
+  border: 1px solid $border-offwhite
+  border-radius: 4px
+
+  &:not(:last-child)
+    margin-bottom: 20px
+
+  &__media
+    border-radius: 4px 0 0 4px
+    width: 180px
+    height: 140px
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    flex: 0 0 180px
+    max-width: 180px
+
+    &-img
+      border-radius: 4px 0 0 4px
+      width: 100%
+      height: 100%
+      object-fit: cover
+
+  &__body
+    background-color: $bg-white
+    border-radius: 0 4px 4px 0
+    border: 1px solid $border-offwhite
+    position: relative
+    z-index: 1
+    padding: 8px 18px
+    display: flex
+    justify-content: space-between
+    flex: 1 1 auto
+
+    &.workshop-card__body--small
+      padding: 8px 18px
+
+  &__content
+    flex: 1 1 auto
+    margin-right: 10px
+
+  &__title
+    font-size: 15px
+    font-weight: $semi
+    color: $text-black
+    margin: 0 0 6px
+    display: flex
+    align-items: center
+
+  &__company
+    font-size: 14px
+    font-weight: $regular
+    color: $text-gray
+    margin: 0 0 2px
+    display: flex
+    align-items: center
+
+    img
+      width: 24px
+      height: 24px
+      object-fit: cover
+      margin-right: 8px
+
+  &__save
+    display: flex
+    align-items: center
+    color: $text-gray
+    font-size: 14px
+    margin-left: 20px
+    font-weight: $regular
+
+    &:hover, &:focus
+      color: $text-gray
+
+    img
+      width: 16px
+      margin-right: 6px
+
+  &__share
+    display: flex
+    align-items: center
+    color: $text-gray
+    font-size: 14px
+    margin-left: 10px
+    font-weight: $regular
+
+    &:hover, &:focus
+      color: $text-gray
+
+    img
+      width: 16px
+
+  &__dateplace
+    margin-bottom: 4px
+    display: flex
+    align-items: center
+
+  &__duration
+    font-size: 13px
+    color: $text-blue
+    margin-bottom: 4px
+
+    img
+      width: 16px
+      margin-right: 10px
+
+  &__date
+    margin-right: 15px
+    font-size: 13px
+    color: $text-blue
+    display: inline-flex
+    align-items: center
+
+    img
+      width: 16px
+      margin-right: 10px
+
+  &__place
+    font-size: 13px
+    color: $text-blue
+
+    img
+      height: 16px
+      margin-right: 10px
+
+  &__description
+    font-size: 14px
+    color: $text-gray
+    margin-bottom: 0
+    line-height: 22px
+    max-height: 44px
+    overflow: hidden
+
+  &__meta
+    flex: 0 0 100px
+    max-width: 100px
+    align-self: flex-end
+
+    &.workshop-card__meta--col
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      height: 100%
+
+    &.worshop-card__meta--full
+      flex: 1 1 100px
+      max-width: 100%
+
+    .btn__primary
+      width: 100%
+
+  &__order
+    color: $text-gray
+    font-size: 14px
+    margin-left: 10px
+    font-weight: $regular
+    text-align: right
+
+  &__social
+    display: flex
+    align-items: center
+
+  &__price-tag
+    font-size: 14px
+    font-weight: $semi
+    color: $text-black
+    margin-bottom: 10px
+    line-height: 16px
+    text-align: center
+
+    img
+      width: 16px
+      margin-right: 10px
+
+  &__actions
+    flex: 0 0 100px
+    max-width: 160px
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+  &__footer
+    display: flex
+    align-items: center
+
+  &__date
+    font-size: 14px
+    font-weight: $regular
+    color: $text-blue
+    margin-bottom: 0
+
+    img
+      width: 16px
+      margin-right: 10px

@@ -1,0 +1,43 @@
+//- ./src/views/components/refund-popups.pug
+
+include ../mixins/modal.pug
+
++modalComplete('Refund Order', 'refundOrderPrompt')
+  .modal-body
+    .form__fields-wrap Would you like to issue a refund?
+    .btn__submit-wrap
+      button.btn.btn__primary.mr-3(type="button") Yes
+      button.btn.btn__navigation(type="button") No
+
++modalComplete('Refund Order', 'refundOrderStripe')
+  .modal-body
+    .form__fields-wrap Have you proccessed the refund on your stripe dashboard?
+    .btn__submit-wrap
+      button.btn.btn__primary.mr-3(type="button") Yes
+      button.btn.btn__navigation(type="button") No, Go to Stripe
+
++modalComplete('Refund Order', 'refundOrderResponse')
+  .modal-body
+    form(action="", method="post")
+      .form-row.form__fields-wrap
+        .col-lg-12
+          h1.theme__form-subtitle Response Here
+        .col-lg-12.form__fields-item
+          .form-group
+            label.theme__label(for='refundComments') Please add comments:
+            textarea.form-control.theme__form-control(rows='3' placeholder='Write your comment here' id='refundComments')
+      .btn__submit-wrap
+        button.btn.btn__primary.mr-3(type="button") Submit
+
++modalComplete('Refund Order', 'refundOrderAmount')
+  .modal-body
+    form(action="", method="post")
+      .form-row.form__fields-wrap.align-items-center
+        .col-lg-4.offset-lg-1.text-right
+          h1.theme__form-subtitle.m-0.p-0 Enter Amount Refunded
+        .col-lg-4.offset-lg-1
+          .form-group
+            label.theme__label.sr-only(for='refundAmount') Refund Amount
+            input.form-control.theme__form-control.theme__secondary-form-control(type='text' placeholder='$' id='refundAmount')
+      .btn__submit-wrap
+        button.btn.btn__primary.mr-3(type="button") Submit

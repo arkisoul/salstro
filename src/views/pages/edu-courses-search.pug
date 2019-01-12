@@ -3,6 +3,7 @@
 extends ../layouts/master.pug
 include ../mixins/edu-header.pug
 include ../mixins/memberItem.pug
+include ../mixins/workshop-card.pug
 
 block title
   title Salstro - Educator Courses
@@ -74,6 +75,19 @@ block content
                               label.theme__label(for='locationRadius') Location Radius (km)
                               input#locationRadius.custom-range(type='range' min='0' max='100' step='1' value='50')
                               span.locationRadiusValue
+                          .connections__filter-og
+                            .form-group.input-group.theme__input-group
+                              label.theme__label(for='courseStartDate') Start Date
+                              input.form-control.theme__form-control.theme__secondary-form-control.theme__datepicker(type='text' id='courseStartDate' name='start-date' aria-describedby='button-addon40')
+                              #button-addon40.input-group-append
+                                button.btn.btn__outline(type='button')
+                                  img(src=require("../../assets/images/svg/icon-cal.svg"), alt="")
+                            .form-group.input-group.theme__input-group
+                              label.theme__label(for='courseEndDate') End Date
+                              input.form-control.theme__form-control.theme__secondary-form-control.theme__datepicker(type='text' id='courseEndDate' name='end-date' aria-describedby='button-addon44')
+                              #button-addon44.input-group-append
+                                button.btn.btn__outline(type='button')
+                                  img(src=require("../../assets/images/svg/icon-cal.svg"), alt="")
                     .educator-courses
                       .ec__tabs
                         ul#portfolio__photo-tabs.portfolio__photo-tabs.nav.nav-tabs(role='tablist')
@@ -112,49 +126,13 @@ block content
                         #courseListView.tab-pane.active(role='tabpanel' aria-labelledby='courseListView-tab')
                           section.workshops
                             - for(var x = 1; x < 9; x++)
-                              .workshop-card
-                                .workshop-card__media
-                                  img.workshop-card__media-img(src=require('../../assets/images/img/port-0'+ x +'.jpg'), alt="Workshop Image")
-                                .workshop-card__body
-                                  .workshop-card__content
-                                    h2.workshop-card__title
-                                      | Color Training Course
-                                      a.workshop-card__save(href='')
-                                        img(src=require('../../assets/images/svg/star.svg'), alt="")
-                                        | Save
-                                    p.workshop-card__duration
-                                      img(src=require('../../assets/images/svg/icon-clock.svg'), alt="Duration")
-                                      | 15 Days or 12.00 hours
-                                    p.workshop-card__description Donec eu maximus massa. Cas mollis Nulla metus quam, eu maximus massa Praesent hendrerit facilisis orciaximus tortor.......
-                                  .workshop-card__meta
-                                    p.workshop-card__price-tag
-                                      img(src=require('../../assets/images/svg/icon-dollar.svg'), alt="Price")
-                                      | 1500.00
-                                    a.btn.btn__primary(href="#") Edit
+                              +workshopCard('port-0'+ x +'.jpg')
                             .workshops__pagination
                               a.btn.btn__primary(href='#') View More
                         #courseCalView.tab-pane(role='tabpanel' aria-labelledby='courseCalView-tab')
                           section.workshops
                             - for(var x = 1; x < 9; x++)
-                              .workshop-card
-                                .workshop-card__media
-                                  img.workshop-card__media-img(src=require('../../assets/images/img/port-0'+ x +'.jpg'), alt="Workshop Image")
-                                .workshop-card__body
-                                  .workshop-card__content
-                                    h2.workshop-card__title
-                                      | Color Training Course
-                                      a.workshop-card__save(href='')
-                                        img(src=require('../../assets/images/svg/star.svg'), alt="")
-                                        | Save
-                                    p.workshop-card__duration
-                                      img(src=require('../../assets/images/svg/icon-clock.svg'), alt="Duration")
-                                      | 15 Days or 12.00 hours
-                                    p.workshop-card__description Donec eu maximus massa. Cas mollis Nulla metus quam, eu maximus massa Praesent hendrerit facilisis orciaximus tortor.......
-                                  .workshop-card__meta
-                                    p.workshop-card__price-tag
-                                      img(src=require('../../assets/images/svg/icon-dollar.svg'), alt="Price")
-                                      | 1500.00
-                                    a.btn.btn__primary(href="#") Edit
+                              +workshopCard('port-0'+ x +'.jpg')
                             .workshops__pagination
                               a.btn.btn__primary(href='#') View More
 

@@ -36,11 +36,12 @@ block content
                           .grid-table__col Status
                           .grid-table__col Upgrade
                       .grid-table__body
-                        - for(var x = 0; x < 5; x++)
+                        - var positions = ['Advanced Cutting', 'Color Style', 'Hair Style', 'Advanced Cutting']
+                        each position in positions
                           .grid-table__row.grid-table__row-body
                             .grid-table__col.align__left
                               .content__wrapper
-                                .text__title Advanced Cutting
+                                .text__title= position
                                 .text__date Upload date (19/05/2018)
                                 .text__date Expiry date (18/06/2018)
                             .grid-table__col
@@ -54,6 +55,8 @@ block content
                                   img.icon__view(src=require('../../assets/images/svg/icon-eye.svg'), alt="View")
                                 a.icon__link(href='')
                                   img.icon__edit(src=require('../../assets/images/svg/icon-mod.svg'), alt="View")
+                                a.icon__link(href='')
+                                  img.icon__copy(src=require('../../assets/images/svg/icon-copy.svg'), alt="View")
                                 a.icon__link(href='')
                                   img.icon__trash(src=require('../../assets/images/svg/icon-trash.svg'), alt="View")
 

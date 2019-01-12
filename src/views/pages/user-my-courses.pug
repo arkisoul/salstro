@@ -1,0 +1,42 @@
+//- ./src/views/pages/user-my-courses.pug
+
+extends ../layouts/master.pug
+include ../mixins/workshop-card.pug
+
+block title
+  title Salstro - User My Courses
+
+block content
+  //- header cum navbar
+  include ../components/navbar.pug
+  //- main content
+  section.main-content
+    .container
+      .row
+        .col-lg-3.col-md-4
+          //- include sidebar
+          // Sidebar
+          include ../components/sidebar.pug
+          // ./ Sidebar
+        .col-lg-9.col-md-8
+          //- include content
+          .row
+            //- Include Activity Header
+            .col-12
+              include ../components/myprofile_header.pug
+            .col-12
+              section.myprofile__content
+                +box('My Courses Orders')
+                  .box__container
+                    .courses__container.upcoming__courses
+                      h3.courses__title Upcoming Courses
+                      - for(var x = 1; x < 4; x++)
+                        +workshopCard('port-0'+ x +'.jpg', 'upcoming')
+                    .courses__container.past__courses
+                      h3.courses__title Past Courses
+                      - for(var x = 8; x > 5; x--)
+                        +workshopCard('port-0'+ x +'.jpg', 'past')
+                    .theme__pagination
+                      button.btn.btn__primary View More
+
+block modal
